@@ -6,15 +6,24 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SliderComponent } from './components/slider/slider.component';
+import { HeaderComponent } from './components/header/header.component';
+import { OverviewComponent } from './components/overview/overview.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent,
+    HeaderComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

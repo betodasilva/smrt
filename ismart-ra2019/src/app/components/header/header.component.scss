@@ -1,0 +1,71 @@
+@import "../../../variables.scss";
+
+.header{
+	background: $clear;
+	padding: 25px 0;
+	&__button{
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 20px;
+		font-size: 14px;
+		line-height: 14px;
+		font-family: $montserrat;
+		color: $blue-medium;
+		&--icon{
+			display: inline-block;
+			margin-top: -2px;
+			margin-right: 4px;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__title{
+		&--image{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 8px;
+			margin-top: -3px;
+		}
+		&--excerpt{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+			font-family: $montserrat;
+			font-size: 14px;
+			color: $blue-dark;
+			letter-spacing: 0.2px;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+	}
+	&__toggle{
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		font-size: 14px;
+		font-family: $montserrat;
+		color: $blue-medium;
+		&--icon{
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 5px;
+			span{
+				display: block;
+				width: 16px;
+				height: 2px;
+				background: $blue-medium;
+				border-radius: 2px;
+				margin-bottom: 4px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

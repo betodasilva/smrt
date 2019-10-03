@@ -1,0 +1,87 @@
+@import "../../../variables.scss";
+
+.footer{
+	background: $blue-dark;
+	padding-top: 35px;
+
+	&__nav{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		&--item{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 12px;
+			&:first-child{
+				margin-left: 0;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		&--link{
+			font-size: 16px;
+			color: $grey;
+			transition: all 0.2s ease-out;
+			&:hover{
+				color: $blue;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__social{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: right;
+		&--item{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 4px;
+			&:first-child{
+				margin-left: 0;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		&--link{
+			display: block;
+			width: 43px;
+			height: 43px;
+			border: 1px solid $grey;
+			border-radius: 50%;
+			color: $grey;
+			line-height: 41px;
+			text-align: center;
+			transition: all 0.2s ease-out;
+			&:hover{
+				border-color: $blue;
+				background: $blue;
+				text-decoration: none;
+				color: $clear;
+			}
+		}
+	}
+
+	&__helper{
+		border-top: solid 1px #5a6b87;
+		padding: 30px 0; 
+		margin-top: 30px;
+		p{
+			margin: 0;
+			font-size: 13px;
+			color: $grey;
+			a{
+				color: $grey;
+				transition: all 0.2s ease-out;
+				&:hover{
+					color: $blue;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
