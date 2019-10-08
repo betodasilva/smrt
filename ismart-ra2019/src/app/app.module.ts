@@ -10,6 +10,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderComponent } from './components/slider/slider.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OverviewComponent } from './components/overview/overview.component';
+import { ChaptersComponent } from './components/chapters/chapters.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OverviewComponent } from './components/overview/overview.component';
     FooterComponent,
     SliderComponent,
     HeaderComponent,
-    OverviewComponent
+    OverviewComponent,
+    ChaptersComponent
   ],
   imports: [
     BrowserModule,
