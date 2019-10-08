@@ -2,10 +2,13 @@
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 			<div class="col-3">
-				<button class="header__button">
+				<button class="header__button header__button--chapters" (click)="toggle()">
 					<img src="assets/images/chapter.svg" alt="" class="header__button--icon">
 					Capítulos
 				</button>
+				<div class="header__chapters">
+					<app-chapters *ngIf="show" (onCloseChapters)="toggle($event)"></app-chapters>
+				</div>
 				<button class="header__button">
 					<img src="assets/images/globe.svg" alt="" class="header__button--icon">
 					EN

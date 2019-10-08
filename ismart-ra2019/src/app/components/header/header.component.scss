@@ -87,4 +87,12 @@
 			outline: none;
 		}
 	}
+	&__chapters {
+		position: fixed;
+		width: 100vw;
+		left: 0px;
+		top: 74px;
+		overflow-y: scroll;
+		max-height: 100vh;
+	}
 }

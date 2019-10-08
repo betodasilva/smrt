@@ -1,0 +1,52 @@
+@import "../../../variables.scss";
+
+.chapter-content {
+    padding-top: 70px;
+    p {
+        font-size: 18px;
+        color: $blue-medium;
+        line-height: 1.78;
+    }
+    .row {
+        &:first-child {
+            p {
+                &:first-child {
+                    &:first-letter {
+                        font-size: 88px;
+                        color: $orange;
+                        float: left;
+                        line-height: 89px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &__img {
+        margin: 70px 0 40px 0;
+        img {
+            width: 100%;
+            max-height: auto;
+        }
+        figcaption {
+            font-size: 14px;
+            line-height: 1.71;
+            color: $blue-medium;
+            margin-top: 10px;
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+    .blockquote__simple {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 100%;
+        width: 41%;
+        max-width: 280px;
+        font-size: 24px;
+        line-height: 1.33;
+        color: $blue-medium;
+    }
+}
