@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .chapter-content {
-    padding-top: 70px;
+    padding: 70px 0;
     p {
         font-size: 18px;
         color: $blue-medium;
@@ -9,9 +9,9 @@
     }
     .row {
         &:first-child {
-            p {
-                &:first-child {
-                    &:first-letter {
+            .col-md-6 {
+                & > p {
+                    &:first-of-type:first-letter {
                         font-size: 88px;
                         color: $orange;
                         float: left;
@@ -48,5 +48,85 @@
         font-size: 24px;
         line-height: 1.33;
         color: $blue-medium;
+    }
+    .gallery {
+        padding-top: 60px;
+        &__item {
+            text-align: center;
+            p {
+                font-size: 14px;
+                line-height: 1.71;
+                margin-top: 5px;
+            }
+        }
+    }
+    .share {
+        list-style: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+        right: 0;
+        top: 0;
+		&--item{
+			display: block;
+			margin: 8px 0;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+		&--link{
+			display: block;
+			width: 52px;
+            height: 52px;
+			border: 1px solid $grey;
+			border-radius: 50%;
+			color: $blue-medium;
+            line-height: 52px;
+            font-size: 18px;
+			text-align: center;
+			transition: all 0.2s ease-out;
+			&:hover{
+				border-color: $blue;
+				background: $blue;
+				text-decoration: none;
+				color: $clear;
+			}
+		}
+    }
+    @media (max-width: 1300px) {
+        .share {
+            right: 15px;
+        }
+    }
+    @media (max-width: 992px) {
+        .blockquote__simple {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
+    @media (max-width: 768px) {
+        .share {
+            right: 10px;
+            &--link {
+                width: 43px;
+                height: 43px;
+                font-size: 16px;
+                line-height: 43px;
+            }
+        }
+        .blockquote__simple {
+            position: relative;
+            top: inherit;
+            transform: inherit;
+            left: auto;
+            width: 50%;
+            font-size: 22px;
+            max-width: inherit;
+        }
+    }
+    @media (max-width: 540px) {
+        .blockquote__simple {
+            width: 75%;
+        }
     }
 }

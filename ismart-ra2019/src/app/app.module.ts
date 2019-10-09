@@ -15,6 +15,11 @@ import { ChapterInternSimpleComponent } from './pages/chapter-intern-simple/chap
 import { ChapterHatComponent } from './components/chapter-hat/chapter-hat.component';
 import { ChapterContentComponent } from './components/chapter-content/chapter-content.component';
 import { RelatedComponent } from './components/related/related.component';
+import { ChapterInternComponent } from './pages/chapter-intern/chapter-intern.component';
+import { ChapterContentAllComponent } from './components/chapter-content-all/chapter-content-all.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,11 @@ import { RelatedComponent } from './components/related/related.component';
     ChapterHatComponent,
     ChapterContentComponent,
     RelatedComponent,
+    ChapterInternComponent,
+    ChapterContentAllComponent,
+    SidebarComponent,
+    AccordionComponent,
+    TestimonialsComponent,
   ],
   imports: [
     BrowserModule,

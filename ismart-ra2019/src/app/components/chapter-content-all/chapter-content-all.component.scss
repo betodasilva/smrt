@@ -1,0 +1,164 @@
+@import "../../../variables.scss";
+@import "../chapter-content/chapter-content.component.scss";
+
+.chapter-content {
+    .tag {
+        font-size: 12px;
+        font-family: $montserrat;
+        color: $clear;
+        background-color: $blue;
+        padding: 9px 14px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 1.14;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: $blue-medium;
+        font-family: $montserrat;
+        &--section {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: $montserrat;
+            text-transform: uppercase;
+            color: $blue-medium;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+    }
+    &__subtitle {
+        font-size: 21px;
+        font-family: $montserrat;
+        color: $blue-medium;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+    .row {
+        &:first-child {
+            .col-md-6 {
+                & > p {
+                    &:first-of-type:first-letter {
+                        font-size: 88px;
+                        color: $orange;
+                        float: left;
+                        line-height: 89px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &__img {
+        position: relative;
+    }
+    .blockquote {
+        &__quote {
+            position: absolute;
+            transform: translateY(-50%);
+            line-height: 1.33;
+            max-width: 280px;
+            font-size: 24px;
+            color: $blue-medium;
+            width: 40%;
+            top: 50%;
+            margin-bottom: 0;
+            left: 100%;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -70px;
+                background-image: url('../../../assets/images/left-quote-blue.svg');
+                width: 56px;
+                height: 49px;
+                left: 0;
+            }
+            cite {
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1.71;
+                color: $blue-medium;
+                display: block;
+                margin-top: 15px;
+                position: relative;
+                padding-left: 15px;
+                font-style: normal;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background-image: url('../../../assets/images/triangle-small-orange.svg');
+                    top: 8px;
+                    left: 0;
+                    width: 9px;
+                    height: 8px;
+                }
+            }
+        }
+        &__image {
+            color: $clear;
+            right: 4%;
+            left: initial;
+            &:before {
+                background-image: url('../../../assets/images/left-quote.svg');
+            }
+            cite {
+                color: $clear;
+                &:before {
+                    content: '';
+                    background-image: url('../../../assets/images/triangle-small-white.svg');
+                }
+            }
+        }
+        &__big {
+            padding-top: 70px;
+            margin-top: 40px;
+            font-size: 24px;
+            color: $blue-medium;
+            line-height: 1.33;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                background-image: url('../../../assets/images/left-quote-blue.svg');
+                width: 56px;
+                height: 49px;
+                left: 0;
+            }
+            cite {
+                font-size: 14px;
+                font-weight: bold;
+                display: block;
+                margin-top: 20px;
+                position: relative;
+                padding-left: 15px;
+                font-style: normal;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background-image: url('../../../assets/images/triangle-small-orange.svg');
+                    top: 5px;
+                    left: 0;
+                    width: 9px;
+                    height: 8px;
+                }
+            }
+        }
+    }
+    .list {
+        padding-left: 27px;
+        margin: 0;
+        list-style-image: url('../../../assets/images/triangle-orange.svg');
+        li {
+            font-size: 18px;
+            line-height: 1.78;
+            color: $blue-medium;
+            margin-bottom: 20px;
+        }
+    }
+}
