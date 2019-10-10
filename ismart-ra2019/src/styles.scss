@@ -34,3 +34,25 @@ body{
 		}
 	}
 }
+.testimonials {
+	.slick-track {
+		padding: 15px 0;
+	}
+	.slick-list {
+		padding-right: 50px;
+	}
+	.slick-arrow {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		border: solid 1px $blue-medium;
+		border-radius: 50%;
+		width: 42px;
+		height: 42px;
+		justify-content: center;
+	}
+	.slick-next {
+		left: 55px;
+		transform: rotate(180deg);
+	}
+}
