@@ -1,0 +1,48 @@
+{
+	"HEADER": {
+		"EXCERPT": "Relatório de atividades 2018-2019",
+		"BUTTONS": {
+			"CHAPTERS": "Capítulos",
+			"MENU": "Menu"
+		}
+	},
+	"HOME": {
+		"OVERVIEW": {
+			"TITLE": "UNBELIEAVEBLE",
+			"EXCERPT": "Há 20 anos transformamos talentos em protagonistas do futuro.",
+			"TAG": "#Ismart20anos",
+			"BUTTON": "Ver relatório"
+		}
+	},
+	"CHAPTERS": {
+		"TITLE": "Capítulos",
+		"01": "Mensagem do conselho",
+		"02": "Missão, visão e crenças",
+		"03": "Linha do tempo",
+		"04": "Contato",
+		"05": "Seleção",
+		"06": "Prática",
+		"07": "Suporte",
+		"08": "Internacional",
+		"09": "EAD",
+		"10": "Universidade",
+		"11": "Alumni",
+		"12": "Parceiros ismart",
+		"13": "Horizonte",
+		"14": "Manifesto ismart",
+		"15": "Resultados 2018",
+		"16": "Lista de parceiros",
+		"17": "Expediente"
+	},
+	"NAV": {
+		"HOME": "Página inicial",
+		"DOWNLOAD": "Download do relatório",
+		"VERSIONS": "Versões anteriores",
+		"ABOUT": "Sobre a Ismart",
+		"CONTACT": "Fale conosco"
+	},
+	"FOOTER": {
+		"COPYRIGHT": "Ismart © 2019 todos os direitos reservados",
+		"TERMS": "Política de privacidade"
+	}
+}

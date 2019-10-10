@@ -9,9 +9,13 @@
 				<div class="header__chapters">
 					<app-chapters *ngIf="show" (onCloseChapters)="toggle($event)"></app-chapters>
 				</div>
-				<button class="header__button">
-					<img src="assets/images/globe.svg" alt="" class="header__button--icon">
-					EN
+				<button 
+					class="header__button"
+					(click)="onAvailableLanguaggeClick()">
+						<img src="assets/images/globe.svg" 
+							alt="" 
+							class="header__button--icon">
+					{{ availableLanguage.split('-')[0] }}
 				</button>
 			</div>
 			<div class="col-6 text-center">
