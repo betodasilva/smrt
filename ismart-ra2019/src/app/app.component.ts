@@ -12,6 +12,6 @@ export class AppComponent {
 		translate.addLangs(['pt-BR', 'en'])
 		translate.setDefaultLang('pt-BR');
 		
-		translate.use('en');
+		translate.use('pt-BR');
 	}
 }
