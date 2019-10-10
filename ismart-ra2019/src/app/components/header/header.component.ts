@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
     return availableLanguage;
   }
 
-  onAvailableLanguaggeClick(){
+  onAvailableLanguageClick(){
     this.translate.use( this.availableLanguage );
     this.availableLanguage = this.setAvailableLanguage( this.translate.currentLang, this.translate.getLangs() );
   }
