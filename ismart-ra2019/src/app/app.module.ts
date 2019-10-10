@@ -24,6 +24,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 
@@ -49,6 +50,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidebarComponent,
     AccordionComponent,
     TestimonialsComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

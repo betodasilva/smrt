@@ -46,6 +46,6 @@ export class HeaderComponent implements OnInit {
   
   toggle($event) {
     this.show = !this.show;
-    console.log($event);
+    $('header').toggleClass('chapters-opened');
   }
 }

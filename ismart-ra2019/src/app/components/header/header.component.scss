@@ -18,7 +18,7 @@
 		margin-right: 20px;
 		font-size: 14px;
 		text-transform: uppercase;
-		line-height: 14px;
+		line-height: 16px;
 		font-family: $montserrat;
 		color: $blue-medium;
 		transition: all 0.2s ease-out;
@@ -35,6 +35,15 @@
 		}
 		&:focus{
 			outline: none;
+		}
+		&--chapters {
+			&:hover, &:focus {
+				.header__button--icon {
+					use {
+						fill: $orange;
+					}
+				}
+			}
 		}
 	}
 	&__title{
@@ -95,5 +104,39 @@
 		top: 74px;
 		overflow-y: scroll;
 		max-height: 100vh;
+	}
+	&.chapters-opened {
+		.header__button--icon {
+			use {
+				fill: $orange;
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		&__button--chapters {
+			.header__button--text {
+				display: none;
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		&__title {
+			&--excerpt {
+				display: none;
+			}
+		}
+	}
+	@media (max-width: 540px) {
+		&__button--chapters {
+			margin-right: 15px;
+		}
+		&__button--icon {
+			margin-right: 0;
+		}
+		&__toggle {
+			&--text {
+				display: none;
+			}
+		}
 	}
 }
