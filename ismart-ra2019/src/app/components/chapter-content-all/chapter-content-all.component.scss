@@ -161,4 +161,57 @@
             margin-bottom: 20px;
         }
     }
+    @media (max-width: 992px) {
+        &__title {
+            font-size: 42px;
+        }
+    }
+    @media (max-width: 768px) {
+        .blockquote__quote {
+            position: relative;
+            top: inherit;
+            transform: inherit;
+            left: auto;
+            width: 100%;
+            font-size: 22px;
+            max-width: inherit;
+            margin-top: 120px;
+            &.blockquote__image {
+                &:before {
+                    left: 15px;
+                    background-image: url('../../../assets/images/left-quote-blue.svg');
+                }
+            }
+        }
+    }
+    @media (max-width: 540px) {
+        padding: 30px 0;
+        &__title {
+            font-size: 24px;
+            &--section {
+                font-size: 16px;
+            }
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        &__img {
+            margin: 30px 0;
+        }
+        .blockquote__quote {
+            font-size: 21px;
+            color: #012461;
+            padding: 0 15px;
+            
+        }
+        .list {
+            li {
+                font-size: 16px;
+            }
+        }
+    }
 }

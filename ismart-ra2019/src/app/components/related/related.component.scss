@@ -39,4 +39,10 @@
             }
         }
     }
+    @media (max-width: 540px) {
+        margin: 40px 0;
+        &__title {
+            font-size: 16px;
+        }
+    }
 }

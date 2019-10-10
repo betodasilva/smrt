@@ -60,4 +60,10 @@
             border-bottom: solid 2px $orange;
         }
     }
+    @media (max-width: 540px) {
+        padding: 20px 0 50px 0;
+        &__title {
+            font-size: 16px;
+        }
+    }
 }
