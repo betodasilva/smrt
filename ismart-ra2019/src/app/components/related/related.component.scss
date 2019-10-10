@@ -1,0 +1,42 @@
+@import "../../../variables.scss";
+
+.related {
+    margin: 70px 0;
+    &__title {
+        font-size: 32px;
+        text-transform: uppercase;
+        color: $blue-medium;
+        font-family: $montserrat;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    &__single {
+        position: relative;
+        &--title {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: $clear;
+            h4 {
+                font-size: 12px;
+                font-family: $montserrat;
+                font-weight: normal;
+                text-transform: uppercase;
+                margin-bottom: 3px;
+            }
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+        }
+        figure {
+            img {
+                height: 220px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+}
