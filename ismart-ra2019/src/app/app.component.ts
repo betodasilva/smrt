@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,10 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	title = 'ismart-ra2019';
-	// constructor(private router: Router){
-  	
-	// }
+	constructor(private translate: TranslateService){
+		translate.addLangs(['pt-BR', 'en', 'es'])
+		translate.setDefaultLang('pt-BR');
+		
+		translate.use('pt-BR');
+	}
 }

@@ -1,7 +1,7 @@
 <section class="chapters">
 	<div class="container">
 		<div class="header__chapters--top">
-			<h3 class="chapters__title">Capítulos</h3>
+			<h3 class="chapters__title">{{ 'CHAPTERS.TITLE' | translate }}</h3>
 			<button type="button" class="btn chapters__hide" aria-label="Fechar" (click)="fecharModal()">
 				<span aria-hidden="true">&times;</span>
 			</button>
@@ -17,7 +17,7 @@
 							01.
 						</span>
 						<h4 class="chapters__item--title">
-							Mensagem do conselho
+							{{ 'CHAPTERS.01' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -32,7 +32,7 @@
 							02.
 						</span>
 						<h4 class="chapters__item--title">
-							Missão, visão e crenças
+							{{ 'CHAPTERS.02' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -47,7 +47,7 @@
 							03.
 						</span>
 						<h4 class="chapters__item--title">
-							Linha do tempo
+							{{ 'CHAPTERS.03' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -62,68 +62,7 @@
 							04. Trajetórias Ismart
 						</span>
 						<h4 class="chapters__item--title">
-							Contato
-						</h4>
-					</div>
-				</a>
-			</div>
-
-			<div class="col-12 col-md-3 chapters__item">
-				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
-					<figure class="chapters__item--figure">
-						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
-					</figure>
-					<div class="chapters__item--content">
-						<span class="chapters__item--number">
-							04. Trajetórias Ismart
-						</span>
-						<h4 class="chapters__item--title">
-							Seleção
-						</h4>
-					</div>
-				</a>
-			</div>
-			<div class="col-12 col-md-3 chapters__item">
-				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
-					<figure class="chapters__item--figure">
-						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
-					</figure>
-					<div class="chapters__item--content">
-						<span class="chapters__item--number">
-							04. Trajetórias Ismart
-						</span>
-						<h4 class="chapters__item--title">
-							Prática
-						</h4>
-					</div>
-				</a>
-			</div>
-			<div class="col-12 col-md-3 chapters__item">
-				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
-					<figure class="chapters__item--figure">
-						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
-					</figure>
-					<div class="chapters__item--content">
-						<span class="chapters__item--number">
-							04. Trajetórias Ismart
-						</span>
-						<h4 class="chapters__item--title">
-							Suporte
-						</h4>
-					</div>
-				</a>
-			</div>
-			<div class="col-12 col-md-3 chapters__item">
-				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
-					<figure class="chapters__item--figure">
-						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
-					</figure>
-					<div class="chapters__item--content">
-						<span class="chapters__item--number">
-							04. Trajetórias Ismart
-						</span>
-						<h4 class="chapters__item--title">
-							Internacional
+							{{ 'CHAPTERS.04' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -139,7 +78,7 @@
 							04. Trajetórias Ismart
 						</span>
 						<h4 class="chapters__item--title">
-							EAD
+							{{ 'CHAPTERS.05' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -154,7 +93,7 @@
 							04. Trajetórias Ismart
 						</span>
 						<h4 class="chapters__item--title">
-							Universidade
+							{{ 'CHAPTERS.06' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -169,7 +108,68 @@
 							04. Trajetórias Ismart
 						</span>
 						<h4 class="chapters__item--title">
-							Alumni
+							{{ 'CHAPTERS.07' | translate }}
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-12 col-md-3 chapters__item">
+				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
+					<figure class="chapters__item--figure">
+						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
+					</figure>
+					<div class="chapters__item--content">
+						<span class="chapters__item--number">
+							04. Trajetórias Ismart
+						</span>
+						<h4 class="chapters__item--title">
+							{{ 'CHAPTERS.08' | translate }}
+						</h4>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-12 col-md-3 chapters__item">
+				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
+					<figure class="chapters__item--figure">
+						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
+					</figure>
+					<div class="chapters__item--content">
+						<span class="chapters__item--number">
+							04. Trajetórias Ismart
+						</span>
+						<h4 class="chapters__item--title">
+							{{ 'CHAPTERS.09' | translate }}
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-12 col-md-3 chapters__item">
+				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
+					<figure class="chapters__item--figure">
+						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
+					</figure>
+					<div class="chapters__item--content">
+						<span class="chapters__item--number">
+							04. Trajetórias Ismart
+						</span>
+						<h4 class="chapters__item--title">
+							{{ 'CHAPTERS.10' | translate }}
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-12 col-md-3 chapters__item">
+				<a [routerLink]="['/chapter-intern-simple']" (click)="fecharModal()">
+					<figure class="chapters__item--figure">
+						<img src="assets/images/card.jpg" alt="" class="chapters__item--image">
+					</figure>
+					<div class="chapters__item--content">
+						<span class="chapters__item--number">
+							04. Trajetórias Ismart
+						</span>
+						<h4 class="chapters__item--title">
+							{{ 'CHAPTERS.11' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -184,7 +184,7 @@
 							05.
 						</span>
 						<h4 class="chapters__item--title">
-							Parceiros Ismart
+							{{ 'CHAPTERS.12' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -201,7 +201,7 @@
 							06.
 						</span>
 						<h4 class="chapters__item--title">
-							Horizonte
+							{{ 'CHAPTERS.13' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -216,7 +216,7 @@
 							07.
 						</span>
 						<h4 class="chapters__item--title">
-							Manifesto Ismart
+							{{ 'CHAPTERS.14' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -231,7 +231,7 @@
 							08.
 						</span>
 						<h4 class="chapters__item--title">
-							Resultados 2018
+							{{ 'CHAPTERS.15' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -246,7 +246,7 @@
 							09.
 						</span>
 						<h4 class="chapters__item--title">
-							Lista de parceiros
+							{{ 'CHAPTERS.16' | translate }}
 						</h4>
 					</div>
 				</a>
@@ -262,7 +262,7 @@
 							10.
 						</span>
 						<h4 class="chapters__item--title">
-							Expediente
+							{{ 'CHAPTERS.17' | translate }}
 						</h4>
 					</div>
 				</a>

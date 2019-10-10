@@ -21,6 +21,16 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +53,15 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]

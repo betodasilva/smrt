@@ -4,7 +4,7 @@
 			<div class="col-3">
 				<button class="header__button header__button--chapters" (click)="toggle()">
 					<img src="assets/images/chapter.svg" alt="" class="header__button--icon">
-					Capítulos
+					{{ 'HEADER.BUTTONS.CHAPTERS' | translate }}
 				</button>
 				<div class="header__chapters">
 					<app-chapters *ngIf="show" (onCloseChapters)="toggle($event)"></app-chapters>
@@ -17,12 +17,12 @@
 			<div class="col-6 text-center">
 				<div class="header__title">
 					<img src="assets/images/logo-header.svg" alt="" class="header__title--image">
-					<h1 class="header__title--excerpt">Relatório de Atividades 2018-2019</h1>
+					<h1 class="header__title--excerpt">{{ 'HEADER.EXCERPT' | translate }}</h1>
 				</div>
 			</div>
 			<div class="col-3 text-right">
 				<button class="header__toggle">
-					Menu
+					{{ 'HEADER.BUTTONS.MENU' | translate }}
 					<div class="header__toggle--icon">
 						<span></span>
 						<span></span>
