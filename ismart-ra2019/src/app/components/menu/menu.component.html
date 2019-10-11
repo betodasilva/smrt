@@ -29,7 +29,11 @@
         </li>
     </ul>
     <ul class="menu__language">
-        <li class="menu__language--item menu__language--active">PT</li>
-        <li class="menu__language--item">EN</li>
+        <li 
+            class="menu__language--item"
+            [class.menu__language--active]="activeLang === 'pt'">PT</li>
+        <li 
+            class="menu__language--item"
+            [class.menu__language--active]="activeLang === 'en'">EN</li>
     </ul>
 </div>

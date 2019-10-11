@@ -10,11 +10,12 @@ import { WINDOW } from "../../services/window.service";
 })
 export class HeaderComponent implements OnInit {
 
-
   @ViewChild('header', { static: false }) header: ElementRef;
+
   private headerSrollBefore: number = 0;
   private headerStyle: { top } = { top: '0px' };
 
+  private hasMenuOpened: boolean = false;
   private hasChaptersOpened: boolean = false;
   private _availableLanguage: string;
 
@@ -57,6 +58,10 @@ export class HeaderComponent implements OnInit {
   
   toggle($event) {
     this.hasChaptersOpened = !this.hasChaptersOpened;
+  }
+
+  toggleMenu() {
+    this.hasMenuOpened = !this.hasMenuOpened;
   }
 
   /**
