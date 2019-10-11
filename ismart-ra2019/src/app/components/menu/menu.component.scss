@@ -10,7 +10,7 @@
     visibility: hidden;
     transition: all .5s ease-out;
     background-image: url('../../../assets/images/owl.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
     &__list {
@@ -102,5 +102,17 @@
 		&:focus{
 			outline: none;
 		}
+    }
+    @media (max-width:540px) {
+        width: 100vw;
+        padding: 70px 70px 50px 70px;
+        overflow: auto;
+        &__toggle {
+            right: 15px;
+            top: 28px;
+            &--text {
+                display: none;
+            }
+        }
     }
 }

@@ -1,0 +1,79 @@
+@import "../../../variables.scss";
+
+.modal {
+    &-dialog {
+        max-width: 800px;
+    }
+    &-content {
+        padding: 85px 100px 65px 100px;
+    }
+    &__exit {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    &__top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .slick {
+            &-arrow {
+                display: flex;
+                border: solid 1px #012461;
+                border-radius: 50%;
+                width: 42px;
+                height: 42px;
+                justify-content: center;
+            }
+            &-next {
+                transform: rotate(180deg);
+            }
+        }
+        .modal__img {
+            margin: 0 15px;
+            img {
+                width: 105px;
+                height: 105px;
+                object-fit: cover;
+                border: solid 1px #012461;
+                border-radius: 50%;
+                padding: 5px;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__text {
+        text-align: center;
+        margin-top: 25px;
+        border-bottom: 1px solid rgba(230,233,239,1);
+        padding-bottom: 30px;
+        margin-bottom: 15px;
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: bold;
+        color: $blue-medium;
+    }
+    &__about {
+        font-size: 14px;
+        font-weight: normal;
+        color: $blue-medium;
+    }
+    &__quote {
+        font-size: 18px;
+        line-height: 32px;
+        color: $blue-medium;
+        background-image: url('../../../assets/images/left-quote-light-blue.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        padding-top: 25px;
+    }
+    @media (max-width: 768px) {
+        &-content {
+            padding: 75px 60px 60px 60px;
+        }
+        &-content {
+            padding: 60px 30px 30px 30px;
+        }
+    }
+}
