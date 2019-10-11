@@ -36,7 +36,7 @@
 				</a>
 			</div>
 			<div class="col-4 col-xs-3 text-right">
-				<button class="header__toggle">
+				<button class="header__toggle" (onCloseMenu)="clickEvent($event)">
 					<span class="header__toggle--text">{{ 'HEADER.BUTTONS.MENU' | translate }}</span>
 					<div class="header__toggle--icon">
 						<span></span>
@@ -47,5 +47,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- <app-menu></app-menu> -->
+	<app-menu></app-menu>
 </header>

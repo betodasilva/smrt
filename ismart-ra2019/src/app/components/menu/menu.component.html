@@ -1,4 +1,11 @@
 <div class="menu">
+    <button class="menu__toggle" (click)="fecharMenu()">
+        <span class="menu__toggle--text">{{ 'HEADER.BUTTONS.MENU' | translate }}</span>
+        <div class="menu__toggle--icon">
+            <span></span>
+            <span></span>
+        </div>
+    </button>
     <ul class="menu__list">
         <li class="menu__item">
             <a [routerLink]="['/home']">
@@ -22,7 +29,7 @@
         </li>
     </ul>
     <ul class="menu__language">
-        <li class="menu__language--item">PT</li>
+        <li class="menu__language--item menu__language--active">PT</li>
         <li class="menu__language--item">EN</li>
     </ul>
 </div>
