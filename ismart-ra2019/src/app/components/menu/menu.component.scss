@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .menu {
-    position: absolute;
+    position: fixed;
     background-color: $blue-medium;
     right: 0;
     top: 0;
@@ -55,6 +55,7 @@
             margin-right: 20px;
             color: $grey;
             cursor: pointer;
+            text-transform: uppercase;
             &:hover {
                 color: $orange;
             }
@@ -62,6 +63,7 @@
         &--active {
             color: $orange;
             text-decoration: underline;
+            pointer-events: none;
         }
     }
     &__toggle {
