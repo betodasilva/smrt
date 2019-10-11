@@ -26,6 +26,8 @@
 			display: inline-block;
 			margin-top: -2px;
 			margin-right: 4px;
+			color: inherit;
+			fill: currentColor;
 		}
 		&:last-child{
 			margin-right: 0;
@@ -37,7 +39,7 @@
 			outline: none;
 		}
 		&--chapters {
-			&:hover, &:focus {
+			&:hover {
 				.header__button--icon {
 					use {
 						fill: $orange;
@@ -107,9 +109,7 @@
 	}
 	&.chapters-opened {
 		.header__button--icon {
-			use {
-				fill: $orange;
-			}
+			fill: $orange;
 		}
 	}
 	@media (max-width: 800px) {
