@@ -7,9 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public show : boolean = false;
-  public status: boolean = false;
-
+  private hasChaptersOpened: boolean = false;
   private _availableLanguage: string;
 
   private get availableLanguage(){
@@ -46,10 +44,6 @@ export class HeaderComponent implements OnInit {
   }
   
   toggle($event) {
-    this.show = !this.show;
-  }
-
-	clickEvent($event){
-    this.status = !this.status;    
+    this.hasChaptersOpened = !this.hasChaptersOpened;
   }
 }
