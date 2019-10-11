@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   private hasMenuOpened: boolean = false;
   private hasChaptersOpened: boolean = false;
-  private _availableLanguage: string;
+  private _availableLanguage: string = '';
 
   private get availableLanguage(){
     return this._availableLanguage;
@@ -31,11 +31,14 @@ export class HeaderComponent implements OnInit {
     @Inject(DOCUMENT) private document: any,
     @Inject(WINDOW) private window: Window
   ) {
-    this.availableLanguage = this.setAvailableLanguage(translate.currentLang, translate.getLangs());
+    // this.availableLanguage = this.setAvailableLanguage(translate.currentLang, translate.getLangs());
   }
 
   ngOnInit() {
-    
+    this.translate.onLangChange.subscribe( change => {
+      console.log( change );
+      this.availableLanguage = this.setAvailableLanguage( change.lang, this.translate.getLangs() );
+    })
   }
 
   /**
