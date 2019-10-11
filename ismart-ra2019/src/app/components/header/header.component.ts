@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
   public show : boolean = false;
+  public status: boolean = false;
 
   private _availableLanguage: string;
 
@@ -46,6 +47,9 @@ export class HeaderComponent implements OnInit {
   
   toggle($event) {
     this.show = !this.show;
-    $('header').toggleClass('chapters-opened');
+  }
+
+	clickEvent($event){
+    this.status = !this.status;    
   }
 }

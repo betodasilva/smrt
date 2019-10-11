@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [ngClass]="status ? 'menu__open' : 'menu__close'">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 			<div class="col-4 col-xs-3">
@@ -32,7 +32,7 @@
 				</a>
 			</div>
 			<div class="col-4 col-xs-3 text-right">
-				<button class="header__toggle">
+				<button class="header__toggle" (onCloseMenu)="clickEvent($event)">
 					<span class="header__toggle--text">{{ 'HEADER.BUTTONS.MENU' | translate }}</span>
 					<div class="header__toggle--icon">
 						<span></span>
@@ -43,5 +43,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- <app-menu></app-menu> -->
+	<app-menu></app-menu>
 </header>
