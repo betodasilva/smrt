@@ -31,9 +31,10 @@
     <ul class="menu__language">
         <li 
             class="menu__language--item"
-            [class.menu__language--active]="activeLang === 'pt'">PT</li>
-        <li 
-            class="menu__language--item"
-            [class.menu__language--active]="activeLang === 'en'">EN</li>
+            *ngFor="let lang of translate.getLangs()"
+            [class.menu__language--active]="translate.currentLang === lang"
+            (click)="changeLanguage(lang)">
+            {{ lang.split('-')[0] }}
+        </li>
     </ul>
 </div>

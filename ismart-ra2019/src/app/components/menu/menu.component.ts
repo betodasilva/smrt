@@ -28,6 +28,10 @@ export class MenuComponent implements OnInit {
     })
   }
 
+  changeLanguage(lang){
+    this.translate.use( lang );
+  }
+
   fecharMenu(){
     this.onCloseMenu.emit(true);
   }
