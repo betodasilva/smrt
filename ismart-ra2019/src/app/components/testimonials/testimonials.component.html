@@ -5,12 +5,12 @@
                 <h3 class="testimonials__title">Testemunhos</h3>
                 <ngx-slick-carousel class="testimonials__carousel" 
                     #slickModal="slick-carousel" 
-                    [config]="slideConfig" 
-                    (init)="slickInit($event)"
-                    (breakpoint)="breakpoint($event)"
-                    (afterChange)="afterChange($event)"
-                    (beforeChange)="beforeChange($event)">
-                    <div ngxSlickItem *ngFor="let slide of slides" class="testimonials__single">
+                    [config]="slideConfig">
+                    <div 
+                        ngxSlickItem 
+                        *ngFor="let slide of slides" 
+                        class="testimonials__single"
+                        (click)="onTestimonialClick(slide)">
                         <figure class="testimonials__img">
                             <img src="{{ slide.img }}" alt="">
                         </figure>

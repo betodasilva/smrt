@@ -1,21 +1,27 @@
-<div class="modal" tabindex="-1" role="dialog" id="exampleModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal__exit" data-dismiss="modal" aria-label="Fechar"><img src="assets/images/plus.svg" alt=""></div>
-            <div class="modal__top">
-                <button type="button" class="btn slick-prev slick-arrow"><img src="assets/images/arrow.svg"></button>
-                <figure class="modal__img">
-                    <img src="http://placehold.it/350x150/000000" alt="">
-                </figure>
-                <button type="button" class="btn slick-next slick-arrow"><img src="assets/images/arrow.svg"></button>
-            </div>
-            <div class="modal__text">
-                <h4 class="modal__name">Isabela Julio de Moraes</h4>
-                <p class="modal__about">18 anos, estudante do Colégio Objetivo, em São José dos Campos – SP</p>
-            </div>
-            <div class="modal__quote">
-                <p>"Conheci o projeto através de um amigo chamado Vinicius, que estudava na minha escola de origem e em uma das instituições parceiras do Ismart. Foi ele que meu incentivou e ajudou com todas as etapas do processo seletivo."</p>
-            </div>
-        </div>
+<ng-template #template>
+    <div class="modal__exit" data-dismiss="modal" aria-label="Fechar"><img src="assets/images/plus.svg" alt=""></div>
+    <div class="modal__top">
+        <button 
+            type="button" 
+            class="btn slick-prev slick-arrow"
+            (click)="onModalPrevClick()">
+                <img src="assets/images/arrow.svg">
+        </button>
+        <figure class="modal__img">
+            <img src="http://placehold.it/350x150/000000" alt="">
+        </figure>
+        <button 
+            type="button" 
+            class="btn slick-next slick-arrow"
+            (click)="onModalNextClick()">
+                <img src="assets/images/arrow.svg">
+        </button>
     </div>
-</div>
+    <div class="modal__text">
+        <h4 class="modal__name">{{ content.name }}</h4>
+        <p class="modal__about">18 anos, estudante do Colégio Objetivo, em São José dos Campos – SP</p>
+    </div>
+    <div class="modal__quote">
+        <p>"Conheci o projeto através de um amigo chamado Vinicius, que estudava na minha escola de origem e em uma das instituições parceiras do Ismart. Foi ele que meu incentivou e ajudou com todas as etapas do processo seletivo."</p>
+    </div>
+</ng-template>

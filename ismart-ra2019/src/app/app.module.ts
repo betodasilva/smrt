@@ -27,6 +27,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './services/window.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -66,7 +67,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+    ModalModule.forRoot()
   ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
