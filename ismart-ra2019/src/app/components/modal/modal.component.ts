@@ -28,7 +28,6 @@ export class ModalComponent implements OnInit {
 
   ngOnInit() {
     this.testimonial.subscribe( value => {
-      console.log( value );
       this.content = value;
     })
   }
