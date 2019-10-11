@@ -8,7 +8,7 @@
                 <img src="assets/images/arrow.svg">
         </button>
         <figure class="modal__img">
-            <img src="http://placehold.it/350x150/000000" alt="">
+            <img [src]="content.photo" alt="">
         </figure>
         <button 
             type="button" 
@@ -19,9 +19,9 @@
     </div>
     <div class="modal__text">
         <h4 class="modal__name">{{ content.name }}</h4>
-        <p class="modal__about">18 anos, estudante do Colégio Objetivo, em São José dos Campos – SP</p>
+        <p class="modal__about">{{ content.excerpt }}</p>
     </div>
     <div class="modal__quote">
-        <p>"Conheci o projeto através de um amigo chamado Vinicius, que estudava na minha escola de origem e em uma das instituições parceiras do Ismart. Foi ele que meu incentivou e ajudou com todas as etapas do processo seletivo."</p>
+        <p>"{{ content.testimonial }}"</p>
     </div>
 </ng-template>

@@ -79,5 +79,13 @@
 	}
 	@media (max-width: 540px) {
 		padding-top: 30px;
+		&__title {
+			font-size: 21px;
+		}
+		&__item {
+			&--content {
+				padding-left: 0;
+			}
+		}
 	}
 }
