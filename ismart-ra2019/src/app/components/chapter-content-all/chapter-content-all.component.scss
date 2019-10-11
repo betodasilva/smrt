@@ -11,13 +11,13 @@
         text-transform: uppercase;
         border-radius: 3px;
         display: inline-block;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
     &__title {
         font-size: 56px;
         line-height: 1.14;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         color: $blue-medium;
         font-family: $montserrat;
         &--section {
@@ -28,7 +28,7 @@
             color: $blue-medium;
             letter-spacing: -0.5px;
             margin-bottom: 20px;
-            margin-top: 30px;
+            margin-top: 70px;
         }
     }
     &__subtitle {
@@ -37,7 +37,7 @@
         color: $blue-medium;
         text-transform: uppercase;
         font-weight: normal;
-        margin-bottom: 20px;
+        margin-bottom: 32px;
     }
     .row {
         &:first-child {
@@ -47,7 +47,7 @@
                         font-size: 88px;
                         color: $orange;
                         float: left;
-                        line-height: 89px;
+                        line-height: 90px;
                         margin-right: 20px;
                     }
                 }
