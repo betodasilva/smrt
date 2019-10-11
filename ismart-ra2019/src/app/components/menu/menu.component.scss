@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .menu {
-    position: absolute;
+    position: fixed;
     background-color: $blue-medium;
     right: 0;
     top: 0;
