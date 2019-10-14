@@ -24,6 +24,7 @@
     }
     &__img {
         margin: 40px 0;
+        z-index: 1;
         img {
             width: 100%;
             max-height: auto;
@@ -143,6 +144,7 @@
     transition: top 200ms ease;
     max-width: 90%;
     margin: 0 auto;
+    z-index: 0;
     &.fixed {
         position: fixed;
         left: 0;

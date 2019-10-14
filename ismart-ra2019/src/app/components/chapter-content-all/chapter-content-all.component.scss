@@ -100,9 +100,9 @@
             }
             &.blockquote__white {
                 background-color: $clear;
-                padding-top: 70px;
+                padding: 90px 0 20px 0;
                 &:before {
-                    top: 0;
+                    top: 20px;
                 }
             }
         }
@@ -229,6 +229,7 @@
     transition: top 200ms ease;
     max-width: 90%;
     margin: 0 auto;
+    z-index: 0;
     &.fixed {
         position: fixed;
         left: 0;
