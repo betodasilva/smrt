@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter
+} from '@angular/core';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -7,55 +13,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  slides = [
-    {img: "http://placehold.it/350x150/000000"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x150/333333"},
-    {img: "http://placehold.it/350x150/666666"}
-  ];
-  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1, "infinite": true, "arrows": true, "centerMode": false, "prevArrow": "<button type='button' class='btn slick-prev'><img src='assets/images/arrow.svg'></button>", "nextArrow": "<button type='button' class='btn slick-next'><img src='assets/images/arrow.svg'></button>",
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
+  @Output('onTestimonialCardClick') onTestimonialCardClick: EventEmitter<any> = new EventEmitter();
+  private slides = [];
+  private slideConfig = {
+    "slidesToShow": 3,
+    "slidesToScroll": 1,
+    "infinite": true,
+    "arrows": true,
+    "centerMode": false,
+    "prevArrow": "<button type='button' class='btn slick-prev'><img src='assets/images/arrow.svg'></button>",
+    "nextArrow": "<button type='button' class='btn slick-next'><img src='assets/images/arrow.svg'></button>",
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]};
-  
-  addSlide() {
-    this.slides.push({img: "http://placehold.it/350x150/777777"})
+    ]
+  };
+
+  constructor(private testimonials: TestimonialsService) {
+    this.slides = testimonials.getAll();
+  }
+
+  ngOnInit() {}
+  onTestimonialClick(testimonial) {
+    this.testimonials.current = testimonial;
+    this.onTestimonialCardClick.emit(testimonial);
   }
   
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
-  
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-  
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-  
-  afterChange(e) {
-    console.log('afterChange');
-  }
-  
-  beforeChange(e) {
-    console.log('beforeChange');
-  }
 }

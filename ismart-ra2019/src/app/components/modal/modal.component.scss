@@ -1,16 +1,17 @@
 @import "../../../variables.scss";
 
 .modal {
-    &-dialog {
+    ::ng-deep &-dialog {
         max-width: 800px;
     }
-    &-content {
+    ::ng-deep &-content {
         padding: 85px 100px 65px 100px;
     }
     &__exit {
         position: absolute;
         top: 30px;
         right: 30px;
+        cursor: pointer;
     }
     &__top {
         display: flex;

@@ -5,54 +5,20 @@
                 <h3 class="testimonials__title">Testemunhos</h3>
                 <ngx-slick-carousel class="testimonials__carousel" 
                     #slickModal="slick-carousel" 
-                    [config]="slideConfig" 
-                    (init)="slickInit($event)"
-                    (breakpoint)="breakpoint($event)"
-                    (afterChange)="afterChange($event)"
-                    (beforeChange)="beforeChange($event)">
-                    <div ngxSlickItem *ngFor="let slide of slides" class="testimonials__single">
+                    [config]="slideConfig">
+                    <div 
+                        ngxSlickItem 
+                        *ngFor="let slide of slides" 
+                        class="testimonials__single"
+                        (click)="onTestimonialClick(slide)">
                         <figure class="testimonials__img">
-                            <img src="{{ slide.img }}" alt="">
+                            <img [src]="slide.photo" [alt]="slide.name">
                         </figure>
-                        <h4 class="testimonials__name">Isabela Julio de Moraes</h4>
-                        <p class="testimonials__about">18 anos, estudante do Colégio Objetivo, em São José dos Campos – SP</p>
+                        <h4 class="testimonials__name">{{ slide.name }}</h4>
+                        <p class="testimonials__about">{{ slide.excerpt }}</p>
                         <a href="" data-toggle="modal" data-target="#exampleModal" class="testimonials__link">Ver depoimento</a>
                     </div>
                 </ngx-slick-carousel>
-                <!-- <div class="testimonials__carousel">
-                    <div class="testimonials__single">
-                        <figure class="testimonials__img">
-                            <img src="{{ slide.img }}" alt="">
-                        </figure>
-                        <h4 class="testimonials__name">Isabela Julio de Moraes</h4>
-                        <p class="testimonials__about">18 anos, estudante do Colégio Objetivo, em São José dos Campos – SP</p>
-                        <a href="" class="testimonials__link">Ver depoimento</a>
-                    </div>
-                    <div class="testimonials__single">
-                        <figure class="testimonials__img">
-                            <img src="{{ slide.img }}" alt="">
-                        </figure>
-                        <h4 class="testimonials__name">Isabela Julio de Moraes</h4>
-                        <p class="testimonials__about">18 anos, estudante do Colégio Objetivo</p>
-                        <a href="" class="testimonials__link">Ver depoimento</a>
-                    </div>
-                    <div class="testimonials__single">
-                        <figure class="testimonials__img">
-                            <img src="{{ slide.img }}" alt="">
-                        </figure>
-                        <h4 class="testimonials__name">Isabela Julio de Moraes</h4>
-                        <p class="testimonials__about">18 anos, estudante do Colégio Objetivo, em São José dos Campos – SP</p>
-                        <a href="" class="testimonials__link">Ver depoimento</a>
-                    </div>
-                    <div class="testimonials__single">
-                        <figure class="testimonials__img">
-                            <img src="{{ slide.img }}" alt="">
-                        </figure>
-                        <h4 class="testimonials__name">Isabela Julio de Moraes</h4>
-                        <p class="testimonials__about">18 anos, estudante do Colégio Objetivo, em São José dos Campos – SP</p>
-                        <a href="" class="testimonials__link">Ver depoimento</a>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
