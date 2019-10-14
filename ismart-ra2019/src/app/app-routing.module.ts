@@ -10,7 +10,7 @@ const routes: Routes = [
     pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'chapter-intern-simple', component: ChapterInternSimpleComponent },
-  { path: 'chapter-intern', component: ChapterInternComponent }
+  { path: '04-trajetorias-ismart', component: ChapterInternComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];
 
