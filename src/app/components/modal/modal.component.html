@@ -1,0 +1,27 @@
+<ng-template #template>
+    <div class="modal__exit" data-dismiss="modal" aria-label="Fechar" (click)="modalRef.hide()"><img src="assets/images/plus.svg" alt=""></div>
+    <div class="modal__top">
+        <button 
+            type="button" 
+            class="btn slick-prev slick-arrow"
+            (click)="onModalPrevClick()">
+                <img src="assets/images/arrow.svg">
+        </button>
+        <figure class="modal__img">
+            <img [src]="content.photo" alt="content.name">
+        </figure>
+        <button 
+            type="button" 
+            class="btn slick-next slick-arrow"
+            (click)="onModalNextClick()">
+                <img src="assets/images/arrow.svg">
+        </button>
+    </div>
+    <div class="modal__text">
+        <h4 class="modal__name">{{ content.name }}</h4>
+        <p class="modal__about">{{ content.excerpt }}</p>
+    </div>
+    <div class="modal__quote">
+        <p>"{{ content.testimonial }}"</p>
+    </div>
+</ng-template>

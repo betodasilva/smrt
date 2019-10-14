@@ -1,0 +1,78 @@
+@import "../../../variables.scss";
+
+.overview{
+	width: 100%;
+	height: auto;
+	padding-top: 180px;
+	padding-bottom: 115px;
+	background-color: #028ed4;
+	background-image: linear-gradient(to right, rgba(1, 36, 97, 0.3), rgba(1, 36, 97, 0));
+	position: relative;
+	overflow: hidden;
+	&:before{
+		content: url('../../../assets/images/overview.svg');
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+	}
+	&__tag{
+		font-size: 16px;
+		color: $clear;
+		font-family: $montserrat;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	&__title{
+		font-size: 56px;
+		color: $clear;
+		font-family: $montserrat;
+		font-weight: 700;
+		line-height: 1.15;
+		letter-spacing: -0.5px;
+		margin-bottom: 15px;
+	}
+	&__excerpt{
+		font-size: 18px;
+		color: $clear;
+		line-height: 1.80;
+		margin-bottom: 0;
+	}
+	&__button{
+		display: inline-block;
+		border: 2px solid $clear;
+		border-radius: 5px;
+		padding: 25px 30px;
+		font-size: 14px;
+		color: $clear;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-top: 40px;
+		transition: all 0.2s linear;
+		img{
+			margin-left: 5px;
+		}
+		&:hover{
+			text-decoration: none;
+			border-color: $blue-dark;
+			background: $blue-dark;
+		}
+	}
+	@media (max-width: 540px) {
+		&__tag {
+			font-size: 14px;
+		}
+		&__title {
+			font-size: 24px;
+			line-height: 1.17;
+		}
+		&__excerpt {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+		&__button {
+			margin-top: 24px;
+			padding: 15px 18px;
+		}
+	}
+}

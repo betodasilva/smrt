@@ -1,0 +1,120 @@
+@import "../../../variables.scss";
+
+.menu {
+    position: fixed;
+    background-color: $blue-medium;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    padding: 70px 100px 50px 70px;
+    visibility: hidden;
+    transition: all .5s ease-out;
+    background-image: url('../../../assets/images/owl.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        max-width: 180px;
+        position: relative;
+        padding-bottom: 1px;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 32px;
+            height: 2px;
+            background-color: #5A6B87;
+        }
+    }
+    &__item {
+        margin-bottom: 32px;
+        font-size: 16px;
+    }
+    &__link {
+        color: $clear;
+        line-height: normal;
+        &--strong {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        &:hover, &:focus {
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+    &__language {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        margin-top: 30px;
+        &--item {
+            margin-right: 20px;
+            color: $grey;
+            cursor: pointer;
+            text-transform: uppercase;
+            &:hover {
+                color: $orange;
+            }
+        }
+        &--active {
+            color: $orange;
+            text-decoration: underline;
+            pointer-events: none;
+        }
+    }
+    &__toggle {
+        position: absolute;
+        right: 15%;
+        top: 30px;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        font-family: $montserrat;
+        color: $clear;
+        transition: all 0.2s ease-out;
+        &--icon{
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 5px;
+			span{
+				display: block;
+				width: 16px;
+				height: 2px;
+				background: $clear;
+				border-radius: 2px;
+                margin-bottom: -2px;
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+				&:last-child{
+                    margin-bottom: 0;
+                    transform: rotate(-45deg);
+				}
+			}
+		}
+		&:hover{
+			color: $orange;
+		}
+		&:focus{
+			outline: none;
+		}
+    }
+    @media (max-width:540px) {
+        width: 100vw;
+        padding: 70px 70px 50px 70px;
+        overflow: auto;
+        &__toggle {
+            right: 15px;
+            top: 28px;
+            &--text {
+                display: none;
+            }
+        }
+    }
+}

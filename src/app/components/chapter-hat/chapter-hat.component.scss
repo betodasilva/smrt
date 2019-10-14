@@ -1,0 +1,31 @@
+@import "../../../variables.scss";
+
+.chapter-hat {
+    margin-top: 75px;
+    text-align: center;
+    padding: 70px 0;
+    background-position: center;
+    background-size: cover;
+    &__title {
+        color: $clear;
+        text-transform: uppercase;
+        h2 {
+            font-size: 14px;
+            font-family: $montserrat;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: $montserrat;
+        }
+    }
+    @media (max-width: 540px) {
+        &__title {
+            h1 {
+                font-size: 21px;
+            }
+        }
+    }
+}

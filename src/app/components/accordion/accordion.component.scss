@@ -1,0 +1,57 @@
+@import "../../../variables.scss";
+
+.accordion {
+    margin-bottom: 40px;
+    &__card {
+        border-bottom: solid 1px #b7c1d2;
+        &--header {
+            padding: 25px 0;
+        }
+        &--link {
+            font-size: 18px;
+            font-weight: bold;
+            color: $blue-medium;
+            font-family: $montserrat;
+            line-height: 1.33;
+            letter-spacing: 1.13px;
+            text-transform: uppercase;
+            padding-left: 0;
+            &[aria-expanded="true"] {
+                .plus {
+                    transform: rotate(90deg);
+                }
+            }
+            &:focus {
+                text-decoration: none;
+            }
+            &:hover {
+                text-decoration: none;
+                .plus {
+                    path {
+                        fill: #f2665e;
+                    }
+                }
+            }
+            .plus {
+                transform: rotate(45deg);
+                margin-right: 20px;
+                transition: 0.3s;
+            }
+        }
+        &--body {
+            padding: 0 0 40px 45px;
+            font-size: 18px;
+            line-height: 1.78;
+            color: $blue-medium;
+        }
+    }
+    @media (max-width: 768px) {
+        &__card {
+            &--body {
+                font-size: 16px;
+                line-height: 1.5;
+                padding-left: 0;
+            }
+        }
+    }
+}

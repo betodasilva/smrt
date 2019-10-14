@@ -1,0 +1,40 @@
+<div class="menu">
+    <button class="menu__toggle" (click)="fecharMenu()">
+        <span class="menu__toggle--text">{{ 'HEADER.BUTTONS.MENU' | translate }}</span>
+        <div class="menu__toggle--icon">
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+    <ul class="menu__list">
+        <li class="menu__item">
+            <a [routerLink]="['/home']" (click)="fecharMenu()">
+                <img src="assets/images/logo-footer.svg" alt="" class="menu__item--brand">
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="" class="menu__link menu__link--strong">Relatório de atividades 2018-2019</a>
+        </li>
+        <li class="menu__item">
+            <a href="" class="menu__link">Página inicial</a>
+        </li>
+        <li class="menu__item">
+            <a href="" class="menu__link">Download do Relatório 2018-2019</a>
+        </li>
+        <li class="menu__item">
+            <a href="" class="menu__link">Versões anteriores</a>
+        </li>
+        <li class="menu__item">
+            <a href="" class="menu__link">Sobre a Ismart</a>
+        </li>
+    </ul>
+    <ul class="menu__language">
+        <li 
+            class="menu__language--item"
+            *ngFor="let lang of translate.getLangs()"
+            [class.menu__language--active]="translate.currentLang === lang"
+            (click)="changeLanguage(lang)">
+            {{ lang.split('-')[0] }}
+        </li>
+    </ul>
+</div>
