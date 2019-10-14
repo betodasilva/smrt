@@ -1,6 +1,10 @@
 <article class="chapter-content">
-    <div class="container position-relative">
-        <ul class="share">
+    <div 
+        class="fix-scroll" 
+        [class.fixed]="isFloatContainerFixed"
+        #floatContainer>
+        <ul 
+            class="share">
             <li class="share--item">
                 <a href="#" class="share--link">
                     <i class="fa fa-facebook-f"></i>
