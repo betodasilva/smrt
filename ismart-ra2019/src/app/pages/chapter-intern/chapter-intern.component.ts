@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, ElementRef } from '@angular/core';
 import { TestimonialsService } from "../../services/testimonials/testimonials.service";
 import { ModalComponent } from "../../components/modal/modal.component";
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-chapter-intern',
@@ -9,11 +10,28 @@ import { ModalComponent } from "../../components/modal/modal.component";
 })
 export class ChapterInternComponent implements OnInit {
 
+  public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
+  @ViewChild('testimonialComponent', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('modal', {static:false}) modal: ModalComponent;
   
   constructor(private testimonials: TestimonialsService) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit(){
+    this.sendTestimonialPosition();
+  }
+
+  sendTestimonialPosition(){
+    setTimeout( () => {
+      const { offsetTop, offsetHeight } = this.testimonialComponent.nativeElement;
+      console.log( offsetTop, offsetHeight)
+      this.testimonialPosition.next({
+        offsetTop,
+        offsetHeight
+      });
+    }, 1000);
   }
 
   onPrevTestimonial(){

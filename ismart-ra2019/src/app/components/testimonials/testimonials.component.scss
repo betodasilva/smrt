@@ -1,5 +1,9 @@
 @import "../../../variables.scss";
 
+:host {
+	display: block;
+}
+
 .testimonials {
     background-color: #e6e9ef;
     padding: 70px 0;
