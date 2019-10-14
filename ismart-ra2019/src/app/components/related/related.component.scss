@@ -12,6 +12,7 @@
     }
     &__single {
         position: relative;
+        display: block;
         &--title {
             position: absolute;
             bottom: 30px;
