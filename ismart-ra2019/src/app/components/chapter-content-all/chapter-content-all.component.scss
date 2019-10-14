@@ -98,6 +98,13 @@
                     height: 8px;
                 }
             }
+            &.blockquote__white {
+                background-color: $clear;
+                padding-top: 70px;
+                &:before {
+                    top: 0;
+                }
+            }
         }
         &__image {
             color: $clear;
