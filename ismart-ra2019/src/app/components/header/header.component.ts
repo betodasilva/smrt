@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ViewChild, ElementRef, Inject } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef, Inject, } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
 import { WINDOW } from "../../services/window.service";
@@ -6,7 +6,10 @@ import { WINDOW } from "../../services/window.service";
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  host: {
+    '(document:click)': 'onClick($event)',
+  },
 })
 export class HeaderComponent implements OnInit {
 
@@ -15,7 +18,7 @@ export class HeaderComponent implements OnInit {
   private headerSrollBefore: number = 0;
   private headerStyle: { top } = { top: '0px' };
 
-  private hasMenuOpened: boolean = false;
+  public hasMenuOpened: boolean = false;
   private hasChaptersOpened: boolean = false;
   private _availableLanguage: string = '';
 
@@ -28,6 +31,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private translate: TranslateService,
+    private _eref: ElementRef,
     @Inject(DOCUMENT) private document: any,
     @Inject(WINDOW) private window: Window
   ) {
@@ -98,5 +102,13 @@ export class HeaderComponent implements OnInit {
     }
 
     this.headerSrollBefore = wScrollCurrent;
+  }
+
+  onClick(event) {
+    if (!this._eref.nativeElement.contains(event.target)) {
+      if (this.hasMenuOpened == true) {
+        this.toggleMenu();
+      }
+    }
   }
 }

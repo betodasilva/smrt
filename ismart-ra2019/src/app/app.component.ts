@@ -8,10 +8,19 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	constructor(private translate: TranslateService){
+	constructor(private translate: TranslateService, private router: Router){
 		translate.addLangs(['pt-BR', 'en'])
 		translate.setDefaultLang('pt-BR');
 		
 		translate.use('pt-BR');
 	}
+
+	ngOnInit() {
+        this.router.events.subscribe((evt) => {
+            if (!(evt instanceof NavigationEnd)) {
+                return;
+            }
+            window.scrollTo(0, 0)
+        });
+    }
 }
