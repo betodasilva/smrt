@@ -26,12 +26,11 @@ export class ChapterInternComponent implements OnInit {
   sendTestimonialPosition(){
     setTimeout( () => {
       const { offsetTop, offsetHeight } = this.testimonialComponent.nativeElement;
-      console.log( offsetTop, offsetHeight)
       this.testimonialPosition.next({
         offsetTop,
         offsetHeight
       });
-    }, 1000);
+    }, 2000);
   }
 
   onPrevTestimonial(){
