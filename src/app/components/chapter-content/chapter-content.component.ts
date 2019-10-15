@@ -90,6 +90,10 @@ export class ChapterContentComponent implements OnInit {
       'width',
       '100%',
     )
+    this.renderer.removeStyle(
+      this.floatContainer.nativeElement,
+      'transform'
+    )
   }
 
   removeAbsolutePosition(){
