@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener, Inject, Input, Renderer2 } from '@angular/core';
 import { WINDOW } from 'src/app/services/window.service';
 import { Subject, Subscription } from 'rxjs';
+import { EmitterService } from 'src/app/services/emitter/emitter.service';
 
 @Component({
   selector: 'app-chapter-content-all',
@@ -37,6 +38,21 @@ export class ChapterContentAllComponent implements OnInit {
         this.subscription.unsubscribe();
       }
     });
+
+    EmitterService.get('headerOpen').subscribe( isOpen => {
+      if ( isOpen ) {
+        this.renderer.setStyle(
+          this.floatContainer.nativeElement,
+          'transform',
+          'translateY(100px)'
+        )
+      } else {
+        this.renderer.removeStyle(
+          this.floatContainer.nativeElement,
+          'transform'
+        )
+      }
+    })
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -77,6 +93,10 @@ export class ChapterContentAllComponent implements OnInit {
       this.floatContainer.nativeElement,
       'width',
       '100%',
+    )
+    this.renderer.removeStyle(
+      this.floatContainer.nativeElement,
+      'transform'
     )
   }
 

@@ -226,7 +226,8 @@
 .fix-scroll {
     position: relative;
     top: 0;
-    transition: top 200ms ease;
+    transform: translateY(0);
+    transition: top 200ms ease, transform 200ms ease;
     max-width: 90%;
     margin: 0 auto;
     z-index: 2;
@@ -234,7 +235,7 @@
         position: fixed;
         left: 0;
         right: 0;
-        top: 100px;
+        top: 20px;
     }
 
     @media (min-width: 1300px) {
