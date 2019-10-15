@@ -686,6 +686,7 @@ var ChapterContentComponent = /** @class */ (function () {
         this.renderer.setStyle(this.floatContainer.nativeElement, 'top', this.floatContainerEndPos + "px");
         this.renderer.setStyle(this.floatContainer.nativeElement, 'position', 'absolute');
         this.renderer.setStyle(this.floatContainer.nativeElement, 'width', '100%');
+        this.renderer.removeStyle(this.floatContainer.nativeElement, 'transform');
     };
     ChapterContentComponent.prototype.removeAbsolutePosition = function () {
         var _this = this;
