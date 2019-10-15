@@ -41,7 +41,7 @@ export class ChapterContentComponent implements OnInit {
     setTimeout(() => {
       this.floatContainerEndPos = this.articleContainer.nativeElement.offsetHeight - 220;
 
-    }, 1000);
+    }, 2000);
   }
 
   @HostListener('window:scroll', ['$event'])
