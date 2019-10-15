@@ -28,6 +28,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './services/window.service';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { EmitterService } from './services/emitter/emitter.service';
 
 
 
@@ -70,7 +71,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   }),
     ModalModule.forRoot()
   ],
-  providers: [WINDOW_PROVIDERS],
+  providers: [WINDOW_PROVIDERS, EmitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
