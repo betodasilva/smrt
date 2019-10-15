@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef, Inject, } from 
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
 import { WINDOW } from "../../services/window.service";
+import { EmitterService } from 'src/app/services/emitter/emitter.service';
 
 @Component({
   selector: 'app-header',
@@ -86,19 +87,25 @@ export class HeaderComponent implements OnInit {
         wScrollDiff    = this.headerSrollBefore - wScrollCurrent,
         elTop          = parseInt(this.headerStyle.top) + wScrollDiff;
 
-    if( wScrollCurrent <= 0 ) // scrolled to the very top; element sticks to the top
-        this.headerStyle.top = '0px';
- 
-    else if( wScrollDiff > 0 ) // scrolled up; element slides in
-        this.headerStyle.top = ( elTop > 0 ? 0 : elTop ) + 'px';
- 
+    if( wScrollCurrent <= 0 ) {
+      this.headerStyle.top = '0px';
+      EmitterService.get('headerOpen').emit(false);
+    }
+    else if( wScrollDiff > 0 ) {
+      this.headerStyle.top = ( elTop > 0 ? 0 : elTop ) + 'px';
+      EmitterService.get('headerOpen').emit(true);
+    }
     else if( wScrollDiff < 0 ) // scrolled down
     {
-        if( wScrollCurrent + wHeight >= dHeight - elHeight )  // scrolled to the very bottom; element slides in
+        if( wScrollCurrent + wHeight >= dHeight - elHeight )  {
             this.headerStyle.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
+            EmitterService.get('headerOpen').emit(true);
+        }
  
-        else // scrolled down; element slides out
+        else {
             this.headerStyle.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
+            EmitterService.get('headerOpen').emit(false);
+        }
     }
 
     this.headerSrollBefore = wScrollCurrent;

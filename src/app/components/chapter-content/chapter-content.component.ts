@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2, HostListene
 import { WINDOW } from 'src/app/services/window.service';
 import { Injectable, Inject } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
+import { EmitterService } from 'src/app/services/emitter/emitter.service';
 
 @Component({
   selector: 'app-chapter-content',
@@ -27,14 +28,20 @@ export class ChapterContentComponent implements OnInit {
 
   ngOnInit() {
     this.floatContainerStartPos = this.floatContainer.nativeElement.offsetTop;
-    console.log( this.articleContainer.nativeElement.offsetHeight );
-    // this.subscription = this.testimonialPosition.subscribe( ({offsetTop, offsetHeight}) => {
-    //   if ( !(offsetTop && offsetHeight) ) return;
-    //   this.floatContainerEndPos = offsetTop + ( offsetHeight / 2 ) - 210;
-    //   if ( this.subscription ) {
-    //     this.subscription.unsubscribe();
-    //   }
-    // });
+    EmitterService.get('headerOpen').subscribe( isOpen => {
+      if ( isOpen ) {
+        this.renderer.setStyle(
+          this.floatContainer.nativeElement,
+          'transform',
+          'translateY(100px)'
+        )
+      } else {
+        this.renderer.removeStyle(
+          this.floatContainer.nativeElement,
+          'transform'
+        )
+      }
+    })
   }
 
   ngAfterViewInit(){
