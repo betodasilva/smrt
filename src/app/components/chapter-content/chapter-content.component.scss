@@ -142,7 +142,8 @@
 .fix-scroll {
     position: relative;
     top: 0;
-    transition: top 200ms ease;
+    transform: translateY(0);
+    transition: top 200ms ease, transform 200ms ease;
     max-width: 90%;
     margin: 0 auto;
     z-index: 0;

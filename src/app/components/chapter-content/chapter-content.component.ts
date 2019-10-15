@@ -28,19 +28,17 @@ export class ChapterContentComponent implements OnInit {
 
   ngOnInit() {
     this.floatContainerStartPos = this.floatContainer.nativeElement.offsetTop;
-    console.log( this.articleContainer.nativeElement.offsetHeight );
     EmitterService.get('headerOpen').subscribe( isOpen => {
-      console.log('header open', isOpen);
       if ( isOpen ) {
         this.renderer.setStyle(
           this.floatContainer.nativeElement,
-          'top',
-          '100px'
+          'transform',
+          'translateY(100px)'
         )
       } else {
         this.renderer.removeStyle(
           this.floatContainer.nativeElement,
-          'top'
+          'transform'
         )
       }
     })
