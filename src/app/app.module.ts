@@ -3,19 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+// Pages
+import { HomeComponent } from './pages/home/home.component';
+import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-intern-simple.component';
+import { MissaoComponent } from './pages/02-missao/missao.component';
+import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderComponent } from './components/slider/slider.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { ChaptersComponent } from './components/chapters/chapters.component';
-import { ChapterInternSimpleComponent } from './pages/chapter-intern-simple/chapter-intern-simple.component';
 import { ChapterHatComponent } from './components/chapter-hat/chapter-hat.component';
 import { ChapterContentComponent } from './components/chapter-content/chapter-content.component';
 import { RelatedComponent } from './components/related/related.component';
-import { ChapterInternComponent } from './pages/chapter-intern/chapter-intern.component';
 import { ChapterContentAllComponent } from './components/chapter-content-all/chapter-content-all.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
@@ -29,8 +32,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './services/window.service';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EmitterService } from './services/emitter/emitter.service';
-import { MissaoComponent } from './pages/missao/missao.component';
-
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -46,7 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     OverviewComponent,
     ChaptersComponent,
-    ChapterInternSimpleComponent,
+    ChapterInternSimpleComponentm,
     ChapterHatComponent,
     ChapterContentComponent,
     RelatedComponent,
