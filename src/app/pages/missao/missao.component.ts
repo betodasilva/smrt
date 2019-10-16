@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class MissaoComponent implements OnInit {
 
   private chapterHatInfo = {
-    'image': 'assets/images/chapter-hat.jpg',
-    'title': 'Capítulo 01',
-    'subtitle': 'Mensagem do Conselho'
+    'image': 'assets/images/missao-visao-crencas.jpg',
+    'title': 'Capítulo 02',
+    'subtitle': 'Missão, Visão e Crenças'
   }
   constructor() { }
 
