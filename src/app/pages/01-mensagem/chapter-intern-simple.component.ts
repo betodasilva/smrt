@@ -5,7 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './chapter-intern-simple.component.html',
   styleUrls: ['./chapter-intern-simple.component.scss']
 })
-export class ChapterInternSimpleComponent implements OnInit {
+export class ChapterInternSimpleComponentm implements OnInit {
+
+  private chapterHatInfo = {
+    'image': 'assets/images/chapter-hat.jpg',
+    'title': 'Capítulo 01',
+    'subtitle': 'Mensagem do Conselho'
+  }
 
   constructor() { }
 

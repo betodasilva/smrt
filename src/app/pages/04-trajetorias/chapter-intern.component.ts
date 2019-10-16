@@ -12,9 +12,9 @@ export class ChapterInternComponent implements OnInit {
 
   public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
   private chapterHatInfo = {
-    'image': 'assets/images/chapter-hat.jpg',
-    'title': 'Capítulo 01',
-    'subtitle': 'Mensagem do Conselho'
+    'image': 'assets/images/4-trajetorias.jpg',
+    'title': 'Capítulo 04',
+    'subtitle': 'Trajetórias Ismart'
   }
   
 

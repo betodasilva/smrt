@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { ChapterInternSimpleComponent } from './pages/chapter-intern-simple/chapter-intern-simple.component';
-import { ChapterInternComponent } from './pages/chapter-intern/chapter-intern.component';
-import { MissaoComponent } from './pages/missao/missao.component';
+import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-intern-simple.component';
+import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
+import { MissaoComponent } from './pages/02-missao/missao.component';
 
 const routes: Routes = [
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'chapter-intern-simple', component: ChapterInternSimpleComponent },
+  { path: '01-mensagem-do-conselho', component: ChapterInternSimpleComponentm },
+  { path: '02-missao-visao-valores', component: MissaoComponent },
   { path: '04-trajetorias-ismart', component: ChapterInternComponent },
-  { path: '02-missao-visao-valores', component: MissaoComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];
 
