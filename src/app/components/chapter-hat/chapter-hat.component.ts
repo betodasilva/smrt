@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+interface chapterData {
+  image,
+  title,
+  subtitle
+}
 
 @Component({
   selector: 'app-chapter-hat',
@@ -7,9 +13,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChapterHatComponent implements OnInit {
 
+  @Input('data') data: chapterData;
+  
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -11,6 +11,13 @@ import { Observable, Subject, BehaviorSubject } from 'rxjs';
 export class ChapterInternComponent implements OnInit {
 
   public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
+  private chapterHatInfo = {
+    'image': 'assets/images/chapter-hat.jpg',
+    'title': 'Capítulo 01',
+    'subtitle': 'Mensagem do Conselho'
+  }
+  
+
   @ViewChild('testimonialComponent', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('modal', {static:false}) modal: ModalComponent;
   
