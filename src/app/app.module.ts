@@ -29,6 +29,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './services/window.service';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EmitterService } from './services/emitter/emitter.service';
+import { MissaoComponent } from './pages/missao/missao.component';
 
 
 
@@ -56,6 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TestimonialsComponent,
     MenuComponent,
     ModalComponent,
+    MissaoComponent,
   ],
   imports: [
     BrowserModule,
