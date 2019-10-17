@@ -10,6 +10,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-intern-simple.component';
 import { MissaoComponent } from './pages/02-missao/missao.component';
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
+import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
+import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
+import { ManifestoComponent } from './pages/07-manifesto/manifesto.component';
+import { ListaParceirosComponent } from './pages/09-lista-parceiros/lista-parceiros.component';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderComponent } from './components/slider/slider.component';
@@ -32,8 +36,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './services/window.service';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EmitterService } from './services/emitter/emitter.service';
-import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
-import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -63,6 +66,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MissaoComponent,
     ParceirosComponent,
     HorizonteComponent,
+    ManifestoComponent,
+    ListaParceirosComponent,
   ],
   imports: [
     BrowserModule,
