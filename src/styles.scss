@@ -66,6 +66,12 @@ body{
 		left: 55px;
 		transform: rotate(180deg);
 	}
+	&__dark .slick-arrow {
+		border-color: $clear;
+		img {
+			filter: brightness(0) invert(1);
+		}
+    }
 }
 @media (max-width: 540px) {
 	.testimonials {

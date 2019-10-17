@@ -64,6 +64,12 @@
             border-bottom: solid 2px $orange;
         }
     }
+    &__dark {
+        background-color: $blue-medium;
+        .testimonials__title {
+            color: $clear;
+        }
+    }
     @media (max-width: 540px) {
         padding: 20px 0 50px 0;
         &__title {

@@ -1,0 +1,41 @@
+<app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
+<article 
+    class="chapter-content"
+    #articleContainer>
+    <!-- Share aqui -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+                <p>O grande desafio continua sen-do tornar o Ismart conhecido para que mais jovens talen-tosos possam ter a oportunidade de se desenvolver por meio da educação. Uma vez no projeto, a intenção é ajudá-los a nunca duvidarem do seu potencial e a se apropriarem da sua história com protagonismo, resiliência e perseverança. </p>
+                <p>Quanto ao trabalho do Instituto e os programas de desenvolvimento oferecidos aos jovens, há o constante monitoramento de tendências de mercado. Uma das principais mudanças nos programas de desenvolvimento dos bolsistas foi o início do trabalho com foco em competências socio-emocionais, a reestruturação do pro-grama de orientação profissional, a aprendizagem baseada em projetos e a integração desses alunos às tendências de letramento digital.</p>
+                <p>Entre muitas expectativas, há também um sonho grande: a de que um dia um graduado pelo Ismart venha a fazer parte do Conselho do Instituto, representando a comunidade e dando voz aos principais interessados no projeto: bolsistas e Alumni.</p>
+                <p class="text-big">Nos últimos 20 anos, mais de quatro mil jovens mudaram sua realidade e estão contribuindo para uma sociedade melhor. Para os próximos 20 anos...</p>
+            </div>
+        </div>
+        <div class="row">
+            <figure class="chapter-content__img mb-0">
+                <img src="assets/images/eduardo-braga.jpg" alt="">
+                <div class="container-fluid">
+                    <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+                        <figcaption><img src="assets/images/camera.svg" alt="">Eduardo Braga da Costa - Projeto Ismart Online - São Paulo</figcaption>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </div>
+</article>
+<app-testimonials
+	#testimonialComponent
+	(onTestimonialCardClick)="modal.openModal()">
+</app-testimonials>
+<app-testimonials
+    [modeDark]="true"
+	(onTestimonialCardClick)="modal.openModal()">
+</app-testimonials>
+<app-related></app-related>
+<!-- <app-modal
+	#modal
+	[testimonial]="testimonials.current"
+	(onPrev)="onPrevTestimonial()"
+	(onNext)="onNextTestimonial()">
+</app-modal> -->

@@ -32,6 +32,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './services/window.service';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EmitterService } from './services/emitter/emitter.service';
+import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
+import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -59,6 +61,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MenuComponent,
     ModalComponent,
     MissaoComponent,
+    ParceirosComponent,
+    HorizonteComponent,
   ],
   imports: [
     BrowserModule,
