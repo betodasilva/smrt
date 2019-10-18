@@ -9,6 +9,7 @@ import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
 import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
 import { ManifestoComponent } from './pages/07-manifesto/manifesto.component';
 import { ListaParceirosComponent } from './pages/09-lista-parceiros/lista-parceiros.component';
+import { ExpedienteComponent } from './pages/10-expediente/expediente.component';
 
 const routes: Routes = [
   { path: '',
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: '05-parceiros-ismart', component: ParceirosComponent },
   { path: '06-horizonte', component: HorizonteComponent },
   { path: '07-manifesto', component: ManifestoComponent },
-  { path: '09-lista-parceiros', component: ListaParceirosComponent}
+  { path: '09-lista-parceiros', component: ListaParceirosComponent},
+  { path: '10-expediente', component: ExpedienteComponent}
   // { path: '**', component: PageNotFoundComponent }
 ];
 

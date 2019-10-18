@@ -1,17 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-chapter-intern-simple',
-  templateUrl: './chapter-intern-simple.component.html',
-  styleUrls: ['./chapter-intern-simple.component.scss']
+  selector: 'app-expediente',
+  templateUrl: './expediente.component.html',
+  styleUrls: ['./expediente.component.scss']
 })
-export class ChapterInternSimpleComponentm implements OnInit {
+export class ExpedienteComponent implements OnInit {
 
   private chapterHatInfo = {
-    'image': 'assets/images/chapter-hat.jpg',
-    'title': 'Capítulo 01',
-    'subtitle': 'Mensagem do Conselho'
+    'image': 'assets/images/10-expediente.jpg',
+    'title': 'Capítulo 10',
+    'subtitle': 'Expediente'
   }
+
+  private accordionContent = [
+    {
+      'title': 'Equipe Ismart ',
+      'content': 'Conteúdo Equipe Ismart '
+    },
+    {
+      'title': 'Redação',
+      'content': 'Conteúdo Redação'
+    },
+    {
+      'title': 'Fotos',
+      'content': 'Conteúdo Fotos'
+    },
+    {
+      'title': 'Design',
+      'content': 'Conteúdo Design'
+    },
+  ]
 
   private relatedInfo = [
     {

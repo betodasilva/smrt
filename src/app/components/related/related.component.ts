@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+interface relatedData {
+  title,
+  subtile,
+  url,
+  image
+}
 
 @Component({
   selector: 'app-related',
@@ -6,7 +13,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./related.component.scss']
 })
 export class RelatedComponent implements OnInit {
-
+  @Input('relatedData') relatedData: relatedData;
+  
   constructor() { }
 
   ngOnInit() {

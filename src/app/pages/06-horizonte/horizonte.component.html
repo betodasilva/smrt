@@ -32,7 +32,7 @@
     [modeDark]="true"
 	(onTestimonialCardClick)="modal.openModal()">
 </app-testimonials>
-<app-related></app-related>
+<app-related [relatedData]="relatedInfo"></app-related>
 <!-- <app-modal
 	#modal
 	[testimonial]="testimonials.current"
