@@ -39,6 +39,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { EmitterService } from './services/emitter/emitter.service';
 import { TimelineCardComponent } from './components/timeline-card/timeline-card.component';
 import { TimelineImageComponent } from './components/timeline-image/timeline-image.component';
+import { FloatContainerComponent } from './components/float-container/float-container.component';
+import { ShareComponent } from './components/share/share/share.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -73,6 +75,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HorizonteComponent,
     ManifestoComponent,
     ListaParceirosComponent,
+    FloatContainerComponent,
+    ShareComponent,
   ],
   imports: [
     BrowserModule,
