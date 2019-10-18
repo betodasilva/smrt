@@ -2,6 +2,7 @@ import {
   Component,
   OnInit,
   Output,
+  Input,
   EventEmitter
 } from '@angular/core';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
@@ -13,6 +14,7 @@ import { TestimonialsService } from 'src/app/services/testimonials/testimonials.
 })
 export class TestimonialsComponent implements OnInit {
 
+  @Input() modeDark: boolean = false;
   @Output('onTestimonialCardClick') onTestimonialCardClick: EventEmitter<any> = new EventEmitter();
   private slides = [];
   private slideConfig = {

@@ -11,6 +11,10 @@ import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-inter
 import { MissaoComponent } from './pages/02-missao/missao.component';
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
 import { TimelineComponent } from "./pages/03-timeline/timeline.component";
+import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
+import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
+import { ManifestoComponent } from './pages/07-manifesto/manifesto.component';
+import { ListaParceirosComponent } from './pages/09-lista-parceiros/lista-parceiros.component';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderComponent } from './components/slider/slider.component';
@@ -37,6 +41,7 @@ import { TimelineCardComponent } from './components/timeline-card/timeline-card.
 import { TimelineImageComponent } from './components/timeline-image/timeline-image.component';
 
 import { NgxMasonryModule } from 'ngx-masonry';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -65,7 +70,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     MissaoComponent,
     TimelineComponent,
     TimelineCardComponent,
-    TimelineImageComponent
+    TimelineImageComponent,
+    ParceirosComponent,
+    HorizonteComponent,
+    ManifestoComponent,
+    ListaParceirosComponent,
   ],
   imports: [
     BrowserModule,

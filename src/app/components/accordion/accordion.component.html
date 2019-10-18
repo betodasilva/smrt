@@ -1,51 +1,19 @@
 <div class="accordion" id="accordionExample">
-    <div class="accordion__card">
-        <div class="accordion__card--header" id="headingOne">
+    <div class="accordion__card" *ngFor="let accordion of accordiondata; let i = index;">
+        <div class="accordion__card--header" [attr.id]="'heading-'+ i">
             <h2 class="mb-0">
-                <button class="btn btn-link accordion__card--link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="btn btn-link accordion__card--link" type="button" data-toggle="collapse" [attr.data-target]="'#collapse-'+ i" [attr.aria-expanded]="i === 0? true : false" [attr.aria-controls]="'#collapse-'+ i">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="plus">
                     <path fill="#028ED4" fill-rule="evenodd" d="M10 7.879L17.425.454a1.5 1.5 0 0 1 2.12 2.121L12.122 10l7.425 7.425a1.5 1.5 0 0 1-2.121 2.12L10 12.122l-7.425 7.425a1.5 1.5 0 0 1-2.12-2.121L7.878 10 .454 2.575A1.5 1.5 0 0 1 2.575.455L10 7.878z"/>
-                </svg> Alicerce
+                </svg> {{ accordion.title }}
                 </button>
             </h2>
         </div>
         
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div [attr.id]="'collapse-'+ i" class="collapse show" [ngClass]="{'show': i === 0 }" [attr.aria-labelledby]="'heading-'+ i" data-parent="#accordionExample">
             <div class="accordion__card--body">
-                Oferece um curso preparatório de dois anos de duração no contraturno escolar. O curso acontece em uma escola particular parceira do Ismart. O objetivo é preparar os bolsistas para o ingresso no ensino médio nas escolas em que realizam o curso. Podem se candidatar ao Alicerce alunos matriculados no 7º ano do ensino fundamental, com até 13 anos completos e vindos de famílias com renda per capita de no máximo dois salários mínimos.
+                <div [innerHTML]="accordion.content"></div>
             </div>
-        </div>
-    </div>
-    <div class="accordion__card">
-        <div class="accordion__card--header" id="headingTwo">
-        <h2 class="mb-0">
-            <button class="btn btn-link accordion__card--link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="plus">
-                <path fill="#028ED4" fill-rule="evenodd" d="M10 7.879L17.425.454a1.5 1.5 0 0 1 2.12 2.121L12.122 10l7.425 7.425a1.5 1.5 0 0 1-2.121 2.12L10 12.122l-7.425 7.425a1.5 1.5 0 0 1-2.12-2.121L7.878 10 .454 2.575A1.5 1.5 0 0 1 2.575.455L10 7.878z"/>
-            </svg> Bolsa Talento
-            </button>
-        </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="accordion__card--body">
-            Oferece um curso preparatório de dois anos de duração no contraturno escolar. O curso acontece em uma escola particular parceira do Ismart. O objetivo é preparar os bolsistas para o ingresso no ensino médio nas escolas em que realizam o curso. Podem se candidatar ao Alicerce alunos matriculados no 7º ano do ensino fundamental, com até 13 anos completos e vindos de famílias com renda per capita de no máximo dois salários mínimos.
-        </div>
-        </div>
-    </div>
-    <div class="accordion__card">
-        <div class="accordion__card--header" id="headingThree">
-        <h2 class="mb-0">
-            <button class="btn btn-link accordion__card--link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="plus">
-                <path fill="#028ED4" fill-rule="evenodd" d="M10 7.879L17.425.454a1.5 1.5 0 0 1 2.12 2.121L12.122 10l7.425 7.425a1.5 1.5 0 0 1-2.121 2.12L10 12.122l-7.425 7.425a1.5 1.5 0 0 1-2.12-2.121L7.878 10 .454 2.575A1.5 1.5 0 0 1 2.575.455L10 7.878z"/>
-            </svg> Ismart Online
-            </button>
-        </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        <div class="accordion__card--body">
-            Oferece um curso preparatório de dois anos de duração no contraturno escolar. O curso acontece em uma escola particular parceira do Ismart. O objetivo é preparar os bolsistas para o ingresso no ensino médio nas escolas em que realizam o curso. Podem se candidatar ao Alicerce alunos matriculados no 7º ano do ensino fundamental, com até 13 anos completos e vindos de famílias com renda per capita de no máximo dois salários mínimos.
-        </div>
         </div>
     </div>
 </div>

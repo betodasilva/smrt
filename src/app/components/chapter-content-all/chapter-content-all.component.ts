@@ -122,4 +122,26 @@ export class ChapterContentAllComponent implements OnInit {
     )
   }
 
+  private accordionContent = [
+    {
+      'title': 'Alicerce',
+      'content': 'Oferece um curso preparatório de dois anos de duração no contraturno escolar. O curso acontece em uma escola particular parceira do Ismart. O objetivo é preparar os bolsistas para o ingresso no ensino médio nas escolas em que realizam o curso. Podem se candidatar ao Alicerce alunos matriculados no 7º ano do ensino fundamental, com até 13 anos completos e vindos de famílias com renda per capita de no máximo dois salários mínimos.'
+    },
+    {
+      'title': 'Bolsa Talento',
+      'content': 'Conteúdo Bolsa Talento'
+    },
+    {
+      'title': 'Ismart Online',
+      'content': 'Conteúdo Ismart Online'
+    },
+    {
+      'title': 'Ensino superior',
+      'content': 'Conteúdo Ensino superior'
+    },
+    {
+      'title': 'Alumni',
+      'content': 'Conteúdo Alumni'
+    }
+  ]
 }
