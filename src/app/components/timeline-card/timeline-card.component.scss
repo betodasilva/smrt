@@ -1,0 +1,78 @@
+.timeline-card {
+	padding: 32px;
+	border: 1px solid #e6e9ef;
+	box-shadow: 0 12px 24px 0 rgba(48, 61, 85, 0.08);
+	border-radius: 2px;
+	max-width: 400px;
+	background: #fff;
+	margin: 0 auto;
+	$this: &;
+	&__title {
+		font-size: 44px;
+		letter-spacing: -0.31px;
+		color: white;
+		margin-bottom: 10px;
+		font-weight: 700;
+		font-family: 'Montserrat';
+		// border: 1px solid var(--orange);
+		-webkit-text-stroke: 1px var(--orange);
+	}
+
+	&__excerpt {
+		
+		::ng-deep p {
+			line-height: 21px;
+			font-size: 13px;
+			color: var(--blue-m);
+			font-family: 'Montserrat';
+			margin-bottom: 20px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		border: 2px solid var(--orange);
+		margin-bottom: 10px;
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 auto;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+
+	&--last {
+		max-width: 600px;
+		position: relative;
+		padding-bottom: 40px;
+		border-color: var(--orange);
+		#{$this} {
+
+			&__title,
+			&__excerpt {
+				padding-left: 50%;
+				padding-right: 20px;
+			}
+
+			&__icon {
+				position: absolute;
+				border: none;
+				margin: none;
+				width: auto;
+				height: auto;
+				border-radius: 0;
+				left: calc( 50% - 120px);
+				transform: translateX(-50%);
+			}
+		}
+	}
+}

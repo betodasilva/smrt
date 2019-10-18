@@ -1,0 +1,209 @@
+.chapter-content {
+	padding: 70px 0;
+	position: relative;
+}
+
+.timeline {
+	&__line {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 3px;
+		background: var(--orange);
+		bottom: 280px;
+		z-index: -1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -50px;
+			left: 50%;
+    	transform: translateX(-50%);
+			width: 88px;
+			height: 88px;
+			border-radius: 50%;
+			background: var(--orange);
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: top;
+		align-content: flex-start;
+		margin-bottom: 64px;
+		@media (max-width: 991px) {
+			&:nth-child(odd),
+			&:nth-child(even) {
+				margin-top: 0 !important;
+			}
+			> app-timeline-card {
+				order: 0 !important;
+				width: 100%;
+				margin: 0 auto 20px !important;
+				text-align: center !important;
+				::ng-deep .timeline-card__icon{
+					margin: 0 auto !important;
+				}
+
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+			justify-content: center !important;
+		}
+		@media (min-width: 992px) {
+			max-width: 870px;
+			margin-left: auto;
+			margin-right: auto;
+			flex-wrap: nowrap;
+		}
+		@media (min-width: 1340px) {
+			// padding: 0 17%;
+		}
+		&:nth-child(odd) {
+			justify-content: flex-end;
+			> app-timeline-card {
+				margin-right: 0;
+				margin-left: 30px;
+				text-align: left;
+
+				::ng-deep .timeline-card__icon {
+					margin-right: auto;
+					margin-left: 0;
+				}
+			}
+		}
+		
+		&:last-child {
+			justify-content: center;
+			margin-top: 0 !important;
+			z-index: 1;
+			> app-timeline-card {
+				margin-left: 0 !important;
+
+				&::after,
+				&::before {
+					right: auto;
+					left: calc(50% - 3px) !important;
+					transform: translateX(-50%) rotate(-45deg);
+					top: 0;
+					border: 8px solid black;
+				}
+
+				&::after {
+					top: 1px;
+					border-color: #fff #fff transparent transparent !important;
+				}
+	
+				&::before {
+					border-color: var(--orange) var(--orange) transparent transparent !important;
+				}
+
+			}
+		}
+
+		& + &:not(.timeline__item--img) {
+			margin-top: -140px;
+		}
+
+		&:nth-child(odd) {
+			> app-timeline-card {
+				&::after,
+				&::before {
+					right: auto;
+					left: -10px;
+				}
+
+				&::after {
+					border: 8px solid black;
+					left: -8px;
+					border-color: #fff transparent transparent #fff;
+				}
+	
+				&::before {
+					border: 8px solid black;
+					border-color: #e6e9ef transparent transparent #e6e9ef;
+				}
+			}
+		}
+
+		> app-timeline-card {
+			margin-right: 30px;
+			text-align: right;
+			position: relative;
+
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 30px;
+				right: -4px;
+				box-sizing: border-box;
+				
+				transform-origin: 0 0;
+				transform: rotate(-45deg);
+
+				border-radius: 2px;
+				// box-shadow: 0 12px 24px 0 rgba(48, 61, 85, 0.08);
+				
+				// z-index: -1;
+				// outline: 1px solid #e6e9ef;
+			}
+
+			&::after {
+				border: 8px solid black;
+				right: -2px;
+				border-color:  transparent #fff #fff transparent;
+			}
+
+			&::before {
+				border: 8px solid black;
+				border-color:  transparent #e6e9ef #e6e9ef transparent;
+			}
+
+			::ng-deep .timeline-card__icon {
+				margin-left: auto;
+			}
+		}
+
+
+		@media (min-width: 992px) {
+			&:nth-child(4){
+				margin-top: -220px !important;
+			}
+			&:nth-child(7){
+				margin-top: -174px !important;
+			}
+			&:nth-child(9){
+				margin-top: -164px !important;
+			}
+			&:nth-child(10){
+				margin-top: -280px !important;
+			}
+			&:nth-child(11){
+				margin-top: -270px !important;
+			}
+			&:nth-child(12){
+				margin-top: -90px !important;
+			}
+			&:nth-child(13){
+				margin-top: -260px !important;
+			}
+		}
+	
+	}	
+}
+
+.col-left app-timeline-card,
+.col-left app-timeline-image {
+	float: right;
+}
+
+.col-right app-timeline-card,
+.col-right app-timeline-image {
+	float: left;
+}

@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-intern-simple.component';
 import { MissaoComponent } from './pages/02-missao/missao.component';
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
+import { TimelineComponent } from "./pages/03-timeline/timeline.component";
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderComponent } from './components/slider/slider.component';
@@ -32,7 +33,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './services/window.service';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EmitterService } from './services/emitter/emitter.service';
+import { TimelineCardComponent } from './components/timeline-card/timeline-card.component';
+import { TimelineImageComponent } from './components/timeline-image/timeline-image.component';
 
+import { NgxMasonryModule } from 'ngx-masonry';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -59,12 +63,16 @@ export function HttpLoaderFactory(http: HttpClient) {
     MenuComponent,
     ModalComponent,
     MissaoComponent,
+    TimelineComponent,
+    TimelineCardComponent,
+    TimelineImageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
     HttpClientModule,
+    NgxMasonryModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

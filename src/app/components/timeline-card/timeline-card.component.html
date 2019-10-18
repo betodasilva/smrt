@@ -1,0 +1,13 @@
+<div 
+	[ngClass]="{
+		'timeline-card': true, 
+		'timeline-card--last': last
+	}">
+	<div class="timeline-card__icon">
+		<img [src]="icon">
+	</div>
+	<h2 class="timeline-card__title">
+		{{ title }}
+	</h2>
+	<div class="timeline-card__excerpt" [innerHTML]="excerpt"></div>
+</div>

@@ -1,0 +1,28 @@
+<app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
+<div class="container">
+	<article
+		class="chapter-content row justify-content-center">
+		<div class="timeline__line"></div>
+		<div
+			*ngFor="let item of timeline.content; let i = index;" 
+			[ngClass]="{
+				'col-12': true, 
+				'timeline__item': true, 
+				'timeline__item--img': !!item.image
+			}">
+			<app-timeline-card
+				[title]="item.title"
+				[icon]="item.icon"
+				[excerpt]="item.excerpt"
+				[style.order]="i % 2 !== 0 ? '1' : '0'"
+				[last]="i + 1 === timeline.content.length">
+			</app-timeline-card>
+			<app-timeline-image
+				*ngIf="item.image"
+				[path]="item.image">
+			</app-timeline-image>
+		</div>
+
+	</article>
+</div>
+<app-related></app-related>
