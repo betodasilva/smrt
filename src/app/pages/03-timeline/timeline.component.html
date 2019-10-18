@@ -1,10 +1,16 @@
 <app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
-<div class="container">
+
 	<article
-		class="chapter-content row justify-content-center">
+		#article
+		class="chapter-content">
 		<div class="timeline__line"></div>
-		<div class="fix-scroll">
-			<nav class="timeline-nav">
+		<app-float-container
+			[startPosEl]="article"
+			[endPosEl]="article"
+			[child]="nav">
+			<nav
+				#nav 
+				class="timeline-nav">
 				<a
 					#navItems
 					*ngFor="let navItem of timeline.content; let index = index;" 
@@ -14,7 +20,9 @@
 					{{ navItem.title }}
 				</a>
 			</nav>
-		</div>
+			<app-share></app-share>
+		</app-float-container>
+		<ul class="container">
 		<li
 			#cards
 			*ngFor="let item of timeline.content; let i = index;"
@@ -36,7 +44,7 @@
 				[path]="item.image">
 			</app-timeline-image>
 		</li>
-
+		</ul>
 	</article>
-</div>
+
 <app-related></app-related>

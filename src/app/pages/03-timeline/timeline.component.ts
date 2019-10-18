@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline/timeline.service';
 
 @Component({
@@ -10,6 +10,9 @@ export class TimelineComponent implements OnInit {
 
   @ViewChildren('cards') cards: QueryList<ElementRef>;
   @ViewChildren('navItems') navItems: QueryList<ElementRef>;
+  
+  @ViewChild('article', {static: false}) article: ElementRef;
+  @ViewChild('nav', {static: false}) nav: ElementRef;
 
   private chapterHatInfo = {
     'image': 'assets/images/3-timeline.jpg',
