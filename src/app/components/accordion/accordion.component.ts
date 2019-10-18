@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+interface accordionData {
+  title,
+  content
+}
 
 @Component({
   selector: 'app-accordion',
@@ -6,10 +11,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements OnInit {
+  @Input('accordiondata') accordiondata: accordionData;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.accordiondata)
   }
-
+  
 }
