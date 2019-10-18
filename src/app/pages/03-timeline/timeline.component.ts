@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2 } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline/timeline.service';
-import { NgxMasonryOptions } from 'ngx-masonry';
 
 @Component({
   selector: 'app-timeline',
@@ -16,11 +15,6 @@ export class TimelineComponent implements OnInit {
     'image': 'assets/images/3-timeline.jpg',
     'title': 'Capítulo 03',
     'subtitle': 'Linha do Tempo'
-  }
-
-  public masonryOptions: NgxMasonryOptions = {
-    fitWidth: true,
-    gutter: 20
   }
 
   constructor(

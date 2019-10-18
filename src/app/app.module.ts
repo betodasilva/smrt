@@ -40,8 +40,6 @@ import { EmitterService } from './services/emitter/emitter.service';
 import { TimelineCardComponent } from './components/timeline-card/timeline-card.component';
 import { TimelineImageComponent } from './components/timeline-image/timeline-image.component';
 
-import { NgxMasonryModule } from 'ngx-masonry';
-
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -81,7 +79,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     SlickCarouselModule,
     HttpClientModule,
-    NgxMasonryModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
