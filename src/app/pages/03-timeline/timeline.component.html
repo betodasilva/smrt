@@ -3,8 +3,22 @@
 	<article
 		class="chapter-content row justify-content-center">
 		<div class="timeline__line"></div>
-		<div
-			*ngFor="let item of timeline.content; let i = index;" 
+		<div class="fix-scroll">
+			<nav class="timeline-nav">
+				<a
+					#navItems
+					*ngFor="let navItem of timeline.content; let index = index;" 
+					(click)="onItemNavClick( $event, navItem.title )"
+					class="timeline-nav__item"
+					[class.timeline-nav__item--active]="index === 0">
+					{{ navItem.title }}
+				</a>
+			</nav>
+		</div>
+		<li
+			#cards
+			*ngFor="let item of timeline.content; let i = index;"
+			[attr.year]="item.title"
 			[ngClass]="{
 				'col-12': true, 
 				'timeline__item': true, 
@@ -21,7 +35,7 @@
 				*ngIf="item.image"
 				[path]="item.image">
 			</app-timeline-image>
-		</div>
+		</li>
 
 	</article>
 </div>
