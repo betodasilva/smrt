@@ -1,10 +1,16 @@
 <app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
-<div class="container">
+
 	<article
-		class="chapter-content row justify-content-center">
+		#article
+		class="chapter-content">
 		<div class="timeline__line"></div>
-		<div class="fix-scroll">
-			<nav class="timeline-nav">
+		<app-float-container
+			[startPosEl]="article"
+			[endPosEl]="article"
+			[child]="nav">
+			<nav
+				#nav 
+				class="timeline-nav">
 				<a
 					#navItems
 					*ngFor="let navItem of timeline.content; let index = index;" 
@@ -14,29 +20,30 @@
 					{{ navItem.title }}
 				</a>
 			</nav>
-		</div>
-		<li
-			#cards
-			*ngFor="let item of timeline.content; let i = index;"
-			[attr.year]="item.title"
-			[ngClass]="{
-				'col-12': true, 
-				'timeline__item': true, 
-				'timeline__item--img': !!item.image
-			}">
-			<app-timeline-card
-				[title]="item.title"
-				[icon]="item.icon"
-				[excerpt]="item.excerpt"
-				[style.order]="i % 2 !== 0 ? '1' : '0'"
-				[last]="i + 1 === timeline.content.length">
-			</app-timeline-card>
-			<app-timeline-image
-				*ngIf="item.image"
-				[path]="item.image">
-			</app-timeline-image>
-		</li>
-
+			<app-share></app-share>
+		</app-float-container>
+		<ul class="container">
+			<li
+				#cards
+				*ngFor="let item of timeline.content; let i = index;"
+				[attr.year]="item.title"
+				[ngClass]="{
+					'col-12': true, 
+					'timeline__item': true, 
+					'timeline__item--img': !!item.image
+				}">
+				<app-timeline-card
+					[title]="item.title"
+					[icon]="item.icon"
+					[excerpt]="item.excerpt"
+					[style.order]="i % 2 !== 0 ? '1' : '0'"
+					[last]="i + 1 === timeline.content.length">
+				</app-timeline-card>
+				<app-timeline-image
+					*ngIf="item.image"
+					[path]="item.image">
+				</app-timeline-image>
+			</li>
+		</ul>
 	</article>
-</div>
 <app-related [relatedData]="relatedInfo"></app-related>
