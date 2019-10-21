@@ -6,36 +6,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <a class="related__single" [routerLink]="['/04-trajetorias-ismart']">
+            <div class="col-md-4" *ngFor="let related of relatedData">
+                <a class="related__single" [routerLink]="'/' + related.url">
                     <figure>
-                        <img src="assets/images/related.jpg" alt="">
+                        <img src="{{ related.image }}" alt="{{ related.subtitle }}">
                     </figure>
                     <div class="related__single--title">
-                        <h4>Capítulo 01</h4>
-                        <h3>Mensagem do Conselho</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="related__single" [routerLink]="['/04-trajetorias-ismart']">
-                    <figure>
-                        <img src="assets/images/related.jpg" alt="">
-                    </figure>
-                    <div class="related__single--title">
-                        <h4>Capítulo 01</h4>
-                        <h3>Mensagem do Conselho</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="related__single" [routerLink]="['/04-trajetorias-ismart']">
-                    <figure>
-                        <img src="assets/images/related.jpg" alt="">
-                    </figure>
-                    <div class="related__single--title">
-                        <h4>Capítulo 01</h4>
-                        <h3>Mensagem do Conselho</h3>
+                        <h4>{{ related.title }}</h4>
+                        <h3>{{ related.subtitle }}</h3>
                     </div>
                 </a>
             </div>

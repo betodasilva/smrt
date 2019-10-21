@@ -15,6 +15,7 @@ import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
 import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
 import { ManifestoComponent } from './pages/07-manifesto/manifesto.component';
 import { ListaParceirosComponent } from './pages/09-lista-parceiros/lista-parceiros.component';
+import { ExpedienteComponent } from './pages/10-expediente/expediente.component';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderComponent } from './components/slider/slider.component';
@@ -75,6 +76,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HorizonteComponent,
     ManifestoComponent,
     ListaParceirosComponent,
+    ExpedienteComponent,
     FloatContainerComponent,
     ShareComponent,
   ],
