@@ -172,6 +172,20 @@
             margin-bottom: 20px;
         }
     }
+    .blue__content {
+        background-color: $blue;
+        border-radius: 4px;
+        width: calc(100% + 60px);
+        padding: 40px 30px;
+        margin: 30px 0 40px -30px;
+        .chapter-content__title--section {
+            color: $clear;
+            margin-top: 0;
+        }
+        p {
+            color: $clear;
+        }
+    }
     @media (max-width: 992px) {
         &__title {
             font-size: 42px;

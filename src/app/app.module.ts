@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-intern-simple.component';
 import { MissaoComponent } from './pages/02-missao/missao.component';
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
+import { TrajetoriasSelecaoComponent } from './pages/04-trajetorias-selecao/trajetorias-selecao.component';
+import { TrajetoriasPraticaComponent } from './pages/04-trajetorias-pratica/trajetorias-pratica.component';
 import { TimelineComponent } from "./pages/03-timeline/timeline.component";
 import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
 import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
@@ -81,6 +83,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ExpedienteComponent,
     FloatContainerComponent,
     ShareComponent,
+    TrajetoriasPraticaComponent,
+    TrajetoriasSelecaoComponent,
     // ResultadosComponent,
     // SvgIconComponent,
     // SvgDefinitionsComponent

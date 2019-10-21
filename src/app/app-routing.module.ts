@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-intern-simple.component';
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
+import { TrajetoriasPraticaComponent } from './pages/04-trajetorias-pratica/trajetorias-pratica.component';
+import { TrajetoriasSelecaoComponent } from './pages/04-trajetorias-selecao/trajetorias-selecao.component';
 import { MissaoComponent } from './pages/02-missao/missao.component';
 import { TimelineComponent } from './pages/03-timeline/timeline.component';
 import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: '02-missao-visao-valores', component: MissaoComponent },
   { path: '03-linha-do-tempo', component: TimelineComponent },
   { path: '04-trajetorias-ismart-contato', component: ChapterInternComponent },
+  { path: '04-trajetorias-ismart-selecao', component: TrajetoriasSelecaoComponent },
+  { path: '04-trajetorias-ismart-praticas', component: TrajetoriasPraticaComponent },
   { path: '05-parceiros-ismart', component: ParceirosComponent },
   { path: '06-horizonte', component: HorizonteComponent },
   { path: '07-manifesto', component: ManifestoComponent },
