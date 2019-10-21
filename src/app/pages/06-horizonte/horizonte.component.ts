@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HorizonteComponent implements OnInit {
 
   private chapterHatInfo = {
+    'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',
+    'imageTablet': 'assets/images/hats/6-horizonte-tablet.jpg',
     'image': 'assets/images/6-horizonte.jpg',
     'title': 'Capítulo 06',
     'subtitle': 'Horizonte'
@@ -27,7 +29,7 @@ export class HorizonteComponent implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto.jpg',
+      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
       'title': '07.',
       'subtitle': 'Resultados 2018',
       'url': ''

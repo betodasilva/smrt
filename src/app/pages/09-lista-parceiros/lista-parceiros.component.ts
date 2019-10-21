@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ListaParceirosComponent implements OnInit {
 
   private chapterHatInfo = {
+    'imageMobile': 'assets/images/hats/9-lista-de-parceiros-hat.jpg',
+    'imageTablet': 'assets/images/hats/9-lista-de-parceiros-tablet.jpg',
     'image': 'assets/images/9-lista.jpg',
     'title': 'Capítulo 09',
     'subtitle': 'Lista de parceiros'
@@ -74,7 +76,7 @@ export class ListaParceirosComponent implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto.jpg',
+      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
       'title': '07.',
       'subtitle': 'Resultados 2018',
       'url': ''

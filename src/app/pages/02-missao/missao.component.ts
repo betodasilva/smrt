@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MissaoComponent implements OnInit {
 
   private chapterHatInfo = {
+    'imageMobile': 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
+    'imageTablet': 'assets/images/hats/2-missao-visao-crencas-tablet.jpg',
     'image': 'assets/images/missao-visao-crencas.jpg',
     'title': 'Capítulo 02',
     'subtitle': 'Missão, Visão e Crenças'
@@ -27,7 +29,7 @@ export class MissaoComponent implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto.jpg',
+      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
       'title': '07.',
       'subtitle': 'Resultados 2018',
       'url': ''

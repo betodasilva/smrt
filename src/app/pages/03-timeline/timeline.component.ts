@@ -15,6 +15,8 @@ export class TimelineComponent implements OnInit {
   @ViewChild('nav', {static: false}) nav: ElementRef;
 
   private chapterHatInfo = {
+    'imageMobile': 'assets/images/hats/3-timeline-hat.jpg',
+    'imageTablet': 'assets/images/hats/3-timeline-tablet.jpg',
     'image': 'assets/images/3-timeline.jpg',
     'title': 'Capítulo 03',
     'subtitle': 'Linha do Tempo'
@@ -34,7 +36,7 @@ export class TimelineComponent implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto.jpg',
+      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
       'title': '07.',
       'subtitle': 'Resultados 2018',
       'url': ''
