@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="597" height="198" viewBox="0 0 597 198">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#D9D9D9" stroke-width="1.404" d="M173.123 29.572h423.854M173.123 113.5h423.854M173.123 197.285h423.854M173.123 169.308h423.854M173.123 85.524h423.854M173.123 141.332h423.854M173.123 57.548h423.854M173.123 1.596h423.854"/>
+        <path fill="#002661" d="M0 197.284h173.123V.894H0z"/>
+        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="16" font-weight="bold" letter-spacing="1" transform="translate(51 73.894)">
+            <tspan x=".76" y="20">ISMART</tspan> <tspan x=".496" y="44">ONLINE</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14" transform="translate(0 .894)">
+            <tspan x="185" y="21">São Paulo</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" transform="translate(0 .894)">
+            <tspan x="562.64" y="21">331</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14" transform="translate(0 .894)">
+            <tspan x="185" y="104">São José dos Campos</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" transform="translate(0 .894)">
+            <tspan x="570.76" y="48">11</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14" transform="translate(0 .894)">
+            <tspan x="185" y="132">Rio de Janeiro</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14" transform="translate(0 .894)">
+            <tspan x="185" y="48">Cotia</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" transform="translate(0 .894)">
+            <tspan x="570.76" y="76">29</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" transform="translate(0 .894)">
+            <tspan x="562.64" y="132">266</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14" transform="translate(0 .894)">
+            <tspan x="185" y="160">Belo Horizonte</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14" transform="translate(0 .894)">
+            <tspan x="185" y="76">Sorocaba</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" transform="translate(0 .894)">
+            <tspan x="562.64" y="104">148</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" transform="translate(0 .894)">
+            <tspan x="562.64" y="160">158</tspan>
+        </text>
+        <text fill="#002661" font-family="Lato-Bold, Lato" font-size="16.848" font-weight="bold" letter-spacing="-.657" transform="translate(0 .894)">
+            <tspan x="186" y="189">T</tspan> <tspan x="195.047" y="189" letter-spacing="-.649">O</tspan> <tspan x="207.599" y="189" letter-spacing="-1.238">T</tspan> <tspan x="215.282" y="189">AL ISMA</tspan> <tspan x="281.183" y="189" letter-spacing="-.463">R</tspan> <tspan x="291.233" y="189">T </tspan> <tspan x="186" y="210">ONLINE</tspan>
+        </text>
+        <text fill="#002661" font-family="Lato-Bold, Lato" font-size="16" font-weight="bold" transform="translate(0 .894)">
+            <tspan x="559.16" y="188">943</tspan>
+        </text>
+    </g>
+</svg>

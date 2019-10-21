@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="598" height="225" viewBox="0 0 598 225">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#D9D9D9" d="M145 92.5h452M145 224.5h452M145 160.5h452"/>
+        <path fill="#002661" d="M0 91h119V28H0z"/>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="41.694" y="48">Custos </tspan> <tspan x="22.509" y="63">operacionais - </tspan> <tspan x="14.559" y="78">Ismart presencial</tspan>
+        </text>
+        <path fill="#002661" d="M0 158h119V95H0z"/>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="34.665" y="123">Despesas </tspan> <tspan x="19.23" y="138">administrativas</tspan>
+        </text>
+        <path fill="#002661" d="M0 225h119v-63H0z"/>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="40.668" y="197">TOTAL</tspan>
+        </text>
+        <text fill="#8FC6B2" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="169.478" y="62">R$ 21.909.370</tspan>
+        </text>
+        <text fill="#F2665E" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="325.478" y="62">R$ 24.651.000</tspan>
+        </text>
+        <text fill="#028ED4" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="481.478" y="62">R$ 27.663.015</tspan>
+        </text>
+        <text fill="#F2665E" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="325.478" y="196">R$ 28.090.000</tspan>
+        </text>
+        <text fill="#028ED4" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="481.478" y="196">R$ 31.349.174</tspan>
+        </text>
+        <text fill="#8FC6B2" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="173.538" y="129">R$ 2.974.628</tspan>
+        </text>
+        <text fill="#8FC6B2" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="169.478" y="196">R$ 24.883.998</tspan>
+        </text>
+        <text fill="#F2665E" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="329.538" y="129">R$ 3.439.000</tspan>
+        </text>
+        <text fill="#028ED4" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="485.538" y="129">R$ 3.686.159</tspan>
+        </text>
+        <path fill="#8FC7B0" d="M145 28h141V0H145z"/>
+        <text fill="#FEFEFE" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" letter-spacing=".028">
+            <tspan x="202.704" y="18">2016</tspan>
+        </text>
+        <path fill="#F2665E" d="M301 28h141V0H301z"/>
+        <text fill="#FEFEFE" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" letter-spacing=".028">
+            <tspan x="358.704" y="18">2017</tspan>
+        </text>
+        <path fill="#00BDF2" d="M457 28h141V0H457z"/>
+        <text fill="#FEFEFE" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" letter-spacing=".028">
+            <tspan x="514.704" y="18">2018</tspan>
+        </text>
+    </g>
+</svg>

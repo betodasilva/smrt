@@ -18,7 +18,7 @@ import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
 import { ManifestoComponent } from './pages/07-manifesto/manifesto.component';
 import { ListaParceirosComponent } from './pages/09-lista-parceiros/lista-parceiros.component';
 import { ExpedienteComponent } from './pages/10-expediente/expediente.component';
-// import { ResultadosComponent } from './pages/08-resultados/resultados.component';
+import { ResultadosComponent } from './pages/08-resultados/resultados.component';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SliderComponent } from './components/slider/slider.component';
@@ -45,8 +45,8 @@ import { TimelineCardComponent } from './components/timeline-card/timeline-card.
 import { TimelineImageComponent } from './components/timeline-image/timeline-image.component';
 import { FloatContainerComponent } from './components/float-container/float-container.component';
 import { ShareComponent } from './components/share/share/share.component';
-// import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
-// import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
+import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
+import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -85,9 +85,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ShareComponent,
     TrajetoriasPraticaComponent,
     TrajetoriasSelecaoComponent,
-    // ResultadosComponent,
-    // SvgIconComponent,
-    // SvgDefinitionsComponent
+    ResultadosComponent,
+    SvgIconComponent,
+    SvgDefinitionsComponent
   ],
   imports: [
     BrowserModule,
