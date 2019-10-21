@@ -7,6 +7,7 @@ import { throttleTime } from 'rxjs/operators';
 interface chapterData {
   image,
   imageMobile,
+  imageTablet,
   title,
   subtitle
 }
@@ -36,19 +37,21 @@ export class ChapterHatComponent implements OnInit {
   }
 
   get backgroundImage(){
-    let styles = {}
-    const isMobile = this.window.innerWidth < 768;
+    let styles = {}, imageUrl: string = "";
+    const isMobile: boolean = this.windowWidth < 560;
+    const isTablet: boolean = this.windowWidth > 560 && this.windowWidth <= 768;
+    
     if ( isMobile ) {
-      styles = {
-        'background-image': `url(${this.data.imageMobile})`
-      }
+      imageUrl = this.data.imageMobile;
+    } else if ( isTablet ){
+      imageUrl = this.data.imageTablet;
     } else {
-      styles = {
-        'background-image': `url(${this.data.image})`
-      }
+      imageUrl = this.data.image;
     }
 
-    return styles;
+    return styles = {
+      'background-image': `url(${imageUrl})`
+    };
   }
 
   @HostListener('window:resize', ['$event.target'])
