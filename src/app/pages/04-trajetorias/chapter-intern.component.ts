@@ -12,6 +12,8 @@ export class ChapterInternComponent implements OnInit {
 
   public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
   private chapterHatInfo = {
+    'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
+    'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
     'image': 'assets/images/4-trajetorias.jpg',
     'title': 'Capítulo 04',
     'subtitle': 'Trajetórias Ismart'
@@ -31,7 +33,7 @@ export class ChapterInternComponent implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto.jpg',
+      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
       'title': '07.',
       'subtitle': 'Resultados 2018',
       'url': ''

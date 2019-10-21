@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ChapterInternSimpleComponentm implements OnInit {
 
   private chapterHatInfo = {
-    'image': 'assets/images/chapter-hat.jpg',
+    'imageMobile': 'assets/images/hats/1-mensagem-do-conselho-hat.jpg',
+    'imageTablet': 'assets/images/hats/1-mensagem-do-conselho-tablet.jpg',
+    'image': 'assets/images/1-mensagem-do-conselho.jpg',
     'title': 'Capítulo 01',
     'subtitle': 'Mensagem do Conselho'
   }
@@ -27,7 +29,7 @@ export class ChapterInternSimpleComponentm implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto.jpg',
+      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
       'title': '07.',
       'subtitle': 'Resultados 2018',
       'url': ''
