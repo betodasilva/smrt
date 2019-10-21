@@ -1,6 +1,6 @@
 <app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
 
-<article class="chapter-content">
+<article class="chapter-content pb-0">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
@@ -10,7 +10,7 @@
 				<svg-icon name="ismart-online" viewBox="0 0 597 198"></svg-icon>
 				<h2>Quem o levou a conhecer o Ismart?</h2>
 				<div 
-					class="chapter-content__inline-data">
+					class="inline-data">
 					<svg-icon 
 						name="doc" 
 						viewBox="0 0 75 75"
@@ -96,7 +96,99 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="block-content__bg"></div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+				<h2>Total de universitários ativos por área</h2>
+				<svg-icon 
+					name="ativos-por-area"
+					viewBox="0 0 601 159"
+					width="601"
+					height="159">
+				</svg-icon>
+				<h2 class="mb-2">Percentual de universitários em tipos de universidades</h2>
+				<p class="mb-4">(Públicas, particular, estrangeira)</p>
+				<div 
+					class="d-flex justify-content-between align-items-center">
+					<svg-icon
+						class="m-0"
+						name="ilustra01"
+						viewBox="0 0 75 193"
+						height="193"
+						width="75">
+					</svg-icon>
+					<svg-icon
+						class="m-0"
+						name="grafico"
+						viewBox="0 0 366 195"
+						height="195"
+						width="366">
+					</svg-icon>
+					<img src="../../../assets/images/ilustra-2.svg">
+				</div>
+				<ul class="graph-list">
+					<li class="graph-list__item">
+						<div class="graph-list__item-text">
+							<h4>Públicas</h4>
+							<span>(USP, UFRJ, Unesp, UFABC, etc.)</span>
+						</div>
+						<div class="graph-list__item-number graph-list__item-number--blue-l">
+							<span>49%</span>
+						</div>
+					</li>
+					<li class="graph-list__item">
+						<div class="graph-list__item-text">
+							<h4>Particulares</h4>
+							<span>(PUC-RIO, INSPER, PUC-SP, FGV, etc.)</span>
+						</div>
+						<div class="graph-list__item-number graph-list__item-number--blue-m">
+							<span>49%</span>
+						</div>
+					</li>
+					<li class="graph-list__item">
+						<div class="graph-list__item-text">
+							<h4>Particulares</h4>
+							<span>(Universidad de Buenos Aires, Princeton, Yale University, Dartmouth, Stanford, 
+								Harvard University, University of Notre Dame, Lehigh University, Barnard College, Porto)</span>
+						</div>
+						<div class="graph-list__item-number graph-list__item-number--green">
+							<span>2%</span>
+						</div>
+					</li>
+				</ul>
+				<div 
+					class="inline-data inline-data--version02">
+					<svg-icon 
+						name="study" 
+						viewBox="0 0 81 81"
+						height="81"
+						width="81">
+					</svg-icon>
+					<span class="divider divider--white"></span>
+					<strong>323</strong>
+					<p>Graduados (ALUMNI ISMART) – acumulado com conclusão da formação até 2018</p>
+				</div>
+				<h2>Orçamento Anual</h2>
+				<p>Custos operacionais e despesas administrativas ao longo dos anos.</p>
+				<svg-icon
+					name="tabela-custo01"
+					viewBox="0 0 598 225"
+					height="225"
+					width="598">
+				</svg-icon>
+				<h2>Número de alunos</h2>
+				<p>Jovens atendidos nos ensinos fundamental, médio e superior</p>
+				<svg-icon
+					name="tabela-custo02"
+					viewBox="0 0 598 161"
+					height="161"
+					width="598">
+				</svg-icon>
+			</div>
+		</div>
+		<hr class="my-4">
+	</div>
 </article>
+<app-related [relatedData]="relatedInfo"></app-related>

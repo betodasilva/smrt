@@ -11,6 +11,7 @@ import { ManifestoComponent } from './pages/07-manifesto/manifesto.component';
 // import { ResultadosComponent } from './pages/08-resultados/resultados.component';
 import { ListaParceirosComponent } from './pages/09-lista-parceiros/lista-parceiros.component';
 import { ExpedienteComponent } from './pages/10-expediente/expediente.component';
+import { ResultadosComponent } from './pages/08-resultados/resultados.component';
 
 const routes: Routes = [
   { path: '',
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: '07-manifesto', component: ManifestoComponent },
   { path: '09-lista-parceiros', component: ListaParceirosComponent},
   { path: '10-expediente', component: ExpedienteComponent},
-  // { path: '08-resultados', component: ResultadosComponent }
+  { path: '08-resultados', component: ResultadosComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];
 

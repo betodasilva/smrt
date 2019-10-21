@@ -62,32 +62,6 @@
 			margin-bottom: 32px;
 	}
 
-	&__inline-data {
-		display: flex;
-		align-items: center;
-		strong {
-			font-size: 24px;
-			line-height: 32px;
-			letter-spacing: -0.5px;
-			color: var(--blue-m);
-		}
-		svg-icon {
-			margin-bottom: 0;
-		}
-		.divider {
-			align-self: stretch;
-			width: 1px;
-			background: var(--green);
-			margin: 0 20px;
-		}
-
-		p {
-			font-size: 14px;
-			line-height: 24px;
-			font-weight: 700;
-		}
-	}
-
 	&__img {
 		margin: 40px 0;
 		z-index: 1;
@@ -105,6 +79,53 @@
 						margin-right: 6px;
 						max-width: 16px;
 				}
+		}
+	}
+}
+
+.inline-data {
+	display: flex;
+	align-items: center;
+	strong {
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: -0.5px;
+		color: var(--blue-m);
+	}
+	svg-icon {
+		margin-bottom: 0;
+	}
+	.divider {
+		align-self: stretch;
+		width: 1px;
+		background: var(--green);
+		margin: 0 20px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+
+	&--version02 {
+		background: #d4f0fc;
+		padding: 12px 0;
+		font-family: var(--font-montserrat);
+		margin-bottom: 72px;
+		strong {
+			margin-right: 15px;
+			font-weight: 700;
+		}
+
+		p {
+			font-weight: 400;
+			margin: 0;
+		}
+
+		> .divider {
+			background: #fff;
+			width: 2px;
 		}
 	}
 }
@@ -152,9 +173,7 @@ svg-icon {
 	height: 420px;
 	position: relative;
 	&__bg {
-		background-image: url('../../../assets/images/encontro-es-sp.jpg');
-		background-color: var(--blue-l);
-		background-blend-mode: multiply;
+		background-image: url('../../../assets/images/umlo-sp-2019-wallisson-rj.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
@@ -162,7 +181,7 @@ svg-icon {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		opacity: 0.6;
+		// opacity: 0.6;
 		z-index: -1;
 	}
 
@@ -206,5 +225,63 @@ svg-icon {
 				text-align: left;
 			}
 		}
+	}
+}
+
+.graph-list {
+	padding: 0;
+	margin: 25px 0 75px;
+	
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		font-family: var(--font-lato);
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+		border-bottom: 1px solid #d9d9d9;
+		
+		&-text {
+			color: var(--blue-m);
+			line-height: 1;
+			h4 {
+				font-weight: 700;
+				margin-bottom: 5px;
+				text-transform: uppercase;
+			}
+
+			span {
+				font-size: 14px;
+			}
+		}
+
+		&-number {
+			text-align: center;
+			font-size: 18px;
+			line-height: 40px;
+			padding: 8px;
+			font-weight: 700;
+			width: 75px;
+			flex: 0 0 75px;
+			&--blue-l {
+				background: var(--blue-ll);
+				color: var(--blue-m);
+			}
+
+			&--blue-m {
+				background: var(--blue-m);
+				color: #fff;
+			}
+
+			&--green {
+				background: var(--green);
+				color: var(--blue-m);
+				line-height: 300%;
+				margin-top: 3px;
+				display: inline-block;
+			}
+		}
+		
+
 	}
 }
