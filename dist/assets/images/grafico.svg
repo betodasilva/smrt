@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="366" height="195" viewBox="0 0 366 195">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#00BDF2" d="M46 168h68V0H46z"/>
+        <path fill="#002661" d="M149 168h68V0h-68z"/>
+        <path fill="#EBEB70" d="M250 168h68v-10h-68z"/>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="18" font-weight="bold">
+            <tspan x="62.184" y="194">49%</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="18" font-weight="bold">
+            <tspan x="165.185" y="194">49%</tspan>
+        </text>
+        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="18" font-weight="bold">
+            <tspan x="271.404" y="194">2%</tspan>
+        </text>
+        <path fill="#D9D9D9" d="M366 174v-6H0v6l183-.208z"/>
+    </g>
+</svg>

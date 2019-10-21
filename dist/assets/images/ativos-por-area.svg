@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="601" height="159" viewBox="0 0 601 159">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#012461" d="M0 42.264h116.73V0H0zM119.748 42.264h60.378V0h-60.378z"/>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="10" font-weight="bold">
+            <tspan x="13.348" y="19">CIÊNCIAS EXATAS</tspan>
+        </text>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="139.56" y="26">191</tspan>
+        </text>
+        <path fill="#028ED4" d="M0 71.17h116.73V44H0z"/>
+        <path fill="#00BDF2" d="M120 71.17h60.377V44H120z"/>
+        <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12">
+            <tspan x="10" y="64">Engenharia</tspan>
+        </text>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="139.56" y="62">139</tspan>
+        </text>
+        <path fill="#028ED4" d="M0 129.17h116.73V102H0z"/>
+        <path fill="#00BDF2" d="M120 129.17h60.377V102H120z"/>
+        <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12">
+            <tspan x="10" y="122">Computação</tspan>
+        </text>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="146.52" y="120">8</tspan>
+        </text>
+        <path fill="#028ED4" d="M0 100.17h116.73V73H0z"/>
+        <path fill="#00BDF2" d="M120 100.17h60.377V73H120z"/>
+        <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12">
+            <tspan x="10" y="93">Ciências</tspan>
+        </text>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="143.04" y="91">12</tspan>
+        </text>
+        <path fill="#028ED4" d="M0 158.17h116.73V131H0z"/>
+        <path fill="#00BDF2" d="M120 158.17h60.377V131H120z"/>
+        <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12">
+            <tspan x="10" y="151">Outros</tspan>
+        </text>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="143.04" y="149">32</tspan>
+        </text>
+        <g>
+            <path fill="#012461" d="M210 42.264h116.73V0H210zM329.748 42.264h60.378V0h-60.378z"/>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="10" font-weight="bold" transform="translate(210)">
+                <tspan x="15.207" y="19">HUMANIDADES</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(210)">
+                <tspan x="139.56" y="26">118</tspan>
+            </text>
+            <path fill="#028ED4" d="M210 71.17h116.73V44H210z"/>
+            <path fill="#00BDF2" d="M330 71.17h60.377V44H330z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(210)">
+                <tspan x="10" y="64">Direito</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(210)">
+                <tspan x="143.04" y="62">45</tspan>
+            </text>
+            <path fill="#028ED4" d="M210 129.17h116.73V102H210z"/>
+            <path fill="#00BDF2" d="M330 129.17h60.377V102H330z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(210)">
+                <tspan x="10" y="122">Economia</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(210)">
+                <tspan x="143.04" y="120">27</tspan>
+            </text>
+            <path fill="#028ED4" d="M210 100.17h116.73V73H210z"/>
+            <path fill="#00BDF2" d="M330 100.17h60.377V73H330z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(210)">
+                <tspan x="10" y="93">Administração</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(210)">
+                <tspan x="143.04" y="91">28</tspan>
+            </text>
+            <path fill="#028ED4" d="M210 158.17h116.73V131H210z"/>
+            <path fill="#00BDF2" d="M330 158.17h60.377V131H330z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(210)">
+                <tspan x="10" y="151">Outros</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(210)">
+                <tspan x="143.04" y="149">18</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="#012461" d="M420 42.264h116.73V0H420zM540 42.264h60.377V0H540z"/>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="10" font-weight="bold" transform="translate(420)">
+                <tspan x="22.913" y="19">BIOLÓGICAS</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(420)">
+                <tspan x="143.04" y="26">60</tspan>
+            </text>
+            <path fill="#028ED4" d="M420 71.17h116.73V44H420z"/>
+            <path fill="#00BDF2" d="M540 71.17h60.377V44H540z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(420)">
+                <tspan x="10" y="64">Medicina</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(420)">
+                <tspan x="143.04" y="62">21</tspan>
+            </text>
+            <path fill="#028ED4" d="M420 129.17h116.73V102H420z"/>
+            <path fill="#00BDF2" d="M540 129.17h60.377V102H540z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(420)">
+                <tspan x="10" y="122">Farmácia</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(420)">
+                <tspan x="143.04" y="120">10</tspan>
+            </text>
+            <path fill="#028ED4" d="M420 100.17h116.73V73H420z"/>
+            <path fill="#00BDF2" d="M540 100.17h60.377V73H540z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(420)">
+                <tspan x="10" y="93">Biologia</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(420)">
+                <tspan x="143.04" y="91">19</tspan>
+            </text>
+            <path fill="#028ED4" d="M420 158.17h116.73V131H420z"/>
+            <path fill="#00BDF2" d="M540 158.17h60.377V131H540z"/>
+            <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="12" transform="translate(420)">
+                <tspan x="10" y="151">Outros</tspan>
+            </text>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold" transform="translate(420)">
+                <tspan x="143.04" y="149">10</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
