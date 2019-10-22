@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 
 @Component({
   selector: 'app-trajetorias-selecao',
@@ -36,8 +38,9 @@ export class TrajetoriasSelecaoComponent implements OnInit {
     },
     
   ]
-  
-  constructor() { }
+  @ViewChild('modal', {static:false}) modal: ModalComponent;
+
+  constructor(private testimonials: TestimonialsService) { }
 
   ngOnInit() {
   }

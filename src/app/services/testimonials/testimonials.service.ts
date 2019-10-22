@@ -66,8 +66,7 @@ export class TestimonialsService {
         que o maior desafio dessa profissão é
         fazer com que as pessoas percebam
         que não há futuro, não há mudança
-        possível sem educação.`,
-        photo: "assets/images/isabela-moraes.jpg"
+        possível sem educação.`
       },
       {
         id: 2,
@@ -80,8 +79,7 @@ export class TestimonialsService {
         e começa a identificar esses alunos
         a partir do processo seletivo, e
         eles entendem a importância de se
-        desenvolver e crescer`,
-        photo: "assets/images/isabela-moraes.jpg"
+        desenvolver e crescer`
       },
       {
         id: 3,
@@ -142,8 +140,7 @@ export class TestimonialsService {
         ao seu redor, tornando-o um cidadão
         mais crítico, responsável, organizado,
         solidário, participativo e consciente da
-        realidade.`,
-        photo: "assets/images/isabela-moraes.jpg"
+        realidade.`
       }
     ],
     parceiros: [
