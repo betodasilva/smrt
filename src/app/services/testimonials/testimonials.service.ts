@@ -229,8 +229,7 @@ export class TestimonialsService {
         com confiança e muita vontade de
         ingressar no projeto. Foi assim que
         tive meus primeiros contatos com o
-        Ismart.`,
-        photo: "assets/images/pedro-navarro.jpg"
+        Ismart.`
       },
       {
         id: 4,

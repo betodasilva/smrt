@@ -8,7 +8,7 @@
                 <img src="assets/images/arrow.svg">
         </button>
         <figure class="modal__img">
-            <img [src]="content.photo" alt="content.name">
+            <img [src]="content.photo || 'assets/images/placeholder.jpg'" alt="content.name">
         </figure>
         <button 
             type="button" 
