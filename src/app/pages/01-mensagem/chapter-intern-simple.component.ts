@@ -47,6 +47,7 @@ export class ChapterInternSimpleComponentm implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/1-mensagem-do-conselho-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '01. Mensagem do Conselho - Ismart'});
   }
 
 }

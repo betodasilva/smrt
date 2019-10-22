@@ -1,13 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
-
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-horizonte',
   templateUrl: './horizonte.component.html',
   styleUrls: ['./horizonte.component.scss']
 })
 export class HorizonteComponent implements OnInit {
+
+  title = '06. Horizonte - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',
@@ -41,9 +43,16 @@ export class HorizonteComponent implements OnInit {
   @ViewChild('modal01', {static: false}) modal01: ModalComponent;
   @ViewChild('modal02', {static: false}) modal02: ModalComponent;
   
-  constructor(private testimonials: TestimonialsService) { }
+  constructor(
+    private testimonials: TestimonialsService,
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/6-horizonte-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '06. Horizonte - Ismart'});
   }
 
 }

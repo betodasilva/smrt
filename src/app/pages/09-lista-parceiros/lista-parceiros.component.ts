@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-lista-parceiros',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-parceiros.component.scss']
 })
 export class ListaParceirosComponent implements OnInit {
+
+  title = '09. Lista de parceiros - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/9-lista-de-parceiros-hat.jpg',
@@ -83,9 +86,15 @@ export class ListaParceirosComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/9-lista-de-parceiros-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '09. Lista de parceiros - Ismart'});
   }
 
 }

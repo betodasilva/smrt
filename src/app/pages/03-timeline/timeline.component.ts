@@ -56,6 +56,7 @@ export class TimelineComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/3-timeline-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '03. Linha do Tempo - Ismart'});
   }
 
   onItemNavClick( { target }, navItem ){

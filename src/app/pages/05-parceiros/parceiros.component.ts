@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-parceiros',
@@ -10,6 +11,8 @@ import { ModalComponent } from 'src/app/components/modal/modal.component';
 export class ParceirosComponent implements OnInit {
 
   @ViewChild('modal', {static: false}) modal: ModalComponent;
+  title = '05. Parceiros Ismart - Ismart';
+
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/5-parceiros-hat.jpg',
     'imageTablet': 'assets/images/hats/5-parceiros-tablet.jpg',
@@ -39,9 +42,16 @@ export class ParceirosComponent implements OnInit {
     }
   ]
 
-  constructor(private testimonials: TestimonialsService) { }
+  constructor(
+    private testimonials: TestimonialsService,
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/5-parceiros-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '05. Parceiros Ismart - Ismart'});
   }
 
 }
