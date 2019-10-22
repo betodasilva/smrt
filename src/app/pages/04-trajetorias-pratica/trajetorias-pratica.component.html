@@ -91,14 +91,15 @@
         </div>
     </div>
 </article>
-<!-- <app-testimonials
+<app-testimonials
+    [data]="testimonials.getByPage('pratica')"
 	#testimonialComponent
 	(onTestimonialCardClick)="modal.openModal()">
-</app-testimonials> -->
+</app-testimonials>
 <app-related [relatedData]="relatedInfo"></app-related>
-<!-- <app-modal
+<app-modal
 	#modal
 	[testimonial]="testimonials.current"
-	(onPrev)="onPrevTestimonial()"
-	(onNext)="onNextTestimonial()">
-</app-modal> -->
+	(onPrev)="testimonials.navigatePrev('pratica')"
+	(onNext)="testimonials.navigateNext('pratica')">
+</app-modal>

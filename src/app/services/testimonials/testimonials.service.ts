@@ -404,7 +404,7 @@ export class TestimonialsService {
         serão abertas. Você amadurecerá
         muito. Para mim, o Ismart representa
         transformação.`,
-        photo: ""
+        photo: "assets/images/gabrielli-trajetorias.png"
       },
       {
         id: 2,
@@ -468,7 +468,8 @@ export class TestimonialsService {
         adversidades econômicas e sociais, conquistando bolsas para o
         Ismart e entrando nas melhores
         universidades do Brasil e do
-        mundo`
+        mundo`,
+        photo: "assets/images/pedro-navarro.jpg"
       },
       {
         id: 3,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 
 @Component({
   selector: 'app-trajetorias-pratica',
@@ -36,7 +37,7 @@ export class TrajetoriasPraticaComponent implements OnInit {
     },
   ]
   
-  constructor() { }
+  constructor(private testimonials: TestimonialsService) { }
 
   ngOnInit() {
   }
