@@ -4,6 +4,7 @@
 	[testimonialPosition]="testimonialPosition">
 </app-chapter-content-all>
 <app-testimonials
+	[data]="testimonials.getByPage('contato')"
 	#testimonialComponent
 	(onTestimonialCardClick)="modal.openModal()">
 </app-testimonials>
