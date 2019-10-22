@@ -29,10 +29,10 @@ export class MissaoComponent implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Resultados 2018',
-      'url': ''
+      'image': 'assets/images/05-parceiros-mobile.jpg',
+      'title': '05.',
+      'subtitle': 'Parceiros Ismart',
+      'url': '05-parceiros-ismart'
     }
   ]
   

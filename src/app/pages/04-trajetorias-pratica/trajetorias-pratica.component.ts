@@ -17,10 +17,10 @@ export class TrajetoriasPraticaComponent implements OnInit {
 
   private relatedInfo = [
     {
-      'image': 'assets/images/03-linha-do-tempo.jpg',
-      'title': '03.',
-      'subtitle': 'Linha do Tempo',
-      'url': '03-linha-do-tempo'
+      'image': 'assets/images/04-trajetorias-mobile.jpg',
+      'title': '04. Trajetórias Ismart',
+      'subtitle': 'Seleção',
+      'url': '04-trajetorias-ismart-selecao'
     },
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
@@ -29,11 +29,11 @@ export class TrajetoriasPraticaComponent implements OnInit {
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Resultados 2018',
-      'url': ''
-    }
+      'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
+      'title': '09.',
+      'subtitle': 'Lista de parceiros',
+      'url': '09-lista-parceiros'
+    },
   ]
   
   constructor() { }

@@ -42,17 +42,17 @@ export class ExpedienteComponent implements OnInit {
       'url': '03-linha-do-tempo'
     },
     {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Contato',
-      'url': '04-trajetorias-ismart-contato'
+      'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
+      'title': '09.',
+      'subtitle': 'Lista de parceiros',
+      'url': '09-lista-parceiros'
     },
     {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Resultados 2018',
-      'url': ''
-    }
+      'image': 'assets/images/01-mensagem-do-conselho-mobile.jpg',
+      'title': '01.',
+      'subtitle': 'Mensagem do conselho',
+      'url': '01-mensagem-do-conselho'
+    },
   ]
 
   constructor() { }

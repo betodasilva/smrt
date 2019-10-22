@@ -24,23 +24,23 @@ export class TimelineComponent implements OnInit {
 
   private relatedInfo = [
     {
-      'image': 'assets/images/03-linha-do-tempo.jpg',
-      'title': '03.',
-      'subtitle': 'Linha do Tempo',
-      'url': '03-linha-do-tempo'
-    },
-    {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
       'subtitle': 'Contato',
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Resultados 2018',
-      'url': ''
-    }
+      'image': 'assets/images/05-parceiros-mobile.jpg',
+      'title': '05.',
+      'subtitle': 'Parceiros Ismart',
+      'url': '05-parceiros-ismart'
+    },
+    {
+      'image': 'assets/images/06-horizonte-mobile.jpg',
+      'title': '06.',
+      'subtitle': 'Horizonte',
+      'url': '06-horizonte'
+    },
   ]
   
   constructor(

@@ -17,6 +17,12 @@ export class ChapterInternSimpleComponentm implements OnInit {
 
   private relatedInfo = [
     {
+      'image': 'assets/images/02-missao-visao-crencas-mobile.jpg',
+      'title': '02.',
+      'subtitle': 'Missão, Visão e Crenças',
+      'url': '02-missao-visao-valores'
+    },
+    {
       'image': 'assets/images/03-linha-do-tempo.jpg',
       'title': '03.',
       'subtitle': 'Linha do Tempo',
@@ -28,12 +34,6 @@ export class ChapterInternSimpleComponentm implements OnInit {
       'subtitle': 'Contato',
       'url': '04-trajetorias-ismart-contato'
     },
-    {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Resultados 2018',
-      'url': ''
-    }
   ]
 
   constructor() { }
