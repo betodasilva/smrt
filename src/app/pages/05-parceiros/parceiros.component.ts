@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
   selector: 'app-parceiros',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParceirosComponent implements OnInit {
 
+  @ViewChild('modal', {static: false}) modal: ModalComponent;
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/5-parceiros-hat.jpg',
     'imageTablet': 'assets/images/hats/5-parceiros-tablet.jpg',
@@ -36,7 +39,7 @@ export class ParceirosComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private testimonials: TestimonialsService) { }
 
   ngOnInit() {
   }
