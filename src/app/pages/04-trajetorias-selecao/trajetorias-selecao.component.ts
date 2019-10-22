@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -39,8 +41,10 @@ export class TrajetoriasSelecaoComponent implements OnInit {
     },
     
   ]
-  
+  @ViewChild('modal', {static:false}) modal: ModalComponent;
+
   constructor(
+    private testimonials: TestimonialsService,
     private titleService: Title,
     private meta: Meta
   ) { }

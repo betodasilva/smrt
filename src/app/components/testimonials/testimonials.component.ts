@@ -14,9 +14,12 @@ import { TestimonialsService } from 'src/app/services/testimonials/testimonials.
 })
 export class TestimonialsComponent implements OnInit {
 
+  @Input() data: any;
   @Input() modeDark: boolean = false;
   @Output('onTestimonialCardClick') onTestimonialCardClick: EventEmitter<any> = new EventEmitter();
-  private slides = [];
+  private get slides() {
+    return this.data;
+  };
   private slideConfig = {
     "slidesToShow": 3,
     "slidesToScroll": 1,
@@ -41,9 +44,7 @@ export class TestimonialsComponent implements OnInit {
     ]
   };
 
-  constructor(private testimonials: TestimonialsService) {
-    this.slides = testimonials.getAll();
-  }
+  constructor(private testimonials: TestimonialsService) {}
 
   ngOnInit() {}
   onTestimonialClick(testimonial) {

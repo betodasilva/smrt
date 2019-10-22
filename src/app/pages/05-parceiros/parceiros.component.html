@@ -39,13 +39,14 @@
     </div>
 </article>
 <app-testimonials
+    [data]="testimonials.getByPage('parceiros')"
 	#testimonialComponent
 	(onTestimonialCardClick)="modal.openModal()">
 </app-testimonials>
 <app-related [relatedData]="relatedInfo"></app-related>
-<!-- <app-modal
+<app-modal
 	#modal
 	[testimonial]="testimonials.current"
-	(onPrev)="onPrevTestimonial()"
-	(onNext)="onNextTestimonial()">
-</app-modal> -->
+	(onPrev)="testimonials.navigatePrev('parceiros')"
+	(onNext)="testimonials.navigateNext('parceiros')">
+</app-modal>

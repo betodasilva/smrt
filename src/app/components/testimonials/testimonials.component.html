@@ -12,7 +12,7 @@
                         class="testimonials__single"
                         (click)="onTestimonialClick(slide)">
                         <figure class="testimonials__img">
-                            <img [src]="slide.photo" [alt]="slide.name">
+                            <img [src]="slide.photo || 'assets/images/placeholder.jpg'" [alt]="slide.name">
                         </figure>
                         <h4 class="testimonials__name">{{ slide.name }}</h4>
                         <p class="testimonials__about">{{ slide.excerpt }}</p>

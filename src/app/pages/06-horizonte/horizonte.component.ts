@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Title, Meta } from '@angular/platform-browser';
-
 @Component({
   selector: 'app-horizonte',
   templateUrl: './horizonte.component.html',
@@ -39,7 +40,11 @@ export class HorizonteComponent implements OnInit {
     }
   ]
 
+  @ViewChild('modal01', {static: false}) modal01: ModalComponent;
+  @ViewChild('modal02', {static: false}) modal02: ModalComponent;
+  
   constructor(
+    private testimonials: TestimonialsService,
     private titleService: Title,
     private meta: Meta
   ) { }

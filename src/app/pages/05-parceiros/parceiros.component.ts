@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -8,6 +10,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ParceirosComponent implements OnInit {
 
+  @ViewChild('modal', {static: false}) modal: ModalComponent;
   title = '05. Parceiros Ismart - Ismart';
 
   private chapterHatInfo = {
@@ -40,6 +43,7 @@ export class ParceirosComponent implements OnInit {
   ]
 
   constructor(
+    private testimonials: TestimonialsService,
     private titleService: Title,
     private meta: Meta
   ) { }

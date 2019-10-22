@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -41,7 +42,8 @@ export class TrajetoriasPraticaComponent implements OnInit {
   
   constructor(
     private titleService: Title,
-    private meta: Meta
+    private meta: Meta,
+    private testimonials: TestimonialsService
   ) { }
 
   ngOnInit() {

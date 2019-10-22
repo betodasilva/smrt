@@ -11,7 +11,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ChapterInternComponent implements OnInit {
 
-  title = '04. Trajetórias Ismart: Contato - Ismart';
+  private title: string = '04. Trajetórias Ismart: Contato - Ismart';
 
   public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
   private chapterHatInfo = {
@@ -21,7 +21,6 @@ export class ChapterInternComponent implements OnInit {
     'title': 'Capítulo 04',
     'subtitle': 'Trajetórias Ismart'
   }
-  
   private relatedInfo = [
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
@@ -72,11 +71,11 @@ export class ChapterInternComponent implements OnInit {
   }
 
   onPrevTestimonial(){
-    this.testimonials.navigatePrev()
+    this.testimonials.navigatePrev('contato')
   }
 
   onNextTestimonial(){
-    this.testimonials.navigateNext()
+    this.testimonials.navigateNext('contato')
   }
 
 }
