@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, Input, ElementRef } from '@angular/core';
 import { TestimonialsService } from "../../services/testimonials/testimonials.service";
 import { ModalComponent } from "../../components/modal/modal.component";
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-chapter-intern',
@@ -9,6 +10,8 @@ import { Observable, Subject, BehaviorSubject } from 'rxjs';
   styleUrls: ['./chapter-intern.component.scss']
 })
 export class ChapterInternComponent implements OnInit {
+
+  title = '04. Trajetórias Ismart: Seleção - Ismart';
 
   public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
   private chapterHatInfo = {
@@ -43,9 +46,14 @@ export class ChapterInternComponent implements OnInit {
   @ViewChild('testimonialComponent', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('modal', {static:false}) modal: ModalComponent;
   
-  constructor(private testimonials: TestimonialsService) { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta,
+    private testimonials: TestimonialsService) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
   }
 
   ngAfterViewInit(){

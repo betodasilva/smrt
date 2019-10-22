@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-missao',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./missao.component.scss']
 })
 export class MissaoComponent implements OnInit {
+
+  title = '02. Missão, Visão e Crenças - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
@@ -36,8 +39,13 @@ export class MissaoComponent implements OnInit {
     }
   ]
   
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/2-missao-visao-crencas-hat.jpg' } );
   }
 }

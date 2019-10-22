@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline/timeline.service';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-timeline',
@@ -13,6 +14,8 @@ export class TimelineComponent implements OnInit {
   
   @ViewChild('article', {static: false}) article: ElementRef;
   @ViewChild('nav', {static: false}) nav: ElementRef;
+
+  title = '03. Linha do Tempo - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/3-timeline-hat.jpg',
@@ -45,10 +48,14 @@ export class TimelineComponent implements OnInit {
   
   constructor(
     private timeline: TimelineService,
-    private renderer: Renderer2) 
+    private renderer: Renderer2,
+    private titleService: Title,
+    private meta: Meta) 
   { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/3-timeline-hat.jpg' } );
   }
 
   onItemNavClick( { target }, navItem ){
