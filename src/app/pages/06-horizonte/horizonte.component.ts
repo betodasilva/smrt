@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-horizonte',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horizonte.component.scss']
 })
 export class HorizonteComponent implements OnInit {
+
+  title = '06. Horizonte - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',
@@ -36,9 +39,15 @@ export class HorizonteComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/6-horizonte-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '06. Horizonte - Ismart'});
   }
 
 }

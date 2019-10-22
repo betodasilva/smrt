@@ -11,7 +11,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ChapterInternComponent implements OnInit {
 
-  title = '04. Trajetórias Ismart: Seleção - Ismart';
+  title = '04. Trajetórias Ismart: Contato - Ismart';
 
   public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
   private chapterHatInfo = {
@@ -54,6 +54,7 @@ export class ChapterInternComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Contato - Ismart'});
   }
 
   ngAfterViewInit(){

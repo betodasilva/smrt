@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-trajetorias-pratica',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trajetorias-pratica.component.scss']
 })
 export class TrajetoriasPraticaComponent implements OnInit {
+
+  title = '04. Trajetórias Ismart: Prática - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
@@ -36,9 +39,15 @@ export class TrajetoriasPraticaComponent implements OnInit {
     },
   ]
   
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Prática - Ismart'});
   }
 
 }

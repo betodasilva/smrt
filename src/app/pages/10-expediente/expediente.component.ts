@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-expediente',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./expediente.component.scss']
 })
 export class ExpedienteComponent implements OnInit {
+
+  title = '10. Expediente - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/10-expediente-hat.jpg',
@@ -55,9 +58,15 @@ export class ExpedienteComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/10-expediente-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '10. Expediente - Ismart'});
   }
 
 }

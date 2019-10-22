@@ -47,5 +47,6 @@ export class MissaoComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/2-missao-visao-crencas-hat.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '02. Missão, Visão e Crenças - Ismart'});
   }
 }

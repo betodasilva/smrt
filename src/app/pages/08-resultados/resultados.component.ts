@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-resultados',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resultados.component.scss']
 })
 export class ResultadosComponent implements OnInit {
+
+  title = '08. Resultados - Ismart';
+
   private chapterHatInfo = {
     'image': 'assets/images/8-resultados.jpg',
     'imageMobile': 'assets/images/3-timeline.jpg',
@@ -33,9 +37,15 @@ export class ResultadosComponent implements OnInit {
       'url': '03-linha-do-tempo'
     }
   ]
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/8-resultados.jpg' } );
+    this.meta.addTag({property: 'og:title', content: '08. Resultados - Ismart'});
   }
 
 }
