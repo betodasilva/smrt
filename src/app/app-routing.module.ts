@@ -5,6 +5,9 @@ import { ChapterInternSimpleComponentm } from './pages/01-mensagem/chapter-inter
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
 import { TrajetoriasPraticaComponent } from './pages/04-trajetorias-pratica/trajetorias-pratica.component';
 import { TrajetoriasSelecaoComponent } from './pages/04-trajetorias-selecao/trajetorias-selecao.component';
+import { TrajetoriasSuporteComponent } from './pages/04-trajetorias-suporte/trajetorias-suporte.component';
+import { TrajetoriasInternacionalComponent } from './pages/04-trajetorias-internacional/trajetorias-internacional.component';
+import { TrajetoriasEadComponent } from './pages/04-trajetorias-ead/trajetorias-ead.component';
 import { MissaoComponent } from './pages/02-missao/missao.component';
 import { TimelineComponent } from './pages/03-timeline/timeline.component';
 import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
@@ -25,6 +28,9 @@ const routes: Routes = [
   { path: '04-trajetorias-ismart-contato', component: ChapterInternComponent },
   { path: '04-trajetorias-ismart-selecao', component: TrajetoriasSelecaoComponent },
   { path: '04-trajetorias-ismart-praticas', component: TrajetoriasPraticaComponent },
+  { path: '04-trajetorias-ismart-suporte', component: TrajetoriasSuporteComponent },
+  { path: '04-trajetorias-ismart-internacional', component: TrajetoriasInternacionalComponent },
+  { path: '04-trajetorias-ismart-ead', component: TrajetoriasEadComponent },
   { path: '05-parceiros-ismart', component: ParceirosComponent },
   { path: '06-horizonte', component: HorizonteComponent },
   { path: '07-manifesto', component: ManifestoComponent },

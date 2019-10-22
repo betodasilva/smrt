@@ -12,6 +12,9 @@ import { MissaoComponent } from './pages/02-missao/missao.component';
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
 import { TrajetoriasSelecaoComponent } from './pages/04-trajetorias-selecao/trajetorias-selecao.component';
 import { TrajetoriasPraticaComponent } from './pages/04-trajetorias-pratica/trajetorias-pratica.component';
+import { TrajetoriasSuporteComponent } from './pages/04-trajetorias-suporte/trajetorias-suporte.component';
+import { TrajetoriasInternacionalComponent } from './pages/04-trajetorias-internacional/trajetorias-internacional.component';
+import { TrajetoriasEadComponent } from './pages/04-trajetorias-ead/trajetorias-ead.component';
 import { TimelineComponent } from "./pages/03-timeline/timeline.component";
 import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
 import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
@@ -87,7 +90,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     TrajetoriasSelecaoComponent,
     ResultadosComponent,
     SvgIconComponent,
-    SvgDefinitionsComponent
+    SvgDefinitionsComponent,
+    TrajetoriasSuporteComponent,
+    TrajetoriasInternacionalComponent,
+    TrajetoriasEadComponent
   ],
   imports: [
     BrowserModule,
