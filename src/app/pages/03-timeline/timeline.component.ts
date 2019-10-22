@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline/timeline.service';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-timeline',
@@ -14,6 +15,8 @@ export class TimelineComponent implements OnInit {
   @ViewChild('article', {static: false}) article: ElementRef;
   @ViewChild('nav', {static: false}) nav: ElementRef;
 
+  title = '03. Linha do Tempo - Ismart';
+
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/3-timeline-hat.jpg',
     'imageTablet': 'assets/images/hats/3-timeline-tablet.jpg',
@@ -24,31 +27,35 @@ export class TimelineComponent implements OnInit {
 
   private relatedInfo = [
     {
-      'image': 'assets/images/03-linha-do-tempo.jpg',
-      'title': '03.',
-      'subtitle': 'Linha do Tempo',
-      'url': '03-linha-do-tempo'
-    },
-    {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
       'subtitle': 'Contato',
       'url': '04-trajetorias-ismart-contato'
     },
     {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Resultados 2018',
-      'url': ''
-    }
+      'image': 'assets/images/05-parceiros-mobile.jpg',
+      'title': '05.',
+      'subtitle': 'Parceiros Ismart',
+      'url': '05-parceiros-ismart'
+    },
+    {
+      'image': 'assets/images/06-horizonte-mobile.jpg',
+      'title': '06.',
+      'subtitle': 'Horizonte',
+      'url': '06-horizonte'
+    },
   ]
   
   constructor(
     private timeline: TimelineService,
-    private renderer: Renderer2) 
+    private renderer: Renderer2,
+    private titleService: Title,
+    private meta: Meta) 
   { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/3-timeline-hat.jpg' } );
   }
 
   onItemNavClick( { target }, navItem ){

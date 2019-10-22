@@ -64,23 +64,23 @@ export class ListaParceirosComponent implements OnInit {
 
   private relatedInfo = [
     {
+      'image': 'assets/images/10-expediente-mobile.jpg',
+      'title': '10.',
+      'subtitle': 'Expediente',
+      'url': '10-expediente'
+    },
+    {
       'image': 'assets/images/03-linha-do-tempo.jpg',
       'title': '03.',
       'subtitle': 'Linha do Tempo',
       'url': '03-linha-do-tempo'
     },
     {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Contato',
-      'url': '04-trajetorias-ismart-contato'
+      'image': 'assets/images/01-mensagem-do-conselho-mobile.jpg',
+      'title': '01.',
+      'subtitle': 'Mensagem do conselho',
+      'url': '01-mensagem-do-conselho'
     },
-    {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Resultados 2018',
-      'url': ''
-    }
   ]
 
   constructor() { }
