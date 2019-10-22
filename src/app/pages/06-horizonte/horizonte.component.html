@@ -25,17 +25,25 @@
     </div>
 </article>
 <app-testimonials
-	#testimonialComponent
-	(onTestimonialCardClick)="modal.openModal()">
+    #testimonialComponent
+    [data]="testimonials.getByPage('horizonte')"
+	(onTestimonialCardClick)="modal01.openModal()">
 </app-testimonials>
 <app-testimonials
+    [data]="testimonials.getByPage('chegando')"
     [modeDark]="true"
-	(onTestimonialCardClick)="modal.openModal()">
+	(onTestimonialCardClick)="modal02.openModal()">
 </app-testimonials>
 <app-related [relatedData]="relatedInfo"></app-related>
-<!-- <app-modal
-	#modal
+<app-modal
+	#modal01
 	[testimonial]="testimonials.current"
-	(onPrev)="onPrevTestimonial()"
-	(onNext)="onNextTestimonial()">
-</app-modal> -->
+	(onPrev)="testimonials.navigatePrev('horizonte')"
+	(onNext)="testimonials.navigateNext('horizonte')">
+</app-modal>
+<app-modal
+	#modal02
+	[testimonial]="testimonials.current"
+	(onPrev)="testimonials.navigatePrev('chegando')"
+	(onNext)="testimonials.navigateNext('chegando')">
+</app-modal>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
   selector: 'app-horizonte',
@@ -36,7 +38,10 @@ export class HorizonteComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  @ViewChild('modal01', {static: false}) modal01: ModalComponent;
+  @ViewChild('modal02', {static: false}) modal02: ModalComponent;
+  
+  constructor(private testimonials: TestimonialsService) { }
 
   ngOnInit() {
   }
