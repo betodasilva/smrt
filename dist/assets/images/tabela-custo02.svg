@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="598" height="161" viewBox="0 0 598 161">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#D9D9D9" d="M145 92.5h452M145 160.5h452"/>
+        <path fill="#002661" d="M0 91h119V28H0z"/>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="14.559" y="63">Ismart presencial</tspan>
+        </text>
+        <path fill="#002661" d="M0 158h119V95H0z"/>
+        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+            <tspan x="23.751" y="128">Ismart Online</tspan>
+        </text>
+        <text fill="#8FC6B2" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="198.608" y="62">1.120</tspan>
+        </text>
+        <text fill="#F2665E" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="354.608" y="62">1.203</tspan>
+        </text>
+        <text fill="#028ED4" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="509.608" y="62">1.258</tspan>
+        </text>
+        <text fill="#8FC6B2" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="204.32" y="129">244</tspan>
+        </text>
+        <text fill="#F2665E" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="360.32" y="129">330</tspan>
+        </text>
+        <text fill="#028ED4" font-family="Lato-Regular, Lato" font-size="14">
+            <tspan x="515.32" y="129">869</tspan>
+        </text>
+        <path fill="#8FC7B0" d="M145 28h141V0H145z"/>
+        <text fill="#FEFEFE" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" letter-spacing=".028">
+            <tspan x="202.704" y="18">2016</tspan>
+        </text>
+        <path fill="#F2665E" d="M301 28h141V0H301z"/>
+        <text fill="#FEFEFE" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" letter-spacing=".028">
+            <tspan x="358.704" y="18">2017</tspan>
+        </text>
+        <path fill="#00BDF2" d="M457 28h141V0H457z"/>
+        <text fill="#FEFEFE" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" letter-spacing=".028">
+            <tspan x="514.704" y="18">2018</tspan>
+        </text>
+    </g>
+</svg>
