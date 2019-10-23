@@ -55,7 +55,7 @@ export class TrajetoriasSuporteComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Seleção - Ismart'});
+    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Suporte - Ismart'});
   }
 
 }
