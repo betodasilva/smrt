@@ -1,8 +1,15 @@
 <app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
 <article 
     class="chapter-content"
-    #articleContainer>
-    <!-- Share aqui -->
+    #article>
+    <app-float-container
+    [startPosEl]="article"
+    [endPosEl]="testimonialComponent.nativeElement"
+    fixOffset="40"
+    endOffset="-40"
+    [child]="shareComponent.nativeElement">
+    <app-share #share></app-share>
+</app-float-container>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
@@ -19,7 +26,7 @@
                     <cite>Helena Aguiar - diretora de Planejamento e Integração do Colégio Bandeirantes</cite>
                     </blockquote>
                     <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
-                        <figcaption><img src="assets/images/camera.svg" alt="">Giovanna, Jean, Carlos e Lucca Muliterno</figcaption>
+                        <figcaption><img src="assets/images/camera.svg">Helena Aguiar - diretora de Planejamento e Integração do Colégio Bandeirantes - São Paulo</figcaption>
                     </div>
                 </div>
             </figure>
@@ -40,7 +47,7 @@
 </article>
 <app-testimonials
     [data]="testimonials.getByPage('parceiros')"
-	#testimonialComponent
+	#testimonial
 	(onTestimonialCardClick)="modal.openModal()">
 </app-testimonials>
 <app-related [relatedData]="relatedInfo"></app-related>
