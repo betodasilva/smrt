@@ -15,6 +15,8 @@ import { TrajetoriasPraticaComponent } from './pages/04-trajetorias-pratica/traj
 import { TrajetoriasSuporteComponent } from './pages/04-trajetorias-suporte/trajetorias-suporte.component';
 import { TrajetoriasInternacionalComponent } from './pages/04-trajetorias-internacional/trajetorias-internacional.component';
 import { TrajetoriasEadComponent } from './pages/04-trajetorias-ead/trajetorias-ead.component';
+import { TrajetoriasUniversidadeComponent } from './pages/04-trajetorias-universidade/trajetorias-universidade.component';
+import { TrajetoriasAlumniComponent } from './pages/04-trajetorias-alumni/trajetorias-alumni.component';
 import { TimelineComponent } from "./pages/03-timeline/timeline.component";
 import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
 import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
@@ -93,7 +95,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SvgDefinitionsComponent,
     TrajetoriasSuporteComponent,
     TrajetoriasInternacionalComponent,
-    TrajetoriasEadComponent
+    TrajetoriasEadComponent,
+    TrajetoriasUniversidadeComponent,
+    TrajetoriasAlumniComponent
   ],
   imports: [
     BrowserModule,
