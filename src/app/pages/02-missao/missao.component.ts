@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class MissaoComponent implements OnInit {
 
-  title = '02. Missão, Visão e Crenças - Ismart';
+  private title: string = '02. Missão, Visão e Crenças - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
@@ -39,6 +39,9 @@ export class MissaoComponent implements OnInit {
     }
   ]
   
+  @ViewChild('share', {static: true, read: ElementRef}) myShare: ElementRef;
+  @ViewChild('article', {static: false}) article: ElementRef;
+
   constructor(
     private titleService: Title,
     private meta: Meta
