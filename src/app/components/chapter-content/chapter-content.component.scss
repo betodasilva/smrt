@@ -26,9 +26,21 @@
         margin: 40px 0;
         z-index: 1;
         width: 100%;
+        position: relative;
         img {
             width: 100%;
             height: auto;
+        }
+        .img__container {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: $blue-medium;
+                opacity: 0.2;
+            }
         }
         figcaption {
             font-size: 14px;
@@ -131,7 +143,7 @@
     }
     @media (max-width: 540px) {
         .blockquote__simple {
-            width: 75%;
+            width: 100%;
         }
         .share {
             display: none;

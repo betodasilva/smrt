@@ -28,7 +28,7 @@
             color: $blue-medium;
             letter-spacing: -0.5px;
             margin-bottom: 20px;
-            margin-top: 70px;
+            margin-top: 60px;
         }
     }
     &__subtitle {
@@ -60,6 +60,7 @@
     }
     &__img {
         position: relative;
+        margin-bottom: 0;
     }
     .blockquote {
         &__quote {
@@ -72,7 +73,7 @@
             width: 40%;
             top: 50%;
             margin-bottom: 0;
-            left: 100%;
+            left: calc(100% + 30px);
             &:before {
                 content: '';
                 position: absolute;
@@ -164,7 +165,7 @@
     .list {
         padding-left: 27px;
         margin: 0;
-        list-style-image: url('../../../assets/images/triangle-orange.svg');
+        list-style-image: url('../../../assets/images/green-triangle-small.svg');
         li {
             font-size: 18px;
             line-height: 1.78;
@@ -191,7 +192,7 @@
             font-size: 42px;
         }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         .blockquote__quote {
             position: relative;
             top: inherit;
@@ -199,9 +200,20 @@
             left: auto;
             width: 100%;
             font-size: 22px;
-            max-width: inherit;
-            margin-top: 120px;
+            max-width: 100%;
+            margin-top: 30px;
             &.blockquote__image {
+                color: $blue-medium;
+                right: inherit;
+                padding: 10px;
+                width: 50%;
+                margin: 120px auto 0 auto;
+                cite {
+                    color: $blue-medium;
+                    &:before {
+                        background-image: url('../../../assets/images/triangle-small-orange.svg');
+                    }
+                }
                 &:before {
                     left: 15px;
                     background-image: url('../../../assets/images/left-quote-blue.svg');
@@ -215,6 +227,7 @@
             font-size: 24px;
             &--section {
                 font-size: 16px;
+                margin-top: 40px;
             }
         }
         &__subtitle {
@@ -231,7 +244,12 @@
             font-size: 21px;
             color: #012461;
             padding: 0 15px;
-            
+            &.blockquote__image {
+                width: 100%;
+            }
+        }
+        .blockquote__big {
+            font-size: 21px;            
         }
         .list {
             li {

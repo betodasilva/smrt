@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class TrajetoriasSuporteComponent implements OnInit {
   
-  title = '04. Trajetórias Ismart: Seleção - Ismart';
+  title = '04. Trajetórias Ismart: Suporte - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
@@ -47,7 +47,7 @@ export class TrajetoriasSuporteComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Seleção - Ismart'});
+    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Suporte - Ismart'});
   }
 
 }

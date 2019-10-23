@@ -28,6 +28,8 @@
 			bottom: 17px;
 			overflow: hidden;
 			border-radius: 4px;
+			top: 50%;
+			transform: translateY(-50%);
 			opacity: 0;
 			visibility: hidden;
 			transition: all 0.2s ease-out;
@@ -76,6 +78,19 @@
 	}
 	&__hide {
 		display: none;
+	}
+	@media (max-width: 992px) {
+		&__item {
+			a:hover {
+				.chapters__item--figure {
+					visibility: hidden;
+					opacity: 0;
+				}
+				.chapters__item--number{
+					color: $orange;
+				}
+			}
+		}
 	}
 	@media (max-width: 540px) {
 		padding-top: 30px;

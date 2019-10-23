@@ -5,7 +5,7 @@
 	height: auto;
 	padding-top: 180px;
 	padding-bottom: 115px;
-	background-color: #028ed4;
+	background-color: $blue;
 	background-image: linear-gradient(to right, rgba(1, 36, 97, 0.3), rgba(1, 36, 97, 0));
 	position: relative;
 	overflow: hidden;
@@ -54,8 +54,8 @@
 		}
 		&:hover{
 			text-decoration: none;
-			border-color: $blue-dark;
-			background: $blue-dark;
+			border-color: $orange; 
+			background: $orange;
 		}
 	}
 	@media (max-width: 540px) {
