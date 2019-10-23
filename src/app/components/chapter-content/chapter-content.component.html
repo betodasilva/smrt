@@ -1,12 +1,13 @@
 <article 
     class="chapter-content"
-    #articleContainer>
-    <div 
-        class="fix-scroll"
-        [class.fixed]="isFloatContainerFixed"
-        #floatContainer>
-        <app-share></app-share>
-    </div>
+    #article>
+    <app-float-container
+        [startPosEl]="article"
+        [endPosEl]="article"
+        [child]="shareComponent.nativeElement"
+        endOffset="600">
+        <app-share #share></app-share>
+    </app-float-container>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
