@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 
 @Component({
   selector: 'app-trajetorias-ead',
@@ -8,7 +10,12 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class TrajetoriasEadComponent implements OnInit {
 
-  title = '04. Trajetórias Ismart: Prática - Ismart';
+  @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
+  @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
+  @ViewChild('modal', {static: true}) modal: ModalComponent;
+
+  private title: string = '04. Trajetórias Ismart: Prática - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
@@ -41,7 +48,8 @@ export class TrajetoriasEadComponent implements OnInit {
   
   constructor(
     private titleService: Title,
-    private meta: Meta
+    private meta: Meta,
+    private testimonials: TestimonialsService
   ) { }
 
   ngOnInit() {

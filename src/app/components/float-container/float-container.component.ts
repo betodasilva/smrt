@@ -14,6 +14,7 @@ export class FloatContainerComponent implements OnInit {
   @Input() endPosEl: any;
   @Input() child: any;
   @Input() endOffset: number | string = 0;
+  @Input() fixOffset: number | string = 0;
 
   private startPos: number;
   private endPos: number;
@@ -34,13 +35,18 @@ export class FloatContainerComponent implements OnInit {
     console.log( this.endPosEl );
     console.log( this.child );
 
+    console.log( 'fix offset', this.fixOffset );
   }
 
   ngAfterViewInit() {
-    this.startPos = this.startPosEl.offsetTop;
-    this.endPos = this.endPosEl.offsetHeight;
-
-    console.log(`inicio ${this.startPos} e fim ${this.endPos}, offset? ${this.endOffset}`);
+    setTimeout(() => {
+      const isSameElements = this.startPosEl.isEqualNode( this.endPosEl );
+      this.startPos = this.startPosEl.offsetTop;
+      this.endPos = isSameElements ? this.endPosEl.offsetHeight : this.endPosEl.offsetTop + (this.endPosEl.offsetHeight / 2);
+  
+      console.log(`inicio ${this.startPos} e fim ${this.endPos}, offset? ${this.endOffset}`);
+    }, 500);
+   
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -54,7 +60,7 @@ export class FloatContainerComponent implements OnInit {
       this.isFloatContainerFixed = false; 
     }
 
-    if ( currentScroll >= endPos ) {
+    if ( currentScroll >= endPos - Number(this.fixOffset) ) {
       this.setAbsolutePosition();
     } else {
       this.removeAbsolutePosition();
