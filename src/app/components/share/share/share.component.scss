@@ -1,5 +1,12 @@
 @import "../../../../variables.scss";
 
+:host {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+}
+
 .share {
   list-style: none;
   padding: 0;
