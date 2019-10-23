@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 
 @Component({
@@ -11,9 +10,7 @@ import { TestimonialsService } from 'src/app/services/testimonials/testimonials.
 export class TrajetoriasAlumniComponent implements OnInit {
 
   @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
-  @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
-  @ViewChild('modal', {static: true}) modal: ModalComponent;
 
   private title: string = '04. Trajetórias Ismart: Alumni - Ismart';
 

@@ -5,7 +5,7 @@
     class="chapter-content">
     <app-float-container
         [startPosEl]="article"
-        [endPosEl]="testimonialComponent.nativeElement"
+        [endPosEl]="article"
         fixOffset="240"
         [child]="sidebarComponent.nativeElement">
         <app-sidebar #sidebar></app-sidebar>
@@ -58,15 +58,4 @@
         </div>
     </div>
 </article>
-<app-testimonials
-    [data]="testimonials.getByPage('contato')"
-	#testimonial
-	(onTestimonialCardClick)="modal.openModal()">
-</app-testimonials>
 <app-related [relatedData]="relatedInfo"></app-related>
-<app-modal
-	#modal
-	[testimonial]="testimonials.current"
-	(onPrev)="testimonials.navigatePrev('contato')"
-	(onNext)="testimonials.navigateNext('contato')">
-</app-modal>
