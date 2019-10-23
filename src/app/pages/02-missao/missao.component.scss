@@ -1,7 +1,10 @@
 @import "../../../variables.scss";
+.chapter-content {
+    padding: 70px 0;
+}
 
 .mission {
-    margin-top: 70px;
+    // margin-top: 70px;
     margin-bottom: 32px;
     background-color: $blue-clear;
     border-radius: 3px;
@@ -20,7 +23,7 @@
     }
 }
 .beliefs {
-    margin: 70px 0;
+    margin: 70px 0 0;
     &__title {
         font-family: $montserrat;
         font-size: 32px;

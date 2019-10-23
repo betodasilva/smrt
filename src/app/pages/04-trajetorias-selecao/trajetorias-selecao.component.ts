@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { Title, Meta } from '@angular/platform-browser';
@@ -10,7 +10,10 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class TrajetoriasSelecaoComponent implements OnInit {
 
-  title = '04. Trajetórias Ismart: Seleção - Ismart';
+  private title: string = '04. Trajetórias Ismart: Seleção - Ismart';
+  @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
+  @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',

@@ -13,6 +13,8 @@ export class FloatContainerComponent implements OnInit {
   @Input() startPosEl: any;
   @Input() endPosEl: any;
   @Input() child: any;
+  @Input() endOffset: number | string = 0;
+  @Input() fixOffset: number | string = 0;
 
   private startPos: number;
   private endPos: number;
@@ -28,27 +30,37 @@ export class FloatContainerComponent implements OnInit {
   ngOnInit() {
     this.listenForHeaderOpen();
 
-    console.log(`elementos`, this.startPosEl, this.endPosEl)
+    console.log(`%c elementos`, 'background: cyan');
+    console.log( this.startPosEl);
+    console.log( this.endPosEl );
+    console.log( this.child );
+
+    console.log( 'fix offset', this.fixOffset );
   }
 
   ngAfterViewInit() {
-    this.startPos = this.startPosEl.offsetTop;
-    this.endPos = this.endPosEl.offsetHeight;
-
-    console.log(`inicio ${this.startPos} e fim ${this.endPos}`);
+    setTimeout(() => {
+      const isSameElements = this.startPosEl.isEqualNode( this.endPosEl );
+      this.startPos = this.startPosEl.offsetTop;
+      this.endPos = isSameElements ? this.endPosEl.offsetHeight : this.endPosEl.offsetTop + (this.endPosEl.offsetHeight / 2);
+  
+      console.log(`inicio ${this.startPos} e fim ${this.endPos}, offset? ${this.endOffset}`);
+    }, 500);
+   
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event){
-    const currentScroll = this.window.pageYOffset;
-    console.log( currentScroll, this.startPos )
+    const currentScroll = this.window.pageYOffset,
+          endPos = Number(this.endPos) + Number(this.endOffset);
+    
     if ( currentScroll >= this.startPos ) {
       this.isFloatContainerFixed = true;
     } else{
       this.isFloatContainerFixed = false; 
     }
 
-    if ( currentScroll >= this.endPos && this.endPos ) {
+    if ( currentScroll >= endPos - Number(this.fixOffset) ) {
       this.setAbsolutePosition();
     } else {
       this.removeAbsolutePosition();
@@ -82,7 +94,7 @@ export class FloatContainerComponent implements OnInit {
     this.renderer.setStyle(
       this.floatContainer.nativeElement,
       'top',
-      `${this.endPos - (this.child.offsetHeight) + 200}px`,
+      `${Number(this.endPos) + Number(this.endOffset) - (this.child.offsetHeight) + 200}px`,
     )
     this.renderer.setStyle(
       this.floatContainer.nativeElement,

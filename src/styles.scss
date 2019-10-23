@@ -48,6 +48,8 @@ body{
 .testimonials {
 	.slick-track {
 		padding: 15px 0;
+		margin-left: 0;
+		display: flex;
 	}
 	.slick-list {
 		padding-right: 50px;
@@ -83,7 +85,11 @@ body{
 @media (max-width: 540px) {
 	.testimonials {
 		.slick-list {
-			padding-right: 20px;
+			padding-right: 0;
+		}
+
+		.slick-track {
+			margin-left: auto;
 		}
 	}
 	.header__chapters .header__chapters--top .chapters__title {
@@ -98,5 +104,21 @@ body{
 		height: 30px;
 		font-size: 20px;
 		margin-left: 15px;
+	}
+}
+
+@media (min-width: 1320px) {
+	.testimonials {
+		.slick-list {
+			padding-right: 110px;
+		}
+	}
+}
+
+@media (min-width: 1500px) {
+	.testimonials {
+		.slick-list {
+			padding-right: 30%;
+		}
 	}
 }

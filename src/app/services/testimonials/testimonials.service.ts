@@ -740,6 +740,51 @@ export class TestimonialsService {
         você já tem, a capacidade também, nenhum sonho deve ser menor do que
         você mesmo. Hora de concretizar!`
       },
+    ],
+    ead: [
+      {
+        id: 1,
+        name: "Gabrielli Fonseca de Oliveira",
+        excerpt: "Participou do processo seletivo do Ismart em 2013 e iniciou sua trajetória no Ismart participando da primeira turma do programa Ismart Online",
+        testimonial: `Foi somente com a jornada do Ismart Online que eu expandi minha visão de mundo sobre me relaciono com a sociedade e posso criar minha própria história, independente de padrões socioeconômicos relacionados à conquista de oportunidades`
+      },
+      {
+        id: 2,
+        name: "Letícia Nunes de Campos",
+        excerpt: "3o ano Ensino médio - Ismart Online",
+        testimonial: ` Letícia de 2016 não tinha muita perspectiva de vida e com o Ismart Online, eu comecei a entender que eu não precisava me limitar, que eu poderia ir muito mais além e escolher os rumos da minha vida. Já no primeiro ano, eu tive que solucionar um problema presente na sociedade e foi aí que o meu caminho cruzou com o do Lucas Nicascio, na época, universitário Ismart e ele mudou completamente a minha forma de enxergar a vida, além de ajudar a buscar novas oportunidades e avaliar perspectivas de carreiras. E você começa a entender que o Ismart Online não é você e uma plataforma apenas, mas é você e toda uma família que se forma. A gente compartilha, aprende, ri, chora e se ajuda na vida, no Ismart, na escola e em tudo. O Ismart Online ajuda com conteúdos, mas para além disso, ele amplia horizontes. O Ismart é transformação social.`
+      },
+    ],
+    universidade: [
+      {
+        id: 1,
+        name: "Miguel Alves",
+        excerpt: "Universitário Ismart do curso de Engenharia de Petróleo na Poli - USP",
+        testimonial: `O que mais me marcou no Ismart, sem sombra de dúvida, foi a rede, seja por meio das analistas e gerentes, seja por meio dos bolsistas e agora Alumni. Sinto de fato que tenho uma família. Aqui conheci pessoas incríveis, pelas quais sinto profunda admiração pessoal e profissional, que, são exemplos que quero manter por perto, sempre. Participei em meu primeiro ano do Coaching, que transformou minha carreira no mundo acadêmico. Consegui identificar os possíveis obstáculos e onde gostaria de estar me desafiando.`
+      },
+      {
+        id: 2,
+        name: "Pedro Henrique C. Navarro",
+        excerpt: "Universitário Ismart de Engenharia Química na Universidade de Notre Dame, nos EUA",
+        testimonial: `Quando entrei no Ismart, não sabia exatamente como fazia para ingressar em uma universidade. Tudo que lembrava era das palavras da minha mãe, de que eu tinha que
+        entrar em uma federal. Logo nos primeiros dois meses no projeto, recebi o convite para uma palestra sobre a University of Notre Dame com alguns ex-alunos no escritório do Ismart em São Paulo. Fiquei maravilhado ao ver as fotos daquele campus e ouvir as histórias de ex-
+        alunos brasileiros e americanos sobre o quão enriquecedora tinham sido suas experiências. No fim da palestra, os alunos compartilharam uma oportunidade de um programa de verão de duas semanas na universidade, o iLED, em que teríamos aulas diárias nos diversos colleges com alunos de outros países. Sempre que deparava com uma oportunidade diferente, minha mãe sempre dizia “por que não?”, e foi o que fiz. Enviei minha application, e alguns meses depois eu estava entrando em um avião pela primeira vez na vida rumo
+        a uma das melhores universidades dos EUA. A experiência abriu minha mente a novas possibilidades e tirou qualquer medo relacionado ao sonho grande de estudar fora. Apesar do iLED ter sido o motivador principal para eu querer estudar fora, o que deu uma faísca ainda maior foi um vídeo que o Ismart nos mostrou quando os bolsistas foram ao Colégio Santo Américo assinar o contrato da bolsa. Lembrar do vídeo e ter a experiência que tive no iLED foi suficiente para eu definir qual seria o objetivo principal pelo qual mais me dedicaria
+        nos próximos anos no Ismart. Graças a todo o networking do Ismart, também pude participar de alguns programas que oferecerem mentoria e apoio financeiro para o
+        processo de application ao longo do Ensino médio e, no 3° ano, tive a chance de participar de outros programas de verão em Stanford e UC Berkeley. Essas oportunidades foram
+        fundamentais para que eu realizasse minha application para os EUA
+        `
+      },
+      {
+        id: 3,
+        name: "Miguel Alves",
+        excerpt: "Universitário Ismart do curso de Engenharia de Petróleo na Poli - USP",
+        testimonial: `Minha primeira experiência profissional foi o estágio de férias na Odebrecht Oil&Gas, no Rio de Janeiro, em julho de 2017. A experiência de morar em outro estado sozinho foi um pouco assustadora, mas me aproximei da rede do Rio, seja com os universitários, seja com o ensino básico, por meio do Uma Mão Lava a Outra. Foi como ter uma família lá, mesmo que eu tenha acabado de conhecer. A experiência profissional foi desafiadora, era a primeira vez que eu tinha mais do que notas para me avaliar. A todo momento eu era desafiado, em comunicação, aprendendo algo novo, montando planejamento. Trabalhei na área de Inteligência de Mercado da companhia, estudando plataformas de perfuração e produção, campos de produção de petróleo e contextos globais envolvendo a geopolítica
+        do petróleo. Pela primeira vez, senti meu curso saindo da teoria – uma experiência super motivadora. Realizei um segundo estágio de férias na mesma empresa, agora na área de
+        Controladoria & Finanças, entendo um pouco melhor do fluxo de caixa da produção de petróleo. E, em 2019, iniciei estágio regular na Ambev em Trade Marketing, desenvolvendo e aprendendo mais sobre logística, estratégia de marketing e inteligência de Mercado. Ainda não tenho a certeza dos passos que darei e do caminho a trilhar, mas quero impactar
+        pessoas ao meu redor da mesma maneira como o Ismart me impactou.
+        `
+      },
     ]
   }
 

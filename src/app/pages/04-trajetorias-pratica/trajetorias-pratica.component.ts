@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -9,8 +9,12 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class TrajetoriasPraticaComponent implements OnInit {
 
-  title = '04. Trajetórias Ismart: Prática - Ismart';
+  
+  @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
+  @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
 
+  private title: string = '04. Trajetórias Ismart: Prática - Ismart';
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
     'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',

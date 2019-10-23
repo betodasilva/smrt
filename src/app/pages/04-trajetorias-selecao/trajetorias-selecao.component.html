@@ -1,31 +1,16 @@
 <app-chapter-hat
     [data]="chapterHatInfo"></app-chapter-hat>
-<article class="chapter-content">
-    <div
-        #floatContainer 
-        class="fix-scroll" 
-        [class.fixed]="isFloatContainerFixed">
-        <ul 
-            class="share">
-            <li class="share--item">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=http://google.com" target="_blank" class="share--link">
-                    <i class="fa fa-facebook-f"></i>
-                </a>
-            </li>
-            <li class="share--item">
-                <a href="#" class="share--link">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </li>
-            <li class="share--item">
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://google.com&title=Mensagem%20do%20Conselho&source=Ismart" target="_blank" class="share--link">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-            </li>
-        </ul>
-        <!-- Sidebar -->
-        <app-sidebar></app-sidebar>
-    </div>
+<article 
+    #article
+    class="chapter-content">
+    <app-float-container
+        [startPosEl]="article"
+        [endPosEl]="testimonialComponent.nativeElement"
+        fixOffset="240"
+        [child]="sidebarComponent.nativeElement">
+        <app-sidebar #sidebar></app-sidebar>
+        <app-share></app-share>
+    </app-float-container>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
@@ -85,7 +70,7 @@
 </article>
 <app-testimonials
     [data]="testimonials.getByPage('selecao')"
-	#testimonialComponent
+	#testimonial
 	(onTestimonialCardClick)="modal.openModal()">
 </app-testimonials>
 <app-related [relatedData]="relatedInfo"></app-related>

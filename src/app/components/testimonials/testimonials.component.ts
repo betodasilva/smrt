@@ -31,11 +31,17 @@ export class TestimonialsComponent implements OnInit {
     responsive: [{
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 560,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

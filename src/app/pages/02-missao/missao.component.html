@@ -1,5 +1,15 @@
 <app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
-<article class="chapter-content">
+<article 
+    #article
+    class="chapter-content">
+    <app-float-container
+        [startPosEl]="article"
+        [endPosEl]="article"
+        [child]="myShare.nativeElement"
+        fixOffset="40"
+        endOffset="-60">
+        <app-share #share></app-share>
+    </app-float-container>
     <!-- Inserir o share -->
     <div class="container">
         <div class="row">
