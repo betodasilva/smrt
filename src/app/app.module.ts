@@ -12,6 +12,11 @@ import { MissaoComponent } from './pages/02-missao/missao.component';
 import { ChapterInternComponent } from './pages/04-trajetorias/chapter-intern.component';
 import { TrajetoriasSelecaoComponent } from './pages/04-trajetorias-selecao/trajetorias-selecao.component';
 import { TrajetoriasPraticaComponent } from './pages/04-trajetorias-pratica/trajetorias-pratica.component';
+import { TrajetoriasSuporteComponent } from './pages/04-trajetorias-suporte/trajetorias-suporte.component';
+import { TrajetoriasInternacionalComponent } from './pages/04-trajetorias-internacional/trajetorias-internacional.component';
+import { TrajetoriasEadComponent } from './pages/04-trajetorias-ead/trajetorias-ead.component';
+import { TrajetoriasUniversidadeComponent } from './pages/04-trajetorias-universidade/trajetorias-universidade.component';
+import { TrajetoriasAlumniComponent } from './pages/04-trajetorias-alumni/trajetorias-alumni.component';
 import { TimelineComponent } from "./pages/03-timeline/timeline.component";
 import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
 import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
@@ -47,6 +52,7 @@ import { FloatContainerComponent } from './components/float-container/float-cont
 import { ShareComponent } from './components/share/share/share.component';
 import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
+import { PoliticaComponent } from './pages/politica/politica.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -87,7 +93,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     TrajetoriasSelecaoComponent,
     ResultadosComponent,
     SvgIconComponent,
-    SvgDefinitionsComponent
+    SvgDefinitionsComponent,
+    TrajetoriasSuporteComponent,
+    TrajetoriasInternacionalComponent,
+    TrajetoriasEadComponent,
+    TrajetoriasUniversidadeComponent,
+    TrajetoriasAlumniComponent,
+    PoliticaComponent
   ],
   imports: [
     BrowserModule,

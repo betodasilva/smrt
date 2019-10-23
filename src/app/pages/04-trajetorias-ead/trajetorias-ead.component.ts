@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-trajetorias-pratica',
-  templateUrl: './trajetorias-pratica.component.html',
-  styleUrls: ['./trajetorias-pratica.component.scss']
+  selector: 'app-trajetorias-ead',
+  templateUrl: './trajetorias-ead.component.html',
+  styleUrls: ['./trajetorias-ead.component.scss']
 })
-export class TrajetoriasPraticaComponent implements OnInit {
+export class TrajetoriasEadComponent implements OnInit {
 
   title = '04. Trajetórias Ismart: Prática - Ismart';
 
@@ -23,27 +22,26 @@ export class TrajetoriasPraticaComponent implements OnInit {
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Suporte',
-      'url': '04-trajetorias-ismart-suporte'
+      'subtitle': 'Universidade',
+      'url': '04-trajetorias-ismart-universidade'
     },
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Internacional',
-      'url': '04-trajetorias-ismart-internacional'
+      'subtitle': 'Alumni',
+      'url': '04-trajetorias-ismart-alumni'
     },
     {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'EaD',
-      'url': '04-trajetorias-ismart-ead'
+      'image': 'assets/images/05-parceiros-mobile.jpg',
+      'title': '05.',
+      'subtitle': 'Parceiros Ismart',
+      'url': '05-parceiros-ismart'
     },
   ]
   
   constructor(
     private titleService: Title,
-    private meta: Meta,
-    private testimonials: TestimonialsService
+    private meta: Meta
   ) { }
 
   ngOnInit() {

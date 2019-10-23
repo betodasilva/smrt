@@ -1,14 +1,12 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
-import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
+import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-trajetorias-selecao',
-  templateUrl: './trajetorias-selecao.component.html',
-  styleUrls: ['./trajetorias-selecao.component.scss']
+  selector: 'app-trajetorias-internacional',
+  templateUrl: './trajetorias-internacional.component.html',
+  styleUrls: ['./trajetorias-internacional.component.scss']
 })
-export class TrajetoriasSelecaoComponent implements OnInit {
+export class TrajetoriasInternacionalComponent implements OnInit {
 
   title = '04. Trajetórias Ismart: Seleção - Ismart';
 
@@ -24,30 +22,27 @@ export class TrajetoriasSelecaoComponent implements OnInit {
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Prática',
-      'url': '04-trajetorias-ismart-praticas'
+      'subtitle': 'EaD',
+      'url': '04-trajetorias-ismart-ead'
     },
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Suporte',
-      'url': '04-trajetorias-ismart-suporte'
+      'subtitle': 'Universidade',
+      'url': '04-trajetorias-ismart-universidade'
     },
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Internacional',
-      'url': '04-trajetorias-ismart-internacional'
+      'subtitle': 'Alumni',
+      'url': '04-trajetorias-ismart-alumni'
     },
     
   ]
-  @ViewChild('modal', {static:false}) modal: ModalComponent;
 
   constructor(
-    private testimonials: TestimonialsService,
     private titleService: Title,
-    private meta: Meta
-  ) { }
+    private meta: Meta) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);

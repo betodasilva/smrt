@@ -38,6 +38,7 @@
         line-height: normal;
         &--strong {
             font-size: 18px;
+            color: $clear;
             font-weight: bold;
         }
         &:hover, &:focus {
