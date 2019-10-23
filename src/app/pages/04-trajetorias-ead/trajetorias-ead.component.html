@@ -47,7 +47,7 @@
     </div>
 </article>
 <app-testimonials
-    [data]="testimonials.getByPage('contato')"
+    [data]="testimonials.getByPage('ead')"
 	#testimonial
 	(onTestimonialCardClick)="modal.openModal()">
 </app-testimonials>
@@ -55,6 +55,6 @@
 <app-modal
 	#modal
 	[testimonial]="testimonials.current"
-	(onPrev)="testimonials.navigatePrev('contato')"
-	(onNext)="testimonials.navigateNext('contato')">
+	(onPrev)="testimonials.navigatePrev('ead')"
+	(onNext)="testimonials.navigateNext('ead')">
 </app-modal>

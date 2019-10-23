@@ -80,7 +80,7 @@
     </div>
 </article>
 <app-testimonials
-    [data]="testimonials.getByPage('contato')"
+    [data]="testimonials.getByPage('universidade')"
 	#testimonial
 	(onTestimonialCardClick)="modal.openModal()">
 </app-testimonials>
@@ -88,6 +88,6 @@
 <app-modal
 	#modal
 	[testimonial]="testimonials.current"
-	(onPrev)="testimonials.navigatePrev('contato')"
-	(onNext)="testimonials.navigateNext('contato')">
+	(onPrev)="testimonials.navigatePrev('universidade')"
+	(onNext)="testimonials.navigateNext('universidade')">
 </app-modal>
