@@ -23,20 +23,20 @@ export class TrajetoriasPraticaComponent implements OnInit {
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Seleção',
-      'url': '04-trajetorias-ismart-selecao'
+      'subtitle': 'Suporte',
+      'url': '04-trajetorias-ismart-suporte'
     },
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Contato',
-      'url': '04-trajetorias-ismart-contato'
+      'subtitle': 'Internacional',
+      'url': '04-trajetorias-ismart-internacional'
     },
     {
-      'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-      'title': '09.',
-      'subtitle': 'Lista de parceiros',
-      'url': '09-lista-parceiros'
+      'image': 'assets/images/04-trajetorias-mobile.jpg',
+      'title': '04. Trajetórias Ismart',
+      'subtitle': 'EaD',
+      'url': '04-trajetorias-ismart-ead'
     },
   ]
   

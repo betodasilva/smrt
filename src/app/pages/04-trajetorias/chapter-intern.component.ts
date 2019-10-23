@@ -29,16 +29,16 @@ export class ChapterInternComponent implements OnInit {
       'url': '04-trajetorias-ismart-selecao'
     },
     {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
+      'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Práticas',
+      'subtitle': 'Prática',
       'url': '04-trajetorias-ismart-praticas'
     },
     {
-      'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-      'title': '09.',
-      'subtitle': 'Lista de parceiros',
-      'url': '09-lista-parceiros'
+      'image': 'assets/images/04-trajetorias-mobile.jpg',
+      'title': '04. Trajetórias Ismart',
+      'subtitle': 'Suporte',
+      'url': '04-trajetorias-ismart-suporte'
     },
   ]
 

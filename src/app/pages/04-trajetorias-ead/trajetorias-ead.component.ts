@@ -22,20 +22,20 @@ export class TrajetoriasEadComponent implements OnInit {
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Seleção',
-      'url': '04-trajetorias-ismart-selecao'
+      'subtitle': 'Universidade',
+      'url': '04-trajetorias-ismart-universidade'
     },
     {
       'image': 'assets/images/04-trajetorias-mobile.jpg',
       'title': '04. Trajetórias Ismart',
-      'subtitle': 'Contato',
-      'url': '04-trajetorias-ismart-contato'
+      'subtitle': 'Alumni',
+      'url': '04-trajetorias-ismart-alumni'
     },
     {
-      'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-      'title': '09.',
-      'subtitle': 'Lista de parceiros',
-      'url': '09-lista-parceiros'
+      'image': 'assets/images/05-parceiros-mobile.jpg',
+      'title': '05.',
+      'subtitle': 'Parceiros Ismart',
+      'url': '05-parceiros-ismart'
     },
   ]
   

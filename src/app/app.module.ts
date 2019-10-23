@@ -52,6 +52,7 @@ import { FloatContainerComponent } from './components/float-container/float-cont
 import { ShareComponent } from './components/share/share/share.component';
 import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
+import { PoliticaComponent } from './pages/politica/politica.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -97,7 +98,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TrajetoriasInternacionalComponent,
     TrajetoriasEadComponent,
     TrajetoriasUniversidadeComponent,
-    TrajetoriasAlumniComponent
+    TrajetoriasAlumniComponent,
+    PoliticaComponent
   ],
   imports: [
     BrowserModule,
