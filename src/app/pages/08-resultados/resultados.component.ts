@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
   selector: 'app-resultados',
@@ -7,8 +8,12 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./resultados.component.scss']
 })
 export class ResultadosComponent implements OnInit {
-
-  title = '08. Resultados - Ismart';
+  
+  @ViewChild('share', {static: true, read: ElementRef}) shareComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
+  @ViewChild('modal', {static: false}) modal: ModalComponent;
+  
+  private title: string = '08. Resultados - Ismart';
 
   private chapterHatInfo = {
     'image': 'assets/images/8-resultados.jpg',
