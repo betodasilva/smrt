@@ -53,6 +53,7 @@ import { ShareComponent } from './components/share/share/share.component';
 import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
 import { PoliticaComponent } from './pages/politica/politica.component';
+import { ProgressBarDirective } from './directives/progress-bar.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -99,7 +100,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TrajetoriasEadComponent,
     TrajetoriasUniversidadeComponent,
     TrajetoriasAlumniComponent,
-    PoliticaComponent
+    PoliticaComponent,
+    ProgressBarDirective
   ],
   imports: [
     BrowserModule,

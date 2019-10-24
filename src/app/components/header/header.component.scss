@@ -8,6 +8,16 @@
 	left: 0;
 	width: 100%;
 	z-index: 99;
+	&__progress {
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+		height: 5px;
+		background: var(--orange);
+		width: 0;
+	}
+
 	&__button{
 		background: none;
 		border: none;
