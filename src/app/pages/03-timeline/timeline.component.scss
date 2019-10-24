@@ -228,16 +228,16 @@
 	margin: 0;
 	z-index: 0;
 	&.fixed {
-			position: fixed;
-			left: 0;
-			right: 0;
-			top: 20px;
-			.share {
-				right: 15px;
-			}
-			.sidebar {
-				left: 15px;
-			}
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 20px;
+		.share {
+			right: 15px;
+		}
+		.sidebar {
+			left: 15px;
+		}
 	}
 
 	@media (min-width: 1300px) {

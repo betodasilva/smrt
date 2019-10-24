@@ -82,7 +82,14 @@ body{
 			right: 15px;
 		}
 		.sidebar {
-			left: 15px;
+			left: 10px;
+		}
+	}
+	@media (max-width: 1300px) {
+		&.fixed {
+			.sidebar {
+				left: 40px;
+			}
 		}
 	}
 }
