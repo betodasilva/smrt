@@ -230,7 +230,7 @@ export class TestimonialsService {
       },
       {
         id: 4,
-        name: "Pedro Henrique Cardoso Navarro",
+        name: "Pedro Henrique C. Navarro",
         excerpt: "Estudante de Engenharia Química na Universidade de Notre Dame, nos EUA",
         testimonial: `Conheci o Ismart em 2012,
         no 9° ano, durante uma consulta
