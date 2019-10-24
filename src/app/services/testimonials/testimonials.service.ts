@@ -66,7 +66,8 @@ export class TestimonialsService {
         que o maior desafio dessa profissão é
         fazer com que as pessoas percebam
         que não há futuro, não há mudança
-        possível sem educação.`
+        possível sem educação.`,
+        photo: "assets/images/nadia-ribeiro.jpg"
       },
       {
         id: 2,
@@ -140,7 +141,8 @@ export class TestimonialsService {
         ao seu redor, tornando-o um cidadão
         mais crítico, responsável, organizado,
         solidário, participativo e consciente da
-        realidade.`
+        realidade.`,
+        photo: "assets/images/renato-aguiar.jpg"
       }
     ],
     parceiros: [
@@ -226,7 +228,8 @@ export class TestimonialsService {
         com confiança e muita vontade de
         ingressar no projeto. Foi assim que
         tive meus primeiros contatos com o
-        Ismart.`
+        Ismart.`,
+        photo: "assets/images/leonardo-frazao.jpg"
       },
       {
         id: 4,
@@ -303,7 +306,8 @@ export class TestimonialsService {
           como tantas outras concedidas por
           escolas particulares, mas percebi
           que o programa de desenvolvimento
-          dos alunos agrega demais na vivência desses alunos`
+          dos alunos agrega demais na vivência desses alunos`,
+          photo: "assets/images/renato-aguiar.jpg"
       },
     ],
     horizonte: [
@@ -595,7 +599,8 @@ export class TestimonialsService {
         vinham dela. Percebi que meu
         comportamento era infantil, e fui
         aprendendo a ter autocontrole e tirar
-        o melhor de mim.`
+        o melhor de mim.`,
+        photo: "assets/images/joao-pedro-oliveira.jpg"
       },
     ],
     suporte: [
@@ -656,7 +661,8 @@ export class TestimonialsService {
         a escolher e em que trabalhar, além
         de já ter ideias de faculdades que
         me interessam. Quero ser médica da
-        família no SUS.`
+        família no SUS.`,
+        photo: "assets/images/maria-eduarda-machado.jpg"
       },
     ],
     chegando: [
@@ -666,7 +672,8 @@ export class TestimonialsService {
         excerpt: "Graduado Ismart, engenheiro mecânico e trainee no Itaú BBA",
         testimonial: `Aproveite ao máximo todas as atividades que ele propõe. Procure
         se envolver com os colegas e os analistas e coordenadores, pois eles vão te
-        entender e ajudar nessa nada fácil e super empolgante jornada`
+        entender e ajudar nessa nada fácil e super empolgante jornada`,
+        photo: "assets/images/joao-pedro-oliveira.jpg"
       },
       {
         id: 2,
@@ -675,7 +682,8 @@ export class TestimonialsService {
         testimonial: `Você enfrentará desafios e terá de fazer sacrifícios. Você passará
         por dificuldades e momentos de provação. Mas saiba que tudo isso será
         para o seu crescimento pessoal. Ao fim, tudo valerá a pena, muitas portas
-        serão abertas e você amadurecerá muito`
+        serão abertas e você amadurecerá muito`,
+        photo: "assets/images/gabrielli-fonseca.jpg"
       },
       {
         id: 3,
@@ -746,7 +754,8 @@ export class TestimonialsService {
         id: 1,
         name: "Gabrielli Fonseca de Oliveira",
         excerpt: "Participou do processo seletivo do Ismart em 2013 e iniciou sua trajetória no Ismart participando da primeira turma do programa Ismart Online",
-        testimonial: `Foi somente com a jornada do Ismart Online que eu expandi minha visão de mundo sobre me relaciono com a sociedade e posso criar minha própria história, independente de padrões socioeconômicos relacionados à conquista de oportunidades`
+        testimonial: `Foi somente com a jornada do Ismart Online que eu expandi minha visão de mundo sobre me relaciono com a sociedade e posso criar minha própria história, independente de padrões socioeconômicos relacionados à conquista de oportunidades`,
+        photo: "assets/images/gabrielli-fonseca.jpg"
       },
       {
         id: 2,
