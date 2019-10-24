@@ -84,4 +84,40 @@
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		&__brand {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		&__social {
+			text-align: center;
+			margin-top: 20px;
+		}
+		&__helper {
+			padding-bottom: 24px;
+			p {
+				margin-bottom: 24px;
+				text-align: left;
+			}
+		}
+	}
+	@media (max-width: 540px) {
+		&__nav {
+			text-align: left;
+			&--item {
+				display: block;
+				margin-left: 0;
+				margin-bottom: 24px;
+			}
+		}
+		&__brand {
+			margin-bottom: 48px;
+			text-align: left;
+		}
+		&__social {
+			margin-top: 8px;
+			text-align: left;
+		}
+		
+	}
 }
