@@ -2,8 +2,15 @@
 <article 
     class="chapter-content"
     progressBarListener
-    #articleContainer>
-    <!-- Share aqui -->
+    #article>
+    <app-float-container
+        [startPosEl]="article"
+        [endPosEl]="testimonialComponent.nativeElement"
+        fixOffset="40"
+        endOffset="-40"
+        [child]="shareComponent.nativeElement">
+    <app-share #share></app-share>
+</app-float-container>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
@@ -28,11 +35,11 @@
     </div>
 </article>
 <app-testimonials
-    #testimonialComponent
     [data]="testimonials.getByPage('horizonte')"
 	(onTestimonialCardClick)="modal01.openModal()">
 </app-testimonials>
 <app-testimonials
+    #testimonial
     [data]="testimonials.getByPage('chegando')"
     [modeDark]="true"
 	(onTestimonialCardClick)="modal02.openModal()">
