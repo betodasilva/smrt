@@ -115,6 +115,31 @@
 			fill: $orange;
 		}
 	}
+	.container, .col-lg-6 {
+		position: relative;
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			opacity: 0.08;
+			border-left: solid 1px $blue-medium;
+			height: calc(100vh + 86px);
+			top: -26px;
+		}
+		&:before {
+			left: -12px;
+		}
+		&:after {
+			right: -12px;
+		}
+	}
+	.col-lg-6 {
+		&:before {
+			left: -36px;
+		}
+		&:after {
+			right: -36px;
+		}
+	}
 	@media (max-width: 800px) {
 		&__button--chapters {
 			.header__button--text {
@@ -139,6 +164,14 @@
 		&__toggle {
 			&--text {
 				display: none;
+			}
+		}
+		.col-lg-6 {
+			&:before {
+				left: -15px;
+			}
+			&:after {
+				right: -15px;
 			}
 		}
 	}
