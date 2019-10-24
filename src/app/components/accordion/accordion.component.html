@@ -10,7 +10,7 @@
             </h2>
         </div>
         
-        <div [attr.id]="'collapse-'+ i" class="collapse show" [ngClass]="{'show': i === 0 }" [attr.aria-labelledby]="'heading-'+ i" data-parent="#accordionExample">
+        <div [attr.id]="'collapse-'+ i" class="collapse show" [ngClass]="{'show': i === 0 }" [attr.aria-labelledby]="'heading-'+ i">
             <div class="accordion__card--body">
                 <div [innerHTML]="accordion.content"></div>
             </div>

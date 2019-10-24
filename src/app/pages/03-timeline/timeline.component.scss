@@ -3,14 +3,18 @@
 	position: relative;
 	background: url('../../../assets/images/bg-arrows.svg') no-repeat center;
 	background-size: cover;
-	z-index: -1;
 	margin: 0 auto;
 	max-width: 1260px;
-	padding-right: 15px;
-	padding-left: 15px;
+	// padding-right: 15px;
+	// padding-left: 15px;
 	@media (min-width: 1600px) {
 		max-width: 1440px;
 	}
+}
+
+app-chapter-hat ::ng-deep .chapter-hat{
+	position: relative;
+	z-index: 1;
 }
 
 .timeline {
@@ -22,7 +26,7 @@
 		width: 3px;
 		background: var(--orange);
 		bottom: 280px;
-		z-index: -1;
+		z-index: 0;
 		&::before {
 			content: "";
 			position: absolute;
