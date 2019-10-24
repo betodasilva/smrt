@@ -285,7 +285,7 @@
     top: 0;
     transform: translateY(0);
     transition: top 200ms ease, transform 200ms ease;
-    max-width: 90%;
+    // max-width: 90%;
     margin: 0 auto;
     z-index: 0;
     &.fixed {
@@ -295,7 +295,10 @@
         top: 20px;
     }
 
-    @media (min-width: 1300px) {
-        max-width: 80%;
-    }
+    // @media (min-width: 1300px) {
+    //     max-width: 80%;
+    // }
+    @media (min-width: 1600px) {
+		max-width: 1440px;
+	}
 }

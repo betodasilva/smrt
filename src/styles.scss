@@ -75,6 +75,17 @@ body{
 		}
     }
 }
+.fix-scroll {
+	max-width: 1260px;
+	&.fixed {
+		.share {
+			right: 15px;
+		}
+		.sidebar {
+			left: 15px;
+		}
+	}
+}
 @media (max-width: 768px) {
 	.modal {
 		.modal-content {
@@ -120,5 +131,10 @@ body{
 		.slick-list {
 			padding-right: 30%;
 		}
+	}
+}
+@media (min-width: 1600px) {
+	.container {
+		max-width: 1440px;
 	}
 }
