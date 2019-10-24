@@ -1,15 +1,16 @@
 <app-chapter-hat [data]="chapterHatInfo"></app-chapter-hat>
 <article 
     class="chapter-content"
+    progressBarListener
     #article>
     <app-float-container
-    [startPosEl]="article"
-    [endPosEl]="testimonialComponent.nativeElement"
-    fixOffset="40"
-    endOffset="-40"
-    [child]="shareComponent.nativeElement">
-    <app-share #share></app-share>
-</app-float-container>
+        [startPosEl]="article"
+        [endPosEl]="testimonialComponent.nativeElement"
+        fixOffset="40"
+        endOffset="-40"
+        [child]="shareComponent.nativeElement">
+        <app-share #share></app-share>
+    </app-float-container>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">

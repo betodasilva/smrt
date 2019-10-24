@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
   selector: 'app-lista-parceiros',
@@ -7,8 +8,12 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./lista-parceiros.component.scss']
 })
 export class ListaParceirosComponent implements OnInit {
+  
+  @ViewChild('share', {static: true, read: ElementRef}) shareComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
+  @ViewChild('modal', {static: false}) modal: ModalComponent;
 
-  title = '09. Lista de parceiros - Ismart';
+  private title: string = '09. Lista de parceiros - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/9-lista-de-parceiros-hat.jpg',

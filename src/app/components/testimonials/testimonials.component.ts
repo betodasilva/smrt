@@ -17,6 +17,8 @@ export class TestimonialsComponent implements OnInit {
   @Input() data: any;
   @Input() modeDark: boolean = false;
   @Output('onTestimonialCardClick') onTestimonialCardClick: EventEmitter<any> = new EventEmitter();
+  @Input() customTitle: string;
+  
   private get slides() {
     return this.data;
   };

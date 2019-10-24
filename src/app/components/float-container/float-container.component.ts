@@ -30,12 +30,12 @@ export class FloatContainerComponent implements OnInit {
   ngOnInit() {
     this.listenForHeaderOpen();
 
-    console.log(`%c elementos`, 'background: cyan');
-    console.log( this.startPosEl);
-    console.log( this.endPosEl );
-    console.log( this.child );
+    // console.log(`%c elementos`, 'background: cyan');
+    // console.log( this.startPosEl);
+    // console.log( this.endPosEl );
+    // console.log( this.child );
 
-    console.log( 'fix offset', this.fixOffset );
+    // console.log( 'fix offset', this.fixOffset );
   }
 
   ngAfterViewInit() {

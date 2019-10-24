@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
   selector: 'app-manifesto',
@@ -7,8 +8,12 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./manifesto.component.scss']
 })
 export class ManifestoComponent implements OnInit {
+  
+  @ViewChild('share', {static: true, read: ElementRef}) shareComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
+  @ViewChild('modal', {static: false}) modal: ModalComponent;
 
-  title = '07. Manifesto Ismart - Ismart';
+  private title: string = '07. Manifesto Ismart - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/7-manifesto-hat.jpg',

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Title, Meta } from '@angular/platform-browser';
@@ -9,7 +9,12 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class HorizonteComponent implements OnInit {
 
-  title = '06. Horizonte - Ismart';
+  @ViewChild('share', {static: true, read: ElementRef}) shareComponent: ElementRef;
+  @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
+  @ViewChild('modal', {static: false}) modal: ModalComponent;
+  
+  private title: string = '06. Horizonte - Ismart';
 
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',

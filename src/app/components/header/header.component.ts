@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
 import { WINDOW } from "../../services/window.service";
 import { EmitterService } from 'src/app/services/emitter/emitter.service';
+import { ProgressBarService } from 'src/app/services/progress-bar/progress-bar.service';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,8 @@ import { EmitterService } from 'src/app/services/emitter/emitter.service';
 export class HeaderComponent implements OnInit {
 
   @ViewChild('header', { static: false }) header: ElementRef;
+
+  private percentage: number = 0;
 
   private headerSrollBefore: number = 0;
   private headerStyle: { top } = { top: '0px' };
@@ -34,16 +37,18 @@ export class HeaderComponent implements OnInit {
     private translate: TranslateService,
     private _eref: ElementRef,
     @Inject(DOCUMENT) private document: any,
-    @Inject(WINDOW) private window: Window
+    @Inject(WINDOW) private window: Window,
+    private progressBar: ProgressBarService
   ) {
     // this.availableLanguage = this.setAvailableLanguage(translate.currentLang, translate.getLangs());
   }
 
   ngOnInit() {
     this.translate.onLangChange.subscribe( change => {
-      console.log( change );
       this.availableLanguage = this.setAvailableLanguage( change.lang, this.translate.getLangs() );
-    })
+    });
+
+    this.listenProgress();
   }
 
   /**
@@ -117,5 +122,13 @@ export class HeaderComponent implements OnInit {
         this.toggleMenu();
       }
     }
+  }
+
+  listenProgress(){
+    this.progressBar
+        .progressObs()
+        .subscribe(
+          (value) => this.percentage = value
+        )
   }
 }
