@@ -30,16 +30,19 @@ export class TestimonialsComponent implements OnInit {
     "centerMode": false,
     "prevArrow": "<button type='button' class='btn slick-prev'><img src='assets/images/arrow.svg'></button>",
     "nextArrow": "<button type='button' class='btn slick-next'><img src='assets/images/arrow.svg'></button>",
-    responsive: [{
+    responsive: [
+      {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
+          slidesToScroll: 1
         }
       },
       {
