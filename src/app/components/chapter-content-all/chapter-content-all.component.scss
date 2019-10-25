@@ -73,7 +73,7 @@
             width: 40%;
             top: 50%;
             margin-bottom: 0;
-            left: calc(100% + 15px);
+            left: calc(100% + 30px);
             // z-index: -1;
             &:before {
                 content: '';
@@ -83,6 +83,28 @@
                 width: 56px;
                 height: 49px;
                 left: 0;
+            }
+            span {
+                position: relative;
+                display: block;
+                &:before {
+                    content: "";
+                    height: 55px;
+                    width: 100%;
+                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
+                    position: absolute;
+                    top: -140px;
+                    left: 0;
+                }
+                &:after {
+                    content: "";
+                    height: 55px;
+                    width: 100%;
+                    background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
+                    position: absolute;
+                    bottom: -110px;
+                    left: 0;
+                }
             }
             cite {
                 font-size: 14px;
@@ -114,7 +136,7 @@
         }
         &__image {
             color: $clear;
-            right: 4%;
+            right: 3%;
             left: initial;
             &:before {
                 background-image: url('../../../assets/images/left-quote.svg');
@@ -194,6 +216,30 @@
     .img-desk {
         margin-top: 30px;
     }
+    // Blockquote Responsive
+    @media (min-width: 992px) {
+        .blockquote__quote.blockquote__white {
+            width: calc(40% + 15px);
+        }
+    }
+    @media (min-width: 1300px) {
+        .blockquote__quote.blockquote__white {
+            left: calc(100% + 15px);
+        }
+    }
+    @media (min-width: 1440px) {
+        .blockquote__quote.blockquote__white {
+            width: calc(40% + 65px);
+            left: calc(100% + 35px);
+            max-width: 290px;
+        }
+    }
+    @media (min-width: 1600px) {
+        .blockquote__quote.blockquote__white {
+            max-width: 335px;
+        }
+    }
+    // End Blockquote Responsive
     @media (max-width: 992px) {
         &__title {
             font-size: 42px;
