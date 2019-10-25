@@ -50,7 +50,10 @@
 		</div>
 	</div>
 	<app-menu (onCloseMenu)="toggleMenu()"></app-menu>
-	<div 
-		class="header__progress"
-		[style.width.%]="percentage"></div>
+	<div class="header__progress">
+		<div 
+			class="header__progress-bar"
+			[style.width.%]="percentage">
+		</div>
+	</div>
 </header>
