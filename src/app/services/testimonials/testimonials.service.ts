@@ -728,7 +728,8 @@ export class TestimonialsService {
         as melhores oportunidades para você irão aparecer. Procure passar adiante
         tudo que receber, e garantir que suas conquistas sejam a de outros também –
         gratidão é o melhor combustível possível, e dentro do Ismart você se torna uma
-        pessoa com poder imenso de transformar a realidade de outros ao seu redor`
+        pessoa com poder imenso de transformar a realidade de outros ao seu redor`,
+        photo: "assets/images/pedro-navarro.jpg"
       },
       {
         id: 7,
