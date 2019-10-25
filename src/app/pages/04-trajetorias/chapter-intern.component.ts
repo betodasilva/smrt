@@ -11,9 +11,13 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ChapterInternComponent implements OnInit {
 
+  @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
+  @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
+  @ViewChild('article', {static: true}) article: ElementRef;
+  @ViewChild('modal', {static: true}) modal: ModalComponent;
+
   private title: string = '04. Trajetórias Ismart: Contato - Ismart';
 
-  public testimonialPosition: BehaviorSubject<any> = new BehaviorSubject({});
   private chapterHatInfo = {
     'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
     'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
@@ -41,9 +45,6 @@ export class ChapterInternComponent implements OnInit {
       'url': '04-trajetorias-ismart-suporte'
     },
   ]
-
-  @ViewChild('testimonialComponent', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
-  @ViewChild('modal', {static:false}) modal: ModalComponent;
   
   constructor(
     private titleService: Title,
@@ -56,26 +57,5 @@ export class ChapterInternComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Contato - Ismart'});
   }
 
-  ngAfterViewInit(){
-    this.sendTestimonialPosition();
-  }
-
-  sendTestimonialPosition(){
-    setTimeout( () => {
-      const { offsetTop, offsetHeight } = this.testimonialComponent.nativeElement;
-      this.testimonialPosition.next({
-        offsetTop,
-        offsetHeight
-      });
-    }, 2000);
-  }
-
-  onPrevTestimonial(){
-    this.testimonials.navigatePrev('contato')
-  }
-
-  onNextTestimonial(){
-    this.testimonials.navigateNext('contato')
-  }
 
 }
