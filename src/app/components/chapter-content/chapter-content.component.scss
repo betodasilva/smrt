@@ -132,6 +132,12 @@
 			}
 		}
     }
+    @media (min-width: 1500px) {
+        .col-md-6 {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+    }
     @media (min-width: 1440px) {
         margin: 0 auto;
         // max-width: 1260px;
