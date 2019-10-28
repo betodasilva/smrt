@@ -29,7 +29,7 @@ export class FloatContainerComponent implements OnInit {
 
   ngOnInit() {
     this.listenForHeaderOpen();
-
+    this.listenForRecalculations();
     // console.log(`%c elementos`, 'background: cyan');
     // console.log( this.startPosEl);
     // console.log( this.endPosEl );
@@ -37,16 +37,25 @@ export class FloatContainerComponent implements OnInit {
 
     // console.log( 'fix offset', this.fixOffset );
   }
+  listenForRecalculations() {
+    EmitterService.get('calculateSizes').subscribe( () => {
+      this.calculateSizes();
+    })
+  }
 
   ngAfterViewInit() {
     setTimeout(() => {
-      const isSameElements = this.startPosEl.isEqualNode( this.endPosEl );
-      this.startPos = this.startPosEl.offsetTop;
-      this.endPos = isSameElements ? this.endPosEl.offsetHeight : this.endPosEl.offsetTop + (this.endPosEl.offsetHeight / 2);
-  
+      this.calculateSizes();
+
       console.log(`inicio ${this.startPos} e fim ${this.endPos}, offset? ${this.endOffset}`);
     }, 500);
    
+  }
+
+  public calculateSizes() {
+    const isSameElements = this.startPosEl.isEqualNode(this.endPosEl);
+    this.startPos = this.startPosEl.offsetTop;
+    this.endPos = isSameElements ? this.endPosEl.offsetHeight : this.endPosEl.offsetTop + (this.endPosEl.offsetHeight / 2);
   }
 
   @HostListener('window:scroll', ['$event'])

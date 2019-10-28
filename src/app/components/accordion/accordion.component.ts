@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { EmitterService } from 'src/app/services/emitter/emitter.service';
+// import { FloatContainerComponent } from '../float-container/float-container.component';
 
 interface accordionData {
   title,
@@ -16,6 +18,13 @@ export class AccordionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onAccordionClick(){
+    setTimeout( () => {
+      EmitterService.get('calculateSizes').emit();
+
+    }, 600)
   }
   
 }
