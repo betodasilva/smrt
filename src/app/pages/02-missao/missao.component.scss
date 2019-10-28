@@ -1,6 +1,11 @@
 @import "../../../variables.scss";
 .chapter-content {
     padding: 70px 0;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 }
 
 .mission {
