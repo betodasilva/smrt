@@ -54,6 +54,7 @@ import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
 import { PoliticaComponent } from './pages/politica/politica.component';
 import { ProgressBarDirective } from './directives/progress-bar.directive';
+import { ContentOffsetDirective } from './directives/content-offset.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -101,7 +102,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TrajetoriasUniversidadeComponent,
     TrajetoriasAlumniComponent,
     PoliticaComponent,
-    ProgressBarDirective
+    ProgressBarDirective,
+    ContentOffsetDirective
   ],
   imports: [
     BrowserModule,
