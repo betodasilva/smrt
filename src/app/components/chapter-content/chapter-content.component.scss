@@ -176,6 +176,11 @@
             width: 50%;
             font-size: 22px;
             max-width: inherit;
+
+            span:before,
+            span:after {
+                display: none;
+            }
         }
     }
     @media (max-width: 540px) {
