@@ -107,6 +107,6 @@
 <app-modal
 	#modal
 	[testimonial]="testimonials.current"
-	(onPrev)="onPrevTestimonial()"
-	(onNext)="onNextTestimonial()">
+	(onPrev)="testimonials.navigatePrev('contato')"
+	(onNext)="testimonials.navigateNext('contato')">
 </app-modal>
