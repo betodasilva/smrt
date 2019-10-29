@@ -14,7 +14,7 @@
 	</app-float-container>
 	<div class="container-fluid">
 			<div class="row">
-					<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+					<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12" contentOffset>
 							<span class="tag">Contato</span>
 							<h2 class="chapter-content__title">Espaço Talento deu início à transformação</h2>
 							<h3 class="chapter-content__subtitle">Estudantes como João Pedro de Oliveira tiveram a chance de revelar seus talentos</h3>
@@ -26,10 +26,13 @@
 							<div class="img__container">
 									<img src="assets/images/joao-pedro-de-oliveira-graduado-ismart_2.jpg" alt="">
 							</div>
-							<div class="container">
+							<div class="blockquote__container container">
 									<blockquote class="blockquote__image blockquote__quote">"Conheci o Ismart aos 6 anos de idade, no fim do primeiro ano do Ensino Fundamental I, quando uma equipe do instituto foi a minha escola, apresentou o projeto e aplicou uma prova de seleção"
 									<cite>João Pedro de Oliveira, 22, Ex-Ismart</cite>
 									</blockquote>
+							</div>
+							<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+									<figcaption><img src="assets/images/camera.svg">João Pedro de Oliveira, 22, Ex-Ismart</figcaption>
 							</div>
 					</figure>
 			</div>
@@ -104,6 +107,6 @@
 <app-modal
 	#modal
 	[testimonial]="testimonials.current"
-	(onPrev)="onPrevTestimonial()"
-	(onNext)="onNextTestimonial()">
+	(onPrev)="testimonials.navigatePrev('contato')"
+	(onNext)="testimonials.navigateNext('contato')">
 </app-modal>

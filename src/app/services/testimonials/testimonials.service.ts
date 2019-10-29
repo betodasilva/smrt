@@ -184,7 +184,7 @@ export class TestimonialsService {
     contato: [
       {
         id: 1,
-        name: "Isabela Regina Julio de Moraes",
+        name: "Isabela Regina J. de Moraes",
         excerpt: "18 anos, estudante do Colégio Objetivo, em São José dos Campos - SP",
         testimonial: "Conheci o projeto através de um amigo chamado Vinicius, que estudava na minha escola de origem e em uma das instituições parceiras do Ismart. Foi ele que meu incentivou e ajudou com todas as etapas do processo seletivo.",
         photo: "assets/images/isabela-moraes.jpg"
@@ -283,7 +283,8 @@ export class TestimonialsService {
         com a participação de ao menos um
         bolsista e um pai de bolsista que dão
         depoimentos e reforçam as minhas
-        informações`
+        informações`,
+        photo: "assets/images/nadia-ribeiro.jpg"
       },
       {
         id: 6,
@@ -408,7 +409,7 @@ export class TestimonialsService {
         serão abertas. Você amadurecerá
         muito. Para mim, o Ismart representa
         transformação.`,
-        photo: "assets/images/gabrielli-trajetorias.png"
+        photo: "assets/images/gabrielli-fonseca.jpg"
       },
       {
         id: 2,
@@ -533,7 +534,7 @@ export class TestimonialsService {
       },
       {
         id: 4,
-        name: " Isabela Regina J. de Moraes",
+        name: "Isabela Regina J. de Moraes",
         excerpt: "17 anos, estudante do Colégio Objetivo, em São José dos Campos – SP",
         testimonial: `
         No meu primeiro ano de Ensino
@@ -577,7 +578,8 @@ export class TestimonialsService {
         em conjunto com outras instituições
         e, neste ano, estou fazendo meu
         primeiro projeto social com ajuda, é
-        claro, do Ismart.`
+        claro, do Ismart.`,
+        photo: "assets/images/isabela-moraes.jpg"
       },
       {
         id: 5,
@@ -707,11 +709,12 @@ export class TestimonialsService {
       },
       {
         id: 5,
-        name: "Isabela Regina",
+        name: "Isabela Regina J. de Moraes",
         excerpt: "Bolsista Ismart em São José dos Campos – SP",
         testimonial: `Sonhe! Sonhe o mais alto que quiser; somos capazes e podemos tudo.
         Batalhe por todos os seus objetivos e nunca desista, mesmo que seja difícil.
-        Você é forte e só de estar aqui já está lutando!`
+        Você é forte e só de estar aqui já está lutando!`,
+        photo: "assets/images/isabela-moraes.jpg"
       },
       {
         id: 6,
@@ -728,7 +731,8 @@ export class TestimonialsService {
         as melhores oportunidades para você irão aparecer. Procure passar adiante
         tudo que receber, e garantir que suas conquistas sejam a de outros também –
         gratidão é o melhor combustível possível, e dentro do Ismart você se torna uma
-        pessoa com poder imenso de transformar a realidade de outros ao seu redor`
+        pessoa com poder imenso de transformar a realidade de outros ao seu redor`,
+        photo: "assets/images/pedro-navarro.jpg"
       },
       {
         id: 7,
@@ -782,7 +786,8 @@ export class TestimonialsService {
         nos próximos anos no Ismart. Graças a todo o networking do Ismart, também pude participar de alguns programas que oferecerem mentoria e apoio financeiro para o
         processo de application ao longo do Ensino médio e, no 3° ano, tive a chance de participar de outros programas de verão em Stanford e UC Berkeley. Essas oportunidades foram
         fundamentais para que eu realizasse minha application para os EUA
-        `
+        `,
+        photo: "assets/images/pedro-navarro.jpg"
       },
       {
         id: 3,

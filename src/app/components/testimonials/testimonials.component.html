@@ -1,7 +1,9 @@
 <section class="testimonials" [class.testimonials__dark]="modeDark">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9 offset-md-3 col-sm-10 offset-sm-1 col-12">
+            <div 
+                class="col-md-9 offset-md-3 col-sm-10 offset-sm-1 col-12 testimonials__container"
+                [style.margin-left.px]="contentOffsetX">
                 <h3 class="testimonials__title">{{ customTitle || 'Testemunhos' }}</h3>
                 <ngx-slick-carousel class="testimonials__carousel" 
                     #slickModal="slick-carousel" 

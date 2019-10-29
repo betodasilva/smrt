@@ -27,19 +27,23 @@
         z-index: 1;
         width: 100%;
         position: relative;
-        img {
-            width: 100%;
-            height: auto;
-        }
         .img__container {
             position: relative;
+            width: 100%;
+            background: #F4FBFF;
+            img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+            }
+
             &:before {
                 content: "";
                 position: absolute;
-                height: 100%;
-                width: 100%;
+                top: 0; right: 0; bottom: 0; left: 0;
                 background-color: $blue-medium;
                 opacity: 0.2;
+                z-index: 1;
             }
         }
         figcaption {
@@ -176,6 +180,11 @@
             width: 50%;
             font-size: 22px;
             max-width: inherit;
+
+            span:before,
+            span:after {
+                display: none;
+            }
         }
     }
     @media (max-width: 540px) {

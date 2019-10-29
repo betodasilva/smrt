@@ -4,6 +4,8 @@ import { DOCUMENT } from '@angular/common';
 import { WINDOW } from "../../services/window.service";
 import { EmitterService } from 'src/app/services/emitter/emitter.service';
 import { ProgressBarService } from 'src/app/services/progress-bar/progress-bar.service';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -26,6 +28,8 @@ export class HeaderComponent implements OnInit {
   private hasChaptersOpened: boolean = false;
   private _availableLanguage: string = '';
 
+  private disableProgressBar: boolean = false;
+
   private get availableLanguage(){
     return this._availableLanguage;
   }
@@ -38,9 +42,19 @@ export class HeaderComponent implements OnInit {
     private _eref: ElementRef,
     @Inject(DOCUMENT) private document: any,
     @Inject(WINDOW) private window: Window,
-    private progressBar: ProgressBarService
+    private progressBar: ProgressBarService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
-    // this.availableLanguage = this.setAvailableLanguage(translate.currentLang, translate.getLangs());
+    this.disableProgressBarOnHome();
+  }
+
+  private disableProgressBarOnHome() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((value: NavigationEnd) => {
+      this.disableProgressBar = Boolean(value.url === '/home');
+    });
   }
 
   ngOnInit() {

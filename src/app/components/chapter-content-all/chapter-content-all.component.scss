@@ -136,7 +136,7 @@
         }
         &__image {
             color: $clear;
-            right: 3%;
+            right: 30px;
             left: initial;
             &:before {
                 background-image: url('../../../assets/images/left-quote.svg');
@@ -184,6 +184,7 @@
                 }
             }
         }
+
     }
     .list {
         padding-left: 27px;
@@ -221,6 +222,16 @@
         .blockquote__quote.blockquote__white {
             width: calc(40% + 15px);
         }
+
+        .blockquote__container {
+            position: absolute;
+            max-width: 1440px;
+            right: 0;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
     }
     @media (min-width: 1300px) {
         .blockquote__quote.blockquote__white {
@@ -244,7 +255,22 @@
         &__title {
             font-size: 42px;
         }
+
+        &__img {
+            display: flex;
+            flex-wrap: wrap;
+
+            .blockquote__container {
+                order: 1;
+            }
+
+            .blockquote__container + .col-md-6 {
+                order: 0;
+            }
+
+        }
     }
+    
     @media (max-width: 992px) {
         .blockquote__quote {
             position: relative;
