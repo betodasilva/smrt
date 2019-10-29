@@ -172,8 +172,7 @@ export class TestimonialsService {
         id: 2,
         name: "Helena Aguiar",
         excerpt: "Diretora de Planejamento e Integração do Colégio Bandeirantes",
-        testimonial: `
-        Não é só o
+        testimonial: `Não é só o
         bolsista do Ismart que
         se beneficia por estar aqui.
         Todo o Colégio ganha
@@ -255,8 +254,7 @@ export class TestimonialsService {
         id: 5,
         name: "Nádia Ribeiro",
         excerpt: "Professora de Matemática na Escola Calhim Manuel Abud, na Zona Sul de São Paulo",
-        testimonial: `
-        Soube da existência do
+        testimonial: `Soube da existência do
         Instituto por um ex-aluno da prefeitura que queria que o inscrevesse
         para o processo seletivo. Meu
         primeiro contato com o Ismart foi
@@ -290,8 +288,7 @@ export class TestimonialsService {
         id: 6,
         name: "Renato Aguiar",
         excerpt: "Professor de Matemática da Escola Municipal República do Peru",
-        testimonial: `
-        “Comecei a trabalhar na Escola
+        testimonial: `Comecei a trabalhar na Escola
           Municipal República do Peru, em
           2011. A escola já participava do
           Ismart desde 2010, mas só fui
@@ -480,8 +477,7 @@ export class TestimonialsService {
         id: 3,
         name: "Miguel Alves",
         excerpt: "Estudante de Engenharia de Petróleo na Poli - USP",
-        testimonial: `
-        Entrei no Ismart em 2010,
+        testimonial: `Entrei no Ismart em 2010,
         no Colégio Objetivo. O baque de
         perceber a diferença de ensino que
         estava tendo na escola pública e que
@@ -536,14 +532,16 @@ export class TestimonialsService {
         id: 4,
         name: "Isabela Regina J. de Moraes",
         excerpt: "17 anos, estudante do Colégio Objetivo, em São José dos Campos – SP",
-        testimonial: `
-        No meu primeiro ano de Ensino
+        testimonial: `No meu primeiro ano de Ensino
         médio, por causa de um episódio
         pessoal, acabei contraindo distúrbio
         de ansiedade e foi nesse momento que
         a frase de que nós, ismartanos, somos
-        uma família, se tornou real. Tanto
-        meu analista1
+        uma família, se tornou real. Tanto meu analista 
+        (Profissional da área da educação básica que acompanha, 
+        acolhe e integra o bolsista ao ambiente do colégio privado, 
+        orientado-o em toda a transição desde a adaptação ao 
+        desenvolvimento interpessoal e processo de orientação profissional.)
         como os amigos que
         fiz durante os dois anos de Instituto
         foram os responsáveis por eu não
@@ -585,7 +583,7 @@ export class TestimonialsService {
         id: 5,
         name: "João Pedro de Oliveira",
         excerpt: "Graduado Ismart, engenheiro mecânico e trainee no Itaú BBA",
-        testimonial: `“Eu tinha muita dificuldade
+        testimonial: `Eu tinha muita dificuldade
         em me disciplinar e estudar o que
         eu não gostava. Era uma criança
         muito inquieta e não conseguia me
@@ -610,7 +608,7 @@ export class TestimonialsService {
         id: 1,
         name: "Maria Eduarda Machado",
         excerpt: "Bolsista em Belo Horizonte – MG",
-        testimonial: `“Minha história com o Ismart é
+        testimonial: `Minha história com o Ismart é
         feliz. Eu amo o Ismart: os funcionários,
         meus colegas e as atividades, como
         rodas de conversa e cafés com
@@ -705,7 +703,8 @@ export class TestimonialsService {
         escolas do Brasil, com todo o material necessário e infraestrutura, venha
         para o Ismart! Com bolsa numa grande escola, suporte psicológico e outros
         benefícios, a única coisa que o aluno precisa fazer é se esforçar e estudar para
-        chegar aonde ele quiser!`
+        chegar aonde ele quiser!`,
+        photo: "assets/images/maria-eduarda.jpg"
       },
       {
         id: 5,
@@ -739,7 +738,8 @@ export class TestimonialsService {
         name: "Leonardo de Castro Coelho",
         excerpt: "Graduado em Direito pela Universidade Mackenzie",
         testimonial: `Os momentos difíceis fazem parte do seu crescimento e você não está
-        sozinho(a) nessa jornada. O Ismart e sua comunidade estão aqui para apoiálo(a). Você eventualmente irá superar essas etapas com sucesso.`
+        sozinho(a) nessa jornada. O Ismart e sua comunidade estão aqui para apoiálo(a). Você eventualmente irá superar essas etapas com sucesso.`,
+        photo: "assets/images/leonardo-coelho.jpg"
       },
       {
         id: 8,
@@ -764,8 +764,9 @@ export class TestimonialsService {
       {
         id: 2,
         name: "Letícia Nunes de Campos",
-        excerpt: "3o ano Ensino médio - Ismart Online",
-        testimonial: ` Letícia de 2016 não tinha muita perspectiva de vida e com o Ismart Online, eu comecei a entender que eu não precisava me limitar, que eu poderia ir muito mais além e escolher os rumos da minha vida. Já no primeiro ano, eu tive que solucionar um problema presente na sociedade e foi aí que o meu caminho cruzou com o do Lucas Nicascio, na época, universitário Ismart e ele mudou completamente a minha forma de enxergar a vida, além de ajudar a buscar novas oportunidades e avaliar perspectivas de carreiras. E você começa a entender que o Ismart Online não é você e uma plataforma apenas, mas é você e toda uma família que se forma. A gente compartilha, aprende, ri, chora e se ajuda na vida, no Ismart, na escola e em tudo. O Ismart Online ajuda com conteúdos, mas para além disso, ele amplia horizontes. O Ismart é transformação social.`
+        excerpt: "3º ano Ensino médio - Ismart Online",
+        testimonial: `Letícia de 2016 não tinha muita perspectiva de vida e com o Ismart Online, eu comecei a entender que eu não precisava me limitar, que eu poderia ir muito mais além e escolher os rumos da minha vida. Já no primeiro ano, eu tive que solucionar um problema presente na sociedade e foi aí que o meu caminho cruzou com o do Lucas Nicascio, na época, universitário Ismart e ele mudou completamente a minha forma de enxergar a vida, além de ajudar a buscar novas oportunidades e avaliar perspectivas de carreiras. E você começa a entender que o Ismart Online não é você e uma plataforma apenas, mas é você e toda uma família que se forma. A gente compartilha, aprende, ri, chora e se ajuda na vida, no Ismart, na escola e em tudo. O Ismart Online ajuda com conteúdos, mas para além disso, ele amplia horizontes. O Ismart é transformação social.`,
+        photo: "assets/images/leticia-nunes.jpg"
       },
     ],
     universidade: [
