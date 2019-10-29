@@ -33,7 +33,7 @@
 				<a [routerLink]="['/home']">
 					<div class="header__title">
 						<img src="assets/images/logo-header.svg" alt="" class="header__title--image">
-						<h1 class="header__title--excerpt">{{ 'HEADER.EXCERPT' | translate }}</h1>
+						<h1 class="header__title--excerpt" [innerHTML]="'HEADER.EXCERPT' | translate"></h1>
 					</div>
 				</a>
 			</div>
