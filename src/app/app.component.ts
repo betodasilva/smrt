@@ -48,6 +48,7 @@ export class AppComponent {
                 if ( img.naturalWidth ) {
                     // console.log( img.offsetWidth );
                     clearInterval( interval );
+                    console.log('settado tamanho para ', imgContainer);
                     this.renderer.setStyle(
                         imgContainer,
                         'padding-bottom',

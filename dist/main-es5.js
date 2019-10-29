@@ -617,6 +617,7 @@ var AppComponent = /** @class */ (function () {
                 if (img.naturalWidth) {
                     // console.log( img.offsetWidth );
                     clearInterval(interval);
+                    console.log('settado tamanho para ', imgContainer);
                     _this.renderer.setStyle(imgContainer, 'padding-bottom', (img.naturalHeight / img.naturalWidth) * 100 + "%");
                     // this.renderer.setStyle(
                     //     el,
