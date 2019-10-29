@@ -46,7 +46,7 @@ export class FloatContainerComponent implements OnInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.calculateSizes();
-
+      
       console.log(`inicio ${this.startPos} e fim ${this.endPos}, offset? ${this.endOffset}`);
     }, 500);
    

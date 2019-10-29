@@ -584,6 +584,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _services_emitter_emitter_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services/emitter/emitter.service */ "./src/app/services/emitter/emitter.service.ts");
+
 
 
 
@@ -624,6 +626,8 @@ var AppComponent = /** @class */ (function () {
                     //     'height',
                     //     `${img.naturalHeight}px`
                     // )
+                    console.log('hora de recalcular tamanhos');
+                    _services_emitter_emitter_service__WEBPACK_IMPORTED_MODULE_5__["EmitterService"].get('calculateSizes').emit();
                 }
             }, 10);
         });

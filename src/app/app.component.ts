@@ -2,6 +2,7 @@ import { Component, Inject, Renderer2 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
+import { EmitterService } from './services/emitter/emitter.service';
 
 @Component({
   selector: 'app-root',
@@ -59,8 +60,12 @@ export class AppComponent {
                     //     'height',
                     //     `${img.naturalHeight}px`
                     // )
+                    
+                    console.log('hora de recalcular tamanhos');
+                    EmitterService.get('calculateSizes').emit();
                 }
             }, 10)
+
             
         })
     }
