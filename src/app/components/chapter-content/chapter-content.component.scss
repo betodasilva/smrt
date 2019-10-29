@@ -27,19 +27,21 @@
         z-index: 1;
         width: 100%;
         position: relative;
-        img {
-            width: 100%;
-            height: auto;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; bottom: 32px; left: 0;
+            background-color: $blue-medium;
+            opacity: 0.2;
+            z-index: 1;
         }
         .img__container {
             position: relative;
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
+            
+            img {
                 width: 100%;
-                background-color: $blue-medium;
-                opacity: 0.2;
+                height: auto;
+                position: absolute;
             }
         }
         figcaption {
