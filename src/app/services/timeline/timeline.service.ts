@@ -12,14 +12,14 @@ export class TimelineService {
       type: 'content',
       title: '1999',
       excerpt: '<p>Lançado, no Rio de Janeiro, o Espaço Talento, primeiro projeto do Ismart, voltado para alunos, a partir de 6 anos, selecionados na rede municipal de ensino.</p>',
-      image: 'assets/images/1999.png',
+      image: 'assets/images/1999.jpg',
       icon: 'assets/images/pencil.svg'
     },
     {
       type: 'content',
       title: '2004',
       excerpt: '<p>Criado o Projeto Alicerce, que oferece a alunos do 7º ano (antiga 6ª série) curso preparatório, no contraturno das aulas da rede pública, para prepará-los para o Ensino médio. Surge também, a partir de parceria com escolas de excelência, o Bolsa Talento, projeto que oferece bolsas de estudos a alunos talentosos que são indicados por professores.</p><p>Transferência da sede do Ismart para São Paulo.</p>',
-      image: 'assets/images/2004.png',
+      image: 'assets/images/2004.jpg',
       icon: 'assets/images/stairs.svg'
     },
     {
@@ -39,7 +39,7 @@ export class TimelineService {
       title: '2007',
       excerpt: `<p>Ismart estabelece parceria com a Secretaria de Educação de São José dos Campos e com a Secretaria de Educação do Estado de São Paulo.</p>
       <p>Início da Convenção de Alunos e Famílias Ismart, evento anual que reúne os alunos e responsáveis dos cursos presenciais de cada praça para inspirar e fortalecer a comunidade Ismart.</p>`,
-      image: 'assets/images/2007.png',
+      image: 'assets/images/2007.jpg',
       icon: 'assets/images/bridge.svg'
     },
     {
@@ -51,7 +51,7 @@ export class TimelineService {
     {
       title: '2009',
       excerpt: '<p>Ismart promove seminário internacional a fim de oferecer às escolas parceiras conhecimentos sobre o aprimoramento de práticas de ensino com qualidade.</p><p>O professor Vicente Falconi, conselheiro Ismart, lança seu livro “O verdadeiro Poder” e destina renda ao Ismart.</p>',
-      image: 'assets/images/2009.png',
+      image: 'assets/images/2009.jpg',
       icon: 'assets/images/books.svg'
     },
     {
@@ -99,7 +99,7 @@ export class TimelineService {
       <p>99% dos bolsistas concluintes do Ensino médio foram aprovados em vestibulares.</p>
       <p>Os alunos da primeira turma do Ismart Online são aprovados em universidades de excelência e recomendados para ingressar como bolsistas universitários do Ismart.</p>
       `,
-      image: 'assets/images/2018.png',
+      image: 'assets/images/2018.jpg',
       icon: 'assets/images/pin.svg'
     },
     {
