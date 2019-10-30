@@ -30,8 +30,7 @@
 				#cards
 				*ngFor="let item of timeline.content; let i = index;"
 				animateOnScroll
-				[animationName]="animationClass(i, timeline.content.length)"
-				[style.animation-delay]="'100ms'"
+				animationName="visible fadeInUp"
 				[attr.year]="item.title"
 				[ngClass]="{
 					'col-12': true,

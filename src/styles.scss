@@ -195,6 +195,17 @@ hr.divider {
 	}
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0); } 
+}
+
 .fadeInRight {
 	animation-name: fadeInRight;
 }
@@ -203,14 +214,18 @@ hr.divider {
 	animation-name: fadeInLeft;
 }
 
+.fadeInUp {
+	animation-name: fadeInUp;
+}
+
 .fadeIn {
 	animation-name: fadeIn;
 	animation-duration: 100ms !important;
 }
 
 .animate {
-	animation-duration: 2s;
-	animation-timing-function: cubic-bezier(0.91, 0.03, 0.29, 1);
+	animation-duration: 800ms;
+	animation-timing-function: ease;
 	animation-fill-mode: both;
 	visibility: hidden;
 	will-change: transform;
