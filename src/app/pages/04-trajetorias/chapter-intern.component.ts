@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, ElementRef, ViewEncapsulation } from '@angular/core';
 import { TestimonialsService } from "../../services/testimonials/testimonials.service";
 import { ModalComponent } from "../../components/modal/modal.component";
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
@@ -7,7 +7,8 @@ import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-chapter-intern',
   templateUrl: './chapter-intern.component.html',
-  styleUrls: ['./chapter-intern.component.scss']
+  styleUrls: ['./chapter-intern.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ChapterInternComponent implements OnInit {
 

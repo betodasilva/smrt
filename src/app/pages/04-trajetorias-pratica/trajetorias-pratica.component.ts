@@ -1,11 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-trajetorias-pratica',
   templateUrl: './trajetorias-pratica.component.html',
-  styleUrls: ['./trajetorias-pratica.component.scss']
+  styleUrls: ['./trajetorias-pratica.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TrajetoriasPraticaComponent implements OnInit {
 

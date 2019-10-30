@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
@@ -6,7 +6,8 @@ import { TestimonialsService } from 'src/app/services/testimonials/testimonials.
 @Component({
   selector: 'app-trajetorias-universidade',
   templateUrl: './trajetorias-universidade.component.html',
-  styleUrls: ['./trajetorias-universidade.component.scss']
+  styleUrls: ['./trajetorias-universidade.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TrajetoriasUniversidadeComponent implements OnInit {
 
