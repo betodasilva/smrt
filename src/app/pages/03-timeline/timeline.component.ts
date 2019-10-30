@@ -1,6 +1,9 @@
-import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2, ViewChild, Inject } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline/timeline.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { ScrollService } from 'src/app/services/scroll/scroll.service';
+import { WINDOW } from 'src/app/services/window.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-timeline',
@@ -50,7 +53,10 @@ export class TimelineComponent implements OnInit {
     private timeline: TimelineService,
     private renderer: Renderer2,
     private titleService: Title,
-    private meta: Meta) 
+    private meta: Meta,
+    private scroll: ScrollService,
+    @Inject(WINDOW) private window: Window
+  ) 
   { }
 
   ngOnInit() {
@@ -63,11 +69,22 @@ export class TimelineComponent implements OnInit {
     const elToNavigate = this.cards.find( (el: ElementRef) => el.nativeElement.getAttribute('year') === navItem );
     if ( !elToNavigate ) return;
 
-    elToNavigate.nativeElement.scrollIntoView({behavior: 'smooth', block: 'center'})
+    const yPosition = ( elToNavigate.nativeElement.getBoundingClientRect().top + this.window.scrollY ) - 64;
+    this.window.scrollTo({
+      top: yPosition,
+      behavior: 'smooth'
+    });
+    // elToNavigate.nativeElement.scrollIntoView({behavior: 'smooth', block: 'center'})
     this.navItems.forEach( el => {
       this.renderer.removeClass( el.nativeElement, 'timeline-nav__item--active');
     });
     this.renderer.addClass( target, 'timeline-nav__item--active');
+  }
+
+  animationClass(index, total) {
+    if ( index + 1 === total ) return 'visible fadeIn'
+    
+    return index % 2 === 0 ? 'visible fadeInLeft' : 'visible fadeInRight';
   }
 
 }

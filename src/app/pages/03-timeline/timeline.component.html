@@ -29,9 +29,12 @@
 			<li
 				#cards
 				*ngFor="let item of timeline.content; let i = index;"
+				animateOnScroll
+				animationName="visible fadeInUp"
 				[attr.year]="item.title"
 				[ngClass]="{
-					'col-12': true, 
+					'col-12': true,
+					'animate': true,
 					'timeline__item': true, 
 					'timeline__item--img': !!item.image
 				}">
@@ -48,6 +51,10 @@
 				</app-timeline-image>
 			</li>
 		</ul>
+
+		<div
+			[ngStyle]="{'transform': 'translateY(' + (- scroll.pos / 6 ) + 'px)'}" 
+			class="chapter-content__background"></div>
 	</article>
 	<div class="container">
 		<hr class="divider">

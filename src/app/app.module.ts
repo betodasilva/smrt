@@ -55,6 +55,8 @@ import { SvgDefinitionsComponent } from './components/svg-definitions/svg-defini
 import { PoliticaComponent } from './pages/politica/politica.component';
 import { ProgressBarDirective } from './directives/progress-bar.directive';
 import { ContentOffsetDirective } from './directives/content-offset.directive';
+import { AnimateOnScrollDirective } from './directives/animate-on-scroll.directive';
+import { ScrollService } from './services/scroll/scroll.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -103,7 +105,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TrajetoriasAlumniComponent,
     PoliticaComponent,
     ProgressBarDirective,
-    ContentOffsetDirective
+    ContentOffsetDirective,
+    AnimateOnScrollDirective
   ],
   imports: [
     BrowserModule,
@@ -119,7 +122,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   }),
     ModalModule.forRoot()
   ],
-  providers: [WINDOW_PROVIDERS, EmitterService],
+  providers: [WINDOW_PROVIDERS, EmitterService, ScrollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

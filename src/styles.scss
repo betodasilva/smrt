@@ -161,3 +161,76 @@ hr.divider {
 	margin-bottom: 20px;
 	padding-bottom: 10px;
 }
+
+@keyframes fadeInLeft {
+	0% {
+			opacity: 0;
+			transform: translate3d(-100%,0,0)
+	}
+
+	to {
+			opacity: 1;
+			transform: translateZ(0)
+	}
+}
+@keyframes fadeInRight {
+	0% {
+			opacity: 0;
+			transform: translate3d(100%,0,0)
+	}
+
+	to {
+			opacity: 1;
+			transform: translateZ(0)
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0); } 
+}
+
+.fadeInRight {
+	animation-name: fadeInRight;
+}
+
+.fadeInLeft {
+	animation-name: fadeInLeft;
+}
+
+.fadeInUp {
+	animation-name: fadeInUp;
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	animation-duration: 100ms !important;
+}
+
+.animate {
+	animation-duration: 400ms;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	visibility: hidden;
+	will-change: transform;
+}
+
+.visible {
+	visibility: visible !important;
+}
