@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2, HostListener } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2, HostListener, ViewEncapsulation } from '@angular/core';
 import { WINDOW } from 'src/app/services/window.service';
 import { Injectable, Inject } from '@angular/core';
 
@@ -7,7 +7,8 @@ import { Injectable, Inject } from '@angular/core';
 @Component({
   selector: 'app-chapter-content',
   templateUrl: './chapter-content.component.html',
-  styleUrls: ['./chapter-content.component.scss']
+  styleUrls: ['./chapter-content.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 @Injectable()

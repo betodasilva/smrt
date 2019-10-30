@@ -13,19 +13,19 @@
             </a>
         </li>
         <li class="menu__item">
-            <span class="menu__link--strong">Relatório de atividades 2018-2019</span>
+            <span class="menu__link--strong">{{ 'HEADER.EXCERPT' | translate }}</span>
         </li>
         <li class="menu__item">
-            <a [routerLink]="['/home']" (click)="fecharMenu()" class="menu__link">Página inicial</a>
+            <a [routerLink]="['/home']" (click)="fecharMenu()" class="menu__link">{{ 'NAV.HOME' | translate }}</a>
         </li>
         <li class="menu__item">
-            <a href="assets/RA_Completo_4outubro19.pdf" target="_blank" download class="menu__link">Download do Relatório 2018-2019</a>
+            <a href="assets/RA_Completo_4outubro19.pdf" target="_blank" download class="menu__link">{{ 'NAV.DOWNLOAD_MENU' | translate }}</a>
         </li>
         <li class="menu__item">
-            <a href="https://www.ismart.org.br/quem-somos/" target="_blank" class="menu__link">Versões anteriores</a>
+            <a href="https://www.ismart.org.br/quem-somos/" target="_blank" class="menu__link">{{ 'NAV.VERSIONS' | translate }}</a>
         </li>
         <li class="menu__item">
-            <a href="https://www.ismart.org.br/quem-somos/" target="_blank" class="menu__link">Sobre a Ismart</a>
+            <a href="https://www.ismart.org.br/quem-somos/" target="_blank" class="menu__link">{{ 'NAV.ABOUT' | translate }}</a>
         </li>
     </ul>
     <ul class="menu__language">
