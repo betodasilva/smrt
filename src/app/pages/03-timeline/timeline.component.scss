@@ -1,14 +1,29 @@
 .chapter-content {
 	padding: 70px 0;
 	position: relative;
-	background: url('../../../assets/images/bg-arrows.svg') no-repeat center;
-	background-size: cover;
 	margin: 0 auto;
 	max-width: 1260px;
+	overflow: hidden;
 	// padding-right: 15px;
 	// padding-left: 15px;
 	@media (min-width: 1600px) {
 		max-width: 1440px;
+	}
+
+	&__background {
+		position: absolute;
+		top: 0;
+		bottom: -100%;
+		left: 0;
+		right: 0;
+		background: url('../../../assets/images/bg-arrows.svg');
+		background-repeat: repeat;
+		background-position: 0 0;
+		background-size: contain;
+		transform: translateY(0);
+		transition: transform 100ms ease;
+		z-index: -1;
+
 	}
 }
 

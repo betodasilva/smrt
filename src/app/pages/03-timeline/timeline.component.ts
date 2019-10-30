@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChildren, QueryList, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline/timeline.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { ScrollService } from 'src/app/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-timeline',
@@ -50,7 +51,9 @@ export class TimelineComponent implements OnInit {
     private timeline: TimelineService,
     private renderer: Renderer2,
     private titleService: Title,
-    private meta: Meta) 
+    private meta: Meta,
+    private scroll: ScrollService
+  ) 
   { }
 
   ngOnInit() {
@@ -68,6 +71,12 @@ export class TimelineComponent implements OnInit {
       this.renderer.removeClass( el.nativeElement, 'timeline-nav__item--active');
     });
     this.renderer.addClass( target, 'timeline-nav__item--active');
+  }
+
+  animationClass(index, total) {
+    if ( index + 1 === total ) return 'visible fadeIn'
+    
+    return index % 2 === 0 ? 'visible fadeInLeft' : 'visible fadeInRight';
   }
 
 }
