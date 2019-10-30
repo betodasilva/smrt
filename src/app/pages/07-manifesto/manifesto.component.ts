@@ -1,11 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
   selector: 'app-manifesto',
   templateUrl: './manifesto.component.html',
-  styleUrls: ['./manifesto.component.scss']
+  styleUrls: ['./manifesto.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ManifestoComponent implements OnInit {
   
