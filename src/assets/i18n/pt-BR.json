@@ -708,5 +708,71 @@
 				"url": "01-mensagem-do-conselho"
 			}
 		]
+	},
+	"TESTIMONIALS": {
+		"SUPORTE": [
+			{
+        "id": 1,
+        "name": "Maria Eduarda Machado",
+        "excerpt": "Bolsista em Belo Horizonte – MG",
+        "testimonial": "Minha história com o Ismart é feliz. Eu amo o Ismart: os funcionários, meus colegas e as atividades, como rodas de conversa e cafés com profissional. Todo o meu primeiro ano no Instituto me fez crescer muito, me tornou mais confiante, e a oportunidade de estudar num colégio de excelência é indescritível. Eu gosto de aprender e o Ismart me proporciona todas as ferramentas para isso. Às vezes não acredito que estou tendo essa oportunidade. No início, estava eufórica e nervosa: tudo novo pra mim. Um pouco confusa também, já que o ensino médio é uma experiência totalmente diferente do que o fundamental. Mas, apesar do nervosismo de estar em uma escola nova em que eu conhecia um pouco mais de dez pessoas, tinha a sensação de que, com o meu esforço, esse período seria muito produtivo e minha vida mudaria para melhor. Eu sou de Brumadinho, então ficava alguns dias da semana na casa da minha bisavó, em Belo Horizonte, sentindo muita falta dos meus pais e do meu irmão, o que me chateava. Mas ir para minha casa, aturar o ônibus por duas horas e acordar no outro dia às quatro da manhã não era fácil. Além disso, a adaptação na escola também foi difícil, com uma carga horária pesada e muitas atividades e provas toda semana, mas, acostumando com a rotina, isso ficou mais fácil. O que eu mais gosto no Ismart são as pessoas: meus melhores amigos também são bolsistas, e nós nos entendemos muito bem, já que nos ajudamos mutuamente, tanto no colégio, como na vida fora dele. O programa de orientação profissional está sendo fundamental para a minha escolha profissional: antes, eu tinha uma ideia vaga do que queria estudar, mas essa ideia foi trabalhada nas entrevistas e no Trabalho de Escolha Profissional (TEP) e hoje estou segura do curso a escolher e em que trabalhar, além de já ter ideias de faculdades que me interessam. Quero ser médica da família no SUS.",
+        "photo": "assets/images/maria-eduarda-machado.jpg"
+      }
+		],
+		"CHEGANDO": [
+      {
+        "id": 1,
+        "name": "João Pedro de Oliveira",
+        "excerpt": "Graduado Ismart, engenheiro mecânico e trainee no Itaú BBA",
+        "testimonial": "Aproveite ao máximo todas as atividades que ele propõe. Procure se envolver com os colegas e os analistas e coordenadores, pois eles vão te entender e ajudar nessa nada fácil e super empolgante jornada",
+        "photo": "assets/images/joao-pedro-oliveira.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Gabrielli Fonseca de Oliveira",
+        "excerpt": "Universitária Ismart do 1º ano de Farmácia – USP",
+        "testimonial": "Você enfrentará desafios e terá de fazer sacrifícios. Você passará por dificuldades e momentos de provação. Mas saiba que tudo isso será para o seu crescimento pessoal. Ao fim, tudo valerá a pena, muitas portas serão abertas e você amadurecerá muito",
+        "photo": "assets/images/gabrielli-fonseca.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Larissa Fabião",
+        "excerpt": "Universitária Ismart do curso de Sistema de Informação, na USP",
+        "testimonial": "Aproveitem ao máximo a oportunidade que estão tendo de ingressar nessa comunidade. Participem de todas as atividades possíveis, conversem com o máximo de alunos da comunidade, sonhem grande e se dediquem para alcançar os sonhos que vão acabar surgindo a partir dessa nova comunidade"
+      },
+      {
+        "id": 4,
+        "name": "Maria Eduarda",
+        "excerpt": "Bolsista em Belo Horizonte – MG",
+        "testimonial": "Se você gosta de estudar e acredita que a educação pode impulsionar sua vida, mas, mesmo assim, não tem os recursos para estudar nas melhores escolas do Brasil, com todo o material necessário e infraestrutura, venha para o Ismart! Com bolsa numa grande escola, suporte psicológico e outros benefícios, a única coisa que o aluno precisa fazer é se esforçar e estudar para chegar aonde ele quiser!",
+        "photo": "assets/images/maria-eduarda.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Isabela Regina J. de Moraes",
+        "excerpt": "Bolsista Ismart em São José dos Campos – SP",
+        "testimonial": "Sonhe! Sonhe o mais alto que quiser; somos capazes e podemos tudo. Batalhe por todos os seus objetivos e nunca desista, mesmo que seja difícil. Você é forte e só de estar aqui já está lutando!",
+        "photo": "assets/images/isabela-moraes.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Pedro Navarro",
+        "excerpt": "Universitário Ismart de Engenharia Química na Universidade de Notre Dame, nos EUA",
+        "testimonial": "Aproveite cada oportunidade que surgir, não importa o quão louca ou impossível de alcançar ela pareça. Faça amizade com o máximo de pessoas possíveis e busque inspiração com a história de cada uma. Não desperdice nenhum segundo no projeto, procure crescer sempre, pois o tempo passa rápido, e é incrível como o Ismart nos desenvolve em tão pouco tempo. Não tenha medo de falhar algumas vezes ou não conquistar algumas das oportunidades que encontrar pela frente – ter resiliência é importante, e como minha mãe sempre fala, ‘tudo se ajeita’, e de uma forma ou de outra, as melhores oportunidades para você irão aparecer. Procure passar adiante tudo que receber, e garantir que suas conquistas sejam a de outros também – gratidão é o melhor combustível possível, e dentro do Ismart você se torna uma pessoa com poder imenso de transformar a realidade de outros ao seu redor", "photo": "assets/images/pedro-navarro.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Leonardo de Castro Coelho",
+        "excerpt": "Graduado em Direito pela Universidade Mackenzie",
+        "testimonial": "Os momentos difíceis fazem parte do seu crescimento e você não está sozinho(a) nessa jornada. O Ismart e sua comunidade estão aqui para apoiálo(a). Você eventualmente irá superar essas etapas com sucesso.",
+        "photo": "assets/images/leonardo-coelho.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Miguel Alves",
+        "excerpt": "Universitário Ismart de Engenharia de Petróleo na Poli – USP",
+        "testimonial": "Eu aprendi a sonhar grande dentro do Ismart. Ainda mais importante do que isso, eu compreendi que era capaz de alcançar esses sonhos. Por isso, só tenho a dizer uma coisa: sonhe muito grande, alcance o infinito nesse sonho, e carregue bem forte consigo a crença no seu próprio potencial. A oportunidade você já tem, a capacidade também, nenhum sonho deve ser menor do que você mesmo. Hora de concretizar!"
+      }
+    ]
 	}
 }
