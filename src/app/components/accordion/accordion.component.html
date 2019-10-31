@@ -11,14 +11,14 @@
                     (click)="onAccordionClick()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="plus">
                     <path fill="#028ED4" fill-rule="evenodd" d="M10 7.879L17.425.454a1.5 1.5 0 0 1 2.12 2.121L12.122 10l7.425 7.425a1.5 1.5 0 0 1-2.121 2.12L10 12.122l-7.425 7.425a1.5 1.5 0 0 1-2.12-2.121L7.878 10 .454 2.575A1.5 1.5 0 0 1 2.575.455L10 7.878z"/>
-                </svg> {{ accordion.title }}
+                </svg> {{ accordion.TITLE | translate }}
                 </button>
             </h2>
         </div>
         
         <div [attr.id]="'collapse-'+ i" class="collapse show" [ngClass]="{'show': i === 0 }" [attr.aria-labelledby]="'heading-'+ i">
             <div class="accordion__card--body">
-                <div [innerHTML]="accordion.content"></div>
+                <div [innerHTML]="accordion.CONTENT | translate "></div>
             </div>
         </div>
     </div>
