@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable, observable, BehaviorSubject } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TestimonialsService {
 
-  constructor() {}
+  constructor(private translate: TranslateService) {}
 
   private _testimonial: BehaviorSubject<any> = new BehaviorSubject({});
 
@@ -808,18 +809,18 @@ export class TestimonialsService {
   }
 
   public getByPage( page: string ) {
-    return this.all[page];
+    return this.translate.get( `TESTIMONIALS.${page.toUpperCase()}` );
   }
 
-  public navigatePrev(page){
-    const all = this.getByPage(page);
+  public async navigatePrev(page){
+    const all = await this.getByPage(page).toPromise();
     const currentIndex = all.findIndex( testimonial => testimonial.id === this._testimonial.getValue().id );
     const testimonial = currentIndex > 0 ? all[ currentIndex - 1 ] : all[ all.length - 1 ];
     this._testimonial.next(testimonial);
   }
 
-  public navigateNext(page){
-    const all = this.getByPage(page);
+  public async navigateNext(page){
+    const all = await this.getByPage(page).toPromise();
     const currentIndex = all.findIndex( testimonial => testimonial.id === this._testimonial.getValue().id );
     const testimonial = currentIndex + 1 < all.length ? all[ currentIndex + 1 ] : all[0];
     this._testimonial.next(testimonial);

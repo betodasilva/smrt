@@ -10,7 +10,7 @@
                     [config]="slideConfig">
                     <div 
                         ngxSlickItem 
-                        *ngFor="let slide of slides" 
+                        *ngFor="let slide of slides | async" 
                         class="testimonials__single"
                         (click)="onTestimonialClick(slide)">
                         <figure class="testimonials__img">
