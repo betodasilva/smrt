@@ -6,7 +6,10 @@
             </div>
         </div>
         
-        <ngx-slick-carousel class="row"
+        <ngx-slick-carousel 
+            class="row"
+            [class.last-slide]="isLastSlide"
+            (beforeChange)="beforeChange($event)"
             [config]="slideConfig">
             <div
                 ngxSlickItem 

@@ -14,6 +14,7 @@ interface relatedData {
 })
 export class RelatedComponent implements OnInit {
   @Input('relatedData') relatedData: relatedData;
+  private isLastSlide: boolean = false;
   private slideConfig = {
     "slidesToShow": 1,
     "slidesToScroll": 1,
@@ -31,6 +32,15 @@ export class RelatedComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  beforeChange($event){
+    const { 
+      currentSlide, 
+      nextSlide, 
+      slick 
+    } = $event;
+    this.isLastSlide = (currentSlide + nextSlide) === slick.slideCount;
   }
 
 }
