@@ -162,7 +162,7 @@ module.exports = "<section class=\"overview\">\n\t<div class=\"container\">\n\t\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"related\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h2 class=\"related__title\">Leia Também</h2>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-4\" *ngFor=\"let related of relatedData\">\n                <a class=\"related__single\" [routerLink]=\"'/' + related.url\">\n                    <figure>\n                        <img src=\"{{ related.image }}\" alt=\"{{ related.subtitle }}\">\n                    </figure>\n                    <div class=\"related__single--title\">\n                        <h4>{{ related.title }}</h4>\n                        <h3>{{ related.subtitle }}</h3>\n                    </div>\n                </a>\n            </div>\n        </div>\n    </div>\n</section>"
+module.exports = "<section class=\"related\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <h2 class=\"related__title\">Leia Também</h2>\n            </div>\n        </div>\n        \n        <ngx-slick-carousel class=\"row\"\n            [config]=\"slideConfig\">\n            <div\n                ngxSlickItem \n                class=\"col-md-4\" \n                *ngFor=\"let related of relatedData\">\n                <a class=\"related__single\" [routerLink]=\"'/' + related.url\">\n                    <figure>\n                        <img src=\"{{ related.image }}\" alt=\"{{ related.subtitle }}\">\n                    </figure>\n                    <div class=\"related__single--title\">\n                        <h4>{{ related.title }}</h4>\n                        <h3>{{ related.subtitle }}</h3>\n                    </div>\n                </a>\n            </div>\n        </ngx-slick-carousel>\n        \n    </div>\n</section>"
 
 /***/ }),
 
@@ -1731,7 +1731,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let RelatedComponent = class RelatedComponent {
-    constructor() { }
+    constructor() {
+        this.slideConfig = {
+            "slidesToShow": 1,
+            "slidesToScroll": 1,
+            "infinite": false,
+            "arrows": false,
+            "centerMode": false,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: "unslick"
+                }
+            ]
+        };
+    }
     ngOnInit() {
     }
 };

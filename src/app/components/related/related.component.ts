@@ -14,7 +14,20 @@ interface relatedData {
 })
 export class RelatedComponent implements OnInit {
   @Input('relatedData') relatedData: relatedData;
-  
+  private slideConfig = {
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "infinite": false,
+    "arrows": false,
+    "centerMode": false,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
+  };
   constructor() { }
 
   ngOnInit() {

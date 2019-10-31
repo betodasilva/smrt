@@ -5,8 +5,13 @@
                 <h2 class="related__title">Leia Também</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4" *ngFor="let related of relatedData">
+        
+        <ngx-slick-carousel class="row"
+            [config]="slideConfig">
+            <div
+                ngxSlickItem 
+                class="col-md-4" 
+                *ngFor="let related of relatedData">
                 <a class="related__single" [routerLink]="'/' + related.url">
                     <figure>
                         <img src="{{ related.image }}" alt="{{ related.subtitle }}">
@@ -17,6 +22,7 @@
                     </div>
                 </a>
             </div>
-        </div>
+        </ngx-slick-carousel>
+        
     </div>
 </section>
