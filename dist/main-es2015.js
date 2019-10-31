@@ -41,7 +41,7 @@ module.exports = "\n<app-header></app-header>\n<router-outlet (activate)=\"onRou
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"accordion\" id=\"accordionExample\">\n    <div class=\"accordion__card\" *ngFor=\"let accordion of accordiondata; let i = index;\">\n        <div class=\"accordion__card--header\" [attr.id]=\"'heading-'+ i\">\n            <h2 class=\"mb-0\">\n                <button \n                    class=\"btn btn-link accordion__card--link\" \n                    type=\"button\" data-toggle=\"collapse\" \n                    [attr.data-target]=\"'#collapse-'+ i\" \n                    [attr.aria-expanded]=\"i === 0? true : false\" \n                    [attr.aria-controls]=\"'#collapse-'+ i\"\n                    (click)=\"onAccordionClick()\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" class=\"plus\">\n                    <path fill=\"#028ED4\" fill-rule=\"evenodd\" d=\"M10 7.879L17.425.454a1.5 1.5 0 0 1 2.12 2.121L12.122 10l7.425 7.425a1.5 1.5 0 0 1-2.121 2.12L10 12.122l-7.425 7.425a1.5 1.5 0 0 1-2.12-2.121L7.878 10 .454 2.575A1.5 1.5 0 0 1 2.575.455L10 7.878z\"/>\n                </svg> {{ accordion.title }}\n                </button>\n            </h2>\n        </div>\n        \n        <div [attr.id]=\"'collapse-'+ i\" class=\"collapse show\" [ngClass]=\"{'show': i === 0 }\" [attr.aria-labelledby]=\"'heading-'+ i\">\n            <div class=\"accordion__card--body\">\n                <div [innerHTML]=\"accordion.content\"></div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"accordion\" id=\"accordionExample\">\n    <div class=\"accordion__card\" *ngFor=\"let accordion of accordiondata; let i = index;\">\n        <div class=\"accordion__card--header\" [attr.id]=\"'heading-'+ i\">\n            <h2 class=\"mb-0\">\n                <button \n                    class=\"btn btn-link accordion__card--link\" \n                    type=\"button\" data-toggle=\"collapse\" \n                    [attr.data-target]=\"'#collapse-'+ i\" \n                    [attr.aria-expanded]=\"i === 0? true : false\" \n                    [attr.aria-controls]=\"'#collapse-'+ i\"\n                    (click)=\"onAccordionClick()\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" class=\"plus\">\n                    <path fill=\"#028ED4\" fill-rule=\"evenodd\" d=\"M10 7.879L17.425.454a1.5 1.5 0 0 1 2.12 2.121L12.122 10l7.425 7.425a1.5 1.5 0 0 1-2.121 2.12L10 12.122l-7.425 7.425a1.5 1.5 0 0 1-2.12-2.121L7.878 10 .454 2.575A1.5 1.5 0 0 1 2.575.455L10 7.878z\"/>\n                </svg> {{ accordion.title | translate }}\n                </button>\n            </h2>\n        </div>\n        \n        <div [attr.id]=\"'collapse-'+ i\" class=\"collapse show\" [ngClass]=\"{'show': i === 0 }\" [attr.aria-labelledby]=\"'heading-'+ i\">\n            <div class=\"accordion__card--body\">\n                <div [innerHTML]=\"accordion.content | translate \"></div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "<article \n    class=\"chapter-content\"\n    #article\n    pr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"chapter-hat\" [ngStyle]=\"backgroundImage\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"chapter-hat__title\">\n                    <h2>{{ data.title }}</h2>\n                    <h1>{{ data.subtitle }}</h1>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>"
+module.exports = "<section class=\"chapter-hat\" [ngStyle]=\"backgroundImage\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"chapter-hat__title\">\n                    <h2>{{ data.title | translate}}</h2>\n                    <h1>{{ data.subtitle | translate}}</h1>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>"
 
 /***/ }),
 
@@ -228,7 +228,7 @@ module.exports = "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmln
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"testimonials\" [class.testimonials__dark]=\"modeDark\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div \n                class=\"col-md-9 offset-md-3 col-sm-10 offset-sm-1 col-12 testimonials__container\"\n                [style.margin-left.px]=\"contentOffsetX\">\n                <h3 class=\"testimonials__title\">{{ customTitle || 'Testemunhos' }}</h3>\n                <ngx-slick-carousel class=\"testimonials__carousel\" \n                    #slickModal=\"slick-carousel\" \n                    [config]=\"slideConfig\">\n                    <div \n                        ngxSlickItem \n                        *ngFor=\"let slide of slides\" \n                        class=\"testimonials__single\"\n                        (click)=\"onTestimonialClick(slide)\">\n                        <figure class=\"testimonials__img\">\n                            <img [src]=\"slide.photo || 'assets/images/placeholder.jpg'\" [alt]=\"slide.name\">\n                        </figure>\n                        <h4 class=\"testimonials__name\">{{ slide.name }}</h4>\n                        <p class=\"testimonials__about\">{{ slide.excerpt }}</p>\n                        <a href=\"\" data-toggle=\"modal\" data-target=\"#exampleModal\" class=\"testimonials__link\">Ver depoimento</a>\n                    </div>\n                </ngx-slick-carousel>\n            </div>\n        </div>\n    </div>\n</section>"
+module.exports = "<section class=\"testimonials\" [class.testimonials__dark]=\"modeDark\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div \n                class=\"col-md-9 offset-md-3 col-sm-10 offset-sm-1 col-12 testimonials__container\"\n                [style.margin-left.px]=\"contentOffsetX\">\n                <h3 class=\"testimonials__title\">{{ customTitle || 'Testemunhos' }}</h3>\n                <ngx-slick-carousel class=\"testimonials__carousel\" \n                    #slickModal=\"slick-carousel\" \n                    [config]=\"slideConfig\">\n                    <div \n                        ngxSlickItem \n                        *ngFor=\"let slide of slides | async\" \n                        class=\"testimonials__single\"\n                        (click)=\"onTestimonialClick(slide)\">\n                        <figure class=\"testimonials__img\">\n                            <img [src]=\"slide.photo || 'assets/images/placeholder.jpg'\" [alt]=\"slide.name\">\n                        </figure>\n                        <h4 class=\"testimonials__name\">{{ slide.name }}</h4>\n                        <p class=\"testimonials__about\">{{ slide.excerpt }}</p>\n                        <a href=\"\" data-toggle=\"modal\" data-target=\"#exampleModal\" class=\"testimonials__link\">Ver depoimento</a>\n                    </div>\n                </ngx-slick-carousel>\n            </div>\n        </div>\n    </div>\n</section>"
 
 /***/ }),
 
@@ -294,7 +294,7 @@ module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"article\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <span class=\"tag\">Alumni</span>\n                <h2 class=\"chapter-content__title\">Missão do Alumni é fomentar sinergia</h2>\n                <h3 class=\"chapter-content__subtitle\">Idealizador do projeto, Leonardo Coelho, destaca a colaboração criativa entre os integrantes</h3>\n                <p>Etimologicamente a palavra “alumni” vem do latim “alumnus”, que significa pupilo. Assim, é uma expressão utilizada para identificar uma organização de antigos alunos. Alumni é também o termo escolhido para designar a rede de ex-bolsistas graduados do Ismart.</p>\n                <p>O grupo foi criado por iniciativa de Leonardo de Castro Coelho, graduado em Direito pela Universidade Mackenzie, a partir da percepção de que era importante manter conectados todos os que fizeram parte da comunidade Ismart. “Algumas interações informais já aconteciam entre alguns graduados. Porém, sempre senti a necessidade de ampliarmos os benefícios dessa rede para um grupo ainda maior e de forma institucionalizada”, afirma Leonardo.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/leonardo-coelho-graduado-ismart.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> Leonardo Coelho - Graduado Ismart</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>O Alumni é uma rede que busca aproximar e gerar sinergia entre o grupo de pessoas que se graduaram com o Ismart ao longo dos anos e a comunidade Ismart como um todo. “Acredito que um dos pontos fortes do projeto é termos muita coisa em comum – experiências que vivenciamos na transição entre a nossa formação acadêmica e a vida profissional são bem similares em alguns casos – ao mesmo tempo em que nossas diferenças, como áreas de atuação e convicções pessoais, são essenciais para que possamos colaborar de forma criativa uns com os outros”, completa o ex-bolsista do Ismart.</p>\n                <p>Atualmente, o Alumni é um grupo vinculado institucionalmente ao Ismart, formado por profissionais que concluíram com sucesso o ciclo universitário da instituição. Determinados membros do Alumni mantêm contato frequente com o Instituto, coordenando execução de alguns projetos do grupo.</p>\n                <p>Para a diretora-executiva do Ismart, Mariana Rego Monteiro, a importância do Alumni está na valorização da entidade pelos jovens que passaram pelo instituto e querem continuar contribuindo para sua ação transformadora. “São jovens engajados, que querem participar da vida do Ismart. Para nós, isso é muito importante. O grande sonho do Conselho é que um dia o mesmo seja formado por jovens do Ismart”, revela Mariana.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/barbara-domene-graduada-ismart.jpg\" alt=\"\">\n                </div>\n                <div class=\"blockquote__container container\">\n                    <blockquote class=\"blockquote__image blockquote__quote\">“Eu passei a fazer parte do Alumni e compreender a importância de valorizar os graduados e manter a troca de experiências e ajuda mútua”\n                    <cite>Bárbara Domene - Graduada Ismart</cite>\n                    </blockquote>\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\">Bárbara Domene - Graduada Ismart</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>Por isso, desde 2017 o Ismart abraçou o projeto ao entender que a rede de graduados estava crescendo e o grupo Alumni poderia ser inspiração para os mais novos, fortalecendo a interação entre bolsistas e ex-bolsistas. “Em 2017 realizamos uma pesquisa com 139 graduados que já estavam no mercado de trabalho. O levantamento nos mostrou como vivem os jovens bolsistas, onde trabalham e quais são os desafios que enfrentam atualmente. Até então não tínhamos acesso a esses dados, sabíamos pouca coisa sobre nossos alunos graduados”, conta Beatriz Mantelato, gerente do ensino superior do Instituto. No ano seguinte, em 2018, a pesquisa foi feita com 222 graduados, servindo como base para a elaboração de ações que possam auxiliar os exbolsistas na tomada de decisões relacionadas à carreira.</p>\n                <p>Bárbara Domene, graduada em Direito pela Universidade Mackenzie e ex-mentorada pelo criador da rede, Leonardo de Castro Coelho, explica: “Eu passei a fazer parte do Alumni e compreender a importância de valorizar os graduados e manter a troca de experiências e ajuda mútua. O desafio desse grupo agora é atrair cada vez mais graduados e se manter atuante”.</p>\n                \n            </div>\n        </div>\n    </div>\n</article>\n<div class=\"container\">\n    <hr class=\"divider\">\n</div>\n<app-related [relatedData]=\"relatedInfo\"></app-related>"
+module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"article\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <span class=\"tag\">{{ 'CHAPTERS.04.8' | translate }}</span>\n                <h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.8.CONTENT.TITLE' | translate }}</h2>\n                <h3 class=\"chapter-content__subtitle\">{{ 'CHAPTER_4.8.CONTENT.SUBTITLE' | translate }}</h3>\n                <span [innerHTML]=\"'CHAPTER_4.8.CONTENT.SECTION_1' | translate\"></span>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/leonardo-coelho-graduado-ismart.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> {{ 'CHAPTER_4.8.CONTENT.SECTION_2' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.8.CONTENT.SECTION_3' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/barbara-domene-graduada-ismart.jpg\" alt=\"\">\n                </div>\n                <div class=\"blockquote__container container\">\n                    <blockquote class=\"blockquote__image blockquote__quote\">{{ 'CHAPTER_4.8.CONTENT.SECTION_4.QUOTE' | translate }}\n                    <cite>{{ 'CHAPTER_4.8.CONTENT.SECTION_4.CITE' | translate }}</cite>\n                    </blockquote>\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\">{{ 'CHAPTER_4.8.CONTENT.SECTION_4.PHOTO_DESCRIPTION' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.8.CONTENT.SECTION_5' | translate\">                \n            </div>\n        </div>\n    </div>\n</article>\n<div class=\"container\">\n    <hr class=\"divider\">\n</div>\n<app-related [relatedData]=\"relatedInfo\"></app-related>"
 
 /***/ }),
 
@@ -305,7 +305,7 @@ module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">EaD</span>\n                <h2 class=\"chapter-content__title\">Ismart Online une tecnologia e oportunidade de expansão</h2>\n                <h3 class=\"chapter-content__subtitle\"><strong>Beatriz Mantelato,</strong> que participou do início do programa, diz que a motivação foi ampliar o número de oportunidades oferecidas pelo Instituto</h3>\n                <p>A perspectiva de atingir um público maior e desenvolver mais alunos talentosos levou o Ismart a criar, em 2014, uma plataforma on-line com conteúdos exclusivos para o bolsista. O Instituto decidiu apostar na tecnologia como uma maneira de ampliar as oportunidades para que mais jovens pudessem ter acesso aos seus projetos.</p>\n                <p>Beatriz Mantelato, atualmente gerente do ensino superior e que foi responsável pela implantação do Ismart Online, conta que o projeto surgiu quando o Instituto “identificou a possibilidade de ter uma experiência com tecnologia para educação, uma vez que a tendência vinha para ficar e o Ismart não tinha vivência em educação a distância”.</p>\n                <p>O Ismart Online representa, portanto, um grande avanço nesses 20 anos de história do Instituto. A implantação de cursos a distância permitiu romper os limites físicos de atendimento, ampliando a oportunidade aos que demonstraram alto potencial no processo seletivo. Além disso, constatou-se que era uma forma viável de expandir a atuação do Ismart a um custo mais baixo. Foram seis meses de planejamento, elaboração da metodologia, processo seletivo, implementação da plataforma, prospecção de parceiros e negociação com investidores. “Lançamos o Ismart Online em março de 2014, com uma turma de 186 alunos”.</p>\n                <p>Passados cinco anos, a primeira turma que entrou no Ismart Online está se formando com bons resultados: dos 38 alunos do on-line, 18 passaram em faculdades de excelência, segundo revela Mariana Rego Monteiro, diretora-executiva do Instituto. “Com uma equipe enxuta, de seis pessoas, o Ismart Online hoje atende mais de 1.400 alunos das cidades de São Paulo, do Rio de Janeiro, de Belo Horizonte e de São José dos Campos. É uma opção concreta para ampliar nosso trabalho.\"</p>\n                <p>No sistema a distância, os alunos têm acesso a ferramentas para melhorar o desempenho tanto no ensino fundamental como no ensino médio, com atividades em equipe e workshops para o desenvolvimento de competências para o século 21. O programa está dividido em dois módulos. Um é dedicado a aulas de reforço de português e matemática, além de um módulo de redação que prepara os bolsistas para a prova de redação do Exame Nacional do ensino médio (Enem). As redações são corrigidas e comentadas para que, com orientação especializada, os alunos possam reescrevê-las e melhorar o desempenho.</p>\n                \n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/miguel-angelo-celestino-da-silva.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Miguel Angelo Celestino da Silva Projeto Ismart Online - Belo Horizonte </figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>Os bolsistas encontram ainda conteúdo com uma linguagem mais leve, que busca trabalhar aspectos ligados à autonomia, à inspiração, à motivação e à persistência. É o módulo de cultura, que tem como objetivo difundir as crenças e o “jeito de ser do Ismart”. Nele, são incluídas propostas de projetos individuais e em equipe, a partir de conteúdos que estão na plataforma.</p>\n                <p>A proposta do Ismart Online, segundo Mariana, é oferecer ensino híbrido, ou seja, apesar de basear-se em uma plataforma na internet, o programa prevê quatro encontros presenciais ao longo do ano, nos quais estudantes e famílias participam de formações em que se busca desenvolvimento, integração e aproximação com o trabalho desenvolvido com todos os bolsistas.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/fabricio-neri-lima-e-layne-pereira-da-silva.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> Fabrício Neri Lima e Layne Pereira da Silva Projeto Ismart Online - São Paulo</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>A plataforma permite que o aluno estude sozinho, realize simulados, tire dúvidas com monitores, participe de projetos que ampliam o seu conhecimento sobre orientação profissional e vestibulares. Os estudantes também contam com o auxílio de um tutor para desenvolver as atividades e organizar a rotina de estudos.</p>\n                <p>Larissa Fabião prestou processo seletivo do Ismart pela primeira vez, em 2013, chegando à quarta etapa (visita domiciliar), mas foi desclassificada. A surpresa ficou por conta do convite inesperado: fazer parte da primeira turma do Ismart Online. “Pensei: por que não? Decidi agarrar a oportunidade e aproveitar ao máximo. Achei que poderia fazer muita coisa”, lembra. E fez mesmo. Larissa manteve o excelente desempenho na escola pública e, no Ismart Online, desenvolveu em grupo um aplicativo para combater o bullying. No segundo ano do projeto, criou um jogo que tinha como pano de fundo a trajetória dela e de outros alunos.</p>\n                <p>Apesar de não fazer mais parte do Ismart Online, em 2015 participou novamente do processo seletivo Ismart para o Projeto Bolsa Talento, foi aprovada e cursou o ensino médio no Colégio Poliedro. Larissa nunca cortou os laços com o projeto Ismart Online. Pelo contrário: tornou-se monitora e deu aulas de robótica para alguns alunos. “Não adianta nada estudar e não compartilhar, guardar tudo para você. Quero realizar o que gosto, aproveitar cada momento e ter experiências fantásticas, mas quero fazer tudo isso enquanto ajudo a mudar outras realidades.” Hoje, Larissa é universitária Ismart do curso de Sistema de Informação, na USP.</p>\n                <h3 class=\"chapter-content__title--section\">Linha da evolução</h3>\n                <img src=\"assets/images/linha-da-evolucao-desk.png\" alt=\"Linha de evolução\" class=\"img-fluid img-desk\">\n                <img src=\"assets/images/linha-da-evolucao-mobile.png\" alt=\"Linha de evolução\" class=\"img-fluid img-mobile\">\n            </div>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('ead')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('ead')\"\n\t(onNext)=\"testimonials.navigateNext('ead')\">\n</app-modal>"
+module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">{{ 'CHAPTERS.04.6' | translate }}</span>\n                <h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.6.CONTENT.TITLE' | translate }}</h2>\n                <h3 class=\"chapter-content__subtitle\" [innerHTML]=\"'CHAPTER_4.6.CONTENT.SUBTITLE' | translate\"></h3>\n                <span [innerHTML]=\"'CHAPTER_4.6.CONTENT.SECTION_1' | translate\"></span>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/miguel-angelo-celestino-da-silva.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.6.CONTENT.SECTION_2' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.6.CONTENT.SECTION_3' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/fabricio-neri-lima-e-layne-pereira-da-silva.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> {{ 'CHAPTER_4.6.CONTENT.SECTION_4' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.6.CONTENT.SECTION_5' | translate\">\n            </div>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('ead')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('ead')\"\n\t(onNext)=\"testimonials.navigateNext('ead')\">\n</app-modal>"
 
 /***/ }),
 
@@ -316,7 +316,7 @@ module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"article\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <span class=\"tag\">Internacional</span>\n                <h2 class=\"chapter-content__title\">Imersão cultural em de verão</h2>\n                <h3 class=\"chapter-content__subtitle\">Um dos primeiros bolsistas a participar do summer program, <strong>Pedro Navarro</strong> ingressou na graduação nos Estados Unidos </h3>\n                <p>Ao longo de seus 20 anos, o Ismart desenvolveu programas para incentivar e motivar os bolsistas a sonharem cada vez mais alto, buscando novos conhecimentos e experiências. Um exemplo consiste em enviar estudantes do ensino médio para cursos de verão no exterior, os summer programs, de curta duração, que ocorrem nas férias das instituições de ensino, nos quais os alunos participam de atividades nos campi de universidades de destaque em outros países. Após um rigoroso processo seletivo, os alunos passam toda a temporada de verão hospedados no próprio campus (nos dormitórios das universidades) e conhecem pessoas de diversos países, participam de aulas teóricas e práticas e de atividades extracurriculares.</p>\n                <p>O projeto começou em 2013 e, de lá para cá, chega a 47 o número de bolsistas que frequentou instituições como Harvard, Notre Dame, Duke, UChicago, Berkeley, Yale, Stanford e muitas outras. Esse contato com estudantes de várias partes do mundo é fundamental para a formação acadêmica e pode ajudar a desenvolver habilidades que irão acrescentar muito no crescimento profissional e pessoal.</p>\n                <p>Em geral, essa primeira experiência reforça no aluno o desejo de investir na formação acadêmica no exterior. O Ismart avalia o perfil do estudante e seu rendimento escolar, dando suporte para que se prepare para os processos de admissão das universidades norte-americanas.</p>\n                <p>Essa preparação começa com o conhecimento da língua inglesa. Os alunos do Projeto Alicerce e do Bolsa Talento têm acesso ao ensino do idioma por meio de bolsa de estudos em centros de idiomas de excelência.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/turma-de-intercambistas-ismart-2019.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> Turma de intercambistas Ismart 2019, de São Paulo, e universitários Ismart, que fazem graduação nos EUA</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <div class=\"blue__content\">\n                    <p>Além de fundamental, o ensino de inglês é o primeiro passo para se preparar para uma faculdade fora do Brasil.</p>\n                    <p>Pedro Navarro, de Sorocaba (SP), foi um dos primeiros alunos bolsistas a participar de um programa de verão, em 2013. Ele foi para a Universidade Notre Dame, nos Estados Unidos, e pôde experimentar, por algumas semanas, a vida em uma instituição americana. “Aquilo me motivou a querer voltar”, conta Pedro, que três anos depois passou a cursar lá a graduação. “O que tornou possível essa conquista foi ver o exemplo de tantas pessoas inspiradoras da comunidade Ismart e a minha busca pessoal pela excelência.”</p>\n                    <p>A paulista de São José dos Campos, Larissa Fabião Fonseca, de 18 anos, representa a essência do Ismart pela garra, determinação e superação de desafios. Iniciou sua trajetória pelo Ismart Online e, depois, prestou processo seletivo para o Bolsa Talento. Em 2017, encarou extensa jornada para se preparar e conseguir uma bolsa em um curso de verão em Stanford, na área de Física. “Era mais difícil do que eu esperava. Nos primeiros dias não entendia quase nada das aulas e passava as horas livres estudando para acompanhar a turma”, relembra a estudante, que se dividia entre o ensino médio, em São José dos Campos, e as aulas preparatórias aos sábados, em São Paulo.</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/andre-garcia.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Da esquerda para a direira: André Garcia, estudante de Engenharia na Universidade de Yale, nos Estados Unidos; Jessica de Oliveira Moreira, estudante de Economia e Educação na Barnard College, nos Estados Unidos; Pedro Henrique Cardoso Navarro, estudante de Engenharia Química na Universidade de Notre Dame, nos Estados Unidos</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>“Tive acesso a aulas e suporte completo para poder aumentar minhas notas nas principais provas de seleção para estudar nos Estados Unidos”. Durante a semana, Larissa fazia duas horas de aula on-line para poder se adaptar ao modelo e ao conteúdo das provas de seleção, além de estudar em período integral no Colégio Poliedro e integrar o curso de inglês na Cultura Inglesa. Resultado: conseguiu a bolsa para um curso de verão sobre a Teoria da Relatividade, em Stanford. “Vi no summer uma oportunidade de conhecer melhor a realidade universitária fora do País e aprender mais sobre um assunto de que gosto em um dos melhores centros acadêmicos do mundo. A experiência de ir para Stanford me fez melhorar meu inglês devido à necessidade de constantemente usar o idioma para me comunicar e, além disso, me mostrou que quando me dedico ao máximo para a concretização de um sonho acabo conseguindo realizá-lo.”</p>\n                <p>Gabrielli Fonseca de Oliveira, que foi aluna do Ismart Online e depois bolsista do ensino médio, no Colégio Bandeirantes, em São Paulo, participou de dois intercâmbios. Seu objetivo era aprender coisas novas, conhecer os campi das universidades, praticar inglês – ter uma experiência marcante, enfim.</p>\n                <p>“Nunca imaginei, mas sempre sonhei! Sobre a experiência em si, a vivência foi bem diferente em cada um dos programas. Em Yale, tive a oportunidade de conhecer alguns pontos turísticos e um grupo mais diverso de pessoas de outros países. Descobri inclusive que me dou muito bem com as chinesas! Já em Chicago, minha experiência foi bem acadêmica e rigorosa, de estudo intenso. Acho que o fato de os dois intercâmbios terem sido bem distintos me ajudou a explorar mais e, ao mesmo tempo, ter noção concreta de como são os estudos em uma universidade norteamericana. Em Yale, eu tive dois cursos fixos no período da manhã, Anatomy + Physiology e Forensic Science. Participei também de workshops no período da tarde, Chemistry Lab e Marine Biology. Já em Chicago, integrei um Immersion Program, tendo aulas de uma única área, cujo tema foi Biotechnology for the 21st Century. Enquanto em Yale eu tive aulas que focaram mais na interação entre os alunos, em Chicago mantive contato com um aparato laboratorial característico da rotina de um pesquisador.</p>\n                <p>Dessa experiência, Gabrielli trouxe maturidade e a certeza de saber lidar com os desafios. “Aprendi a não ter medo de errar e de ser quem eu sou. No summer, existem pessoas de diversas personalidades e gostos. E o melhor é conhecê-las e compartilhar experiências”. Gabrielli, hoje, é aluna do primeiro ano de Farmácia, na Universidade de São Paulo (USP).</p>\n            </div>  \n        </div>\n    </div>\n</article>\n<div class=\"container\">\n    <hr class=\"divider\">\n</div>\n<app-related [relatedData]=\"relatedInfo\"></app-related>"
+module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"article\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <span class=\"tag\">{{ 'CHAPTERS.04.5' | translate }}</span>\n                <h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.5.CONTENT.TITLE' | translate }}</h2>\n                <h3 class=\"chapter-content__subtitle\" [innerHTML]=\"'CHAPTER_4.5.CONTENT.SUBTITLE' | translate\"></h3>\n                <span [innerHTML]=\"'CHAPTER_4.5.CONTENT.SECTION_1' | translate\"></span>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/turma-de-intercambistas-ismart-2019.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> {{ 'CHAPTER_4.5.CONTENT.SECTION_2' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <div class=\"blue__content\" [innerHTML]=\"'CHAPTER_4.5.CONTENT.SECTION_3' | translate\">\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/andre-garcia.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.5.CONTENT.SECTION_4' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.5.CONTENT.SECTION_5' | translate\">\n                \n            </div>  \n        </div>\n    </div>\n</article>\n<div class=\"container\">\n    <hr class=\"divider\">\n</div>\n<app-related [relatedData]=\"relatedInfo\"></app-related>"
 
 /***/ }),
 
@@ -327,7 +327,7 @@ module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">Prática</span>\n                <h2 class=\"chapter-content__title\">Desempenho acadêmico destaca bolsista</h2>\n                <h3 class=\"chapter-content__subtitle\">A partir da observação das discrepâncias escolares, Gabrielli passou a refletir sobre as desigualdades</h3>\n                <p>Se os bons exemplos têm efeito multiplicador, a história de Gabrielli Fonseca de Oliveira, de 18 anos, poderia muito bem ser fonte de inspiração e incentivo para outros jovens talentos. A jovem cresceu na zona leste de São Paulo e era aluna do 6º ano da Escola Estadual Almirante Custódio José de Mello, na Vila Granada, quando conheceu o Ismart. “A coordenadora da minha escola inscreveu os alunos mais dedicados da minha classe”, conta a garota de rosto suave, mas decidido.</p>\n                <p>Ela lembra que foi preciso muita garra e determinação para superar os obstáculos desse desafio. “Entrei no Ismart pelo Ismart Online. Durante o processo seletivo, a entrevista individual com a psicóloga foi a que mais me marcou porque, naquele momento, fui exposta pela primeira vez ao questionamento de por que uma bolsa de estudos seria relevante para minha vida.” Gabrielli reconhece a falta de maturidade aos 12 anos, ao conhecer o Ismart; foi o tempo que a fez perceber que uma chance como aquela poderia mudar sua visão de mundo, torná-la protagonista da própria história, independentemente dos padrões socioeconômicos. Assim, após o primeiro ano participando do Ismart Online, obtendo bons resultados e registrando forte engajamento, foi transferida para o Projeto Alicerce como bolsista presencial no Bandeirantes.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/gabrielli-trajetorias.jpg\" alt=\"\">\n                </div>\n                <div class=\"blockquote__container container\">\n                    <blockquote class=\"blockquote__image blockquote__quote\">“Durante o processo seletivo, a entrevista individual com a psicóloga foi a que mais me marcou porque naquele momento, fui exposta pela primeira vez ao questionamento de por que uma bolsa de estudos seria relevante para minha vida.”\n                        <cite>Gabrielli Fonseca de Oliveira, 18, Ex-Ismart</cite>\n                    </blockquote>\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\">Gabrielli Fonseca de Oliveira, 18, Ex-Ismart</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>O primeiro contato com a nova realidade desconhecida não abalou a convicção da menina de que tudo aquilo traria bons resultados no futuro, nem mesmo a ansiedade ou a surpresa com a estrutura de um novo colégio como o Bandeirantes. “Foi uma experiência que, antes de mais nada, contribuiu para o meu crescimento pessoal. Observar pontos tão discrepantes na estrutura de ensino e no núcleo social me fez refletir sobre a desigualdade do País e minha posição privilegiada. Isso me fez valorizar mais as oportunidades e ter consciência de que preciso retribuir todo suporte que recebi durante essa jornada.”</p>\n                <p>No Bandeirantes, Gabrielli foi uma das melhores alunas da sua turma, com ótimo desempenho acadêmico. Mais do que isso, destacou-se pelas atitudes solidárias. Ao longo da jornada com o Ismart, participou de projetos desenvolvidos como Aluno Tutor e Uma Mão Lava a Outra, que desen-volveram competências fundamentais como a de trabalho colaborativo e comunicação, complementando as ex-periências vividas no Instituto.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <div class=\"blue__content\">\n                    <h3 class=\"chapter-content__title--section\">Estímulo à solidariedade</h3>\n                    <p>Tanto o Aluno Tutor como o Uma Mão Lava a Outra estimulam os alunos a se tornarem agentes multiplicadores para, assim, fortalecer ainda mais a comunidade Ismart. Por meio do Aluno Tutor, o aluno novato recebe a ajuda de um bolsista mais velho que irá lhe auxiliar a entender o “jeito Ismart de ser”. Juntos, eles podem trocar experiências sobre os estudos, formar uma rede de contato na comunidade e desenvolver habilidades como falar em público e cooperação.</p>\n                    <p>Já no Uma Mão Lava a Outra, os bolsistas se ajudam mutuamente com aulas de reforço em matérias específicas ou com aulas temáticas em assuntos que lhes interessam. Dessa forma, estimula-se o convívio e a troca entre alunos de diferentes escolas e projetos. </p>\n                    <p>Já a Liga do Futuro, formada por bolsistas, contempla várias atividades voluntárias com a proposta de trocar conhecimentos e fortalecer a conexão entre os alunos. Em 2018, foram mais de 500 bolsistas engajados na #Conquista 10, projeto que faz parte da Liga do Futuro e que tem como missão divulgar o processo seletivo na rede pública de ensino, trazendo mais candidatos para o processo seletivo do Ismart. Os alunos participantes da atividade ganham pontos (chamados de ligabytes) por escola visitada, que podem ser trocados por prêmios.</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>Segundo Gabrielli, todas as oportunidades no Ismart fizeram com que ela pudesse enfrentar situações inoportunas de forma resiliente e mais assertiva. “Não importava o contexto, se era um evento do Ismart Online, uma roda de conversa ou qualquer outro momento, o Ismart sempre me inspirou a perseguir meus sonhos, me desafiar e querer ir além da minha zona de conforto. E eu sinto que esse será o maior legado do Instituto na minha vida”. É por isso que Gabrielli diz que se antes era uma aprendiz em estágio inicial, que não sabia muito o que queria, depois de viver a experiência é uma sonhadora, consciente de seu papel na sociedade.</p>\n                <p>A mais nova estudante de Farmácia da Universidade de São Paulo (USP) pretende ser pesquisadora de biotec-nologia. “Eu me enxergo em laboratórios e atuando em projetos sociais.”</p>\n                <blockquote class=\"blockquote__quote blockquote__white\"><span>“O Ismart sempre me inspirou a perseguir meus sonhos, me desafiar e querer ir além da minha zona de conforto. E eu sinto que esse será o maior legado do Instituto na minha vida.”</span>\n                <cite>Gabrielli Fonseca de Oliveira, 18, Ex-Ismart</cite>\n                </blockquote>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/familia-lombello.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> Família Lombello: Os irmãos gêmeos Victor e Gustavo, a irmã Giulia - alunos Projeto Alicerce, acompanhados da mãe, Sandra - São José dos Campos</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <h3 class=\"chapter-content__title--section\">Estímulo</h3>\n                <p>A família tem papel fundamental na integração do bolsista à nova realidade. Ela deve abraçar a parceria com o projeto, participando e incen-tivando os filhos a encarar os desafios e a sonhar grande. Isso acontece com a criação de um ambiente favorável aos estudos, a participação nas atividades organizadas ou propostas pela equipe de desenvolvimento dos estudantes, em reuniões e rodas de conversa.</p>\n                <p>Sandra Regina Lombello é mãe de Giulia, Vitor e Gustavo e acompanha de perto o desenvolvimento intelec-tual dos filhos desde que foram sele-cionados como bolsistas do Ismart. “Participei de uma reunião na escola deles, o Colégio Poliedro, em São José dos Campos, e tive conhecimento das propostas do Instituto, me agradaram bastante. O maior impacto é saber que tenho três filhos estudando em uma escola renomada, na qual eu não teria condições de arcar com as mensalidades. Tenho muita gratidão por tudo que o Ismart proporcionou e proporcionará na vida dos meus filhos e, consequentemente, na minha.” </p>\n                <blockquote class=\"blockquote__big\">“...Tenho muita gratidão por tudo que o Ismart proporcionou e proporcionará na vida dos meus filhos...”\n                <cite>Sandra Regina Lombello | Mãe de alunos do Ismart</cite>\n                </blockquote>\n            </div>  \n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('pratica')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('pratica')\"\n\t(onNext)=\"testimonials.navigateNext('pratica')\">\n</app-modal>"
+module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">{{ 'CHAPTERS.04.3' | translate }}</span>\n                <h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.3.CONTENT.TITLE' | translate }}</h2>\n                <h3 class=\"chapter-content__subtitle\">{{ 'CHAPTER_4.3.CONTENT.SUBTITLE' | translate }}</h3>\n                <span [innerHTML]=\"'CHAPTER_4.3.CONTENT.SECTION_1' | translate\"></span>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/gabrielli-trajetorias.jpg\" alt=\"\">\n                </div>\n                <div class=\"blockquote__container container\">\n                    <blockquote class=\"blockquote__image blockquote__quote\">{{ 'CHAPTER_4.3.CONTENT.SECTION_2.QUOTE' | translate }}\n                        <cite>{{ 'CHAPTER_4.3.CONTENT.SECTION_2.CITE' | translate }}</cite>\n                    </blockquote>\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\">{{ 'CHAPTER_4.3.CONTENT.SECTION_2.PHOTO_DESCRIPTION' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.3.CONTENT.SECTION_3' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <div class=\"blue__content\" [innerHTML]=\"'CHAPTER_4.3.CONTENT.SECTION_4' | translate\">\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.3.CONTENT.SECTION_5' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/familia-lombello.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> {{ 'CHAPTER_4.3.CONTENT.SECTION_6' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.3.CONTENT.SECTION_7' | translate\">\n            </div>  \n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('pratica')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('pratica')\"\n\t(onNext)=\"testimonials.navigateNext('pratica')\">\n</app-modal>"
 
 /***/ }),
 
@@ -338,7 +338,7 @@ module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">Seleção</span>\n                <h2 class=\"chapter-content__title\">Porta de entrada para o desenvolvimento</h2>\n                <h3 class=\"chapter-content__subtitle\">Segundo Juliana Silva, gerente de Seleção, etapa está alinhada à visão do Instituto</h3>\n                <p>O processo seletivo é a forma de acesso aos projetos, o momento em que se identifica o jovem talento. A seleção tem como foco dar oportunidade a alunos de baixa renda com altas habilidades, que se desenvolvam e conquistem posições de destaque no mercado de trabalho. Por isso, o Instituto, nos últimos 20 anos, desenvolveu e aprimorou o processo de reconhecimento do potencial dos candidatos a uma vaga nos projetos Alicerce, Bolsa Talento e Ismart Online.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/fernanda-trajetoria.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Fernanda de Oliveira Pereira (Projeto Alicerce - São José dos Campos)</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>Para participar do processo seletivo, o aluno precisa vir de família com renda per capita de até dois salários mínimos, nunca ter sido reprovado e atender aos critérios de idade e ano escolar. O candidato ao projeto Alicerce deve estar matriculado no 7º ano e ter no máximo 13 anos e, para o Bolsa Talento, ter no máximo 15 anos e estar matriculado no 9º ano. Para os alunos do 7º ano, o Ismart oferece vagas no projeto Alicerce, cursinho preparatório para o ensino médio de dois anos de duração, cujas aulas ocorrem no contraturno da escola formal. Já os estudantes do 9º ano aprovados no processo seletivo têm bolsa para cursar o ensino médio nas escolas particulares parceiras do Ismart.</p>\n                <p>Na seleção, são avaliados o desempenho acadêmico, a capacidade de aprendizagem e aspectos compor-tamentais. Essa análise é fundamental para a avaliação da aptidão do aluno para ter sucesso ao longo dos projetos oferecidos pelos Ismart.</p>\n                <p>A seleção é composta por cinco fases, todas eliminatórias. As duas primeiras procuram mensurar os conhe-cimentos acadêmicos e o potencial de aprendizagem dos inscritos; as outras três têm o objetivo de identificar as competências socioemocionais.</p>\n                <h3 class=\"chapter-content__title--section\">Fases da seleção</h3>\n                <ul class=\"list\">\n                    <li>1ª FASE: teste on-line, com questões de múltipla escolha de Português e Matemática.</li>\n                    <li>2ª FASE: prova presencial, com questões de múltipla escolha de Português, Matemática e outros temas que procuram avaliar o potencial de aprendizagem.</li>\n                    <li>3ª FASE: entrevista individual, na qual se procura reconhecer o interesse do candidato em tornar-se bolsista. A entrevista também avalia a capacidade de superar desafios e as competências socioemocionais.</li>\n                    <li>4ª FASE: visita domiciliar, realizada por um profissional do Ismart, para conhecer o ambiente e a família do candidato.</li>\n                    <li>5ª FASE: dinâmica de grupo, com atividades para verificar características comportamentais, como habilidade de comunicação, criatividade e socialização.</li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/itamize-trajetorias.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Itamize Oliveira (Graduada Ismart)</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>Os alunos que se destacaram no processo seletivo, mas não ingressaram nos projetos presenciais, ganham acesso ao Ismart Online – uma plataforma de estudos online, em que realizam atividades em equipe e participam de workshops de formação.</p>\n                <p>Em 2018, 1.288 novos alunos ingressaram nos projetos presenciais e on-line. “A seleção é a forma de ingresso para os projetos oferecidos pelo Instituto; então essa escolha dará, de certa forma, o tom para o atendimento ou não da nossa visão (bolsistas no mercado de trabalho em posição de destaque)”, explica Juliana Silva,gerente de Seleção, área responsável pelo processo seletivo do Ismart.</p>\n                <p>Além disso, o Instituto conta com a parceria da rede pública de ensino – os grandes parceiros na divulgação e no apoio aos candidatos. Os educadores de escolas públicas são valiosos e ajudam a identificar jovens com o perfil Ismart. Por isso, há contatos ao longo de todo o ano com os educadores, tanto por meio de visitas às secretarias e às diretorias, quanto por envio de informativos periódicos. Adicionalmente, uma vez por ano, há encontros de formação e reconhecimento com educadores em São Paulo, no Rio de Janeiro e em Belo Horizonte. O objetivo é apresentar o Ismart, orientar sobre o processo seletivo, capacitar sobre altas habilidades e reconhecer os professores que se engajam com o Instituto e contribuem com a seleção de alunos talentosos.</p>\n                <blockquote class=\"blockquote__big\">“A seleção é a forma de ingresso para os projetos oferecidos pelo Instituto; então essa escolha dará, de certa forma, o tom para o atendimento ou não da nossa visão (bolsistas no mercado de trabalho em posição de destaque)”\n                <cite>Juliana silva | Gerente de Seleção do Ismart</cite>\n                </blockquote>\n                <p>Por sua relevância, o contato com educadores da rede pública é uma das ações do programa Deixe sua Marca, criado em 2014 e que busca o engajamento dos professores e o reconhecimento do trabalho desenvolvido por eles. Essa parceria envolve a realização de eventos e premiações como o título de Embaixador Ismart. O professor-embaixador atua como formador de opinião e de divulgador, não só do processo seletivo, mas da Instituição como um todo. Além de identificar alunos talentosos e prepará-los para concorrer à oportunidade do Ismart, esses parceiros apresentam o projeto aos demais professores, coordenadores e diretores da rede pública de ensino.</p>\n            </div>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('selecao')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('selecao')\"\n\t(onNext)=\"testimonials.navigateNext('selecao')\">\n</app-modal>"
+module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">{{ 'CHAPTERS.04.2' | translate }}</span>\n                <h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.2.CONTENT.TITLE' | translate }}</h2>\n                <h3 class=\"chapter-content__subtitle\">{{ 'CHAPTER_4.2.CONTENT.SUBTITLE' | translate }}</h3>\n                <p>{{ 'CHAPTER_4.2.CONTENT.SECTION_1' | translate }}</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/fernanda-trajetoria.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.2.CONTENT.SECTION_2' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.2.CONTENT.SECTION_3' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-5\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/itamize-trajetorias.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.2.CONTENT.SECTION_4' | translate }</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.2.CONTENT.SECTION_5' | translate\">\n            </div>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('selecao')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('selecao')\"\n\t(onNext)=\"testimonials.navigateNext('selecao')\">\n</app-modal>"
 
 /***/ }),
 
@@ -349,7 +349,7 @@ module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">Suporte</span>\n                <h2 class=\"chapter-content__title\">Projeto Alicerce e Bolsa Talento enfatizam habilidades</h2>\n                <h3 class=\"chapter-content__subtitle\">Gerente de Educação Básica, Ana Paula Camargo, destaca o poder transformador dos programa</h3>\n                <p>O Espaço Talento, proposta inicial do Instituto, começou a ter seu modelo alterado em 2004 a partir da percepção de que era preciso repensar o momento de avaliação das habilidades dos alunos. Chegou-se à conclusão de que, para acompanhar e desenvolver o estudante até o final do Ensino médio, o ideal seria selecionar os bolsistas no fim do ensino fundamental II – pelo fato de que já teriam autonomia suficiente para continuar cursando a escola regular e, no contraturno, realizar o curso preparatório em uma escola parceira do Ismart. O objetivo desse curso, chamado Projeto Alicerce, é preparar o bolsista para que tenha um ótimo desempenho acadêmico ao longo do ensino médio e, dessa forma, possa ser aprovado em universidades de referência, no Brasil e no mundo.</p>\n                <p>Em seguida, foi criado o projeto Bolsa Talento, caracterizado pelo trabalho com alunos ingressando diretamente no Ensino médio regular das escolas parceiras. O Projeto Alicerce e o Bolsa Talento nasceram, então, em uma nova sede, em São Paulo, com a proposta de atender jovens talentos de baixa renda. Para a gerente da Educação Básica, Ana Paula Camargo, os dois projetos representam uma oportunidade transformadora de expandirem seus horizontes, de superarem desafios por meio de mentoria qualificada do time de analistas, de obterem conquistas que mudam a vida, como bolsas de estudos em Harvard, por exemplo. Além disso, os alunos são acompanhados de perto para que se sintam apoiados o tempo todo na superação dos desafios”, afirma.</p>\n                <p>Nos dois projetos, os participantes recebem apoio, que cobrem despesas com mensalidades escolares, uniformes, materiais didáticos, alimentação e transporte. A equipe de Educação Básica, composta por pedagogos e psicólogos, ainda mantém contato permanente com os professores das escolas particulares parceiras e procuram acolher o bolsista, integrando-o ao novo ambiente do colégio particular.</p>\n                <p>No Projeto Alicerce, o Ismart contou com a parceria do Colégio Santo Américo, Bandeirantes e Objetivo, de São Paulo, e São Bento, Santo Inácio, pH e Pensi, no Rio de Janeiro. Para o Bolsa Talento, teve a parceria do Vera Cruz, Santa Cruz, Etapa, Lourenço Castanho, Arquidiocesano, Poliedro e Móbile, na capital paulista. O Ismart expandiu– se então para outras cidades. Em São José dos Campos (SP), juntaram-se ao Instituto os colégios Objetivo, Poliedro e o colégio da Embraer; em Cotia (SP), o colégio Sidarta e, em Sorocaba, a escola Uirapuru. E mais recentemente, os colégios Bernoulli e Santo Antônio, em Belo Horizonte (MG), além do colégio Magno, novo parceiro em São Paulo e Escola Eleva, no Rio de Janeiro.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/pedro-henrique-costa-e-silva.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Pedro Henrique Costa e Silva Projeto Bolsa Talento - São Paulo</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <h3 class=\"chapter-content__title--section\">Histórias</h3>\n                <p>O ex-bolsista, Luan Oliveira Bernardo, ouviu falar do Ismart na escola pública onde estudava, no Rio de Janeiro. “Um dia, perto do fim da aula, a inspetora foi até a nossa sala e falou aos alunos que haveria uma prova no sábado para concorrer a uma bolsa de estudo, passando endereço e horário.” Luan conta que, apesar da pouca idade e maturidade, aos 12 anos, não pensou duas vezes e decidiu que faria a prova. Era uma oportunidade. Foi só na hora que ficou sabendo do que se tratava e conheceu o Ismart e a escola na qual poderia estudar se passasse no exame, o Colégio São Bento, um dos melhores do Brasil. Luan foi aprovado e passou a fazer parte do Projeto Alicerce.</p>\n                <p>Foi o início de novos desafios, como coordenar os estudos na escola pública e o Colégio São Bento. “Eu saia cedo da comunidade onde morava, com a mochila do São Bento, bem pesada, ia para o centro, voltava na hora do almoço e minha mãe me esperava no metrô do Largo do Machado com a outra mochila, a da escola pública. A gente trocava as mochilas e então e eu corria para o outro período. Era uma forma de não perder tempo nem carregar tanto material, livros pesados”, relembra Luan, que hoje trabalha na XP Investimentos, uma das maiores corretoras independentes do Brasil. Melissa Sayuri também descobriu o Ismart aos 12 anos como bolsista do Projeto Alicerce.</p>\n                <p>Ao longo dos dois anos em que frequentou o curso preparatório – no 8º e no 9º ano do ensino fundamental, percebeu no seu dia a dia o poder transformador de uma educação de excelência. A jovem estudante encarava a escola pública pela manhã e a particular, parceira do Ismart, à tarde. “Em um único dia eu via duas realidades opostas. A escola pública, com todas as suas dificuldades, e o Colégio Bandeirantes com aula emtablet e professores atenciosos. Isso causa impacto em mim até hoje”, diz. Melissa não desanimou frente a essas contradições e, depois do cursinho preparatório do Projeto Alicerce, conseguiu atingir um novo sonho, cursar o ensino médio inteiramente no Bandeirantes, em São Paulo.</p>\n                \n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/luan-oliveira-graduado-ismart.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> Luan Oliveira Graduado Ismart</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <h3 class=\"chapter-content__title--section\">Histórias</h3>\n                <p>Outra história é a de Leonardo Frazão que, após enfrentar um duro processo seletivo, teve a recompensa: fazer parte do Projeto Alicerce, estudando no contraturno no Colégio São Bento, no Rio de Janeiro. Ele conta que ao chegar no colégio, percebeu que os desafios dessa nova etapa eram bem concretos. “A dupla jornada era desgastante e exigente. Minhas impressões, no entanto, nunca apontaram para a desistência. Eu me apaixonei pelo colégio e pelo Ismart, tinha certeza do que queria. As maiores dificuldades foram, em suma, abdicar de minhas amizades, num primeiro momento, a fim de me dedicar mais aos estudos. Sentia muita falta dos amigos, mas mutuamente entendíamos que o afastamento era necessário para que eu pudesse focar em minha vida acadêmica, visto que tive de mudar de turno na escola. À época, meu maior prazer era notar, com clareza, meu desenvolvimento pessoal e minha evolução nas matérias. Superei minhas defasagens e aos poucos me nivelei ao São Bento. Gostava também dos passeios e das atividades culturais do Ismart – um mundo novo com o qual eu não estava acostumado.”</p>\n                <p>Leonardo relembra que antes do curso preparatório no São Bento, nunca tinha ouvido falar do colégio.“Depois entendi a dimensão dessa instituição que aprendi a amar e respeitar. Quando entrei para o Alicerce, no 8° ano, minhas impressões eram ainda difusas. Algumas peculiaridades como os monges, a grande extensão das quadras, a ausência de garotas e a proibição do meu brinco – sagrado até hoje – me chamaram a atenção. Mas foi mesmo nas aulas e nas primeiras notas vermelhas que me vi um pouco perdido. Contamos com professores incríveis lá, que foram determinantes para me fazer aprender a estudar. Sempre que os encontro, o sentimento é o mesmo: gratidão. Estou certo da contribuição enorme deles para cada vitória alcançada por mim”, diz o jovem, fundador da Gazeta Ismartiana, projeto de comunicação criado por ele e um grupo de amigos, como resultado do trabalho focado em estimular o protagonismo dos alunos no Ismart.</p>\n                <p>Os alunos que ingressaram no Ismart direto no ensino médio são bolsistas do projeto Bolsa Talento. “Temos uma programação de desenvolvimento de competências socioemocionais como resolução de problemas, trabalho em equipe e pensamento crítico, por meio de eventos e atividades para toda a comunidade, além de um extenso programa de orientação profissional ao longo do ensino médio. Em paralelo, mantemos também o Prep Ismart, que prepara os alunos para serem aprovados em cursos de verão e graduação em universidades americanas de ponta, além de reuniões com as famílias e acompanhamento acadêmico nas escolas”, explica Ana Paula Camargo.</p>\n                <p>Além das aulas regulares no colégio parceiro, os bolsistas recebem suporte do Ismart para se prepararem para o curso universitário. A ideia é trabalhar esse momento de transição logo no início do Ensino médio. Nessa fase, há uma preocupação especial dos profissionais do Instituto em orientar os estudantes a refletirem sobre o futuro profissional para que façam uma escolha universitária, de acordo com suas habilidades. Por isso, desde o 1º ano do ensino médio, depois do período de adaptação à nova escola, o bolsista é convidado a participar de rodas de conversa, workshops de orientação acadêmica e de visitas a empresas. Eles têm o acompanhamento de profissionais das mais diversas áreas do mercado de trabalho, além de uma equipe de psicólogos e pedagogos até o fim do Ensino médio. Os jovens talentos são estimulados a estruturar um projeto de vida, pesquisando as carreiras que despertam mais interesse e entendendo os desafios do mercado de trabalho.</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/kathleen-ayumi-higa.png\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Kathleen Ayumi Higa Projeto Bolsa Talento - São Paulo e Giovani Carvalho Projeto Alicerce - São Paulo </figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <h3 class=\"chapter-content__title--section\">Projetos para auxiliar a escolha de carreira</h3>\n                <p>Alguns programas do Instituto apoiam os alunos, ao longo do ensino médio, na delicada escolha da formação profissional:</p>\n                <ul class=\"list\">\n                    <li><strong>Conexão profissão:</strong> Criado em 2015, tem o objetivo de oferecer aos jovens a oportunidade de conhecer a rotina em uma profissão. O Ismart, com o apoio de parceiros, conecta estudantes a profissionais, que os recebem para mostrar como é um dia de trabalho em determinadas áreas.</li>\n                    <li><strong>Café com profissional:</strong> Encontros mensais em que profissionais de destaque falam sobre formação acadêmica, dão um panorama sobre o mercado de trabalho em suas áreas e tiram dúvidas dos bolsistas sobre carreira.</li>\n                    <li><strong>Trabalho de escolha profissional (TEP):</strong> Obrigatório para todos os alunos do 1º ano do ensino médio. A ideia é incentivá-los a pesquisar informações sobre as profissões e sobre suas inspirações, preferências e perfis. Ao fim do ano letivo, os alunos devem apresentar para uma banca avaliadora, composta por profissionais de destaque do mercado de trabalho e de diversos segmentos, a profissão escolhida e discorrer sobre os motivos que os levaram a essa decisão.</li>\n                    <li><strong>Trabalho de projeto de vida (TPV):</strong> Na sequência do projeto anterior, depois de decidir a profissão que querem seguir, os alunos do 2º ano do ensino médio devem traçar um projeto de vida, considerando a carreira escolhida. Nesse programa, os bolsistas também devem apresentar os resultados a uma banca avaliadora.</li>\n                </ul>\n                <p>Por essas e outras ações, o trabalho do Ismart se intensifica no 3º ano. As rodas de conversa continuam abordando a escolha da carreira e os alunos são estimulados a visitarem universidades e feiras de profissões. E com o objetivo de ampliar a visão de mundo dos estudantes, o Instituto também realiza atividades extracurriculares, como visitas a museus, e tem o apoio de parceiros para a promoção de intercâmbios. Além das aulas de inglês nos colégios particulares, alunos do Ismart também podem estudar, com bolsa integral, em cursos de inglês particulares e parceiros do Ismart. </p>\n            </div>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('suporte')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('suporte')\"\n\t(onNext)=\"testimonials.navigateNext('suporte')\">\n</app-modal>"
+module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">{{ 'CHAPTERS.04.4' | translate }}</span>\n                <h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.4.CONTENT.TITLE' | translate }}</h2>\n                <h3 class=\"chapter-content__subtitle\">{{ 'CHAPTER_4.4.CONTENT.SUBTITLE' | translate }}</h3>\n                <span [innerHTML]=\"'CHAPTER_4.4.CONTENT.SECTION_1' | translate\"></span>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/pedro-henrique-costa-e-silva.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.4.CONTENT.SECTION_2' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.4.CONTENT.SECTION_3' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/luan-oliveira-graduado-ismart.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> {{ 'CHAPTER_4.4.CONTENT.SECTION_4' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.4.CONTENT.SECTION_5' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/kathleen-ayumi-higa.png\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.4.CONTENT.SECTION_6' | translate }} </figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.4.CONTENT.SECTION_7' | translate\">\n            </div>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('suporte')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('suporte')\"\n\t(onNext)=\"testimonials.navigateNext('suporte')\">\n</app-modal>"
 
 /***/ }),
 
@@ -360,7 +360,7 @@ module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">Universidade</span>\n                <h2 class=\"chapter-content__title\">Programa impulsiona o desenvolvimento de universitários</h2>\n                <h3 class=\"chapter-content__subtitle\">Durante a graduação, os universitários da rede Ismart ampliam seu desenvolvimento com novas experiências</h3>\n                <p>O Programa de Desenvolvimento de Universitários é uma das principais iniciativas implantadas ao longo dos 20 anos de história do Ismart. Lançado em 2014, oferece uma série de atividades durante todo o período da graduação com o objetivo de complementar a formação acadêmica recebida pelos alunos nas universidades em que estudam. Ele foi elaborado para que os estudantes assistidos pelo Instituto pudessem enfrentar os desafios de cada fase da graduação, aprimorando as habilidades socioemocionais, adquirindo experiências e conhecimentos, fornecendo ferramentas para que possam conquistar posições de destaque no mercado de trabalho e é conduzido pelo time do ensino superior em parceria com profissionais do mercado.</p>\n                <p>Os universitários têm acesso às informações sobre as atividades dos programas por meio de uma plataforma on-line que conecta os alunos que estão no Brasil e também com aqueles que fazem a graduação no exterior.</p>\n                <p>Para garantir o suporte integral e viabilizar o foco do aluno na graduação, cada universitário bolsista recebe, do Ismart, auxílio financeiro destinado ao custeio dos principais gastos da graduação, como moradia, alimentação, transporte e material escolar. Semestralmente os universitários fazem a solicitação da bolsa por meio do preenchimento de um relatório on-line em que optam por 25% a 125% de um salário mínimo, de acordo com a projeção do valor médio dos seus gastos mensais com a graduação.</p>\n                <p>“O Ismart passou por grandes transformações nos últimos anos e percebo que os resultados demonstram o quanto o Instituto investiu em equipe, processos e parcerias. O programa de desenvolvimento de universitários foi um dos que mais amadureceu. Os universitários atualmente tem um leque grande de ferramentas à sua disposição para alcançarem uma formação de excelência e que os deixem bem posicionados no mercado de trabalho”, explica Celina Seara da Costa Pinto, gerente das praças Rio de Janeiro e Belo Horizonte.</p>\n                <div class=\"blue__content\">\n                    <h3 class=\"chapter-content__title--section\">Jornada da Formação</h3>\n                    <p>Dedicado aos calouros, o programa Jornada da Formação foi concebido para quem acabou de entrar em uma faculdade, considerando que, muitas vezes, são os primeiros membros da família a ter a oportunidade de realizar uma graduação. Daí a importância de proporcionar atividades presenciais e on-line, conduzidas por profissionais e parceiros. Segundo Beatriz Mantelato, gerente do ensino superior, as atividades foram desenhadas para que, ao final desse primeiro ano, os alunos consigam ter uma primeira versão de um plano com objetivos destacados por eles ao longo da graduação.</p>\n                    <p><strong>1. O chamado à jornada:</strong> Workshop presencial para discussão sobre a formação profissional e aspectos relevantes para o planejamento da vida universitária por meio da utilização de ferramentas que podem auxiliar nesse processo.</p>\n                    <p><strong>2.Conhecendo a travessia:</strong> Pesquisa dos recursos que a faculdade e outras instituições oferecem para auxiliar na escolha de experiências.</p>\n                    <p><strong>3. Encontro com o líder:</strong> Atendimento individual com profissional especializado para discutir a escolha do objetivo profissional e da distribuição das atividades a serem realizadas em cada um dos anos da graduação, por meio da elaboração de um plano de formação.</p>\n                    <p><strong>4. Aprendizado em ação:</strong> Revisão do plano de formação, de acordo com os pontos levantados na discussão com o profissional.</p>\n                    <p><strong>5. Elevator pitch:</strong> Apresentação pessoal do plano de formação.</p>\n                    <p><strong>6. Comprometimento com a mudança:</strong> Revisão do plano de formação</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/lara-moccio-brein-solera-universitária-ismart.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Lara Moccio Brein Solera - Universitária Ismart</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <h3 class=\"chapter-content__title--section\">Coaching</h3>\n                <p>No segundo ano da graduação, os bolsistas têm acesso ao coaching, uma atividade que os ajuda a superar desafios ligados à sua formação profissional. Realizado em caráter experimental em 2013, ele foi incorporado ao Programa de Desenvolvimento de Universitários no ano seguinte, com o propósito de oferecer ferramentas para que os estudantes possam tomar decisões com base em escolhas conscientes e alinhadas aos seus objetivos pessoais e profissionais. Desde que foi criado, o programa já atendeu 334 universitários.</p>\n                <p>“O importante nessa atividade é que o aluno desenvolva o autoconhecimento, ou seja, que ele consiga identificar os pontos fortes de sua personalidade, que o ajudarão a superar os desafios e identificar os aspectos que precisam ser aprimorados. Além disso, ele elabora um plano de ação e execução para lidar com o desafio inicial e, por meio das ferramentas e exercícios de reflexão propostos pelo coach, se torna mais preparado para tomar decisões”, explica Beatriz Mantelato. Ao todo, 15 profissionais especializados atuam como orientadores.</p>\n                <h3 class=\"chapter-content__title--section\">Mentoria</h3>\n                <p>Quando o aluno Ismart chega ao terceiro ano de graduação, já vivenciou experiências que possibilitam traçar o caminho que deseja seguir na carreira. Ele já tem um repertório maior para a tomada de decisões. É nesse momento que tem acesso à Mentoria, programa já consolidado no Ismart que foi lançado em 2007 em parceria com a Fundação Estudar e aprimorado ao longo dos anos, sendo atualmente um programa que serve de referência dentro e fora do Instituto. “Várias organizações nos procuram para compartilhar os conhecimentos da Mentoria, o que nos indica que estamos no caminho certo”, relata Beatriz Mantelato.</p>\n                <p>O objetivo do programa é auxiliar o bolsista no desenvolvimento de carreira por meio da interação com profissionais de excelência e da construção de uma rede de relacionamentos na área de interesse. A iniciativa, que busca promover a ampliação de perspectivas, conhecimentos e acessos à rede de contatos, tem duração de dez meses, nos quais ocorrem dez encontros com profissionais experientes do mercado de trabalho.</p>\n                <p>A base de mentores é formada por parceiros que atuam em várias áreas com interesse em compartilhar seus conhecimentos adquiridos. Muitos deles se inspiram com a trajetória dos alunos e veem no projeto uma forma de orientar ou mesmo inspirar a nova geração. Há também um grupo de mentores formado pelos antigos bolsistas que buscam, dessa forma, retribuir e orientar os colegas. “Nosso grande sonho é aumentar essa base de ex-bolsistas como mentores. Estamos trabalhando nesse propósito”, revela Beatriz.</p>\n                <blockquote class=\"blockquote__quote blockquote__white\"><span>“Várias organizações nos procuram para compartilhar os conhecimentos da Mentoria, o que nos indica que estamos no caminho certo”</span>\n                <cite>Beatriz Mantelato, gerente do ensino superior do Ismart</cite>\n                </blockquote>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/universitarios-ismart-sao-paulo.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Universitários Ismart São Paulo</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <h3 class=\"chapter-content__title--section\">Você no mercado</h3>\n                <p>No âmbito do programa dedicado aos universitários, também com o objetivo de preparar os bolsistas para ingressar no mercado de trabalho, o Ismart criou, em 2015, o programa Você no Mercado. A partir do segundo ano da graduação, de olho no futuro, os alunos participam de oficinas sobre processos seletivos. Em encontros individuais com os consultores, eles têm simulações de entrevistas pessoais e recebem feedback sobre o currículo e dicas sobre dinâmicas de grupo. No terceiro ano, as atividades estão direcionadas para trilhas de carreiras, eventos com profissionais de diversas áreas que procuram ajudar o bolsista a entender a carreira escolhida. Por fim, nos últimos anos da graduação, o foco é para a preparação dos processos seletivos e no auxílio à transição para o mercado de trabalho.</p>\n                <p><strong>1. Currículo de Impacto:</strong> Treinamento ressaltando a importância das experiências vivenciadas até o momento.</p>\n                <p><strong>2. A hora da Entrevista:</strong> Workshop com recrutadores para entendimento do que é valorizado em cada entrevista. Simulação de entrevista com profissionais parceiros.</p>\n                <p><strong>3. A hora da Dinâmica:</strong> Workshop com recrutadores para entendimento do que é valorizado em dinâmicas. Simulação de dinâmica com profissionais parceiros.</p>\n                <p><strong>4. Trilhas de Carreira:</strong> Encontros com profissionais e especialistas. Acesso à divulgação de oportunidades (vagas, convites exclusivos para eventos e palestras) relacionadas à trilha de carreira de interesse.</p>\n                <p><strong>5. Bate-papo – Processos Seletivos:</strong> Bate-papo com especialistas e profissionais experientes que já passaram por processos de trainee e de application para pós-graduação.</p>\n                <p><strong>6. Decolar:</strong> Acesso a plataformas de preparação para processos seletivos. Divulgação de oportunidades alinhadas à trilha de carreira de interesse. Acompanhamento direcionado em processos seletivos por meio de atendimentos individuais e/ou em grupo.</p>\n            </div>  \n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('universidade')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('universidade')\"\n\t(onNext)=\"testimonials.navigateNext('universidade')\">\n</app-modal>"
+module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    #article\n    progressBarListener\n    class=\"chapter-content\">\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"240\"\n        [child]=\"sidebarComponent.nativeElement\">\n        <app-sidebar #sidebar></app-sidebar>\n        <app-share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <span class=\"tag\">{{ 'CHAPTERS.04.7' | translate }}</span>\n                <h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.7.CONTENT.TITLE' | translate }}</h2>\n                <h3 class=\"chapter-content__subtitle\">{{ 'CHAPTER_4.7.CONTENT.SUBTITLE' | translate }}</h3>\n                <span [innerHTML]=\"'CHAPTER_4.7.CONTENT.SECTION_1' | translate\"></span>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/lara-moccio-brein-solera-universitária-ismart.jpg\" alt=\"\">\n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.7.CONTENT.SECTION_2' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.7.CONTENT.SECTION_3' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/universitarios-ismart-sao-paulo.jpg\" alt=\"\">  \n                </div>\n                <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                    <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_4.7.CONTENT.SECTION_4' | translate }}</figcaption>\n                </div>\n            </figure>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.7.CONTENT.SECTION_4' | translate\">\n            </div>  \n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('universidade')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('universidade')\"\n\t(onNext)=\"testimonials.navigateNext('universidade')\">\n</app-modal>"
 
 /***/ }),
 
@@ -371,7 +371,7 @@ module.exports = "<app-chapter-hat\n    [data]=\"chapterHatInfo\"></app-chapter-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat\n\t[data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n\tprogressBarListener \n\t#article\n\tclass=\"chapter-content\">\n\t<app-float-container\n\t\t[startPosEl]=\"article\"\n\t\t[endPosEl]=\"testimonialComponent.nativeElement\"\n\t\tfixOffset=\"240\"\n\t\t[child]=\"sidebarComponent.nativeElement\">\n\t\t<app-sidebar #sidebar></app-sidebar>\n\t\t<app-share></app-share>\n\t</app-float-container>\n\t<div class=\"container-fluid\">\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n\t\t\t\t\t\t\t<span class=\"tag\">Contato</span>\n\t\t\t\t\t\t\t<h2 class=\"chapter-content__title\">Espaço Talento deu início à transformação</h2>\n\t\t\t\t\t\t\t<h3 class=\"chapter-content__subtitle\">Estudantes como João Pedro de Oliveira tiveram a chance de revelar seus talentos</h3>\n\t\t\t\t\t\t\t<p>A história de João Pedro de Oliveira, um carioca de 22 anos, se confunde com a do Ismart. Estudante de escola pública, morador do conjunto habitacional Cruzada de São Sebastião, uma favela vertical em pleno Leblon, zona sul do Rio de Janeiro, ele foi o único aprovado em sua escola – uma grande felicidade para si e sua família, apesar da insegurança gerada pelo novo desafio. O jovem fez parte do primeiro projeto desenvolvido pelo Ismart, no Rio de Janeiro, o Espaço Talento, cujo objetivo era ajudar os alunos a ingressarem em escolas técnicas federais.</p>\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<figure class=\"chapter-content__img mb-5\">\n\t\t\t\t\t\t\t<div class=\"img__container\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/joao-pedro-de-oliveira-graduado-ismart_2.jpg\" alt=\"\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"blockquote__container container\">\n\t\t\t\t\t\t\t\t\t<blockquote class=\"blockquote__image blockquote__quote\">\"Conheci o Ismart aos 6 anos de idade, no fim do primeiro ano do Ensino Fundamental I, quando uma equipe do instituto foi a minha escola, apresentou o projeto e aplicou uma prova de seleção\"\n\t\t\t\t\t\t\t\t\t<cite>João Pedro de Oliveira, 22, Ex-Ismart</cite>\n\t\t\t\t\t\t\t\t\t</blockquote>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t\t\t\t\t<figcaption><img src=\"assets/images/camera.svg\">João Pedro de Oliveira, 22, Ex-Ismart</figcaption>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t</figure>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t\t\t<p>Em 1999, o Ismart nasceu do sonho de ver jovens com grandes habilidades, vindos de famílias de baixa renda e escola pública, ingressar em universidades de excelência, no Brasil e no exterior. A proposta era não só dar oportunidade de transformar vidas, mas também contribuir para a transformação do País. Como o acesso ao ensino superior era muito restrito, em geral favorecendo estudantes que cursavam o Ensino Médio em escolas particulares, decidiu-se criar um projeto que favorecesse o desenvolvimento dos bolsistas antes do vestibular.</p>\n\t\t\t\t\t\t\t<p>Assim surgiu Espaço Talento, do qual o João Pedro fez parte. O projeto selecionava os alunos desde muito novos, ainda no Ensino Fundamental I, e oferecia, no contraturno da escola regular, atividades de desenvolvimento ligadas aos interesses pessoais e aulas de Português e de Matemática. Os alunos eram atendidos em pequenos grupos na sede do Ismart, no Rio de Janeiro, e cada turma era orientada por uma psicopedagoga. Ao final do Ensino Fundamental II, eles faziam o exame de seleção para ingressar em uma escola particular. “Eu fui estudar no Colégio Rana Cosac, uma escola pequena na Urca. De manhã, tínhamos atividades e oficinas em grupo na sede do instituto e comigo estavam diversas crianças de origem humilde com muito potencial. Eu lembro que achava tudo muito divertido. Eu tinha acesso a diversos brinquedos, como Lego, e jogos de tabuleiro. Nas oficinas, aprendi sobre mitologia grega, xadrez, física, arte... e fiz amizade com pessoas incríveis, algumas com as quais convivo até hoje. Foi aí que eu realmente conheci o Ismart”, relembra João Pedro.</p>\n\t\t\t\t\t\t\t<blockquote class=\"blockquote__quote blockquote__white\">\"Eu fui estudar no Colégio Rana Cosac, uma escola pequena na Urca. De manhã, tínhamos atividades e oficinas em grupo na sede do instituto e comigo estavam diversas crianças de origem humilde com muito potencial.\"\n\t\t\t\t\t\t\t<cite>João Pedro de Oliveira, 22, Ex-Ismart</cite>\n\t\t\t\t\t\t\t</blockquote>\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<figure class=\"chapter-content__img mb-5\">\n\t\t\t\t\t\t\t<div class=\"img__container\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/alunos-ismart-do-ensino-medio.jpg\" alt=\"\">  \n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t\t\t\t\t<figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> Alunos do ensino médio</figcaption>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t</figure>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t\t\t<p>De 1999 até o início de 2004, o Espaço Talento foi o principal projeto do Ismart. Em 2004, quando o Instituto transferiu sua sede para São Paulo, um novo modelo de gestão foi implementado com a criação de projetos como o Alicerce e o Bolsa Talento. O foco principal passou a ser os programas de apoio a jovens do Ensino Fundamental II, sem deixar de acompanhar os bolsistas egressos do Espaço Talento, como João Pedro.  Nos últimos anos, a essas duas iniciativas somaram-se outros três projetos: o Ismart Online, Ensino Superior e o Alumni.</p>\n\t\t\t\t\t\t\t<p>Para a diretora-executiva do Ismart, Mariana Rego Monteiro, todo esse trabalho representa vinte anos de identificação de talentos acadêmicos e incentivo ao esforço e à dedicação, inspirando jovens a sonharem grande, realizarem seus sonhos e fazerem a diferença!</p>\n\t\t\t\t\t\t\t<blockquote class=\"blockquote__big\">\"São vinte anos desenvolvendo a melhor forma de encontrar jovens talentos de baixa renda, os melhores programas para atender a cada um dos nossos alunos e famílias Ismart e buscando as parcerias mais condizentes com nossos valores e objetivos.\"\n\t\t\t\t\t\t\t<cite>Mariana Rego Monteiro | Diretora-executiva do Ismart</cite>\n\t\t\t\t\t\t\t</blockquote>\n\n\t\t\t\t\t\t\t<p>Acrescenta ainda que “Há vinte anos o Ismart encontra jovens que querem escrever sua própria história e transformar suas realidades, com potencial de promover no Brasil e no mundo um impacto extremamente positivo. O Ismart trabalha diariamente para que possamos continuar crescendo e, ano após ano, oferecer a mais jovens a oportunidade de sonhar mais alto e chegar mais longe.\"</p>\n\n\t\t\t\t\t\t\t<h3 class=\"chapter-content__title--section\">Determinação</h3>\n\t\t\t\t\t\t\t<p>Ao longo da graduação, João Pedro participou de atividades de voluntariado para o Ismart, além de desenvolver projeto social para a sua comunidade. “Já participei como mentor para o 3º ano do Ensino Médio, tanto de um aluno do Ismart presencial como de um grupo do Ismart Online. Sempre senti necessidade de retribuir ao Instituto o investimento que ele fez em mim. Na ocasião das mentorias, vi que o que eu podia agregar de maior valor era ensinar jovens que passavam pelas mesmas dificuldades e desafios que eu já tinha vivido anteriormente”. Hoje, formado em Engenharia Mecânica e de Automóvel, no Instituto Militar de Engenharia, João Pedro foi aprovado como trainee no Itaú BBA.</p>\n\n\t\t\t\t\t\t\t<figure class=\"chapter-content__img\">\n\t\t\t\t\t\t\t\t\t<div class=\"img__container\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/images/joao-pedro-de-oliveira-graduado-ismart_3.jpg\" alt=\"\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> João Pedro fala sobre sua jornada no Ismart</figcaption>\n\t\t\t\t\t\t\t</figure>\n\n\t\t\t\t\t\t\t<h3 class=\"chapter-content__title--section\">Suporte ao alcance dos jovens</h3>\n\t\t\t\t\t\t\t<!-- Accordion -->\n\t\t\t\t\t\t\t<app-accordion [accordiondata]=\"accordionContent\"></app-accordion>\n\n\t\t\t\t\t\t\t<p>“O impacto do Ismart nos últimos 20 anos no Brasil reflete a certeza de que estamos contribuindo para formar cidadãos conscientes e preparados para lidar com os desafios do País. Se refletirmos sobre nossa crença de que os bons exemplos têm efeito multiplicador, que iniciamos em 1999 com apenas seis alunos e que nestes 20 anos tivemos mais de 4.800 alunos impactados pelos projetos que hoje estão pelo Brasil e pelo mundo, conseguimos visualizar o impacto exponencial do Instituto”, ressalta Celina Seara da Costa Pinto, gerente Praça Rio/BH.</p>\n\n\t\t\t\t\t\t\t<h3 class=\"chapter-content__title--section\">Envolvimento</h3>\n\t\t\t\t\t\t\t<p>O trabalho do Ismart se dá com a colaboração de uma rede de parceiros institucionais – apoiadores financeiros, escolas e secretarias de educação – além da equipe interna, para desenvolvimento dos bolsistas e educadores. É essa qualificada rede que permite ao Ismart identificar jovens talentosos de baixa renda ao apoiar a divulgação dos projetos desenvolvidos pelo Instituto. </p>\n\n\t\t\t\t\t\t\t<h3 class=\"chapter-content__title--section\">Principais públicos estratégicos</h3>\n\t\t\t\t\t\t\t<ul class=\"list\">\n\t\t\t\t\t\t\t\t\t<li>Estudantes talentosos de baixa renda (potencial bolsista)</li>\n\t\t\t\t\t\t\t\t\t<li>Bolsistas Ismart</li>\n\t\t\t\t\t\t\t\t\t<li>Familiares responsáveis pelo bolsista Ismart</li>\n\t\t\t\t\t\t\t\t\t<li>Secretarias de Educação</li>\n\t\t\t\t\t\t\t\t\t<li>Educador da rede pública</li>\n\t\t\t\t\t\t\t\t\t<li>Dirigente de escola particular de excelência</li>\n\t\t\t\t\t\t\t\t\t<li>Apoiadores financeiros</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>  \n\t\t\t</div>\n\t</div>\n</article>\n<app-testimonials\n\t[data]=\"testimonials.getByPage('contato')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('contato')\"\n\t(onNext)=\"testimonials.navigateNext('contato')\">\n</app-modal>"
+module.exports = "<app-chapter-hat\n\t[data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n\tprogressBarListener \n\t#article\n\tclass=\"chapter-content\">\n\t<app-float-container\n\t\t[startPosEl]=\"article\"\n\t\t[endPosEl]=\"testimonialComponent.nativeElement\"\n\t\tfixOffset=\"240\"\n\t\t[child]=\"sidebarComponent.nativeElement\">\n\t\t<app-sidebar #sidebar></app-sidebar>\n\t\t<app-share></app-share>\n\t</app-float-container>\n\t<div class=\"container-fluid\">\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n\t\t\t\t\t\t\t<span class=\"tag\">{{ 'CHAPTERS.04.1' | translate }}</span>\n\t\t\t\t\t\t\t<h2 class=\"chapter-content__title\">{{ 'CHAPTER_4.1.CONTENT.TITLE' | translate }}</h2>\n\t\t\t\t\t\t\t<h3 class=\"chapter-content__subtitle\">{{ 'CHAPTER_4.1.CONTENT.SUBTITLE' | translate }}</h3>\n\t\t\t\t\t\t\t<p>{{ 'CHAPTER_4.1.CONTENT.SECTION_1' | translate }}</p>\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<figure class=\"chapter-content__img mb-5\">\n\t\t\t\t\t\t\t<div class=\"img__container\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/joao-pedro-de-oliveira-graduado-ismart_2.jpg\" alt=\"\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"blockquote__container container\">\n\t\t\t\t\t\t\t\t\t<blockquote class=\"blockquote__image blockquote__quote\">{{ 'CHAPTER_4.1.CONTENT.SECTION_2.QUOTE' | translate }}\n\t\t\t\t\t\t\t\t\t<cite>{{ 'CHAPTER_4.1.CONTENT.SECTION_2.CITE' | translate }}</cite>\n\t\t\t\t\t\t\t\t\t</blockquote>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t\t\t\t\t<figcaption><img src=\"assets/images/camera.svg\">{{ 'CHAPTER_4.1.CONTENT.SECTION_2.PHOTO_DESCRIPTION' | translate }}</figcaption>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t</figure>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_4.1.CONTENT.SECTION_3' | translate\">\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<figure class=\"chapter-content__img mb-5\">\n\t\t\t\t\t\t\t<div class=\"img__container\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/alunos-ismart-do-ensino-medio.jpg\" alt=\"\">  \n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t\t\t\t\t<figcaption><img src=\"assets/images/camera.svg\" alt=\"\"> {{ 'CHAPTER_4.1.CONTENT.SECTION_4' | translate }}</figcaption>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t</figure>\n\t\t\t</div>\n\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t\t<span [innerHTML]=\"'CHAPTER_4.1.CONTENT.SECTION_5' | translate\"></span>\n\n\t\t\t\t\t\t\t<figure class=\"chapter-content__img\">\n\t\t\t\t\t\t\t\t\t<div class=\"img__container\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/images/joao-pedro-de-oliveira-graduado-ismart_3.jpg\" alt=\"\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<figcaption><img src=\"assets/images/camera.svg\" alt=\"\">  {{ 'CHAPTER_4.1.CONTENT.SECTION_6' | translate }}</figcaption>\n\t\t\t\t\t\t\t</figure>\n\n\t\t\t\t\t\t\t<h3 class=\"chapter-content__title--section\">{{ 'CHAPTER_4.1.CONTENT.SECTION_7' | translate }}</h3>\n\t\t\t\t\t\t\t<!-- Accordion -->\n\t\t\t\t\t\t\t<app-accordion [accordiondata]=\"accordionContent\"></app-accordion>\n\n\t\t\t\t\t\t\t<span [innerHTML]=\"'CHAPTER_4.1.CONTENT.SECTION_8' | translate\"></span>\n\t\t\t\t\t</div>  \n\t\t\t</div>\n\t</div>\n</article>\n<app-testimonials\n\t[data]=\"testimonials.getByPage('contato')\"\n\t#testimonial\n\t(onTestimonialCardClick)=\"modal.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('contato')\"\n\t(onNext)=\"testimonials.navigateNext('contato')\">\n</app-modal>"
 
 /***/ }),
 
@@ -393,7 +393,7 @@ module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    class=\"chapter-content\"\n    progressBarListener\n    #article>\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"40\"\n        endOffset=\"-40\"\n        [child]=\"shareComponent.nativeElement\">\n    <app-share #share></app-share>\n</app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset>\n                <p>O grande desafio continua sendo tornar o Ismart conhecido para que mais jovens talentosos possam ter a oportunidade de se desenvolver por meio da educação. Uma vez no projeto, a intenção é ajudá-los a nunca duvidarem do seu potencial e a se apropriarem da sua história com protagonismo, resiliência e perseverança. </p>\n                <p>Quanto ao trabalho do Instituto e os programas de desenvolvimento oferecidos aos jovens, há o constante monitoramento de tendências de mercado. Uma das principais mudanças nos programas de desenvolvimento dos bolsistas foi o início do trabalho com foco em competências socio-emocionais, a reestruturação do pro-grama de orientação profissional, a aprendizagem baseada em projetos e a integração desses alunos às tendências de letramento digital.</p>\n                <p>Entre muitas expectativas, há também um sonho grande: a de que um dia um graduado pelo Ismart venha a fazer parte do Conselho do Instituto, representando a comunidade e dando voz aos principais interessados no projeto: bolsistas e Alumni.</p>\n                <p class=\"text-big\">Nos últimos 20 anos, mais de quatro mil jovens mudaram sua realidade e estão contribuindo para uma sociedade melhor. Para os próximos 20 anos...</p>\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/eduardo-braga.jpg\" alt=\"\">\n                </div>\n                <div class=\"container-fluid\">\n                    <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                        <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">Eduardo Braga da Costa - Projeto Ismart Online - São Paulo</figcaption>\n                    </div>\n                </div>\n            </figure>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('horizonte')\"\n\t(onTestimonialCardClick)=\"modal01.openModal()\">\n</app-testimonials>\n<app-testimonials\n    #testimonial\n    [data]=\"testimonials.getByPage('chegando')\"\n    customTitle=\"Para quem está chegando agora ao Ismart\"\n    [modeDark]=\"true\"\n\t(onTestimonialCardClick)=\"modal02.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal01\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('horizonte')\"\n\t(onNext)=\"testimonials.navigateNext('horizonte')\">\n</app-modal>\n<app-modal\n\t#modal02\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('chegando')\"\n\t(onNext)=\"testimonials.navigateNext('chegando')\">\n</app-modal>"
+module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    class=\"chapter-content\"\n    progressBarListener\n    #article>\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"testimonialComponent.nativeElement\"\n        fixOffset=\"40\"\n        endOffset=\"-40\"\n        [child]=\"shareComponent.nativeElement\">\n    <app-share #share></app-share>\n</app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" contentOffset [innerHTML]=\"'CHAPTER_6.CONTENT.SECTION_1' | translate\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <figure class=\"chapter-content__img mb-0\">\n                <div class=\"img__container\">\n                    <img src=\"assets/images/eduardo-braga.jpg\" alt=\"\">\n                </div>\n                <div class=\"container-fluid\">\n                    <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                        <figcaption><img src=\"assets/images/camera.svg\" alt=\"\">{{ 'CHAPTER_6.CONTENT.SECTION_2' | translate }}</figcaption>\n                    </div>\n                </div>\n            </figure>\n        </div>\n    </div>\n</article>\n<app-testimonials\n    [data]=\"testimonials.getByPage('horizonte')\"\n\t(onTestimonialCardClick)=\"modal01.openModal()\">\n</app-testimonials>\n<app-testimonials\n    #testimonial\n    [data]=\"testimonials.getByPage('chegando')\"\n    customTitle=\"Para quem está chegando agora ao Ismart\"\n    [modeDark]=\"true\"\n\t(onTestimonialCardClick)=\"modal02.openModal()\">\n</app-testimonials>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n<app-modal\n\t#modal01\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('horizonte')\"\n\t(onNext)=\"testimonials.navigateNext('horizonte')\">\n</app-modal>\n<app-modal\n\t#modal02\n\t[testimonial]=\"testimonials.current\"\n\t(onPrev)=\"testimonials.navigatePrev('chegando')\"\n\t(onNext)=\"testimonials.navigateNext('chegando')\">\n</app-modal>"
 
 /***/ }),
 
@@ -404,7 +404,7 @@ module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    class=\"chapter-content\"\n    progressBarListener\n    #article>\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"article\"\n        [child]=\"shareComponent.nativeElement\"\n        fixOffset=\"60\">\n        <app-share #share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n                <p>Não existe lugar tão alto que não se possa alcançar, nem tão longe que não se possa chegar.</p>\n                <p>Temos altas expectativas. Temos sonhos.</p>\n                <p>Acreditamos no talento do jovem brasileiro e no poder transformador da educação.</p>\n                <p>Acreditamos no mérito e no esforço individual porque tudo que é conquistado tem mais valor.</p>\n                <p>Vivemos em uma sociedade desigual.</p>\n                <p>Tanto potencial desperdiçado pela falta de oportunidades.</p>\n                <p>Somos todos responsáveis.</p>\n                <p>Eu, você, nós do Ismart.</p>\n                <p>Os alunos. Seus pais.</p>\n                <p> Os professores. A escola.</p>\n                <p>Trabalhando em conjunto com outros agentes de transformação, identificamos talentos acadêmicos de baixa renda e oferecemos a estes jovens a oportunidade de ser mais, de sonhar mais alto, de chegar mais longe. Damos acesso à melhor educação de ensino médio para que conquistem uma vaga nas melhores universidades, desenvolvam seu pleno potencial e se tornem profissionais de sucesso em suas áreas de atuação.</p>\n                <p>Para que se tornem, um dia, também eles, agentes de transformação. Motivamos e apoiamos nossos alunos na longa jornada da educação, na longa jornada da vida em busca do sucesso e da felicidade. </p>\n                <p>Trabalhamos por um futuro melhor para os jovens e para o Brasil.</p>\n            </div>\n        </div>\n    </div>\n</article>\n<div class=\"container\">\n    <hr class=\"divider\">\n</div>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n"
+module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\n<article \n    class=\"chapter-content\"\n    progressBarListener\n    #article>\n    <app-float-container\n        [startPosEl]=\"article\"\n        [endPosEl]=\"article\"\n        [child]=\"shareComponent.nativeElement\"\n        fixOffset=\"60\">\n        <app-share #share></app-share>\n    </app-float-container>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\" [innerHTML]=\"'CHAPTER_7.CONTENT.SECTION_1' | translate\">\n            </div>\n        </div>\n    </div>\n</article>\n<div class=\"container\">\n    <hr class=\"divider\">\n</div>\n<app-related [relatedData]=\"relatedInfo\"></app-related>\n"
 
 /***/ }),
 
@@ -415,7 +415,7 @@ module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\n\n<article \n\tprogressBarListener\n\t#article\n\tclass=\"chapter-content pb-0\">\n\t<app-float-container\n\t\t\t[startPosEl]=\"article\"\n\t\t\t[endPosEl]=\"article\"\n\t\t\t[child]=\"shareComponent.nativeElement\"\n\t\t\tfixOffset=\"60\">\n\t\t\t<app-share #share></app-share>\n\t</app-float-container>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t<h2>Novas bolsas concedidas - Presenciais e on-line em 2018</h2>\n\t\t\t\t<svg-icon name=\"alicerse\" viewBox=\"0 0 597 142\"></svg-icon>\n\t\t\t\t<svg-icon name=\"bolsa-talento\" viewBox=\"0 0 597 198\"></svg-icon>\n\t\t\t\t<svg-icon name=\"ismart-online\" viewBox=\"0 0 597 198\"></svg-icon>\n\t\t\t\t<h2>Quem o levou a conhecer o Ismart?</h2>\n\t\t\t\t<div \n\t\t\t\t\tclass=\"inline-data\">\n\t\t\t\t\t<svg-icon \n\t\t\t\t\t\tname=\"doc\" \n\t\t\t\t\t\tviewBox=\"0 0 75 75\"\n\t\t\t\t\t\theight=\"75\"\n\t\t\t\t\t\twidth=\"75\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<strong>59,7%</strong>\n\t\t\t\t\t<span class=\"divider\"></span>\n\t\t\t\t\t<p>Conheceram o Ismart através do corpo docente da escola (professor, diretor ou coordenador)</p>\n\t\t\t\t</div>\n\t\t\t\t<h2>Número de alunos do Ismart presencial por cidade</h2>\n\t\t\t\t<div class=\"d-flex justify-content-between\">\n\t\t\t\t\t<div class=\"vert-card\">\n\t\t\t\t\t\t<svg-icon \n\t\t\t\t\t\t\tclass=\"vert-card__icon\"\n\t\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\t\twidth=\"81\"\n\t\t\t\t\t\t\tname=\"pencil-large\">\n\t\t\t\t\t\t</svg-icon>\n\t\t\t\t\t\t<div class=\"vert-card__box vert-card__box--border\">\n\t\t\t\t\t\t\t<span>178</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"vert-card__text\">Alunos prestaram vestibular em 2018</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"vert-card\">\n\t\t\t\t\t\t<svg-icon \n\t\t\t\t\t\t\tclass=\"vert-card__icon\"\n\t\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\t\twidth=\"81\"\n\t\t\t\t\t\t\tname=\"study\">\n\t\t\t\t\t\t</svg-icon>\n\t\t\t\t\t\t<div class=\"vert-card__box\">\n\t\t\t\t\t\t\t<span>99%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"vert-card__text\">Alunos prestaram vestibular em 2018</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"vert-card\">\n\t\t\t\t\t\t<svg-icon \n\t\t\t\t\t\t\tclass=\"vert-card__icon\"\n\t\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\t\twidth=\"81\"\n\t\t\t\t\t\t\tname=\"medal\">\n\t\t\t\t\t\t</svg-icon>\n\t\t\t\t\t\t<div class=\"vert-card__box\">\n\t\t\t\t\t\t\t<span>12%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"vert-card__text\">Alunos prestaram vestibular em 2018</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"block-content\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t<h3 class=\"block-content__title\">Mais numeros</h3>\n\t\t\t\t\t<div class=\"block-content__blocks\">\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>175</h3>\n\t\t\t\t\t\t\t<p>Alunos com bolsas na Cultura Inglesa em São Paulo e São José dos Campos</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>129</h3>\n\t\t\t\t\t\t\t<p>Alunos com bolsas na Sociedade Brasileira de Cultura Inglesa no Rio de Janeiro</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>304</h3>\n\t\t\t\t\t\t\t<p>Total da Cultura Inglesa + Sociedade Brasileira de Cultura Inglesa</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>47</h3>\n\t\t\t\t\t\t\t<p>Alunos que fizeram Summer Program</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>127</h3>\n\t\t\t\t\t\t\t<p>Alunos que concluíram o Alicerce</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"block-content__bg\"></div>\n\t</div>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t<h2>Total de universitários ativos por área</h2>\n\t\t\t\t<svg-icon \n\t\t\t\t\tname=\"ativos-por-area\"\n\t\t\t\t\tviewBox=\"0 0 690 182\"\n\t\t\t\t\twidth=\"690\"\n\t\t\t\t\theight=\"182\">\n\t\t\t\t</svg-icon>\n\t\t\t\t<h2 class=\"mb-2\">Percentual de universitários em tipos de universidades</h2>\n\t\t\t\t<p class=\"mb-4\">(Públicas, particular, estrangeira)</p>\n\t\t\t\t<div \n\t\t\t\t\tclass=\"d-flex justify-content-between align-items-center\">\n\t\t\t\t\t<svg-icon\n\t\t\t\t\t\tclass=\"m-0\"\n\t\t\t\t\t\tname=\"ilustra01\"\n\t\t\t\t\t\tviewBox=\"0 0 75 193\"\n\t\t\t\t\t\theight=\"193\"\n\t\t\t\t\t\twidth=\"75\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<svg-icon\n\t\t\t\t\t\tclass=\"m-0\"\n\t\t\t\t\t\tname=\"grafico\"\n\t\t\t\t\t\tviewBox=\"0 0 366 195\"\n\t\t\t\t\t\theight=\"195\"\n\t\t\t\t\t\twidth=\"366\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<img src=\"../../../assets/images/ilustra-2.svg\" class=\"ilustra02\">\n\t\t\t\t</div>\n\t\t\t\t<ul class=\"graph-list\">\n\t\t\t\t\t<li class=\"graph-list__item\">\n\t\t\t\t\t\t<div class=\"graph-list__item-text\">\n\t\t\t\t\t\t\t<h4>Públicas</h4>\n\t\t\t\t\t\t\t<span>(USP, UFRJ, Unesp, UFABC, etc.)</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"graph-list__item-number graph-list__item-number--blue-l\">\n\t\t\t\t\t\t\t<span>49%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"graph-list__item\">\n\t\t\t\t\t\t<div class=\"graph-list__item-text\">\n\t\t\t\t\t\t\t<h4>Particulares</h4>\n\t\t\t\t\t\t\t<span>(PUC-RIO, INSPER, PUC-SP, FGV, etc.)</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"graph-list__item-number graph-list__item-number--blue-m\">\n\t\t\t\t\t\t\t<span>49%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"graph-list__item\">\n\t\t\t\t\t\t<div class=\"graph-list__item-text\">\n\t\t\t\t\t\t\t<h4>Particulares</h4>\n\t\t\t\t\t\t\t<span>(Universidad de Buenos Aires, Princeton, Yale University, Dartmouth, Stanford, \n\t\t\t\t\t\t\t\tHarvard University, University of Notre Dame, Lehigh University, Barnard College, Porto)</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"graph-list__item-number graph-list__item-number--green\">\n\t\t\t\t\t\t\t<span>2%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t<div \n\t\t\t\t\tclass=\"inline-data inline-data--version02\">\n\t\t\t\t\t<svg-icon \n\t\t\t\t\t\tname=\"study\" \n\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\twidth=\"81\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<span class=\"divider divider--white\"></span>\n\t\t\t\t\t<strong>323</strong>\n\t\t\t\t\t<p>Graduados (ALUMNI ISMART) – acumulado com conclusão da formação até 2018</p>\n\t\t\t\t</div>\n\t\t\t\t<h2>Orçamento Anual</h2>\n\t\t\t\t<p>Custos operacionais e despesas administrativas ao longo dos anos.</p>\n\t\t\t\t<svg-icon\n\t\t\t\t\tname=\"tabela-custo01\"\n\t\t\t\t\tviewBox=\"0 0 690 260\"\n\t\t\t\t\theight=\"260\"\n\t\t\t\t\twidth=\"690\">\n\t\t\t\t</svg-icon>\n\t\t\t\t<h2>Número de alunos</h2>\n\t\t\t\t<p>Jovens atendidos nos ensinos fundamental, médio e superior</p>\n\t\t\t\t<svg-icon\n\t\t\t\t\tname=\"tabela-custo02\"\n\t\t\t\t\tviewBox=\"0 0 690 186\"\n\t\t\t\t\theight=\"186\"\n\t\t\t\t\twidth=\"690\">\n\t\t\t\t</svg-icon>\n\t\t\t</div>\n\t\t</div>\n\t\t<hr class=\"my-4\">\n\t</div>\n</article>\n<app-related [relatedData]=\"relatedInfo\"></app-related>"
+module.exports = "<app-chapter-hat [data]=\"chapterHatInfo\"></app-chapter-hat>\n\n<article \n\tprogressBarListener\n\t#article\n\tclass=\"chapter-content pb-0\">\n\t<app-float-container\n\t\t\t[startPosEl]=\"article\"\n\t\t\t[endPosEl]=\"article\"\n\t\t\t[child]=\"shareComponent.nativeElement\"\n\t\t\tfixOffset=\"60\">\n\t\t\t<app-share #share></app-share>\n\t</app-float-container>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t<h2>{{ 'CHAPTER_8.CONTENT.SECTION_1' | translate }}</h2>\n\t\t\t\t<svg-icon name=\"alicerse\" viewBox=\"0 0 597 142\"></svg-icon>\n\t\t\t\t<svg-icon name=\"bolsa-talento\" viewBox=\"0 0 597 198\"></svg-icon>\n\t\t\t\t<svg-icon name=\"ismart-online\" viewBox=\"0 0 597 198\"></svg-icon>\n\t\t\t\t<h2>{{ 'CHAPTER_8.CONTENT.SECTION_2.TITLE' | translate }}</h2>\n\t\t\t\t<div \n\t\t\t\t\tclass=\"inline-data\">\n\t\t\t\t\t<svg-icon \n\t\t\t\t\t\tname=\"doc\" \n\t\t\t\t\t\tviewBox=\"0 0 75 75\"\n\t\t\t\t\t\theight=\"75\"\n\t\t\t\t\t\twidth=\"75\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<strong>59,7%</strong>\n\t\t\t\t\t<span class=\"divider\"></span>\n\t\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_2.TEXT' | translate }}</p>\n\t\t\t\t</div>\n\t\t\t\t<h2>{{ 'CHAPTER_8.CONTENT.SECTION_3.TITLE' | translate }}</h2>\n\t\t\t\t<div class=\"d-flex justify-content-between\">\n\t\t\t\t\t<div class=\"vert-card\">\n\t\t\t\t\t\t<svg-icon \n\t\t\t\t\t\t\tclass=\"vert-card__icon\"\n\t\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\t\twidth=\"81\"\n\t\t\t\t\t\t\tname=\"pencil-large\">\n\t\t\t\t\t\t</svg-icon>\n\t\t\t\t\t\t<div class=\"vert-card__box vert-card__box--border\">\n\t\t\t\t\t\t\t<span>178</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"vert-card__text\">{{ 'CHAPTER_8.CONTENT.SECTION_3.TEXT' | translate }}</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"vert-card\">\n\t\t\t\t\t\t<svg-icon \n\t\t\t\t\t\t\tclass=\"vert-card__icon\"\n\t\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\t\twidth=\"81\"\n\t\t\t\t\t\t\tname=\"study\">\n\t\t\t\t\t\t</svg-icon>\n\t\t\t\t\t\t<div class=\"vert-card__box\">\n\t\t\t\t\t\t\t<span>99%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"vert-card__text\">{{ 'CHAPTER_8.CONTENT.SECTION_3.TEXT' | translate }}</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"vert-card\">\n\t\t\t\t\t\t<svg-icon \n\t\t\t\t\t\t\tclass=\"vert-card__icon\"\n\t\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\t\twidth=\"81\"\n\t\t\t\t\t\t\tname=\"medal\">\n\t\t\t\t\t\t</svg-icon>\n\t\t\t\t\t\t<div class=\"vert-card__box\">\n\t\t\t\t\t\t\t<span>12%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"vert-card__text\">{{ 'CHAPTER_8.CONTENT.SECTION_3.TEXT' | translate }}</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"block-content\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t\t<h3 class=\"block-content__title\">{{ 'CHAPTER_8.CONTENT.SECTION_4.TITLE' | translate }}</h3>\n\t\t\t\t\t<div class=\"block-content__blocks\">\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>175</h3>\n\t\t\t\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_4.NUM_1' | translate }}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>129</h3>\n\t\t\t\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_4.NUM_2' | translate }}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>304</h3>\n\t\t\t\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_4.NUM_3' | translate }}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>47</h3>\n\t\t\t\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_4.NUM_4' | translate }}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t<h3>127</h3>\n\t\t\t\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_4.NUM_5' | translate }}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"block-content__bg\"></div>\n\t</div>\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12\">\n\t\t\t\t<h2>{{ 'CHAPTER_8.CONTENT.SECTION_5' | translate }}</h2>\n\t\t\t\t<svg-icon \n\t\t\t\t\tname=\"ativos-por-area\"\n\t\t\t\t\tviewBox=\"0 0 690 182\"\n\t\t\t\t\twidth=\"690\"\n\t\t\t\t\theight=\"182\">\n\t\t\t\t</svg-icon>\n\t\t\t\t<h2 class=\"mb-2\">{{ 'CHAPTER_8.CONTENT.SECTION_6.TITLE' | translate }}</h2>\n\t\t\t\t<p class=\"mb-4\">{{ 'CHAPTER_8.CONTENT.SECTION_6.SUBTITLE' | translate }}</p>\n\t\t\t\t<div \n\t\t\t\t\tclass=\"d-flex justify-content-between align-items-center\">\n\t\t\t\t\t<svg-icon\n\t\t\t\t\t\tclass=\"m-0\"\n\t\t\t\t\t\tname=\"ilustra01\"\n\t\t\t\t\t\tviewBox=\"0 0 75 193\"\n\t\t\t\t\t\theight=\"193\"\n\t\t\t\t\t\twidth=\"75\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<svg-icon\n\t\t\t\t\t\tclass=\"m-0\"\n\t\t\t\t\t\tname=\"grafico\"\n\t\t\t\t\t\tviewBox=\"0 0 366 195\"\n\t\t\t\t\t\theight=\"195\"\n\t\t\t\t\t\twidth=\"366\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<img src=\"../../../assets/images/ilustra-2.svg\" class=\"ilustra02\">\n\t\t\t\t</div>\n\t\t\t\t<ul class=\"graph-list\">\n\t\t\t\t\t<li class=\"graph-list__item\">\n\t\t\t\t\t\t<div class=\"graph-list__item-text\">\n\t\t\t\t\t\t\t<h4>{{ 'CHAPTER_8.CONTENT.SECTION_6.PERCENTAGE_1.TITLE' | translate }}</h4>\n\t\t\t\t\t\t\t<span>{{ 'CHAPTER_8.CONTENT.SECTION_6.PERCENTAGE_1.SUBTITLE' | translate }}</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"graph-list__item-number graph-list__item-number--blue-l\">\n\t\t\t\t\t\t\t<span>49%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"graph-list__item\">\n\t\t\t\t\t\t<div class=\"graph-list__item-text\">\n\t\t\t\t\t\t\t<h4>{{ 'CHAPTER_8.CONTENT.SECTION_6.PERCENTAGE_2.TITLE' | translate }}</h4>\n\t\t\t\t\t\t\t<span>{{ 'CHAPTER_8.CONTENT.SECTION_6.PERCENTAGE_2.SUBTITLE' | translate }}</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"graph-list__item-number graph-list__item-number--blue-m\">\n\t\t\t\t\t\t\t<span>49%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"graph-list__item\">\n\t\t\t\t\t\t<div class=\"graph-list__item-text\">\n\t\t\t\t\t\t\t<h4>{{ 'CHAPTER_8.CONTENT.SECTION_6.PERCENTAGE_3.TITLE' | translate }}</h4>\n\t\t\t\t\t\t\t<span>{{ 'CHAPTER_8.CONTENT.SECTION_6.PERCENTAGE_3.SUBTITLE' | translate }}</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"graph-list__item-number graph-list__item-number--green\">\n\t\t\t\t\t\t\t<span>2%</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t<div \n\t\t\t\t\tclass=\"inline-data inline-data--version02\">\n\t\t\t\t\t<svg-icon \n\t\t\t\t\t\tname=\"study\" \n\t\t\t\t\t\tviewBox=\"0 0 81 81\"\n\t\t\t\t\t\theight=\"81\"\n\t\t\t\t\t\twidth=\"81\">\n\t\t\t\t\t</svg-icon>\n\t\t\t\t\t<span class=\"divider divider--white\"></span>\n\t\t\t\t\t<strong>323</strong>\n\t\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_7' | translate }}</p>\n\t\t\t\t</div>\n\t\t\t\t<h2>{{ 'CHAPTER_8.CONTENT.SECTION_8.TITLE' | translate }}</h2>\n\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_8.SUBTITLE' | translate }}</p>\n\t\t\t\t<svg-icon\n\t\t\t\t\tname=\"tabela-custo01\"\n\t\t\t\t\tviewBox=\"0 0 690 260\"\n\t\t\t\t\theight=\"260\"\n\t\t\t\t\twidth=\"690\">\n\t\t\t\t</svg-icon>\n\t\t\t\t<h2>{{ 'CHAPTER_8.CONTENT.SECTION_9.TITLE' | translate }}</h2>\n\t\t\t\t<p>{{ 'CHAPTER_8.CONTENT.SECTION_9.SUBTITLE' | translate }}</p>\n\t\t\t\t<svg-icon\n\t\t\t\t\tname=\"tabela-custo02\"\n\t\t\t\t\tviewBox=\"0 0 690 186\"\n\t\t\t\t\theight=\"186\"\n\t\t\t\t\twidth=\"690\">\n\t\t\t\t</svg-icon>\n\t\t\t</div>\n\t\t</div>\n\t\t<hr class=\"my-4\">\n\t</div>\n</article>\n<app-related [relatedData]=\"relatedInfo\"></app-related>"
 
 /***/ }),
 
@@ -2543,51 +2543,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 let ChapterInternSimpleComponentm = class ChapterInternSimpleComponentm {
-    constructor(titleService, meta) {
+    constructor(titleService, meta, translate) {
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '01. Mensagem do Conselho - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/1-mensagem-do-conselho-hat.jpg',
             'imageTablet': 'assets/images/hats/1-mensagem-do-conselho-tablet.jpg',
             'image': 'assets/images/1-mensagem-do-conselho.jpg',
-            'title': 'Capítulo 01',
-            'subtitle': 'Mensagem do Conselho'
+            'title': 'CHAPTER_1.TITLE',
+            'subtitle': 'CHAPTERS.01'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/02-missao-visao-crencas-mobile.jpg',
-                'title': '02.',
-                'subtitle': 'Missão, Visão e Crenças',
-                'url': '02-missao-visao-valores'
-            },
-            {
-                'image': 'assets/images/03-linha-do-tempo.jpg',
-                'title': '03.',
-                'subtitle': 'Linha do Tempo',
-                'url': '03-linha-do-tempo'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Contato',
-                'url': '04-trajetorias-ismart-contato'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/1-mensagem-do-conselho-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '01. Mensagem do Conselho - Ismart' });
+        this.translate.get('CHAPTER_1').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 ChapterInternSimpleComponentm.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateService"] }
 ];
 ChapterInternSimpleComponentm = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2625,51 +2613,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 let MissaoComponent = class MissaoComponent {
-    constructor(titleService, meta) {
+    constructor(titleService, meta, translate) {
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '02. Missão, Visão e Crenças - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
             'imageTablet': 'assets/images/hats/2-missao-visao-crencas-tablet.jpg',
             'image': 'assets/images/missao-visao-crencas.jpg',
-            'title': 'Capítulo 02',
-            'subtitle': 'Missão, Visão e Crenças'
+            'title': 'CHAPTER_2.TITLE',
+            'subtitle': 'CHAPTERS.02'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/03-linha-do-tempo.jpg',
-                'title': '03.',
-                'subtitle': 'Linha do Tempo',
-                'url': '03-linha-do-tempo'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Contato',
-                'url': '04-trajetorias-ismart-contato'
-            },
-            {
-                'image': 'assets/images/05-parceiros-mobile.jpg',
-                'title': '05.',
-                'subtitle': 'Parceiros Ismart',
-                'url': '05-parceiros-ismart'
-            }
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/2-missao-visao-crencas-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '02. Missão, Visão e Crenças - Ismart' });
+        this.translate.get('CHAPTER_2').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 MissaoComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('share', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -2716,6 +2692,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var src_app_services_scroll_scroll_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/scroll/scroll.service */ "./src/app/services/scroll/scroll.service.ts");
 /* harmony import */ var src_app_services_window_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/window.service */ "./src/app/services/window.service.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
@@ -2723,46 +2701,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let TimelineComponent = class TimelineComponent {
-    constructor(timeline, renderer, titleService, meta, scroll, window) {
+    constructor(timeline, renderer, titleService, meta, scroll, window, translate) {
         this.timeline = timeline;
         this.renderer = renderer;
         this.titleService = titleService;
         this.meta = meta;
         this.scroll = scroll;
         this.window = window;
+        this.translate = translate;
         this.title = '03. Linha do Tempo - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/3-timeline-hat.jpg',
             'imageTablet': 'assets/images/hats/3-timeline-tablet.jpg',
             'image': 'assets/images/3-timeline.jpg',
-            'title': 'Capítulo 03',
-            'subtitle': 'Linha do Tempo'
+            'title': 'CHAPTER_3.TITLE',
+            'subtitle': 'CHAPTERS.03'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Contato',
-                'url': '04-trajetorias-ismart-contato'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Seleção',
-                'url': '04-trajetorias-ismart-selecao'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Prática',
-                'url': '04-trajetorias-ismart-praticas'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/3-timeline-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '03. Linha do Tempo - Ismart' });
+        this.translate.get('CHAPTER_3').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
     onItemNavClick({ target }, navItem) {
         const elToNavigate = this.cards.find((el) => el.nativeElement.getAttribute('year') === navItem);
@@ -2791,7 +2754,8 @@ TimelineComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] },
     { type: src_app_services_scroll_scroll_service__WEBPACK_IMPORTED_MODULE_4__["ScrollService"] },
-    { type: Window, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [src_app_services_window_service__WEBPACK_IMPORTED_MODULE_5__["WINDOW"],] }] }
+    { type: Window, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [src_app_services_window_service__WEBPACK_IMPORTED_MODULE_5__["WINDOW"],] }] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChildren"])('cards')
@@ -2843,54 +2807,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let TrajetoriasAlumniComponent = class TrajetoriasAlumniComponent {
-    constructor(titleService, meta, testimonials) {
+    constructor(titleService, meta, testimonials, translate) {
         this.titleService = titleService;
         this.meta = meta;
         this.testimonials = testimonials;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Alumni - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/05-parceiros-mobile.jpg',
-                'title': '05.',
-                'subtitle': 'Parceiros Ismart',
-                'url': '05-parceiros-ismart'
-            },
-            {
-                'image': 'assets/images/06-horizonte-mobile.jpg',
-                'title': '06.',
-                'subtitle': 'Horizonte',
-                'url': '06-horizonte'
-            },
-            {
-                'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-                'title': '07.',
-                'subtitle': 'Manifesto Ismart',
-                'url': '07-manifesto'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Alumni - Ismart' });
+        this.translate.get('CHAPTER_4.8').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 TrajetoriasAlumniComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
-    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] }
+    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -2935,54 +2887,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let TrajetoriasEadComponent = class TrajetoriasEadComponent {
-    constructor(titleService, meta, testimonials) {
+    constructor(titleService, meta, testimonials, translate) {
         this.titleService = titleService;
         this.meta = meta;
         this.testimonials = testimonials;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Prática - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Universidade',
-                'url': '04-trajetorias-ismart-universidade'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Alumni',
-                'url': '04-trajetorias-ismart-alumni'
-            },
-            {
-                'image': 'assets/images/05-parceiros-mobile.jpg',
-                'title': '05.',
-                'subtitle': 'Parceiros Ismart',
-                'url': '05-parceiros-ismart'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Prática - Ismart' });
+        this.translate.get('CHAPTER_4.6').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 TrajetoriasEadComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
-    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] }
+    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3000,6 +2940,7 @@ TrajetoriasEadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-trajetorias-ead',
         template: __webpack_require__(/*! raw-loader!./trajetorias-ead.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/04-trajetorias-ead/trajetorias-ead.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./trajetorias-ead.component.scss */ "./src/app/pages/04-trajetorias-ead/trajetorias-ead.component.scss")]
     })
 ], TrajetoriasEadComponent);
@@ -3033,54 +2974,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let TrajetoriasInternacionalComponent = class TrajetoriasInternacionalComponent {
-    constructor(titleService, meta, testimonials) {
+    constructor(titleService, meta, testimonials, translate) {
         this.titleService = titleService;
         this.meta = meta;
         this.testimonials = testimonials;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Seleção - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'EaD',
-                'url': '04-trajetorias-ismart-ead'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Universidade',
-                'url': '04-trajetorias-ismart-universidade'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Alumni',
-                'url': '04-trajetorias-ismart-alumni'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Seleção - Ismart' });
+        this.translate.get('CHAPTER_4.5').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 TrajetoriasInternacionalComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
-    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] }
+    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3092,6 +3021,7 @@ TrajetoriasInternacionalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decora
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-trajetorias-internacional',
         template: __webpack_require__(/*! raw-loader!./trajetorias-internacional.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/04-trajetorias-internacional/trajetorias-internacional.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./trajetorias-internacional.component.scss */ "./src/app/pages/04-trajetorias-internacional/trajetorias-internacional.component.scss")]
     })
 ], TrajetoriasInternacionalComponent);
@@ -3125,54 +3055,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let TrajetoriasPraticaComponent = class TrajetoriasPraticaComponent {
-    constructor(titleService, meta, testimonials) {
+    constructor(titleService, meta, testimonials, translate) {
         this.titleService = titleService;
         this.meta = meta;
         this.testimonials = testimonials;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Prática - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Suporte',
-                'url': '04-trajetorias-ismart-suporte'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Internacional',
-                'url': '04-trajetorias-ismart-internacional'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'EaD',
-                'url': '04-trajetorias-ismart-ead'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Prática - Ismart' });
+        this.translate.get('CHAPTER_4.3').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 TrajetoriasPraticaComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] },
-    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__["TestimonialsService"] }
+    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__["TestimonialsService"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3187,6 +3105,7 @@ TrajetoriasPraticaComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-trajetorias-pratica',
         template: __webpack_require__(/*! raw-loader!./trajetorias-pratica.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/04-trajetorias-pratica/trajetorias-pratica.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./trajetorias-pratica.component.scss */ "./src/app/pages/04-trajetorias-pratica/trajetorias-pratica.component.scss")]
     })
 ], TrajetoriasPraticaComponent);
@@ -3220,54 +3139,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let TrajetoriasSelecaoComponent = class TrajetoriasSelecaoComponent {
-    constructor(testimonials, titleService, meta) {
+    constructor(testimonials, titleService, meta, translate) {
         this.testimonials = testimonials;
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Seleção - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Prática',
-                'url': '04-trajetorias-ismart-praticas'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Suporte',
-                'url': '04-trajetorias-ismart-suporte'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Internacional',
-                'url': '04-trajetorias-ismart-internacional'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Seleção - Ismart' });
+        this.translate.get('CHAPTER_4.2').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 TrajetoriasSelecaoComponent.ctorParameters = () => [
     { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__["TestimonialsService"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3285,6 +3192,7 @@ TrajetoriasSelecaoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-trajetorias-selecao',
         template: __webpack_require__(/*! raw-loader!./trajetorias-selecao.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/04-trajetorias-selecao/trajetorias-selecao.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./trajetorias-selecao.component.scss */ "./src/app/pages/04-trajetorias-selecao/trajetorias-selecao.component.scss")]
     })
 ], TrajetoriasSelecaoComponent);
@@ -3318,54 +3226,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let TrajetoriasSuporteComponent = class TrajetoriasSuporteComponent {
-    constructor(titleService, meta, testimonials) {
+    constructor(titleService, meta, testimonials, translate) {
         this.titleService = titleService;
         this.meta = meta;
         this.testimonials = testimonials;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Seleção - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Internacional',
-                'url': '04-trajetorias-ismart-internacional'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'EaD',
-                'url': '04-trajetorias-ismart-ead'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Universidade',
-                'url': '04-trajetorias-ismart-universidade'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Suporte - Ismart' });
+        this.translate.get('CHAPTER_4.4').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 TrajetoriasSuporteComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
-    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] }
+    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3383,6 +3279,7 @@ TrajetoriasSuporteComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-trajetorias-suporte',
         template: __webpack_require__(/*! raw-loader!./trajetorias-suporte.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/04-trajetorias-suporte/trajetorias-suporte.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./trajetorias-suporte.component.scss */ "./src/app/pages/04-trajetorias-suporte/trajetorias-suporte.component.scss")]
     })
 ], TrajetoriasSuporteComponent);
@@ -3416,54 +3313,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let TrajetoriasUniversidadeComponent = class TrajetoriasUniversidadeComponent {
-    constructor(titleService, meta, testimonials) {
+    constructor(titleService, meta, testimonials, translate) {
         this.titleService = titleService;
         this.meta = meta;
         this.testimonials = testimonials;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Universidades - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Alumni',
-                'url': '04-trajetorias-ismart-alumni'
-            },
-            {
-                'image': 'assets/images/05-parceiros-mobile.jpg',
-                'title': '05.',
-                'subtitle': 'Parceiros Ismart',
-                'url': '05-parceiros-ismart'
-            },
-            {
-                'image': 'assets/images/06-horizonte-mobile.jpg',
-                'title': '06.',
-                'subtitle': 'Horizonte',
-                'url': '06-horizonte'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Universidades - Ismart' });
+        this.translate.get('CHAPTER_4.7').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 TrajetoriasUniversidadeComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
-    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] }
+    { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_3__["TestimonialsService"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3481,6 +3366,7 @@ TrajetoriasUniversidadeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorat
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-trajetorias-universidade',
         template: __webpack_require__(/*! raw-loader!./trajetorias-universidade.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/04-trajetorias-universidade/trajetorias-universidade.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./trajetorias-universidade.component.scss */ "./src/app/pages/04-trajetorias-universidade/trajetorias-universidade.component.scss")]
     })
 ], TrajetoriasUniversidadeComponent);
@@ -3514,54 +3400,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let ChapterInternComponent = class ChapterInternComponent {
-    constructor(titleService, meta, testimonials) {
+    constructor(titleService, meta, testimonials, translate) {
         this.titleService = titleService;
         this.meta = meta;
         this.testimonials = testimonials;
+        this.translate = translate;
         this.title = '04. Trajetórias Ismart: Contato - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
             'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
             'image': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 04',
-            'subtitle': 'Trajetórias Ismart'
+            'title': 'CHAPTER_4.1.TITLE',
+            'subtitle': 'CHAPTERS.04'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Seleção',
-                'url': '04-trajetorias-ismart-selecao'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Prática',
-                'url': '04-trajetorias-ismart-praticas'
-            },
-            {
-                'image': 'assets/images/04-trajetorias-mobile.jpg',
-                'title': '04. Trajetórias Ismart',
-                'subtitle': 'Suporte',
-                'url': '04-trajetorias-ismart-suporte'
-            },
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '04. Trajetórias Ismart: Contato - Ismart' });
+        this.translate.get('CHAPTER_4.1').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 ChapterInternComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] },
-    { type: _services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__["TestimonialsService"] }
+    { type: _services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__["TestimonialsService"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sidebar', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3579,6 +3453,7 @@ ChapterInternComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-chapter-intern',
         template: __webpack_require__(/*! raw-loader!./chapter-intern.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/04-trajetorias/chapter-intern.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./chapter-intern.component.scss */ "./src/app/pages/04-trajetorias/chapter-intern.component.scss")]
     })
 ], ChapterInternComponent);
@@ -3612,54 +3487,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let ParceirosComponent = class ParceirosComponent {
-    constructor(testimonials, titleService, meta) {
+    constructor(testimonials, titleService, meta, translate) {
         this.testimonials = testimonials;
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '05. Parceiros Ismart - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/5-parceiros-hat.jpg',
             'imageTablet': 'assets/images/hats/5-parceiros-tablet.jpg',
             'image': 'assets/images/5-parceiros.jpg',
-            'title': 'Capítulo 05',
-            'subtitle': 'Parceiros Ismart'
+            'title': 'CHAPTER_5.TITLE',
+            'subtitle': 'CHAPTERS.05'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/06-horizonte-mobile.jpg',
-                'title': '06.',
-                'subtitle': 'Horizonte',
-                'url': '06-horizonte'
-            },
-            {
-                'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-                'title': '07.',
-                'subtitle': 'Manifesto Ismart',
-                'url': '07-manifesto'
-            },
-            {
-                'image': 'assets/images/08-resultados-mobile.jpg',
-                'title': '08.',
-                'subtitle': 'Resultados 2018',
-                'url': '08-resultados'
-            }
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/5-parceiros-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '05. Parceiros Ismart - Ismart' });
+        this.translate.get('CHAPTER_5').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 ParceirosComponent.ctorParameters = () => [
     { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__["TestimonialsService"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('share', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3710,54 +3573,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/testimonials/testimonials.service */ "./src/app/services/testimonials/testimonials.service.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 
 let HorizonteComponent = class HorizonteComponent {
-    constructor(testimonials, titleService, meta) {
+    constructor(testimonials, titleService, meta, translate) {
         this.testimonials = testimonials;
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '06. Horizonte - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',
             'imageTablet': 'assets/images/hats/6-horizonte-tablet.jpg',
             'image': 'assets/images/6-horizonte.jpg',
-            'title': 'Capítulo 06',
-            'subtitle': 'Horizonte'
+            'title': 'CHAPTER_6.TITLE',
+            'subtitle': 'CHAPTERS.06'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-                'title': '07.',
-                'subtitle': 'Manifesto Ismart',
-                'url': '07-manifesto'
-            },
-            {
-                'image': 'assets/images/08-resultados-mobile.jpg',
-                'title': '08.',
-                'subtitle': 'Resultados 2018',
-                'url': '08-resultados'
-            },
-            {
-                'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-                'title': '09.',
-                'subtitle': 'Lista de parceiros',
-                'url': '09-lista-parceiros'
-            }
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/6-horizonte-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '06. Horizonte - Ismart' });
+        this.translate.get('CHAPTER_6').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 HorizonteComponent.ctorParameters = () => [
     { type: src_app_services_testimonials_testimonials_service__WEBPACK_IMPORTED_MODULE_2__["TestimonialsService"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('share', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3781,6 +3632,7 @@ HorizonteComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-horizonte',
         template: __webpack_require__(/*! raw-loader!./horizonte.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/06-horizonte/horizonte.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./horizonte.component.scss */ "./src/app/pages/06-horizonte/horizonte.component.scss")]
     })
 ], HorizonteComponent);
@@ -3813,51 +3665,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 let ManifestoComponent = class ManifestoComponent {
-    constructor(titleService, meta) {
+    constructor(titleService, meta, translate) {
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '07. Manifesto Ismart - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/7-manifesto-hat.jpg',
             'imageTablet': 'assets/images/hats/7-manifesto-ismart-tablet.jpg',
             'image': 'assets/images/7-manifesto.jpg',
-            'title': 'Capítulo 07',
-            'subtitle': 'Manifesto Ismart'
+            'title': 'CHAPTER_7.TITLE',
+            'subtitle': 'CHAPTERS.07'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/08-resultados-mobile.jpg',
-                'title': '08.',
-                'subtitle': 'Resultados 2018',
-                'url': '08-resultados'
-            },
-            {
-                'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-                'title': '09.',
-                'subtitle': 'Lista de parceiros',
-                'url': '09-lista-parceiros'
-            },
-            {
-                'image': 'assets/images/10-expediente-mobile.jpg',
-                'title': '10.',
-                'subtitle': 'Expediente',
-                'url': '10-expediente'
-            }
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/7-manifesto-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '07. Manifesto Ismart - Ismart' });
+        this.translate.get('CHAPTER_7').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 ManifestoComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('share', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3872,6 +3712,7 @@ ManifestoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-manifesto',
         template: __webpack_require__(/*! raw-loader!./manifesto.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/07-manifesto/manifesto.component.html"),
+        encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         styles: [__webpack_require__(/*! ./manifesto.component.scss */ "./src/app/pages/07-manifesto/manifesto.component.scss")]
     })
 ], ManifestoComponent);
@@ -3904,51 +3745,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 let ResultadosComponent = class ResultadosComponent {
-    constructor(titleService, meta) {
+    constructor(titleService, meta, translate) {
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '08. Resultados - Ismart';
         this.chapterHatInfo = {
             'image': 'assets/images/8-resultados.jpg',
             'imageMobile': 'assets/images/3-timeline.jpg',
             'imageTablet': 'assets/images/4-trajetorias.jpg',
-            'title': 'Capítulo 08',
-            'subtitle': 'Resultados'
+            'title': 'CHAPTER_8.TITLE',
+            'subtitle': 'CHAPTERS.08'
         };
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-                'title': '09.',
-                'subtitle': 'Lista de parceiros',
-                'url': '09-lista-parceiros'
-            },
-            {
-                'image': 'assets/images/10-expediente-mobile.jpg',
-                'title': '10.',
-                'subtitle': 'Expediente',
-                'url': '10-expediente'
-            },
-            {
-                'image': 'assets/images/03-linha-do-tempo.jpg',
-                'title': '03.',
-                'subtitle': 'Linha do Tempo',
-                'url': '03-linha-do-tempo'
-            }
-        ];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/8-resultados.jpg' });
         this.meta.addTag({ property: 'og:title', content: '08. Resultados - Ismart' });
+        this.translate.get('CHAPTER_8').subscribe((data) => {
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 ResultadosComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('share', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -3995,569 +3824,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 let ListaParceirosComponent = class ListaParceirosComponent {
-    constructor(titleService, meta) {
+    constructor(titleService, meta, translate) {
         this.titleService = titleService;
         this.meta = meta;
-        this.title = '09. Lista de parceiros - Ismart';
+        this.translate = translate;
+        this.title = "09. Lista de parceiros - Ismart";
         this.chapterHatInfo = {
-            'imageMobile': 'assets/images/hats/9-lista-de-parceiros-hat.jpg',
-            'imageTablet': 'assets/images/hats/9-lista-de-parceiros-tablet.jpg',
-            'image': 'assets/images/9-lista.jpg',
-            'title': 'Capítulo 09',
-            'subtitle': 'Lista de parceiros'
+            "imageMobile": "assets/images/hats/9-lista-de-parceiros-hat.jpg",
+            "imageTablet": "assets/images/hats/9-lista-de-parceiros-tablet.jpg",
+            "image": "assets/images/9-lista.jpg",
+            'title': 'CHAPTER_9.TITLE',
+            'subtitle': 'CHAPTERS.09'
         };
-        this.accordionContent = [
-            {
-                'title': 'Escola parceira',
-                'content': `
-        <p>Bandeirantes (São Paulo)</p>
-        <p>Bernoulli (Belo Horizonte)</p>
-        <p>Embraer & Instituto Embraer (São José dos Campos)</p>
-        <p>Escola Eleva (Rio de Janeiro)</p>
-        <p>Etapa (São Paulo)</p>
-        <p>Lourenço Castanho (São Paulo)</p>
-        <p>Magno (São Paulo)</p>
-        <p>Marista Arquidiocesano (São Paulo)</p>
-        <p>Móbile (São Paulo)</p>
-        <p>Objetivo (S.J. dos Campos)</p>
-        <p>Objetivo (São Paulo)</p>
-        <p>Pensi (Rio de Janeiro)</p>
-        <p>pH (Rio de Janeiro)</p>
-        <p>Poliedro (S.J. dos Campos)</p>
-        <p>Poliedro (São Paulo)</p>
-        <p>Santo Américo (São Paulo)</p>
-        <p>Santo Antonio (Belo Horizonte)</p>
-        <p>São Bento (Rio de Janeiro)</p>
-        <p>Sidarta (Cotia)</p>
-        <p>Uirapuru (Sorocaba)</p>
-      `
-            },
-            {
-                'title': 'Escola parceira ismart online',
-                'content': `
-        <p>Ao Cubo</p>
-        <p>Arquidiocesano</p>
-        <p>Colégio Dante Alighieri (São Paulo)</p>
-        <p>Colégio Marista Glória (São Paulo)</p>
-        <p>Colégio Planck (São José dos Campos)</p>
-        <p>Elite (Rio de Janeiro)</p>
-        <p>Escola Eleva</p>
-        <p>Escola Granja Viana</p>
-        <p>Escola Internacional de Alphaville (Barueri)</p>
-        <p>Mopi (Rio de Janeiro)</p>
-        <p>Pensi (Rio de Janeiro)</p>
-        <p>Salesiano ( ão Paulo)</p>
-        <p>Sarah Dawsey (Rio de Janeiro)</p>
-        <p>St Pauls (São Paulo)</p>
-      `
-            },
-            {
-                'title': 'Apoiadores',
-                'content': `
-        <p>Instituto Helena Antipoff</p>
-        <p>Ministério da Cidadania</p>
-        <p>Secretaria da Educação do Estado de São Paulo</p>
-        <p>Secretaria do Estado de Educação de Minas Gerais</p>
-        <p>Secretaria Municipal de Educação de Belo Horizonte</p>
-        <p>Secretaria Municipal de Educação de São José dos Campos</p>
-        <p>Secretaria Municipal de Educação de São Paulo</p>
-        <p>Secretaria Municipal de Educação do Rio de Janeiro</p>
-      `
-            },
-            {
-                'title': 'Patrocinadores de bolsistas e programas',
-                'content': `
-        <p>Alexandre Behring Costa</p>
-        <p>Alexandre Puigventós Frangioni</p>
-        <p>Ana Luiza Garfinkel</p>
-        <p>Andrea Dessen de Souza e Silva</p>
-        <p>Banco Mundial</p>
-        <p>Benjamin Citron</p>
-        <p>Bertelsmann</p>
-        <p>Blanver</p>
-        <p>Bradesco BBI Solidário</p>
-        <p>Bruno Potenza</p>
-        <p>Christian Telles</p>
-        <p>Claudio Garcia</p>
-        <p>Dilton Marinho Rodrigues</p>
-        <p>Florian Bartunek</p>
-        <p>Humberto Machado</p>
-        <p>Instituto Credit Suisse Hedging-Griffo</p>
-        <p>Juan Vergara</p>
-        <p>Manuel de Almeida Marins Gorito</p>
-        <p>Marcelo de Sá</p>
-        <p>Mattos Filho Advogados</p>
-        <p>Pedro Romano</p>
-        <p>Ricardo Ermírio de Moraes</p>
-        <p>AI Desenvolvimento Imobiliário</p>
-        <p>Rodrigo Figueiredo de Souza</p>
-        <p>Veirano Advogados</p>
-        <p>Vicente Falconi Campos</p>
-        <p>Victória de Sá</p>
-      `
-            },
-            {
-                'title': 'Parceiro Pro bono',
-                'content': `
-        <p>Angela Virgolim - Universidade de Brasília</p>
-        <p>Arte de viver</p>
-        <p>Denise Fleith - Universidade de Brasília</p>
-        <p>Edson Saggese - Universidade Federal do Rio de Janeiro</p>
-        <p>Elisabeth Veiga - PUC Paraná</p>
-        <p>Expo Center Norte</p>
-        <p>Fesap Recrutamento e Seleção</p>
-        <p>Instituto Hinode</p>
-        <p>Itabus</p>
-        <p>Machado Meyer</p>
-        <p>Maria Cristina de Carvalho Delou - Universidade Federal Fluminense</p>
-        <p>Pearson</p>
-        <p>Sapiens Instituto de Psicologia</p>
-        <p>Ulhôa Canto, Rezende e Guerra Advogados</p>
-        <p>Vella Pugliese Buosi e Guidoni Advogados</p>
-      `
-            },
-            {
-                'title': 'Parceiro operacional',
-                'content': `
-        <p>Amigos da Poli</p>
-        <p>Andover</p>
-        <p>Arpex Capital</p>
-        <p>Associação Atlética Tijuca</p>
-        <p>Atados Rio</p>
-        <p>Atados SP</p>
-        <p>B-Abroad</p>
-        <p>Bain & Company</p>
-        <p>Bem Mudar</p>
-        <p>Biblioteca Pública Estadual de Minas Gerais</p>
-        <p>blastU</p>
-        <p>boostLab</p>
-        <p>BrMalls</p>
-        <p>BTG Pactual</p>
-        <p>Cantina SaveMe</p>
-        <p>Canvas</p>
-        <p>CCG Psicologia</p>
-        <p>CEFE (Centro de Formação do Educador em SJC)</p>
-        <p>Centro Cultural João XXIII</p>
-        <p>Civi-co</p>
-        <p>CK Gestão Empresarial</p>
-        <p>Colégio Ao Cubo (Rio de Janeiro)</p>
-        <p>Colégio Boni Consilii (São Paulo)</p>
-        <p>Colégio Madre Cabrini (São Paulo)</p>
-        <p>Colégio Nossa Senhora do Monte Calvário (Belo Horizonte)</p>
-        <p>Cultura Inglesa (Rio de Janeiro)</p>
-        <p>Dell’Arte Soluções Culturais</p>
-        <p>DMS Digital</p>
-        <p>Editora Policarpo</p>
-        <p>En-Sof Uniformes</p>
-        <p>Escola de Mentores</p>
-        <p>Escola Superior Dom Helder Camara</p>
-        <p>ESPM</p>
-        <p>Estácio</p>
-        <p>Fábrica de Ideias Brasileiras (FIB)</p>
-        <p>Facebook</p>
-        <p>FACENS (Sorocaba)</p>
-        <p>Falconi Consultores de Resultado</p>
-        <p>FEBRACE</p>
-        <p>Flow</p>
-        <p>Focus</p>
-        <p>Fundação Estudar</p>
-        <p>Fundação Getulio Vargas - Rio de Janeiro (FGV-Rio)</p>
-        <p>Fundação Getulio Vargas - São Paulo (FGV-SP)</p>
-        <p>Fundação Lemann</p>
-        <p>Future Education</p>
-        <p>Google</p>
-        <p>GRSA Soluções em Alimentação e Serviços</p>
-        <p>Grupo Cia de Talentos</p>
-        <p>Harvard University - DRCLAS</p>
-        <p>IBMEC</p>
-        <p>Insper</p>
-        <p>Instituto Europeu de Design (IED)</p>
-        <p>Instituto Sol</p>
-        <p>Interac</p>
-        <p>Itabus</p>
-        <p>Itaú Unibanco</p>
-        <p>Juliana Souza Deororo ME</p>
-        <p>Learn to fly</p>
-        <p>Livro Fácil</p>
-        <p>LogicPrep</p>
-        <p>Máquina Cohn & Wolfe</p>
-        <p>MAR</p>
-        <p>McKinsey & Company Brasil</p>
-        <p>Mereo</p>
-        <p>Notre Dame Club of Brazil</p>
-        <p>Núcleo Capital</p>
-        <p>Objetivo Line</p>
-        <p>Ouzaz</p>
-        <p>Patente Del Corsi Advogados</p>
-        <p>Pearson</p>
-        <p>Picarelli Associados</p>
-        <p>Plano CDE</p>
-        <p>Politize</p>
-        <p>Primeira Escolha</p>
-        <p>Projeto Gauss</p>
-        <p>PUC Minas - campus Coração Eucarístico</p>
-        <p>RaiaDrograsil</p>
-        <p>Raíz Educação</p>
-        <p>Regus do Brasil</p>
-        <p>Restaurante Mania Mineira</p>
-        <p>Rolim, Viotti & Leite Campos advogados</p>
-        <p>Sanrad</p>
-        <p>Santa Marcelina</p>
-        <p>Santa Marcelina Cultura</p>
-        <p>Santander</p>
-        <p>Sapore</p>
-        <p>Scudra</p>
-        <p>Stanford</p>
-        <p>Startupfarm</p>
-        <p>Stillo’s Produções e Eventos</p>
-        <p>Unip - Paraíso</p>
-        <p>Universidade Newton Paiva (Belo Horizonte)</p>
-        <p>Universidade Paulista (Unip)</p>
-        <p>Vittude</p>
-        <p>Yale University</p>
-        <p>Zasaflor</p>
-      `
-            },
-            {
-                'title': 'Cursos de línguas e pré-vestibular',
-                'content': `
-        <p>Amanda Andersen</p>
-        <p>Anelisa Macedo</p>
-        <p>CCAA Santo Agostinho (Belo Horizonte)</p>
-        <p>CPV Educacional</p>
-        <p>Cultura Inglesa</p>
-        <p>Intergraus São Paulo</p>
-        <p>Objetivo (São Paulo) – Cursinho</p>
-        <p>Patrícia Monteiro</p>
-        <p>Sociedade Brasileira de Cultura Inglesa (Rio de Janeiro)</p>
-        <p>Yázigi</p>
-      `
-            },
-            {
-                'title': 'Conexão profissão',
-                'content': `
-        <p>99 POP</p>
-        <p>Aeroporto Internacional de Cabo Frio</p>
-        <p>Ambev</p>
-        <p>BASF</p>
-        <p>Bio-Rad Laboratórios do Brasil</p>
-        <p>Blossom Consult</p>
-        <p>Bogari</p>
-        <p>Bristol-Myers Squibb</p>
-        <p>Centro Médico Berrini</p>
-        <p>Centro Nacional de Pesquisa em Energia e Materiais</p>
-        <p>Coimbra & Chaves Advogados</p>
-        <p>DASA</p>
-        <p>Departamento de Física da UFMG</p>
-        <p>Dr. Oetker</p>
-        <p>Efix Aviation Support</p>
-        <p>ePay Brasil</p>
-        <p>Escola de Negócios SEBRAE</p>
-        <p>Everymind</p>
-        <p>EXEC</p>
-        <p>Faculdade de Medicina Veterinária e Zootecnia USP</p>
-        <p>FGV RJ</p>
-        <p>Firjan</p>
-        <p>Fix Desing</p>
-        <p>Fórum Criminal de São José dos Campos</p>
-        <p>Fórum Estadual de São José dos Campos</p>
-        <p>Fundação Oswaldo Cruz (Fiocruz) (Rio de Janeiro)</p>
-        <p>Home Vet</p>
-        <p>Hospital A.C.Camargo</p>
-        <p>Hospital das Clínicas da UFMG</p>
-        <p>Hospital das Clínicas da USP</p>
-        <p>Hospital Samaritano RJ</p>
-        <p>Hospital Universitário Antônio Pedro (Rio de Janeiro)</p>
-        <p>Hospital Universitário Clementino Fraga (Rio de Janeiro)</p>
-        <p>Hospital Universitário Gaffrée e Guinle (Rio de Janeiro)</p>
-        <p>Hospital Universitário Pedro Ernesto (Rio de Janeiro)</p>
-        <p>Hospital Veterinário UNIBH</p>
-        <p>Indio da Costa Arquitetura</p>
-        <p>Instituto de Ciências Biológicas da UFMG</p>
-        <p>Instituto de Física da USP</p>
-        <p>Instituto de Pesquisa e Desenvolvimento da Universidade do Vale do Paraíba</p>
-        <p>Instituto Fernandes Figueira</p>
-        <p>Instituto Nacional de Câncer</p>
-        <p>Instituto Nacional de Pesquisas Espaciais</p>
-        <p>Integration Consulting</p>
-        <p>MFB Advogados</p>
-        <p>Moip Pagamentos | Wirecard Brasil S.A.</p>
-        <p>MRV Engenharia</p>
-        <p>Palácio Guanabara</p>
-        <p>Policlin</p>
-        <p>Prodesign</p>
-        <p>Qmágico</p>
-        <p>Rede D’or</p>
-        <p>Sampla Belting</p>
-        <p>Secretaria Municipal do Meio Ambiente</p>
-        <p>Silva Freire Advogados</p>
-        <p>Sinergia Studios</p>
-        <p>Stone Pagamentos</p>
-        <p>Stoodi Ensino e Treinamento a distância LTDA - EPP</p>
-        <p>Unidade de Saúde da Polícia Militar do Estado de São Paulo</p>
-        <p>Universidade Federal do ABC</p>
-        <p>Universidade Federal do Rio de Janeiro</p>
-        <p>Veduca</p>
-        <p>Vetor Brasil</p>
-        <p>Via Varejo</p>
-        <p>Votorantim Cimento S.A.</p>
-        <p>ZMPBC Advogados</p>
-      `
-            },
-            {
-                'title': 'Mentores universitários',
-                'content': `
-        <p>Alessandra Gomensoro</p>
-        <p>Alessandro Takeshi Morita Gagliardi</p>
-        <p>Alicia J. Kowaltowski</p>
-        <p>Aline Teixeira Soares</p>
-        <p>Ana Paula Gouvêa Costa</p>
-        <p>André Godoy Farat</p>
-        <p>Andre Luis Giorgetti Valente</p>
-        <p>Anna Paula de Abreu da Costa Carvalho</p>
-        <p>Antônio Augusto Barboza Pinto</p>
-        <p>Augusto Banuls</p>
-        <p>Barbara Teixeira Faleiro</p>
-        <p>Beatriz Abdalla</p>
-        <p>Brunna Calil Alves Carneiro</p>
-        <p>Bruno Velloso Rodrigues</p>
-        <p>Carla Diniz dos Santos da Silva</p>
-        <p>Carlos Eduardo Rugani Barcellos</p>
-        <p>Carlos Goffredo</p>
-        <p>claudia de melo rocha</p>
-        <p>Claudia Gonçalves Coelho Pellim</p>
-        <p>Claudio Amaral Azzi</p>
-        <p>Danielle Lucie Andrade Freitas</p>
-        <p>Douglas Pereira</p>
-        <p>Eduardo Berardinelli Arraes Carvalho de Oliveira</p>
-        <p>Erica Bastos</p>
-        <p>Fabio Mele Dall’Acqua</p>
-        <p>Felipe de Almeida Maciel Bonfim</p>
-        <p>Fernando Thiers</p>
-        <p>Flavio Veitzman</p>
-        <p>Francisco José Pereira Leite</p>
-        <p>Frederico Porto Mendes</p>
-        <p>Giovanna Killer Soares de Souza</p>
-        <p>Guilherme Carneiro da Cunha Cintra</p>
-        <p>Guilherme Kubo</p>
-        <p>Henrique Martins Candeias Pontes Coelho</p>
-        <p>Iasmim Brandão</p>
-        <p>James Felipe Piazza</p>
-        <p>Joaquim Rocha</p>
-        <p>Juliana Gomes Ramalho Monteiro</p>
-        <p>Leonardo Heiji Kuwabara</p>
-        <p>Leticia Maegava Gomes</p>
-        <p>Luiz Felipe Cavadas de Paiva</p>
-        <p>Marcelo Viveiros de Moura</p>
-        <p>Marcos H. Y. Matsutani</p>
-        <p>Marcus Vinicius Antonio Ayres</p>
-        <p>Maria Carolina Paseto</p>
-        <p>Maria Isabel Moretti de Miranda</p>
-        <p>Maria Isabel Mussnich Pedroso Espirito Santo</p>
-        <p>Mariana Sartor</p>
-        <p>Mauro Dutra</p>
-        <p>Michelle Borensztejn Vilela de Oliveira</p>
-        <p>Nadia Ayad</p>
-        <p>Nathan Partel</p>
-        <p>Nelson Faversani Jr</p>
-        <p>Nicolas R Silva</p>
-        <p>Octávio de Oliveira Santos Neto</p>
-        <p>Pedro Rodrigues</p>
-        <p>Rafael Claude Macedo de Larragoiti Lucas</p>
-        <p>Rafael Teles</p>
-        <p>Raffaella Bignardi</p>
-        <p>Ricardo Correa da Silva</p>
-        <p>Ricardo Lins Ribeiro</p>
-        <p>Rosana de Freitas Correia</p>
-        <p>Sandra Medeiros Proença de Gouvea</p>
-        <p>Silvia Carrara de Moraes</p>
-        <p>Sofia Antonio</p>
-        <p>Thais Ramajo Esteves</p>
-        <p>Thomaz Xavier Carneiro</p>
-        <p>Victor da Silva Pinto</p>
-        <p>Wesley Miquelino</p>
-      `
-            },
-            {
-                'title': 'Coaches de universitários',
-                'content': `
-        <p>Adriane Helena Rodrigues</p>
-        <p>Ana Carolina Shinoda</p>
-        <p>Carla Fritsch</p>
-        <p>Claudia Pereira</p>
-        <p>Cristiana Saad Castello Branco</p>
-        <p>Danilca Galdini</p>
-        <p>Eduardo Correa</p>
-        <p>Estevão Raffaine Vilas Boas</p>
-        <p>Felipe Paiva</p>
-        <p>Fernanda Lopes de Macedo Thees</p>
-        <p>Janice Valentim</p>
-        <p>Luciana Domagala</p>
-        <p>Marcia Nizzo de Moura</p>
-        <p>Maria Angélica Nassour Nunes Sampaio</p>
-        <p>Maria Elci Spaccaquerche Barbosa</p>
-        <p>Mariana Lobato</p>
-        <p>Marise Raposo Cerqueira</p>
-        <p>Mônica Dalgé</p>
-        <p>Neide Silva da Rocha Sencovici</p>
-        <p>Osório Roberto dos Santos</p>
-        <p>Taís Cristina do Amaral</p>
-        <p>Thomaz Meirelles</p>
-        <p>Vanessa Bassili A Domingos</p>
-      `
-            },
-            {
-                'title': 'Café com profissional',
-                'content': `
-        <p>Alexandre Frangioni</p>
-        <p>Alexandre Gonçalves</p>
-        <p>Alice Xavier</p>
-        <p>Ana Carolina Almeida</p>
-        <p>Ana Carolina Azevedo Carneiro</p>
-        <p>Ana Flavia Ramos</p>
-        <p>Andréa Bandoni</p>
-        <p>Andrey Fabiano Lourenço de Aguiar (Graduado Ismart)</p>
-        <p>Anna Paula Carvalho</p>
-        <p>Anny Mayara</p>
-        <p>Arlete Figueiredo Muoio</p>
-        <p>Arthur Carneiro</p>
-        <p>Beatriz Abdalla</p>
-        <p>Beatriz Triano Perusso</p>
-        <p>Bruno Rodrigues</p>
-        <p>Camila Guimarães</p>
-        <p>Carlos Granados</p>
-        <p>Carlos Roberto Marton da Silva</p>
-        <p>Carolina Crespo</p>
-        <p>Carolina Grilo</p>
-        <p>Carolina Rosa</p>
-        <p>Cássia de Oliveira Lima</p>
-        <p>Cássio dos Santos Sousa</p>
-        <p>Cássio José</p>
-        <p>Clara Rodrigues Alves de Oliveira</p>
-        <p>Claudio de Sá Martins</p>
-        <p>Diego Aniceto</p>
-        <p>Dr. Flavio Hojaij</p>
-        <p>Dra. Ho Yeh Li</p>
-        <p>Dra. Marcia Roboldi</p>
-        <p>Eliana Lemos</p>
-        <p>Enya Costa</p>
-        <p>Frederico Torres de Souza</p>
-        <p>Gabriel Barros (Graduado Ismart)</p>
-        <p>Gabriela de Arantes Silva (Graduada Ismart)</p>
-        <p>Gabriela Esteves</p>
-        <p>Guilherme Lourenço Silva</p>
-        <p>Guilherme Melo</p>
-        <p>Guilherme Robattom Loverbeck</p>
-        <p>Henrique Araujo</p>
-        <p>Henrique Weeck</p>
-        <p>Isabela Borges</p>
-        <p>Isabela Padovan</p>
-        <p>Itamize de Oliveira</p>
-        <p>Jansen Xavier Fernandes</p>
-        <p>João Paulo Guimarães</p>
-        <p>João Pedro Rocha</p>
-        <p>João Victor Azevedo</p>
-        <p>Julia Rocha</p>
-        <p>Juliana Brant</p>
-        <p>Juliana Gomes de Souza</p>
-        <p>Juliana Nunes</p>
-        <p>Keicia Pinto</p>
-        <p>Laís Inoue Kurusu (Graduada Ismart)</p>
-        <p>Lara de Almeida Terra</p>
-        <p>Leoberto de Lima</p>
-        <p>Leonardo da Silveira Rodrigues</p>
-        <p>Leonardo Miranda</p>
-        <p>Leonardo Rodrigues</p>
-        <p>Leticia Avila (Graduada Ismart)</p>
-        <p>Luan Bernardo (Graduado Ismart)</p>
-        <p>Lucas dos Santos Gandolfi</p>
-        <p>Lucas Weber</p>
-        <p>Luiz Fernando</p>
-        <p>Manuel Gorito</p>
-        <p>Maria José Couto</p>
-        <p>Mariana M.</p>
-        <p>Mariane Ponte</p>
-        <p>Marília José</p>
-        <p>Mauricio Emanuel</p>
-        <p>Mozart Caruzo (Universitário Ismart)</p>
-        <p>Nickolas Andreas</p>
-        <p>Oliver Turci</p>
-        <p>Paula Carnevalle</p>
-        <p>Paulo de Tarso (Graduado Ismart)</p>
-        <p>Paulo Lima</p>
-        <p>Pedro Rosa</p>
-        <p>Ramon da Costa Lima</p>
-        <p>Regina Gasparetti</p>
-        <p>Renata Nacif</p>
-        <p>Renata Proença</p>
-        <p>Ricardo Jorgensen Cassella</p>
-        <p>Roberto Martins</p>
-        <p>Robson Goulart Barreto</p>
-        <p>Rodrigo Figeuiredo de Oliveira</p>
-        <p>Rodrigo Matsumoto Cobra</p>
-        <p>Sandra Blanco</p>
-        <p>Sthepanie Santos de Almeida</p>
-        <p>Thais Sales</p>
-        <p>Thiago Guimarães Moraes</p>
-        <p>Thiago Rocha</p>
-        <p>Thomas Eichenberg Krahe</p>
-        <p>Thomas Lopes Ferreira</p>
-        <p>Vandré Vegas</p>
-        <p>Vanessa Ribeiro</p>
-        <p>Verônica Souza</p>
-        <p>Víctor Ramineli</p>
-        <p>Vinicius Kuramoto</p>
-        <p>Vitor Horvarth</p>
-        <p>William Duarte (Graduado Ismart)</p>`
-            },
-        ];
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/10-expediente-mobile.jpg',
-                'title': '10.',
-                'subtitle': 'Expediente',
-                'url': '10-expediente'
-            },
-            {
-                'image': 'assets/images/03-linha-do-tempo.jpg',
-                'title': '03.',
-                'subtitle': 'Linha do Tempo',
-                'url': '03-linha-do-tempo'
-            },
-            {
-                'image': 'assets/images/01-mensagem-do-conselho-mobile.jpg',
-                'title': '01.',
-                'subtitle': 'Mensagem do conselho',
-                'url': '01-mensagem-do-conselho'
-            },
-        ];
+        this.accordionContent = [];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
-        this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/9-lista-de-parceiros-hat.jpg' });
-        this.meta.addTag({ property: 'og:title', content: '09. Lista de parceiros - Ismart' });
+        this.meta.addTag({ property: "og:image", content: "assets/images/hats/9-lista-de-parceiros-hat.jpg" });
+        this.meta.addTag({ property: "og:title", content: "09. Lista de parceiros - Ismart" });
+        this.translate.get('CHAPTER_9').subscribe((data) => {
+            this.accordionContent = data['LIST'];
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 ListaParceirosComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('share', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("share", { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
 ], ListaParceirosComponent.prototype, "shareComponent", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('article', { static: true })
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("article", { static: true })
 ], ListaParceirosComponent.prototype, "article", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modal', { static: false })
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("modal", { static: false })
 ], ListaParceirosComponent.prototype, "modal", void 0);
 ListaParceirosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-lista-parceiros',
+        selector: "app-lista-parceiros",
         template: __webpack_require__(/*! raw-loader!./lista-parceiros.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/09-lista-parceiros/lista-parceiros.component.html"),
         styles: [__webpack_require__(/*! ./lista-parceiros.component.scss */ "./src/app/pages/09-lista-parceiros/lista-parceiros.component.scss")]
     })
@@ -4591,139 +3905,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 let ExpedienteComponent = class ExpedienteComponent {
-    constructor(titleService, meta) {
+    constructor(titleService, meta, translate) {
         this.titleService = titleService;
         this.meta = meta;
+        this.translate = translate;
         this.title = '10. Expediente - Ismart';
         this.chapterHatInfo = {
             'imageMobile': 'assets/images/hats/10-expediente-hat.jpg',
             'imageTablet': 'assets/images/hats/10-expediente-tablet.jpg',
             'image': 'assets/images/10-expediente.jpg',
-            'title': 'Capítulo 10',
-            'subtitle': 'Expediente'
+            'title': 'CHAPTER_10.TITLE',
+            'subtitle': 'CHAPTERS.10'
         };
-        this.accordionContent = [
-            {
-                'title': 'Equipe Ismart ',
-                'content': `
-      <p>Adriana Casulari M. Rodrigues</p>
-      <p>Aline Moreira Leonelo</p>
-      <p>Amanda da Silva Prates</p>
-      <p>Ana Carolina Mendes Duarte</p>
-      <p>Ana Carolina Miki Martins</p>
-      <p>Ana Paula Ciriaco Camargo</p>
-      <p>Anelisa Pinto Salles Dias</p>
-      <p>Anne Caroline Barreto</p>
-      <p>Beatrice Soares de Souza Leite</p>
-      <p>Beatriz Arruda</p>
-      <p>Beatriz Mantelato</p>
-      <p>Bruna Credidio Camara</p>
-      <p>Bruna de Almeida Carvalho</p>
-      <p>Bruno Gonçalves de Oliveira</p>
-      <p>Camila Pinheiro</p>
-      <p>Carla Galante Soares</p>
-      <p>Carolina Esteves Garcia</p>
-      <p>Carolina Zauli Ferreira Pinto</p>
-      <p>Caroline M.G. Coelho Ortiz</p>
-      <p>Caroline Passarella de Souza</p>
-      <p>Cecília Rodrigues</p>
-      <p>Celina Seara da Costa Pinto</p>
-      <p>Dafne Caroline Z. de Moraes</p>
-      <p>Ellen Roncolato Kozuka</p>
-      <p>Fabiane Natalia de Souza Pinto</p>
-      <p>Fabricio Vicentini de Souza</p>
-      <p>Felipe Perroti Pereira</p>
-      <p>Fernanda Cardoso F. Fonseca</p>
-      <p>Gabriela M. da Conceição Silva</p>
-      <p>Gabriela Matos da Silva</p>
-      <p>Guilherme Tadeu Chebib</p>
-      <p>Ítalo Rodrigues</p>
-      <p>Jéssica Isquerdo Rodrigues</p>
-      <p>Jessica Maria da Silva Castilho</p>
-      <p>Joyce Cristina Ribeiro</p>
-      <p>Juliana Maria da Silva</p>
-      <p>Karen Santiago V. de Freitas</p>
-      <p>Karina Rodrigues E. Gonçalves</p>
-      <p>Larissa Dantas S. Bacanhim</p>
-      <p>Livia Camaz Vinhosa</p>
-      <p>Luana Maria de F. Oliveira</p>
-      <p>Lucas Casadei Aprile</p>
-      <p>Maria Luiza T. M. Guntovitch</p>
-      <p>Mariana B. do Rego Monteiro</p>
-      <p>Mariana do N. Cardoso</p>
-      <p>Mariana Rodrigues Lopes</p>
-      <p>Patricia Teresinha C. de Lima</p>
-      <p>Poliana Machado dos Santos</p>
-      <p>Rafael Cerqueira Duarte</p>
-      <p>Rafael Ribeiro de Souza Maia</p>
-      <p>Renata Arantes Lourenço</p>
-      <p>Renata Baccarat Ramos</p>
-      <p>Renata Nazaré Magalhães</p>
-      <p>Renate Mitie Fukunaga</p>
-      <p>Roberta Lellis Piozzi</p>
-      <p>Rochelly Suemi Tatsumo</p>
-      <p>Suzana Souza Oliveira</p>
-      <p>Tatiana Lopes da Rocha</p>
-      <p>Thiago Delfino</p>
-      <p>Vanessa Cerqueira Porto</p>
-      <p>Viviane Mendes Machado</p>
-      `
-            },
-            {
-                'title': 'Redação',
-                'content': '<p>KMZ Conteúdo</p>'
-            },
-            {
-                'title': 'Fotos',
-                'content': `
-      <p>Aurelio Cristiano Sena</p>
-      <p>Douglas Shineidr</p>
-      <p>Guilherme Cursino</p>
-      <p>Livia Martins</p>
-      <p>Lucas Pupio</p>
-      <p>Lucíola Vilela</p>
-      <p>Tiago Queiroz</p>
-      `
-            },
-            {
-                'title': 'Design',
-                'content': `<p>Cria Caso | Mariana Nahoum</p>`
-            },
-        ];
-        this.relatedInfo = [
-            {
-                'image': 'assets/images/03-linha-do-tempo.jpg',
-                'title': '03.',
-                'subtitle': 'Linha do Tempo',
-                'url': '03-linha-do-tempo'
-            },
-            {
-                'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-                'title': '09.',
-                'subtitle': 'Lista de parceiros',
-                'url': '09-lista-parceiros'
-            },
-            {
-                'image': 'assets/images/01-mensagem-do-conselho-mobile.jpg',
-                'title': '01.',
-                'subtitle': 'Mensagem do conselho',
-                'url': '01-mensagem-do-conselho'
-            },
-        ];
+        this.accordionContent = [];
+        this.relatedInfo = [];
     }
     ngOnInit() {
         this.titleService.setTitle(this.title);
         this.meta.addTag({ property: 'og:image', content: 'assets/images/hats/10-expediente-hat.jpg' });
         this.meta.addTag({ property: 'og:title', content: '10. Expediente - Ismart' });
+        this.translate.get('CHAPTER_10').subscribe((data) => {
+            this.accordionContent = data['LIST'];
+            this.relatedInfo = data['RELATED'];
+        });
     }
 };
 ExpedienteComponent.ctorParameters = () => [
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('share', { static: true, read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] })
@@ -5026,11 +4242,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+
 
 
 
 let TestimonialsService = class TestimonialsService {
-    constructor() {
+    constructor(translate) {
+        this.translate = translate;
         this._testimonial = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]({});
         this._testimonials = {
             selecao: [
@@ -5826,21 +5045,28 @@ let TestimonialsService = class TestimonialsService {
         return this.all;
     }
     getByPage(page) {
-        return this.all[page];
+        return this.translate.get(`TESTIMONIALS.${page.toUpperCase()}`);
     }
     navigatePrev(page) {
-        const all = this.getByPage(page);
-        const currentIndex = all.findIndex(testimonial => testimonial.id === this._testimonial.getValue().id);
-        const testimonial = currentIndex > 0 ? all[currentIndex - 1] : all[all.length - 1];
-        this._testimonial.next(testimonial);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const all = yield this.getByPage(page).toPromise();
+            const currentIndex = all.findIndex(testimonial => testimonial.id === this._testimonial.getValue().id);
+            const testimonial = currentIndex > 0 ? all[currentIndex - 1] : all[all.length - 1];
+            this._testimonial.next(testimonial);
+        });
     }
     navigateNext(page) {
-        const all = this.getByPage(page);
-        const currentIndex = all.findIndex(testimonial => testimonial.id === this._testimonial.getValue().id);
-        const testimonial = currentIndex + 1 < all.length ? all[currentIndex + 1] : all[0];
-        this._testimonial.next(testimonial);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const all = yield this.getByPage(page).toPromise();
+            const currentIndex = all.findIndex(testimonial => testimonial.id === this._testimonial.getValue().id);
+            const testimonial = currentIndex + 1 < all.length ? all[currentIndex + 1] : all[0];
+            this._testimonial.next(testimonial);
+        });
     }
 };
+TestimonialsService.ctorParameters = () => [
+    { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateService"] }
+];
 TestimonialsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: 'root'
