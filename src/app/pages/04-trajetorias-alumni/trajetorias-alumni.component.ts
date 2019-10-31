@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-trajetorias-alumni',
@@ -22,37 +23,24 @@ export class TrajetoriasAlumniComponent implements OnInit {
     'subtitle': 'Trajetórias Ismart'
   }
 
-  private relatedInfo = [
-    {
-      'image': 'assets/images/05-parceiros-mobile.jpg',
-      'title': '05.',
-      'subtitle': 'Parceiros Ismart',
-      'url': '05-parceiros-ismart'
-    },
-    {
-      'image': 'assets/images/06-horizonte-mobile.jpg',
-      'title': '06.',
-      'subtitle': 'Horizonte',
-      'url': '06-horizonte'
-    },
-    {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Manifesto Ismart',
-      'url': '07-manifesto'
-    },
-  ]
+  private relatedInfo: Array<any> = []
   
   constructor(
     private titleService: Title,
     private meta: Meta,
-    private testimonials: TestimonialsService
+    private testimonials: TestimonialsService,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Alumni - Ismart'});
+
+
+    this.translate.get('CHAPTER_4.8').subscribe( (data: any) => {
+      this.relatedInfo = data['RELATED'];
+    });
   }
 
 }

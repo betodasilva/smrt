@@ -54,7 +54,27 @@
 			"SECTION_1": "<p>Nós, do Ismart, sempre acreditamos na educação como força transformadora da sociedade. Investir na área, portanto, representa a forma mais eficaz de contribuir para o desenvolvimento do Brasil. Por isso, ao longo dos últimos anos, buscamos participar da construção não só de uma sociedade mais justa, mas também mais eficiente, oferecendo oportunidade para jovens com muito talento, muita garra e pouco poder aquisitivo.</p><p>Nosso objetivo sempre foi transformar esse potencial em realidade e, ao completarmos 20 anos, nos orgulhamos de ter beneficiado 4.800 jovens. Desde o início do trabalho, esse foi o principal propósito, pois temos a convicção de que é possível encontrar diferentes formas de talento em todas as classes sociais: basta oferecer oportunidade e estimular cada um a dar o máximo de si para alcançar os resultados desejados.</p><p>Sonhar grande e transformar esse sonho em realidade são o melhor caminho para o sucesso pessoal e para fazer a diferença na sociedade. Os sonhos sem ação, porém, não levam a lugar nenhum. É preciso coragem e resiliência para, dia após dia, trabalhar, planejar, querer muito e fazer escolhas para atingir o objetivo e não perder o foco. E é isso que propomos aos bolsistas.</p><p>Nosso trabalho começa no momento em que um jovem se inscreve para o processo seletivo. Funcionamos como um ecossistema do qual fazem parte órgãos públicos, por meio das secretarias de educação e seus professores, as escolas parceiras e toda a nossa equipe Ismart. Assim, a trajetória de um bolsista tem início nas salas de aula das escolas públicas, onde educadores identificam jovens com elevadas habilidades e os orientam a participar do processo seletivo. Rigoroso, ele visa avaliar, conhecer, entender, selecionar e engajar os futuros bolsistas que, em seguida, serão encaminhados às escolas parceiras – outra ponta desse ecossistema.</p><blockquote class=\"blockquote__simple blockquote__white\"><span>Sonhar grande e transformar esse sonho em realidade são o melhor caminho para o sucesso pessoal e para fazer a diferença na sociedade.</span></blockquote>",
 			"SECTION_2": "Giovanna, Jean, Carlos e Lucca Muliterno",
 			"SECTION_3": "<p>Nesses 20 anos, se obtivemos níveis de excelência na formação e capacitação de jovens talentos foi porque contamos com grandes escolas parceiras, cujo papel fundamental é receber os alunos bolsistas, desenvolvê-los por meio de uma educação de excelência e ajudá-los em sua adaptação. Toda essa organização envolve ainda a dedicação da equipe Ismart, que entende que é preciso ter foco, metas estabelecidas para obter resultados excepcionais, além de ofertar suporte psicológico e emocional.</p><p>Aprendemos muito nesses anos, incorporamos valores fundamentais, como a importância de desenvolver as competências socioemocionais paralelamente à formação acadêmica e, assim, dar suporte aos bolsistas para sonhar cada vez mais e mais alto.</p><p>Ao constatarmos que a tecnologia digital é uma realidade e vem provocando grandes transformações na sociedade, introduzimos a educação a distância ao nosso modelo, o que tem permitido ampliar a capacidade de atender jovens talentos, além do limite físico.</p><p>Ao completarmos duas décadas, temos já os primeiros jovens formados pelo Ismart Online, o que nos motiva a continuar nesse caminho, investindo no mundo digital e na possibilidade de multiplicar a capacidade de atendimento. Outro objetivo para os próximos anos é manter a participação, conexão e atuação de ex-bolsistas em nossas atividades. Esse é o desafio do grupo Alumni: criar uma rede de apoio para os jovens que estão ingressando em nossos projetos, mostrar a eles exemplos de pessoas que, por meio do esforço, conseguiram mudar de vida e estão atuando e mudando a sociedade.</p><p>Com base nessa bem-sucedida trajetória, pedimos aos bolsistas, aos parceiros e à equipe do Ismart que nunca deixem de ir atrás dos seus sonhos!</p><blockquote class=\"blockquote__simple blockquote__white\"><span>Ao constatarmos que a tecnologia digital é uma realidade e vem provocando grandes transformações na sociedade, introduzimos a educação a distância ao nosso modelo, o que tem permitido ampliar a capacidade de atender jovens talentos, além do limite físico.</span> </blockquote>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/02-missao-visao-crencas-mobile.jpg",
+				"title": "02.",
+				"subtitle": "Missão, Visão e Crenças",
+				"url": "02-missao-visao-valores"
+			},
+			{
+				"image": "assets/images/03-linha-do-tempo.jpg",
+				"title": "03.",
+				"subtitle": "Linha do Tempo",
+				"url": "03-linha-do-tempo"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Contato",
+				"url": "04-trajetorias-ismart-contato"
+			}
+		]
 	},
 	"CHAPTER_2": {
 		"TITLE": "Capítulo 02",
@@ -90,7 +110,27 @@
 				"TITLE": "Os bons exemplos têm efeito multiplicador.",
 				"TEXT": "Inspire com seu bom exemplo: primeiro um irmão, depois o vizinho, a turma da rua, a escola, a comunidade... transforme seu mundo!"
 			}
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/03-linha-do-tempo.jpg",
+				"title": "03.",
+				"subtitle": "Linha do Tempo",
+				"url": "03-linha-do-tempo"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Contato",
+				"url": "04-trajetorias-ismart-contato"
+			},
+			{
+				"image": "assets/images/05-parceiros-mobile.jpg",
+				"title": "05.",
+				"subtitle": "Parceiros Ismart",
+				"url": "05-parceiros-ismart"
+			}
+		]
 	},
 	"CHAPTER_3": {
 		"TITLE": "Capítulo 03",
@@ -109,7 +149,27 @@
 			"2017": "<p>No Rio de Janeiro, o Ismart amplia atuação para a zona oeste da cidade.</p><p>Criação do Alumni Ismart, rede de ex-bolsistas graduados do Ismart.</p>",
 			"2018": "<p>Ismart chega à capital mineira, Belo Horizonte, com os projetos presenciais e on-line.</p><p>Processo seletivo do Ismart bate recorde de inscrições, com mais de 20 mil interessados.</p><p>99% dos bolsistas concluintes do Ensino médio foram aprovados em vestibulares.</p><p>Os alunos da primeira turma do Ismart Online são aprovados em universidades de excelência e recomendados para ingressar como bolsistas universitários do Ismart.</p>",
 			"2019": "<p>Ismart completa 20 anos e a história está apenas começando...</p>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Contato",
+				"url": "04-trajetorias-ismart-contato"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Seleção",
+				"url": "04-trajetorias-ismart-selecao"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Prática",
+				"url": "04-trajetorias-ismart-praticas"
+			}
+		]
 	},
 	"CHAPTER_4.1": {
 		"TITLE": "Capítulo 04",
@@ -128,7 +188,27 @@
 			"SECTION_6": "João Pedro fala sobre sua jornada no Ismart",
 			"SECTION_7": "Suporte ao alcance dos jovens",
 			"SECTION_8": "<p>“O impacto do Ismart nos últimos 20 anos no Brasil reflete a certeza de que estamos contribuindo para formar cidadãos conscientes e preparados para lidar com os desafios do País. Se refletirmos sobre nossa crença de que os bons exemplos têm efeito multiplicador, que iniciamos em 1999 com apenas seis alunos e que nestes 20 anos tivemos mais de 4.800 alunos impactados pelos projetos que hoje estão pelo Brasil e pelo mundo, conseguimos visualizar o impacto exponencial do Instituto”, ressalta Celina Seara da Costa Pinto, gerente Praça Rio/BH.</p><h3 class=\"chapter-content__title--section\">Envolvimento</h3><p>O trabalho do Ismart se dá com a colaboração de uma rede de parceiros institucionais – apoiadores financeiros, escolas e secretarias de educação – além da equipe interna, para desenvolvimento dos bolsistas e educadores. É essa qualificada rede que permite ao Ismart identificar jovens talentosos de baixa renda ao apoiar a divulgação dos projetos desenvolvidos pelo Instituto. </p><h3 class=\"chapter-content__title--section\">Principais públicos estratégicos</h3><ul class=\"list\"><li>Estudantes talentosos de baixa renda (potencial bolsista)</li><li>Bolsistas Ismart</li><li>Familiares responsáveis pelo bolsista Ismart</li><li>Secretarias de Educação</li><li>Educador da rede pública</li><li>Dirigente de escola particular de excelência</li><li>Apoiadores financeiros</li></ul>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Seleção",
+				"url": "04-trajetorias-ismart-selecao"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Prática",
+				"url": "04-trajetorias-ismart-praticas"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Suporte",
+				"url": "04-trajetorias-ismart-suporte"
+			}
+		]
 	},
 	"CHAPTER_4.2": {
 		"TITLE": "Capítulo 04",
@@ -140,7 +220,27 @@
 			"SECTION_3": "<p>Para participar do processo seletivo, o aluno precisa vir de família com renda per capita de até dois salários mínimos, nunca ter sido reprovado e atender aos critérios de idade e ano escolar. O candidato ao projeto Alicerce deve estar matriculado no 7º ano e ter no máximo 13 anos e, para o Bolsa Talento, ter no máximo 15 anos e estar matriculado no 9º ano. Para os alunos do 7º ano, o Ismart oferece vagas no projeto Alicerce, cursinho preparatório para o ensino médio de dois anos de duração, cujas aulas ocorrem no contraturno da escola formal. Já os estudantes do 9º ano aprovados no processo seletivo têm bolsa para cursar o ensino médio nas escolas particulares parceiras do Ismart.</p><p>Na seleção, são avaliados o desempenho acadêmico, a capacidade de aprendizagem e aspectos compor-tamentais. Essa análise é fundamental para a avaliação da aptidão do aluno para ter sucesso ao longo dos projetos oferecidos pelos Ismart.</p><p>A seleção é composta por cinco fases, todas eliminatórias. As duas primeiras procuram mensurar os conhe-cimentos acadêmicos e o potencial de aprendizagem dos inscritos; as outras três têm o objetivo de identificar as competências socioemocionais.</p><h3 class=\"chapter-content__title--section\">Fases da seleção</h3><ul class=\"list\"><li>1ª FASE: teste on-line, com questões de múltipla escolha de Português e Matemática.</li><li>2ª FASE: prova presencial, com questões de múltipla escolha de Português, Matemática e outros temas que procuram avaliar o potencial de aprendizagem.</li><li>3ª FASE: entrevista individual, na qual se procura reconhecer o interesse do candidato em tornar-se bolsista. A entrevista também avalia a capacidade de superar desafios e as competências socioemocionais.</li><li>4ª FASE: visita domiciliar, realizada por um profissional do Ismart, para conhecer o ambiente e a família do candidato.</li><li>5ª FASE: dinâmica de grupo, com atividades para verificar características comportamentais, como habilidade de comunicação, criatividade e socialização.</li></ul>",
 			"SECTION_4": "Itamize Oliveira (Graduada Ismart)",
 			"SECTION_5": "<p>Os alunos que se destacaram no processo seletivo, mas não ingressaram nos projetos presenciais, ganham acesso ao Ismart Online – uma plataforma de estudos online, em que realizam atividades em equipe e participam de workshops de formação.</p><p>Em 2018, 1.288 novos alunos ingressaram nos projetos presenciais e on-line. “A seleção é a forma de ingresso para os projetos oferecidos pelo Instituto; então essa escolha dará, de certa forma, o tom para o atendimento ou não da nossa visão (bolsistas no mercado de trabalho em posição de destaque)”, explica Juliana Silva,gerente de Seleção, área responsável pelo processo seletivo do Ismart.</p><p>Além disso, o Instituto conta com a parceria da rede pública de ensino – os grandes parceiros na divulgação e no apoio aos candidatos. Os educadores de escolas públicas são valiosos e ajudam a identificar jovens com o perfil Ismart. Por isso, há contatos ao longo de todo o ano com os educadores, tanto por meio de visitas às secretarias e às diretorias, quanto por envio de informativos periódicos. Adicionalmente, uma vez por ano, há encontros de formação e reconhecimento com educadores em São Paulo, no Rio de Janeiro e em Belo Horizonte. O objetivo é apresentar o Ismart, orientar sobre o processo seletivo, capacitar sobre altas habilidades e reconhecer os professores que se engajam com o Instituto e contribuem com a seleção de alunos talentosos.</p><blockquote class=\"blockquote__big\">“A seleção é a forma de ingresso para os projetos oferecidos pelo Instituto; então essa escolha dará, de certa forma, o tom para o atendimento ou não da nossa visão (bolsistas no mercado de trabalho em posição de destaque)”<cite>Juliana silva | Gerente de Seleção do Ismart</cite></blockquote><p>Por sua relevância, o contato com educadores da rede pública é uma das ações do programa Deixe sua Marca, criado em 2014 e que busca o engajamento dos professores e o reconhecimento do trabalho desenvolvido por eles. Essa parceria envolve a realização de eventos e premiações como o título de Embaixador Ismart. O professor-embaixador atua como formador de opinião e de divulgador, não só do processo seletivo, mas da Instituição como um todo. Além de identificar alunos talentosos e prepará-los para concorrer à oportunidade do Ismart, esses parceiros apresentam o projeto aos demais professores, coordenadores e diretores da rede pública de ensino.</p>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Prática",
+				"url": "04-trajetorias-ismart-praticas"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Suporte",
+				"url": "04-trajetorias-ismart-suporte"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Internacional",
+				"url": "04-trajetorias-ismart-internacional"
+			}
+		]
 	},
 	"CHAPTER_4.3": {
 		"TITLE": "Capítulo 04",
@@ -158,7 +258,27 @@
 			"SECTION_5": "<p>Segundo Gabrielli, todas as oportunidades no Ismart fizeram com que ela pudesse enfrentar situações inoportunas de forma resiliente e mais assertiva. “Não importava o contexto, se era um evento do Ismart Online, uma roda de conversa ou qualquer outro momento, o Ismart sempre me inspirou a perseguir meus sonhos, me desafiar e querer ir além da minha zona de conforto. E eu sinto que esse será o maior legado do Instituto na minha vida”. É por isso que Gabrielli diz que se antes era uma aprendiz em estágio inicial, que não sabia muito o que queria, depois de viver a experiência é uma sonhadora, consciente de seu papel na sociedade.</p><p>A mais nova estudante de Farmácia da Universidade de São Paulo (USP) pretende ser pesquisadora de biotec-nologia. “Eu me enxergo em laboratórios e atuando em projetos sociais.”</p><blockquote class=\"blockquote__quote blockquote__white\"><span>“O Ismart sempre me inspirou a perseguir meus sonhos, me desafiar e querer ir além da minha zona de conforto. E eu sinto que esse será o maior legado do Instituto na minha vida.”</span><cite>Gabrielli Fonseca de Oliveira, 18, Ex-Ismart</cite></blockquote>",
 			"SECTION_6": "Família Lombello: Os irmãos gêmeos Victor e Gustavo, a irmã Giulia - alunos Projeto Alicerce, acompanhados da mãe, Sandra - São José dos Campos",
 			"SECTION_7": "<h3 class=\"chapter-content__title--section\">Estímulo</h3><p>A família tem papel fundamental na integração do bolsista à nova realidade. Ela deve abraçar a parceria com o projeto, participando e incen-tivando os filhos a encarar os desafios e a sonhar grande. Isso acontece com a criação de um ambiente favorável aos estudos, a participação nas atividades organizadas ou propostas pela equipe de desenvolvimento dos estudantes, em reuniões e rodas de conversa.</p><p>Sandra Regina Lombello é mãe de Giulia, Vitor e Gustavo e acompanha de perto o desenvolvimento intelec-tual dos filhos desde que foram sele-cionados como bolsistas do Ismart. “Participei de uma reunião na escola deles, o Colégio Poliedro, em São José dos Campos, e tive conhecimento das propostas do Instituto, me agradaram bastante. O maior impacto é saber que tenho três filhos estudando em uma escola renomada, na qual eu não teria condições de arcar com as mensalidades. Tenho muita gratidão por tudo que o Ismart proporcionou e proporcionará na vida dos meus filhos e, consequentemente, na minha.” </p><blockquote class=\"blockquote__big\">“...Tenho muita gratidão por tudo que o Ismart proporcionou e proporcionará na vida dos meus filhos...”<cite>Sandra Regina Lombello | Mãe de alunos do Ismart</cite></blockquote>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Suporte",
+				"url": "04-trajetorias-ismart-suporte"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Internacional",
+				"url": "04-trajetorias-ismart-internacional"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "EaD",
+				"url": "04-trajetorias-ismart-ead"
+			}
+		]
 	},
 	"CHAPTER_4.4": {
 		"TITLE": "Capítulo 04",
@@ -172,7 +292,27 @@
 			"SECTION_5": "<h3 class=\"chapter-content__title--section\">Histórias</h3><p>Outra história é a de Leonardo Frazão que, após enfrentar um duro processo seletivo, teve a recompensa: fazer parte do Projeto Alicerce, estudando no contraturno no Colégio São Bento, no Rio de Janeiro. Ele conta que ao chegar no colégio, percebeu que os desafios dessa nova etapa eram bem concretos. “A dupla jornada era desgastante e exigente. Minhas impressões, no entanto, nunca apontaram para a desistência. Eu me apaixonei pelo colégio e pelo Ismart, tinha certeza do que queria. As maiores dificuldades foram, em suma, abdicar de minhas amizades, num primeiro momento, a fim de me dedicar mais aos estudos. Sentia muita falta dos amigos, mas mutuamente entendíamos que o afastamento era necessário para que eu pudesse focar em minha vida acadêmica, visto que tive de mudar de turno na escola. À época, meu maior prazer era notar, com clareza, meu desenvolvimento pessoal e minha evolução nas matérias. Superei minhas defasagens e aos poucos me nivelei ao São Bento. Gostava também dos passeios e das atividades culturais do Ismart – um mundo novo com o qual eu não estava acostumado.”</p><p>Leonardo relembra que antes do curso preparatório no São Bento, nunca tinha ouvido falar do colégio.“Depois entendi a dimensão dessa instituição que aprendi a amar e respeitar. Quando entrei para o Alicerce, no 8° ano, minhas impressões eram ainda difusas. Algumas peculiaridades como os monges, a grande extensão das quadras, a ausência de garotas e a proibição do meu brinco – sagrado até hoje – me chamaram a atenção. Mas foi mesmo nas aulas e nas primeiras notas vermelhas que me vi um pouco perdido. Contamos com professores incríveis lá, que foram determinantes para me fazer aprender a estudar. Sempre que os encontro, o sentimento é o mesmo: gratidão. Estou certo da contribuição enorme deles para cada vitória alcançada por mim”, diz o jovem, fundador da Gazeta Ismartiana, projeto de comunicação criado por ele e um grupo de amigos, como resultado do trabalho focado em estimular o protagonismo dos alunos no Ismart.</p><p>Os alunos que ingressaram no Ismart direto no ensino médio são bolsistas do projeto Bolsa Talento. “Temos uma programação de desenvolvimento de competências socioemocionais como resolução de problemas, trabalho em equipe e pensamento crítico, por meio de eventos e atividades para toda a comunidade, além de um extenso programa de orientação profissional ao longo do ensino médio. Em paralelo, mantemos também o Prep Ismart, que prepara os alunos para serem aprovados em cursos de verão e graduação em universidades americanas de ponta, além de reuniões com as famílias e acompanhamento acadêmico nas escolas”, explica Ana Paula Camargo.</p><p>Além das aulas regulares no colégio parceiro, os bolsistas recebem suporte do Ismart para se prepararem para o curso universitário. A ideia é trabalhar esse momento de transição logo no início do Ensino médio. Nessa fase, há uma preocupação especial dos profissionais do Instituto em orientar os estudantes a refletirem sobre o futuro profissional para que façam uma escolha universitária, de acordo com suas habilidades. Por isso, desde o 1º ano do ensino médio, depois do período de adaptação à nova escola, o bolsista é convidado a participar de rodas de conversa, workshops de orientação acadêmica e de visitas a empresas. Eles têm o acompanhamento de profissionais das mais diversas áreas do mercado de trabalho, além de uma equipe de psicólogos e pedagogos até o fim do Ensino médio. Os jovens talentos são estimulados a estruturar um projeto de vida, pesquisando as carreiras que despertam mais interesse e entendendo os desafios do mercado de trabalho.</p>",
 			"SECTION_6": "Kathleen Ayumi Higa Projeto Bolsa Talento - São Paulo e Giovani Carvalho Projeto Alicerce - São Paulo",
 			"SECTION_7": "<h3 class=\"chapter-content__title--section\">Projetos para auxiliar a escolha de carreira</h3><p>Alguns programas do Instituto apoiam os alunos, ao longo do ensino médio, na delicada escolha da formação profissional:</p><ul class=\"list\"><li><strong>Conexão profissão:</strong> Criado em 2015, tem o objetivo de oferecer aos jovens a oportunidade de conhecer a rotina em uma profissão. O Ismart, com o apoio de parceiros, conecta estudantes a profissionais, que os recebem para mostrar como é um dia de trabalho em determinadas áreas.</li><li><strong>Café com profissional:</strong> Encontros mensais em que profissionais de destaque falam sobre formação acadêmica, dão um panorama sobre o mercado de trabalho em suas áreas e tiram dúvidas dos bolsistas sobre carreira.</li><li><strong>Trabalho de escolha profissional (TEP):</strong> Obrigatório para todos os alunos do 1º ano do ensino médio. A ideia é incentivá-los a pesquisar informações sobre as profissões e sobre suas inspirações, preferências e perfis. Ao fim do ano letivo, os alunos devem apresentar para uma banca avaliadora, composta por profissionais de destaque do mercado de trabalho e de diversos segmentos, a profissão escolhida e discorrer sobre os motivos que os levaram a essa decisão.</li><li><strong>Trabalho de projeto de vida (TPV):</strong> Na sequência do projeto anterior, depois de decidir a profissão que querem seguir, os alunos do 2º ano do ensino médio devem traçar um projeto de vida, considerando a carreira escolhida. Nesse programa, os bolsistas também devem apresentar os resultados a uma banca avaliadora.</li></ul><p>Por essas e outras ações, o trabalho do Ismart se intensifica no 3º ano. As rodas de conversa continuam abordando a escolha da carreira e os alunos são estimulados a visitarem universidades e feiras de profissões. E com o objetivo de ampliar a visão de mundo dos estudantes, o Instituto também realiza atividades extracurriculares, como visitas a museus, e tem o apoio de parceiros para a promoção de intercâmbios. Além das aulas de inglês nos colégios particulares, alunos do Ismart também podem estudar, com bolsa integral, em cursos de inglês particulares e parceiros do Ismart.</p>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Internacional",
+				"url": "04-trajetorias-ismart-internacional"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "EaD",
+				"url": "04-trajetorias-ismart-ead"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Universidade",
+				"url": "04-trajetorias-ismart-universidade"
+			}
+		]
 	},
 	"CHAPTER_4.5": {
 		"TITLE": "Capítulo 04",
@@ -184,7 +324,27 @@
 			"SECTION_3": "<p>Além de fundamental, o ensino de inglês é o primeiro passo para se preparar para uma faculdade fora do Brasil.</p><p>Pedro Navarro, de Sorocaba (SP), foi um dos primeiros alunos bolsistas a participar de um programa de verão, em 2013. Ele foi para a Universidade Notre Dame, nos Estados Unidos, e pôde experimentar, por algumas semanas, a vida em uma instituição americana. “Aquilo me motivou a querer voltar”, conta Pedro, que três anos depois passou a cursar lá a graduação. “O que tornou possível essa conquista foi ver o exemplo de tantas pessoas inspiradoras da comunidade Ismart e a minha busca pessoal pela excelência.”</p><p>A paulista de São José dos Campos, Larissa Fabião Fonseca, de 18 anos, representa a essência do Ismart pela garra, determinação e superação de desafios. Iniciou sua trajetória pelo Ismart Online e, depois, prestou processo seletivo para o Bolsa Talento. Em 2017, encarou extensa jornada para se preparar e conseguir uma bolsa em um curso de verão em Stanford, na área de Física. “Era mais difícil do que eu esperava. Nos primeiros dias não entendia quase nada das aulas e passava as horas livres estudando para acompanhar a turma”, relembra a estudante, que se dividia entre o ensino médio, em São José dos Campos, e as aulas preparatórias aos sábados, em São Paulo.</p>",
 			"SECTION_4": "Da esquerda para a direira: André Garcia, estudante de Engenharia na Universidade de Yale, nos Estados Unidos; Jessica de Oliveira Moreira, estudante de Economia e Educação na Barnard College, nos Estados Unidos; Pedro Henrique Cardoso Navarro, estudante de Engenharia Química na Universidade de Notre Dame, nos Estados Unidos",
 			"SECTION_5": "<p>“Tive acesso a aulas e suporte completo para poder aumentar minhas notas nas principais provas de seleção para estudar nos Estados Unidos”. Durante a semana, Larissa fazia duas horas de aula on-line para poder se adaptar ao modelo e ao conteúdo das provas de seleção, além de estudar em período integral no Colégio Poliedro e integrar o curso de inglês na Cultura Inglesa. Resultado: conseguiu a bolsa para um curso de verão sobre a Teoria da Relatividade, em Stanford. “Vi no summer uma oportunidade de conhecer melhor a realidade universitária fora do País e aprender mais sobre um assunto de que gosto em um dos melhores centros acadêmicos do mundo. A experiência de ir para Stanford me fez melhorar meu inglês devido à necessidade de constantemente usar o idioma para me comunicar e, além disso, me mostrou que quando me dedico ao máximo para a concretização de um sonho acabo conseguindo realizá-lo.”</p><p>Gabrielli Fonseca de Oliveira, que foi aluna do Ismart Online e depois bolsista do ensino médio, no Colégio Bandeirantes, em São Paulo, participou de dois intercâmbios. Seu objetivo era aprender coisas novas, conhecer os campi das universidades, praticar inglês – ter uma experiência marcante, enfim.</p><p>“Nunca imaginei, mas sempre sonhei! Sobre a experiência em si, a vivência foi bem diferente em cada um dos programas. Em Yale, tive a oportunidade de conhecer alguns pontos turísticos e um grupo mais diverso de pessoas de outros países. Descobri inclusive que me dou muito bem com as chinesas! Já em Chicago, minha experiência foi bem acadêmica e rigorosa, de estudo intenso. Acho que o fato de os dois intercâmbios terem sido bem distintos me ajudou a explorar mais e, ao mesmo tempo, ter noção concreta de como são os estudos em uma universidade norteamericana. Em Yale, eu tive dois cursos fixos no período da manhã, Anatomy + Physiology e Forensic Science. Participei também de workshops no período da tarde, Chemistry Lab e Marine Biology. Já em Chicago, integrei um Immersion Program, tendo aulas de uma única área, cujo tema foi Biotechnology for the 21st Century. Enquanto em Yale eu tive aulas que focaram mais na interação entre os alunos, em Chicago mantive contato com um aparato laboratorial característico da rotina de um pesquisador.</p><p>Dessa experiência, Gabrielli trouxe maturidade e a certeza de saber lidar com os desafios. “Aprendi a não ter medo de errar e de ser quem eu sou. No summer, existem pessoas de diversas personalidades e gostos. E o melhor é conhecê-las e compartilhar experiências”. Gabrielli, hoje, é aluna do primeiro ano de Farmácia, na Universidade de São Paulo (USP).</p>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "EaD",
+				"url": "04-trajetorias-ismart-ead"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Universidade",
+				"url": "04-trajetorias-ismart-universidade"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Alumni",
+				"url": "04-trajetorias-ismart-alumni"
+			}
+		]
 	},
 	"CHAPTER_4.6": {
 		"TITLE": "Capítulo 04",
@@ -196,7 +356,27 @@
 			"SECTION_3": "<p>Os bolsistas encontram ainda conteúdo com uma linguagem mais leve, que busca trabalhar aspectos ligados à autonomia, à inspiração, à motivação e à persistência. É o módulo de cultura, que tem como objetivo difundir as crenças e o “jeito de ser do Ismart”. Nele, são incluídas propostas de projetos individuais e em equipe, a partir de conteúdos que estão na plataforma.</p><p>A proposta do Ismart Online, segundo Mariana, é oferecer ensino híbrido, ou seja, apesar de basear-se em uma plataforma na internet, o programa prevê quatro encontros presenciais ao longo do ano, nos quais estudantes e famílias participam de formações em que se busca desenvolvimento, integração e aproximação com o trabalho desenvolvido com todos os bolsistas.</p>",
 			"SECTION_4": "Fabrício Neri Lima e Layne Pereira da Silva Projeto Ismart Online - São Paulo",
 			"SECTION_5": "<p>A plataforma permite que o aluno estude sozinho, realize simulados, tire dúvidas com monitores, participe de projetos que ampliam o seu conhecimento sobre orientação profissional e vestibulares. Os estudantes também contam com o auxílio de um tutor para desenvolver as atividades e organizar a rotina de estudos.</p><p>Larissa Fabião prestou processo seletivo do Ismart pela primeira vez, em 2013, chegando à quarta etapa (visita domiciliar), mas foi desclassificada. A surpresa ficou por conta do convite inesperado: fazer parte da primeira turma do Ismart Online. “Pensei: por que não? Decidi agarrar a oportunidade e aproveitar ao máximo. Achei que poderia fazer muita coisa”, lembra. E fez mesmo. Larissa manteve o excelente desempenho na escola pública e, no Ismart Online, desenvolveu em grupo um aplicativo para combater o bullying. No segundo ano do projeto, criou um jogo que tinha como pano de fundo a trajetória dela e de outros alunos.</p><p>Apesar de não fazer mais parte do Ismart Online, em 2015 participou novamente do processo seletivo Ismart para o Projeto Bolsa Talento, foi aprovada e cursou o ensino médio no Colégio Poliedro. Larissa nunca cortou os laços com o projeto Ismart Online. Pelo contrário: tornou-se monitora e deu aulas de robótica para alguns alunos. “Não adianta nada estudar e não compartilhar, guardar tudo para você. Quero realizar o que gosto, aproveitar cada momento e ter experiências fantásticas, mas quero fazer tudo isso enquanto ajudo a mudar outras realidades.” Hoje, Larissa é universitária Ismart do curso de Sistema de Informação, na USP.</p><h3 class=\"chapter-content__title--section\">Linha da evolução</h3><img src=\"assets/images/linha-da-evolucao-desk.png\" alt=\"Linha de evolução\" class=\"img-fluid img-desk\"><img src=\"assets/images/linha-da-evolucao-mobile.png\" alt=\"Linha de evolução\" class=\"img-fluid img-mobile\">"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Universidade",
+				"url": "04-trajetorias-ismart-universidade"
+			},
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Alumni",
+				"url": "04-trajetorias-ismart-alumni"
+			},
+			{
+				"image": "assets/images/05-parceiros-mobile.jpg",
+				"title": "05.",
+				"subtitle": "Parceiros Ismart",
+				"url": "05-parceiros-ismart"
+			}
+		]
 	},
 	"CHAPTER_4.7": {
 		"TITLE": "Capítulo 04",
@@ -208,7 +388,27 @@
 			"SECTION_3": "<h3 class=\"chapter-content__title--section\">Coaching</h3><p>No segundo ano da graduação, os bolsistas têm acesso ao coaching, uma atividade que os ajuda a superar desafios ligados à sua formação profissional. Realizado em caráter experimental em 2013, ele foi incorporado ao Programa de Desenvolvimento de Universitários no ano seguinte, com o propósito de oferecer ferramentas para que os estudantes possam tomar decisões com base em escolhas conscientes e alinhadas aos seus objetivos pessoais e profissionais. Desde que foi criado, o programa já atendeu 334 universitários.</p><p>“O importante nessa atividade é que o aluno desenvolva o autoconhecimento, ou seja, que ele consiga identificar os pontos fortes de sua personalidade, que o ajudarão a superar os desafios e identificar os aspectos que precisam ser aprimorados. Além disso, ele elabora um plano de ação e execução para lidar com o desafio inicial e, por meio das ferramentas e exercícios de reflexão propostos pelo coach, se torna mais preparado para tomar decisões”, explica Beatriz Mantelato. Ao todo, 15 profissionais especializados atuam como orientadores.</p><h3 class=\"chapter-content__title--section\">Mentoria</h3><p>Quando o aluno Ismart chega ao terceiro ano de graduação, já vivenciou experiências que possibilitam traçar o caminho que deseja seguir na carreira. Ele já tem um repertório maior para a tomada de decisões. É nesse momento que tem acesso à Mentoria, programa já consolidado no Ismart que foi lançado em 2007 em parceria com a Fundação Estudar e aprimorado ao longo dos anos, sendo atualmente um programa que serve de referência dentro e fora do Instituto. “Várias organizações nos procuram para compartilhar os conhecimentos da Mentoria, o que nos indica que estamos no caminho certo”, relata Beatriz Mantelato.</p><p>O objetivo do programa é auxiliar o bolsista no desenvolvimento de carreira por meio da interação com profissionais de excelência e da construção de uma rede de relacionamentos na área de interesse. A iniciativa, que busca promover a ampliação de perspectivas, conhecimentos e acessos à rede de contatos, tem duração de dez meses, nos quais ocorrem dez encontros com profissionais experientes do mercado de trabalho.</p><p>A base de mentores é formada por parceiros que atuam em várias áreas com interesse em compartilhar seus conhecimentos adquiridos. Muitos deles se inspiram com a trajetória dos alunos e veem no projeto uma forma de orientar ou mesmo inspirar a nova geração. Há também um grupo de mentores formado pelos antigos bolsistas que buscam, dessa forma, retribuir e orientar os colegas. “Nosso grande sonho é aumentar essa base de ex-bolsistas como mentores. Estamos trabalhando nesse propósito”, revela Beatriz.</p><blockquote class=\"blockquote__quote blockquote__white\"><span>“Várias organizações nos procuram para compartilhar os conhecimentos da Mentoria, o que nos indica que estamos no caminho certo”</span><cite>Beatriz Mantelato, gerente do ensino superior do Ismart</cite></blockquote>",
 			"SECTION_4": "Universitários Ismart São Paulo",
 			"SECTION_5": "<h3 class=\"chapter-content__title--section\">Você no mercado</h3><p>No âmbito do programa dedicado aos universitários, também com o objetivo de preparar os bolsistas para ingressar no mercado de trabalho, o Ismart criou, em 2015, o programa Você no Mercado. A partir do segundo ano da graduação, de olho no futuro, os alunos participam de oficinas sobre processos seletivos. Em encontros individuais com os consultores, eles têm simulações de entrevistas pessoais e recebem feedback sobre o currículo e dicas sobre dinâmicas de grupo. No terceiro ano, as atividades estão direcionadas para trilhas de carreiras, eventos com profissionais de diversas áreas que procuram ajudar o bolsista a entender a carreira escolhida. Por fim, nos últimos anos da graduação, o foco é para a preparação dos processos seletivos e no auxílio à transição para o mercado de trabalho.</p><p><strong>1. Currículo de Impacto:</strong> Treinamento ressaltando a importância das experiências vivenciadas até o momento.</p><p><strong>2. A hora da Entrevista:</strong> Workshop com recrutadores para entendimento do que é valorizado em cada entrevista. Simulação de entrevista com profissionais parceiros.</p><p><strong>3. A hora da Dinâmica:</strong> Workshop com recrutadores para entendimento do que é valorizado em dinâmicas. Simulação de dinâmica com profissionais parceiros.</p><p><strong>4. Trilhas de Carreira:</strong> Encontros com profissionais e especialistas. Acesso à divulgação de oportunidades (vagas, convites exclusivos para eventos e palestras) relacionadas à trilha de carreira de interesse.</p><p><strong>5. Bate-papo – Processos Seletivos:</strong> Bate-papo com especialistas e profissionais experientes que já passaram por processos de trainee e de application para pós-graduação.</p><p><strong>6. Decolar:</strong> Acesso a plataformas de preparação para processos seletivos. Divulgação de oportunidades alinhadas à trilha de carreira de interesse. Acompanhamento direcionado em processos seletivos por meio de atendimentos individuais e/ou em grupo.</p>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/04-trajetorias-mobile.jpg",
+				"title": "04. Trajetórias Ismart",
+				"subtitle": "Alumni",
+				"url": "04-trajetorias-ismart-alumni"
+			},
+			{
+				"image": "assets/images/05-parceiros-mobile.jpg",
+				"title": "05.",
+				"subtitle": "Parceiros Ismart",
+				"url": "05-parceiros-ismart"
+			},
+			{
+				"image": "assets/images/06-horizonte-mobile.jpg",
+				"title": "06.",
+				"subtitle": "Horizonte",
+				"url": "06-horizonte"
+			}
+		]
 	},
 	"CHAPTER_4.8": {
 		"TITLE": "Capítulo 04",
@@ -224,7 +424,27 @@
 				"PHOTO_DESCRIPTION": "Bárbara Domene - Graduada Ismart"
 			},
 			"SECTION_5": "<p>Por isso, desde 2017 o Ismart abraçou o projeto ao entender que a rede de graduados estava crescendo e o grupo Alumni poderia ser inspiração para os mais novos, fortalecendo a interação entre bolsistas e ex-bolsistas. “Em 2017 realizamos uma pesquisa com 139 graduados que já estavam no mercado de trabalho. O levantamento nos mostrou como vivem os jovens bolsistas, onde trabalham e quais são os desafios que enfrentam atualmente. Até então não tínhamos acesso a esses dados, sabíamos pouca coisa sobre nossos alunos graduados”, conta Beatriz Mantelato, gerente do ensino superior do Instituto. No ano seguinte, em 2018, a pesquisa foi feita com 222 graduados, servindo como base para a elaboração de ações que possam auxiliar os exbolsistas na tomada de decisões relacionadas à carreira.</p><p>Bárbara Domene, graduada em Direito pela Universidade Mackenzie e ex-mentorada pelo criador da rede, Leonardo de Castro Coelho, explica: “Eu passei a fazer parte do Alumni e compreender a importância de valorizar os graduados e manter a troca de experiências e ajuda mútua. O desafio desse grupo agora é atrair cada vez mais graduados e se manter atuante”.</p>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/05-parceiros-mobile.jpg",
+				"title": "05.",
+				"subtitle": "Parceiros Ismart",
+				"url": "05-parceiros-ismart"
+			},
+			{
+				"image": "assets/images/06-horizonte-mobile.jpg",
+				"title": "06.",
+				"subtitle": "Horizonte",
+				"url": "06-horizonte"
+			},
+			{
+				"image": "assets/images/7-manifesto-ismart-mobile.jpg",
+				"title": "07.",
+				"subtitle": "Manifesto Ismart",
+				"url": "07-manifesto"
+			}
+		]
 	},
 	"CHAPTER_5": {
 		"TITLE": "Capítulo 02",
@@ -236,20 +456,80 @@
 				"PHOTO_DESCRIPTION": "Helena Aguiar - diretora de Planejamento e Integração do Colégio Bandeirantes - São Paulo"
 			},
 			"SECTION_3": "<p>Bruno Resende Domingues reforça essa resolução. Egresso do Colégio Bandeirantes e do curso de Engenharia de Produção da Universidade de São Paulo (USP), o jovem tem passagens por grandes empresas. Começou a estagiar no Citibank, onde foi efetivado e trabalhou nas áreas de Planejamento, Risco de Mercado e Asset Management. Depois ingressou na Ambev, onde trabalha atualmente.</p><p>“O Bruno sempre demonstrou muito potencial, muita vontade de trabalhar, de resolver, de ajudar e, além de tudo, capacidades analítica e técnica excepcionais”, destaca Ronaldo Rozenbaum, diretor da área de Orçamento e Planejamento Financeiro da Ambev e chefe do Bruno.</p><p>Nos últimos quatro anos, Bruno passou por três funções, relativas a cada uma das linhas do demonstrativo financeiro. Mais recentemente, começou a atuar como gerente, sendo responsável por todas as três responsabilidades anteriores. Ao listar os elementos que impulsionaram a carreira de seu funcionário, Rozenbaum destaca a vontade de entregar sempre além do esperado. “Acho excepcional o trabalho do Ismart de dar uma oportunidade a pessoas que não necessariamente a teriam de maneira fácil, abrindo um caminho para termos um País com menos desigualdade”, conclui.</p><p>Linaldo Vilar, Diretor de Produ-ção da DASA, a maior empresa de medicina diagnóstica da América Latina, também destaca a capacidade analítica de Felipe Oliveira Machado, trainee de sua equipe e ex-bolsista do Ismart. Após concluir o ensino médio no Colégio Sidarta, em Cotia (SP), Felipe cursou Química na Universidade de São Paulo, período em que integrou a entidade Enactus também, uma organização internacional dedicada a inspirar alunos a melhorar o mundo por meio da ação empreendedora.</p><p>O protagonismo na busca por conhecimento é, para Vilar, um dos diferenciais do jovem. “Ele sempre está interessado em buscar informa-ções sobre o setor em que atua”, conta. Para o Diretor, o futuro do jovem será promissor, vindo a ocupar cargos de gestão futuramente. “A participação de executivos na formação dos alunos Ismart proporciona a eles uma visão correta sobre o mundo corporativo”, completa.</p><blockquote class=\"blockquote__quote blockquote__white\"><span>Esses alunos desenvolvem uma sensação de pertencimento a uma sociedade para a qual eles querem dar um retorno.</span><cite>Marcel Lima - Diretor-Geral do Colégio PH</cite></blockquote>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/06-horizonte-mobile.jpg",
+				"title": "06.",
+				"subtitle": "Horizonte",
+				"url": "06-horizonte"
+			},
+			{
+				"image": "assets/images/7-manifesto-ismart-mobile.jpg",
+				"title": "07.",
+				"subtitle": "Manifesto Ismart",
+				"url": "07-manifesto"
+			},
+			{
+				"image": "assets/images/08-resultados-mobile.jpg",
+				"title": "08.",
+				"subtitle": "Resultados 2018",
+				"url": "08-resultados"
+			}
+		]
 	},
 	"CHAPTER_6": {
 		"TITLE": "Capítulo 06",
 		"CONTENT": {
 			"SECTION_1": "<p>O grande desafio continua sendo tornar o Ismart conhecido para que mais jovens talentosos possam ter a oportunidade de se desenvolver por meio da educação. Uma vez no projeto, a intenção é ajudá-los a nunca duvidarem do seu potencial e a se apropriarem da sua história com protagonismo, resiliência e perseverança. </p><p>Quanto ao trabalho do Instituto e os programas de desenvolvimento oferecidos aos jovens, há o constante monitoramento de tendências de mercado. Uma das principais mudanças nos programas de desenvolvimento dos bolsistas foi o início do trabalho com foco em competências socio-emocionais, a reestruturação do pro-grama de orientação profissional, a aprendizagem baseada em projetos e a integração desses alunos às tendências de letramento digital.</p><p>Entre muitas expectativas, há também um sonho grande: a de que um dia um graduado pelo Ismart venha a fazer parte do Conselho do Instituto, representando a comunidade e dando voz aos principais interessados no projeto: bolsistas e Alumni.</p><p class=\"text-big\">Nos últimos 20 anos, mais de quatro mil jovens mudaram sua realidade e estão contribuindo para uma sociedade melhor. Para os próximos 20 anos...</p>",
 			"SECTION_2": "Eduardo Braga da Costa - Projeto Ismart Online - São Paulo"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/7-manifesto-ismart-mobile.jpg",
+				"title": "07.",
+				"subtitle": "Manifesto Ismart",
+				"url": "07-manifesto"
+			},
+			{
+				"image": "assets/images/08-resultados-mobile.jpg",
+				"title": "08.",
+				"subtitle": "Resultados 2018",
+				"url": "08-resultados"
+			},
+			{
+				"image": "assets/images/9-lista-de-parceiros-mobile.jpg",
+				"title": "09.",
+				"subtitle": "Lista de parceiros",
+				"url": "09-lista-parceiros"
+			}
+		]
 	},
 	"CHAPTER_7": {
 		"TITLE": "Capítulo 07",
 		"CONTENT": {
 			"SECTION_1": "<p>Não existe lugar tão alto que não se possa alcançar, nem tão longe que não se possa chegar.</p><p>Temos altas expectativas. Temos sonhos.</p><p>Acreditamos no talento do jovem brasileiro e no poder transformador da educação.</p><p>Acreditamos no mérito e no esforço individual porque tudo que é conquistado tem mais valor.</p><p>Vivemos em uma sociedade desigual.</p><p>Tanto potencial desperdiçado pela falta de oportunidades.</p><p>Somos todos responsáveis.</p><p>Eu, você, nós do Ismart.</p><p>Os alunos. Seus pais.</p><p> Os professores. A escola.</p><p>Trabalhando em conjunto com outros agentes de transformação, identificamos talentos acadêmicos de baixa renda e oferecemos a estes jovens a oportunidade de ser mais, de sonhar mais alto, de chegar mais longe. Damos acesso à melhor educação de ensino médio para que conquistem uma vaga nas melhores universidades, desenvolvam seu pleno potencial e se tornem profissionais de sucesso em suas áreas de atuação.</p><p>Para que se tornem, um dia, também eles, agentes de transformação. Motivamos e apoiamos nossos alunos na longa jornada da educação, na longa jornada da vida em busca do sucesso e da felicidade. </p><p>Trabalhamos por um futuro melhor para os jovens e para o Brasil.</p>"
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/08-resultados-mobile.jpg",
+				"title": "08.",
+				"subtitle": "Resultados 2018",
+				"url": "08-resultados"
+			},
+			{
+				"image": "assets/images/9-lista-de-parceiros-mobile.jpg",
+				"title": "09.",
+				"subtitle": "Lista de parceiros",
+				"url": "09-lista-parceiros"
+			},
+			{
+				"image": "assets/images/10-expediente-mobile.jpg",
+				"title": "10.",
+				"subtitle": "Expediente",
+				"url": "10-expediente"
+			}
+		]
 	},
 	"CHAPTER_8": {
 		"TITLE": "Capítulo 08",
@@ -297,7 +577,27 @@
 				"TITLE": "Número de alunos",
 				"SUBTITLE": "Jovens atendidos nos ensinos fundamental, médio e superior"
 			}
-		}
+		},
+		"RELATED": [
+			{
+				"image": "assets/images/9-lista-de-parceiros-mobile.jpg",
+				"title": "09.",
+				"subtitle": "Lista de parceiros",
+				"url": "09-lista-parceiros"
+			},
+			{
+				"image": "assets/images/10-expediente-mobile.jpg",
+				"title": "10.",
+				"subtitle": "Expediente",
+				"url": "10-expediente"
+			},
+			{
+				"image": "assets/images/03-linha-do-tempo.jpg",
+				"title": "03.",
+				"subtitle": "Linha do Tempo",
+				"url": "03-linha-do-tempo"
+			}
+		]
 	},
 	"CHAPTER_9": {
 		"LIST": [

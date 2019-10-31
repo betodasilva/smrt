@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-manifesto',
@@ -24,36 +25,22 @@ export class ManifestoComponent implements OnInit {
     'subtitle': 'Manifesto Ismart'
   }
   
-  private relatedInfo = [
-    {
-      'image': 'assets/images/08-resultados-mobile.jpg',
-      'title': '08.',
-      'subtitle': 'Resultados 2018',
-      'url': '08-resultados'
-    },
-    {
-      'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-      'title': '09.',
-      'subtitle': 'Lista de parceiros',
-      'url': '09-lista-parceiros'
-    },
-    {
-      'image': 'assets/images/10-expediente-mobile.jpg',
-      'title': '10.',
-      'subtitle': 'Expediente',
-      'url': '10-expediente'
-    }
-  ]
+  private relatedInfo: Array<any> = [];
 
   constructor(
     private titleService: Title,
-    private meta: Meta
+    private meta: Meta,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/7-manifesto-hat.jpg' } );
     this.meta.addTag({property: 'og:title', content: '07. Manifesto Ismart - Ismart'});
+
+    this.translate.get('CHAPTER_7').subscribe( (data: any) => {
+      this.relatedInfo = data['RELATED'];
+    });
   }
 
 }
