@@ -1,11 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-horizonte',
   templateUrl: './horizonte.component.html',
-  styleUrls: ['./horizonte.component.scss']
+  styleUrls: ['./horizonte.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HorizonteComponent implements OnInit {
 
@@ -20,8 +21,8 @@ export class HorizonteComponent implements OnInit {
     'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',
     'imageTablet': 'assets/images/hats/6-horizonte-tablet.jpg',
     'image': 'assets/images/6-horizonte.jpg',
-    'title': 'Capítulo 06',
-    'subtitle': 'Horizonte'
+    'title': 'CHAPTER_6.TITLE',
+    'subtitle': 'CHAPTERS.06'
   }
 
   private relatedInfo = [

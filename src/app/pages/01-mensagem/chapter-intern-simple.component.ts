@@ -14,8 +14,8 @@ export class ChapterInternSimpleComponentm implements OnInit {
     'imageMobile': 'assets/images/hats/1-mensagem-do-conselho-hat.jpg',
     'imageTablet': 'assets/images/hats/1-mensagem-do-conselho-tablet.jpg',
     'image': 'assets/images/1-mensagem-do-conselho.jpg',
-    'title': 'Capítulo 01',
-    'subtitle': 'Mensagem do Conselho'
+    'title': 'CHAPTER_1.TITLE',
+    'subtitle': 'CHAPTERS.01'
   }
 
   private relatedInfo = [

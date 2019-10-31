@@ -19,8 +19,8 @@ export class ExpedienteComponent implements OnInit {
     'imageMobile': 'assets/images/hats/10-expediente-hat.jpg',
     'imageTablet': 'assets/images/hats/10-expediente-tablet.jpg',
     'image': 'assets/images/10-expediente.jpg',
-    'title': 'Capítulo 10',
-    'subtitle': 'Expediente'
+    'title': 'CHAPTER_10.TITLE',
+    'subtitle': 'CHAPTERS.10'
   }
 
   private accordionContent = [

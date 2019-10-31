@@ -20,8 +20,8 @@ export class TrajetoriasPraticaComponent implements OnInit {
     'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
     'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
     'image': 'assets/images/4-trajetorias.jpg',
-    'title': 'Capítulo 04',
-    'subtitle': 'Trajetórias Ismart'
+    'title': 'CHAPTER_4.1.TITLE',
+    'subtitle': 'CHAPTERS.04'
   }
 
   private relatedInfo = [

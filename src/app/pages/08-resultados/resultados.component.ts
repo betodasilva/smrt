@@ -19,8 +19,8 @@ export class ResultadosComponent implements OnInit {
     'image': 'assets/images/8-resultados.jpg',
     'imageMobile': 'assets/images/3-timeline.jpg',
     'imageTablet': 'assets/images/4-trajetorias.jpg',
-    'title': 'Capítulo 08',
-    'subtitle': 'Resultados'
+    'title': 'CHAPTER_8.TITLE',
+    'subtitle': 'CHAPTERS.08'
   }
   private relatedInfo = [
     {

@@ -21,8 +21,8 @@ export class ParceirosComponent implements OnInit {
     'imageMobile': 'assets/images/hats/5-parceiros-hat.jpg',
     'imageTablet': 'assets/images/hats/5-parceiros-tablet.jpg',
     'image': 'assets/images/5-parceiros.jpg',
-    'title': 'Capítulo 05',
-    'subtitle': 'Parceiros Ismart'
+    'title': 'CHAPTER_5.TITLE',
+    'subtitle': 'CHAPTERS.05'
   }
 
   private relatedInfo = [

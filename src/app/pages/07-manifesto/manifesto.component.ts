@@ -20,8 +20,8 @@ export class ManifestoComponent implements OnInit {
     'imageMobile': 'assets/images/hats/7-manifesto-hat.jpg',
     'imageTablet': 'assets/images/hats/7-manifesto-ismart-tablet.jpg',
     'image': 'assets/images/7-manifesto.jpg',
-    'title': 'Capítulo 07',
-    'subtitle': 'Manifesto Ismart'
+    'title': 'CHAPTER_7.TITLE',
+    'subtitle': 'CHAPTERS.07'
   }
   
   private relatedInfo = [

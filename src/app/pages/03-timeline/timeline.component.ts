@@ -24,8 +24,8 @@ export class TimelineComponent implements OnInit {
     'imageMobile': 'assets/images/hats/3-timeline-hat.jpg',
     'imageTablet': 'assets/images/hats/3-timeline-tablet.jpg',
     'image': 'assets/images/3-timeline.jpg',
-    'title': 'Capítulo 03',
-    'subtitle': 'Linha do Tempo'
+    'title': 'CHAPTER_3.TITLE',
+    'subtitle': 'CHAPTERS.03'
   }
 
   private relatedInfo = [

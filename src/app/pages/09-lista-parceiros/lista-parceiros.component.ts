@@ -20,8 +20,8 @@ export class ListaParceirosComponent implements OnInit {
     "imageMobile": "assets/images/hats/9-lista-de-parceiros-hat.jpg",
     "imageTablet": "assets/images/hats/9-lista-de-parceiros-tablet.jpg",
     "image": "assets/images/9-lista.jpg",
-    "title": "Capítulo 09",
-    "subtitle": "Lista de parceiros"
+    'title': 'CHAPTER_9.TITLE',
+    'subtitle': 'CHAPTERS.09'
   }
 
   private accordionContent: Array<any> = [];

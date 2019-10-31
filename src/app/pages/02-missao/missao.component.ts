@@ -14,8 +14,8 @@ export class MissaoComponent implements OnInit {
     'imageMobile': 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
     'imageTablet': 'assets/images/hats/2-missao-visao-crencas-tablet.jpg',
     'image': 'assets/images/missao-visao-crencas.jpg',
-    'title': 'Capítulo 02',
-    'subtitle': 'Missão, Visão e Crenças'
+    'title': 'CHAPTER_2.TITLE',
+    'subtitle': 'CHAPTERS.02'
   }
 
   private relatedInfo = [
