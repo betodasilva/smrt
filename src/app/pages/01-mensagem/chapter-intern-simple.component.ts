@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-chapter-intern-simple',
@@ -18,36 +19,22 @@ export class ChapterInternSimpleComponentm implements OnInit {
     'subtitle': 'CHAPTERS.01'
   }
 
-  private relatedInfo = [
-    {
-      'image': 'assets/images/02-missao-visao-crencas-mobile.jpg',
-      'title': '02.',
-      'subtitle': 'Missão, Visão e Crenças',
-      'url': '02-missao-visao-valores'
-    },
-    {
-      'image': 'assets/images/03-linha-do-tempo.jpg',
-      'title': '03.',
-      'subtitle': 'Linha do Tempo',
-      'url': '03-linha-do-tempo'
-    },
-    {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Contato',
-      'url': '04-trajetorias-ismart-contato'
-    },
-  ]
+  private relatedInfo: Array<any> = []
 
   constructor(
     private titleService: Title,
-    private meta: Meta
+    private meta: Meta,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/1-mensagem-do-conselho-hat.jpg' } );
     this.meta.addTag({property: 'og:title', content: '01. Mensagem do Conselho - Ismart'});
+
+    this.translate.get('CHAPTER_1').subscribe( (data: any) => {
+      this.relatedInfo = data['RELATED'];
+    });
   }
 
 }

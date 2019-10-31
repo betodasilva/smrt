@@ -25,27 +25,7 @@ export class ListaParceirosComponent implements OnInit {
   }
 
   private accordionContent: Array<any> = [];
-
-  private relatedInfo = [
-    {
-      "image": "assets/images/10-expediente-mobile.jpg",
-      "title": "10.",
-      "subtitle": "Expediente",
-      "url": "10-expediente"
-    },
-    {
-      "image": "assets/images/03-linha-do-tempo.jpg",
-      "title": "03.",
-      "subtitle": "Linha do Tempo",
-      "url": "03-linha-do-tempo"
-    },
-    {
-      "image": "assets/images/01-mensagem-do-conselho-mobile.jpg",
-      "title": "01.",
-      "subtitle": "Mensagem do conselho",
-      "url": "01-mensagem-do-conselho"
-    },
-  ]
+  private relatedInfo: Array<any> = [];
 
   constructor(
     private titleService: Title,
@@ -60,6 +40,7 @@ export class ListaParceirosComponent implements OnInit {
 
     this.translate.get('CHAPTER_9').subscribe( (data: any) => {
       this.accordionContent = data['LIST'];
+      this.relatedInfo      = data['RELATED'];
     });
   }
 

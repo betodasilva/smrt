@@ -3,6 +3,7 @@ import { TestimonialsService } from "../../services/testimonials/testimonials.se
 import { ModalComponent } from "../../components/modal/modal.component";
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { Title, Meta } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-chapter-intern',
@@ -26,36 +27,23 @@ export class ChapterInternComponent implements OnInit {
     'title': 'CHAPTER_4.1.TITLE',
     'subtitle': 'CHAPTERS.04'
   }
-  private relatedInfo = [
-    {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Seleção',
-      'url': '04-trajetorias-ismart-selecao'
-    },
-    {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Prática',
-      'url': '04-trajetorias-ismart-praticas'
-    },
-    {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Suporte',
-      'url': '04-trajetorias-ismart-suporte'
-    },
-  ]
+  private relatedInfo: Array<any> = [];
   
   constructor(
     private titleService: Title,
     private meta: Meta,
-    private testimonials: TestimonialsService) { }
+    private testimonials: TestimonialsService,
+    private translate: TranslateService
+  ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Contato - Ismart'});
+
+    this.translate.get('CHAPTER_4.1').subscribe( (data: any) => {
+      this.relatedInfo = data['RELATED'];
+    });
   }
 
 

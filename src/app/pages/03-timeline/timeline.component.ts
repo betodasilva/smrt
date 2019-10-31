@@ -4,6 +4,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 import { WINDOW } from 'src/app/services/window.service';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-timeline',
@@ -28,26 +29,7 @@ export class TimelineComponent implements OnInit {
     'subtitle': 'CHAPTERS.03'
   }
 
-  private relatedInfo = [
-    {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Contato',
-      'url': '04-trajetorias-ismart-contato'
-    },
-    {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Seleção',
-      'url': '04-trajetorias-ismart-selecao'
-    },
-    {
-      'image': 'assets/images/04-trajetorias-mobile.jpg',
-      'title': '04. Trajetórias Ismart',
-      'subtitle': 'Prática',
-      'url': '04-trajetorias-ismart-praticas'
-    },
-  ]
+  private relatedInfo: Array<any> = [];
   
   constructor(
     private timeline: TimelineService,
@@ -55,7 +37,8 @@ export class TimelineComponent implements OnInit {
     private titleService: Title,
     private meta: Meta,
     private scroll: ScrollService,
-    @Inject(WINDOW) private window: Window
+    @Inject(WINDOW) private window: Window,
+    private translate: TranslateService
   ) 
   { }
 
@@ -63,6 +46,10 @@ export class TimelineComponent implements OnInit {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/3-timeline-hat.jpg' } );
     this.meta.addTag({property: 'og:title', content: '03. Linha do Tempo - Ismart'});
+
+    this.translate.get('CHAPTER_3').subscribe( (data: any) => {
+      this.relatedInfo = data['RELATED'];
+    });
   }
 
   onItemNavClick( { target }, navItem ){

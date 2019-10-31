@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@an
 import { TestimonialsService } from 'src/app/services/testimonials/testimonials.service';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Title, Meta } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-horizonte',
   templateUrl: './horizonte.component.html',
@@ -25,26 +26,7 @@ export class HorizonteComponent implements OnInit {
     'subtitle': 'CHAPTERS.06'
   }
 
-  private relatedInfo = [
-    {
-      'image': 'assets/images/7-manifesto-ismart-mobile.jpg',
-      'title': '07.',
-      'subtitle': 'Manifesto Ismart',
-      'url': '07-manifesto'
-    },
-    {
-      'image': 'assets/images/08-resultados-mobile.jpg',
-      'title': '08.',
-      'subtitle': 'Resultados 2018',
-      'url': '08-resultados'
-    },
-    {
-      'image': 'assets/images/9-lista-de-parceiros-mobile.jpg',
-      'title': '09.',
-      'subtitle': 'Lista de parceiros',
-      'url': '09-lista-parceiros'
-    }
-  ]
+  private relatedInfo: Array<any> = []
 
   @ViewChild('modal01', {static: false}) modal01: ModalComponent;
   @ViewChild('modal02', {static: false}) modal02: ModalComponent;
@@ -52,13 +34,19 @@ export class HorizonteComponent implements OnInit {
   constructor(
     private testimonials: TestimonialsService,
     private titleService: Title,
-    private meta: Meta
+    private meta: Meta,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/6-horizonte-hat.jpg' } );
     this.meta.addTag({property: 'og:title', content: '06. Horizonte - Ismart'});
+
+    this.translate.get('CHAPTER_6').subscribe( (data: any) => {
+      this.relatedInfo = data['RELATED'];
+    });
+
   }
 
 }
