@@ -177,6 +177,11 @@
 	}
 	@media (max-width: 540px) {
 		padding: 20px 0;
+
+		&__chapters {
+			top: 64px;
+		}
+		
 		&__button--chapters {
 			margin-right: 15px;
 		}
