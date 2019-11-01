@@ -24,7 +24,7 @@ export class ChapterContentComponent implements OnInit {
   ngOnInit() {
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
   }
 
 

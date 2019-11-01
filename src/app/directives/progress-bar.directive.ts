@@ -6,21 +6,21 @@ import { EmitterService } from '../services/emitter/emitter.service';
 @Directive({
   selector: '[progressBarListener]'
 })
-export class ProgressBarDirective implements OnInit{
+export class ProgressBarDirective implements OnInit {
 
-  private endPos: number = 0;
-  private percentage: number = 0;
+  private endPos = 0;
+  private percentage = 0;
   constructor(
     @Inject(WINDOW) private window: Window,
     private el: ElementRef,
     private progressBarService: ProgressBarService
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
   }
 
-  ngAfterViewInit(){
-    setTimeout(() =>{
+  ngAfterViewInit() {
+    setTimeout(() => {
       this.endPos = this.el.nativeElement.offsetHeight;
       this.calculatePercentage();
     }, 500);
@@ -30,7 +30,7 @@ export class ProgressBarDirective implements OnInit{
       this.calculatePercentage();
     });
   }
-  
+
   private calculatePercentage() {
     const currentScroll = this.window.pageYOffset;
     this.percentage = (currentScroll / (this.endPos - 100)) * 100;
@@ -41,7 +41,7 @@ export class ProgressBarDirective implements OnInit{
   }
 
   @HostListener('window:scroll')
-  onScroll(){
+  onScroll() {
     this.calculatePercentage();
   }
 

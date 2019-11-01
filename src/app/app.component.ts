@@ -11,14 +11,14 @@ import { EmitterService } from './services/emitter/emitter.service';
 })
 export class AppComponent {
 	constructor(
-        private translate: TranslateService, 
+        private translate: TranslateService,
         private router: Router,
         @Inject(DOCUMENT) private document: Document,
         private renderer: Renderer2
-    ){
-		translate.addLangs(['pt-BR', 'en'])
+    ) {
+		translate.addLangs(['pt-BR', 'en']);
 		translate.setDefaultLang('pt-BR');
-		
+
 		translate.use('pt-BR');
 	}
 
@@ -27,24 +27,24 @@ export class AppComponent {
             if (!(evt instanceof NavigationEnd)) {
                 return;
             }
-            window.scrollTo(0, 0)
+            window.scrollTo(0, 0);
         });
 
-        
+
     }
 
-    onRouterOutletActivate($event){
+    onRouterOutletActivate($event) {
         const chapterFigureEl = this.document.querySelectorAll('.chapter-content__img');
-        
+
         chapterFigureEl.forEach( (el) => {
             const imgContainer = el.querySelector('.img__container'),
                   imgSrc       = el.querySelector('img').getAttribute('src'),
                   img          = new Image();
-            
-            
+
+
             img.src = imgSrc;
-            
-            
+
+
             const interval = setInterval( () => {
                 if ( img.naturalWidth ) {
                     // console.log( img.offsetWidth );
@@ -54,19 +54,19 @@ export class AppComponent {
                         imgContainer,
                         'padding-bottom',
                         `${(img.naturalHeight / img.naturalWidth) * 100}%`
-                    )
+                    );
                     // this.renderer.setStyle(
                     //     el,
                     //     'height',
                     //     `${img.naturalHeight}px`
                     // )
-                    
+
                     console.log('hora de recalcular tamanhos');
                     EmitterService.get('calculateSizes').emit();
                 }
-            }, 10)
+            }, 10);
 
-            
-        })
+
+        });
     }
 }

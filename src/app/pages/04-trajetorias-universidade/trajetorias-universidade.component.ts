@@ -16,23 +16,23 @@ export class TrajetoriasUniversidadeComponent implements OnInit {
   @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: true}) modal: ModalComponent;
-  
-  private title: string = '04. Trajetórias Ismart: Universidades - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
-    'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
-    'image': 'assets/images/4-trajetorias.jpg',
-    'title': 'CHAPTER_4.1.TITLE',
-    'subtitle': 'CHAPTERS.04'
-  }
+  private title = '04. Trajetórias Ismart: Universidades - Ismart';
 
-  private relatedInfo: Array<any> = []
-  
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
+    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
+    image: 'assets/images/4-trajetorias.jpg',
+    title: 'CHAPTER_4.1.TITLE',
+    subtitle: 'CHAPTERS.04'
+  };
+
+  public relatedInfo: Array<any> = [];
+
   constructor(
     private titleService: Title,
     private meta: Meta,
-    private testimonials: TestimonialsService,
+    public testimonials: TestimonialsService,
     private translate: TranslateService
   ) { }
 
@@ -42,7 +42,7 @@ export class TrajetoriasUniversidadeComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Universidades - Ismart'});
 
     this.translate.get('CHAPTER_4.7').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 

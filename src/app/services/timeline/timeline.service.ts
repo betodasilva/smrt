@@ -107,5 +107,5 @@ export class TimelineService {
       excerpt: '<p>Ismart completa 20 anos e a história está apenas começando...</p>',
       icon: 'assets/images/positive.svg'
     }
-  ]
+  ];
 }

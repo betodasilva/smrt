@@ -19,7 +19,7 @@ export class FloatContainerComponent implements OnInit {
   private startPos: number;
   private endPos: number;
 
-  private isFloatContainerFixed: boolean = false;
+  public isFloatContainerFixed = false;
   private subscription: Subscription;
 
   constructor(
@@ -40,16 +40,16 @@ export class FloatContainerComponent implements OnInit {
   listenForRecalculations() {
     EmitterService.get('calculateSizes').subscribe( () => {
       this.calculateSizes();
-    })
+    });
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       this.calculateSizes();
-      
+
       console.log(`inicio ${this.startPos} e fim ${this.endPos}, offset? ${this.endOffset}`);
     }, 500);
-   
+
   }
 
   public calculateSizes() {
@@ -59,14 +59,14 @@ export class FloatContainerComponent implements OnInit {
   }
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event){
+  onWindowScroll(event) {
     const currentScroll = this.window.pageYOffset,
           endPos = Number(this.endPos) + Number(this.endOffset);
-    
+
     if ( currentScroll >= this.startPos ) {
       this.isFloatContainerFixed = true;
-    } else{
-      this.isFloatContainerFixed = false; 
+    } else {
+      this.isFloatContainerFixed = false;
     }
 
     if ( currentScroll >= endPos - Number(this.fixOffset) ) {
@@ -77,70 +77,70 @@ export class FloatContainerComponent implements OnInit {
 
   }
 
-  listenForHeaderOpen(){
+  listenForHeaderOpen() {
     EmitterService.get('headerOpen').subscribe( isOpen => {
       if ( isOpen && this.window.pageYOffset - 100 > this.startPos ) {
         this.renderer.setStyle(
           this.floatContainer.nativeElement,
           'transform',
           'translateY(100px)'
-        )
+        );
       } else {
         this.renderer.removeStyle(
           this.floatContainer.nativeElement,
           'transform'
-        )
+        );
       }
-    })
+    });
   }
 
-  setAbsolutePosition(){
+  setAbsolutePosition() {
     this.renderer.setStyle(
       this.floatContainer.nativeElement,
       'transition',
       `none`,
-    )
+    );
     this.renderer.setStyle(
       this.floatContainer.nativeElement,
       'top',
       `${Number(this.endPos) + Number(this.endOffset) - (this.child.offsetHeight) + 200}px`,
-    )
+    );
     this.renderer.setStyle(
       this.floatContainer.nativeElement,
       'position',
       'absolute',
-    )
+    );
     this.renderer.setStyle(
       this.floatContainer.nativeElement,
       'width',
       '100%',
-    )
+    );
     this.renderer.removeStyle(
       this.floatContainer.nativeElement,
       'transform'
-    )
+    );
   }
 
-  removeAbsolutePosition(){
+  removeAbsolutePosition() {
     setTimeout( () => {
       this.renderer.removeStyle(
         this.floatContainer.nativeElement,
         'transition'
-      )
-    }, 200)
-    
+      );
+    }, 200);
+
     this.renderer.removeStyle(
       this.floatContainer.nativeElement,
       'top'
-    )
+    );
     this.renderer.removeStyle(
       this.floatContainer.nativeElement,
       'position'
-    )
+    );
     this.renderer.removeStyle(
       this.floatContainer.nativeElement,
       'width'
-    )
+    );
   }
 
 }

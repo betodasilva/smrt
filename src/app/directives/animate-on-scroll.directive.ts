@@ -19,7 +19,7 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
 
   @Input() animationName: string; // use fadeIn as default if not specified
   // Pixel offset from screen bottom to the animated element to determine the start of the animation
-  @Input() offset: number = 80;
+  @Input() offset = 80;
 
   constructor(private elementRef: ElementRef, private renderer: Renderer, private scroll: ScrollService) { }
 
@@ -131,7 +131,7 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
       // get vertical position for selected element
       this.offsetTop = viewportTop + this.scroll.pos - clientTop;
     } else {
-      this.offsetTop = 0
+      this.offsetTop = 0;
     }
 
   }

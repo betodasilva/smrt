@@ -16,22 +16,22 @@ import { ContentOffsetService } from 'src/app/services/content-offset/content-of
 export class TestimonialsComponent implements OnInit {
 
   @Input() data: any;
-  @Input() modeDark: boolean = false;
+  @Input() modeDark = false;
   @Output('onTestimonialCardClick') onTestimonialCardClick: EventEmitter<any> = new EventEmitter();
   @Input() customTitle: string;
-  
-  private contentOffsetX: number = 0;
-  private get slides() {
+
+  public contentOffsetX = 0;
+  public get slides() {
     return this.data;
-  };
-  private slideConfig = {
-    "slidesToShow": 3,
-    "slidesToScroll": 1,
-    "infinite": true,
-    "arrows": true,
-    "centerMode": false,
-    "prevArrow": "<button type='button' class='btn slick-prev'><img src='assets/images/arrow.svg'></button>",
-    "nextArrow": "<button type='button' class='btn slick-next'><img src='assets/images/arrow.svg'></button>",
+  }
+  public slideConfig = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    centerMode: false,
+    prevArrow: '<button type=\'button\' class=\'btn slick-prev\'><img src=\'assets/images/arrow.svg\'></button>',
+    nextArrow: '<button type=\'button\' class=\'btn slick-next\'><img src=\'assets/images/arrow.svg\'></button>',
     responsive: [
       {
         breakpoint: 1024,
@@ -71,5 +71,5 @@ export class TestimonialsComponent implements OnInit {
     this.testimonials.current = testimonial;
     this.onTestimonialCardClick.emit(testimonial);
   }
-  
+
 }

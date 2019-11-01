@@ -11,26 +11,26 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class TrajetoriasPraticaComponent implements OnInit {
 
-  
+
   @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
   @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
 
-  private title: string = '04. Trajetórias Ismart: Prática - Ismart';
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
-    'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
-    'image': 'assets/images/4-trajetorias.jpg',
-    'title': 'CHAPTER_4.1.TITLE',
-    'subtitle': 'CHAPTERS.04'
-  }
+  private title = '04. Trajetórias Ismart: Prática - Ismart';
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
+    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
+    image: 'assets/images/4-trajetorias.jpg',
+    title: 'CHAPTER_4.1.TITLE',
+    subtitle: 'CHAPTERS.04'
+  };
 
-  private relatedInfo: Array<any> = [];
-  
+  public relatedInfo: Array<any> = [];
+
   constructor(
     private titleService: Title,
     private meta: Meta,
-    private testimonials: TestimonialsService,
+    public testimonials: TestimonialsService,
     private translate: TranslateService
   ) { }
 
@@ -40,7 +40,7 @@ export class TrajetoriasPraticaComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Prática - Ismart'});
 
     this.translate.get('CHAPTER_4.3').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 

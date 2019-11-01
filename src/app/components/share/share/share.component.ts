@@ -7,11 +7,11 @@ import { WINDOW } from 'src/app/services/window.service';
   styleUrls: ['./share.component.scss']
 })
 export class ShareComponent implements OnInit {
-  private currentUrl: string;
+  public currentUrl: string;
   @ViewChild('share', {static: true}) shareList: ElementRef;
   constructor(
-    @Inject(WINDOW) private window: Window, 
-    private el: ElementRef, 
+    @Inject(WINDOW) private window: Window,
+    private el: ElementRef,
     private renderer: Renderer2
   ) {}
 
@@ -24,5 +24,5 @@ export class ShareComponent implements OnInit {
     this.renderer.setStyle(this.el.nativeElement, 'min-height', `${this.shareList.nativeElement.offsetHeight}px`);
     this.renderer.setStyle(this.el.nativeElement, 'min-width', `${this.shareList.nativeElement.offsetWidth}px`);
   }
-  
+
 }

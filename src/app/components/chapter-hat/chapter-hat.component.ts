@@ -5,11 +5,11 @@ import { throttleTime } from 'rxjs/operators';
 
 
 interface chapterData {
-  image,
-  imageMobile,
-  imageTablet,
-  title,
-  subtitle
+  image;
+  imageMobile;
+  imageTablet;
+  title;
+  subtitle;
 }
 
 @Component({
@@ -23,7 +23,7 @@ export class ChapterHatComponent implements OnInit {
   private windowWidth: any;
   private resize$: Subject<any> = new Subject();
 
-  constructor(@Inject(WINDOW) private window: Window,) { }
+  constructor(@Inject(WINDOW) private window: Window, ) { }
 
   ngOnInit() {
     this.resize$
@@ -32,18 +32,18 @@ export class ChapterHatComponent implements OnInit {
         throttleTime(500)
       )
       .subscribe( innerWidth => {
-        this.windowWidth = innerWidth
+        this.windowWidth = innerWidth;
       });
   }
 
-  get backgroundImage(){
-    let styles = {}, imageUrl: string = "";
+  get backgroundImage() {
+    let styles = {}, imageUrl = '';
     const isMobile: boolean = this.windowWidth < 560;
     const isTablet: boolean = this.windowWidth > 560 && this.windowWidth <= 768;
-    
+
     if ( isMobile ) {
       imageUrl = this.data.imageMobile;
-    } else if ( isTablet ){
+    } else if ( isTablet ) {
       imageUrl = this.data.imageTablet;
     } else {
       imageUrl = this.data.image;

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input, ElementRef, ViewEncapsulation } from '@angular/core';
-import { TestimonialsService } from "../../services/testimonials/testimonials.service";
-import { ModalComponent } from "../../components/modal/modal.component";
+import { TestimonialsService } from '../../services/testimonials/testimonials.service';
+import { ModalComponent } from '../../components/modal/modal.component';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { Title, Meta } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
@@ -18,21 +18,22 @@ export class ChapterInternComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: true}) modal: ModalComponent;
 
-  private title: string = '04. Trajetórias Ismart: Contato - Ismart';
+  private title = '04. Trajetórias Ismart: Contato - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
-    'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
-    'image': 'assets/images/4-trajetorias.jpg',
-    'title': 'CHAPTER_4.1.TITLE',
-    'subtitle': 'CHAPTERS.04'
-  }
-  private relatedInfo: Array<any> = [];
-  
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
+    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
+    image: 'assets/images/4-trajetorias.jpg',
+    title: 'CHAPTER_4.1.TITLE',
+    subtitle: 'CHAPTERS.04'
+  };
+  public relatedInfo: Array<any> = [];
+  public accordionContent: Array<any> = [];
+
   constructor(
     private titleService: Title,
     private meta: Meta,
-    private testimonials: TestimonialsService,
+    public testimonials: TestimonialsService,
     private translate: TranslateService
   ) { }
 
@@ -42,7 +43,7 @@ export class ChapterInternComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Contato - Ismart'});
 
     this.translate.get('CHAPTER_4.1').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 

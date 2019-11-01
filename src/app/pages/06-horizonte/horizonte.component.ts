@@ -15,24 +15,24 @@ export class HorizonteComponent implements OnInit {
   @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: false}) modal: ModalComponent;
-  
-  private title: string = '06. Horizonte - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',
-    'imageTablet': 'assets/images/hats/6-horizonte-tablet.jpg',
-    'image': 'assets/images/6-horizonte.jpg',
-    'title': 'CHAPTER_6.TITLE',
-    'subtitle': 'CHAPTERS.06'
-  }
+  private title = '06. Horizonte - Ismart';
 
-  private relatedInfo: Array<any> = []
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/6-horizonte-hat.jpg',
+    imageTablet: 'assets/images/hats/6-horizonte-tablet.jpg',
+    image: 'assets/images/6-horizonte.jpg',
+    title: 'CHAPTER_6.TITLE',
+    subtitle: 'CHAPTERS.06'
+  };
+
+  public relatedInfo: Array<any> = [];
 
   @ViewChild('modal01', {static: false}) modal01: ModalComponent;
   @ViewChild('modal02', {static: false}) modal02: ModalComponent;
-  
+
   constructor(
-    private testimonials: TestimonialsService,
+    public testimonials: TestimonialsService,
     private titleService: Title,
     private meta: Meta,
     private translate: TranslateService
@@ -44,7 +44,7 @@ export class HorizonteComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '06. Horizonte - Ismart'});
 
     this.translate.get('CHAPTER_6').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
 
   }

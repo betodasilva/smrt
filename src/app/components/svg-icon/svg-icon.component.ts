@@ -13,7 +13,7 @@ export class SvgIconComponent implements OnInit {
   @Input() width: string;
   @Input() height: string;
 
-  constructor(@Inject(WINDOW) private window: Window,) {}
+  constructor(@Inject(WINDOW) private window: Window, ) {}
 
   get absUrl() {
     return window.location.href;

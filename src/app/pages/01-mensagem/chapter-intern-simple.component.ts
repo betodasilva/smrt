@@ -11,15 +11,15 @@ export class ChapterInternSimpleComponentm implements OnInit {
 
   title = '01. Mensagem do Conselho - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/1-mensagem-do-conselho-hat.jpg',
-    'imageTablet': 'assets/images/hats/1-mensagem-do-conselho-tablet.jpg',
-    'image': 'assets/images/1-mensagem-do-conselho.jpg',
-    'title': 'CHAPTER_1.TITLE',
-    'subtitle': 'CHAPTERS.01'
-  }
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/1-mensagem-do-conselho-hat.jpg',
+    imageTablet: 'assets/images/hats/1-mensagem-do-conselho-tablet.jpg',
+    image: 'assets/images/1-mensagem-do-conselho.jpg',
+    title: 'CHAPTER_1.TITLE',
+    subtitle: 'CHAPTERS.01'
+  };
 
-  private relatedInfo: Array<any> = []
+  public relatedInfo: Array<any> = [];
 
   constructor(
     private titleService: Title,
@@ -33,7 +33,7 @@ export class ChapterInternSimpleComponentm implements OnInit {
     this.meta.addTag({property: 'og:title', content: '01. Mensagem do Conselho - Ismart'});
 
     this.translate.get('CHAPTER_1').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 

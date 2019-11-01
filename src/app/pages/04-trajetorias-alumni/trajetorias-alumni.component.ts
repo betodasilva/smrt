@@ -13,18 +13,18 @@ export class TrajetoriasAlumniComponent implements OnInit {
   @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
 
-  private title: string = '04. Trajetórias Ismart: Alumni - Ismart';
+  private title = '04. Trajetórias Ismart: Alumni - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
-    'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
-    'image': 'assets/images/4-trajetorias.jpg',
-    'title': 'CHAPTER_4.1.TITLE',
-    'subtitle': 'CHAPTERS.04'
-  }
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
+    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
+    image: 'assets/images/4-trajetorias.jpg',
+    title: 'CHAPTER_4.1.TITLE',
+    subtitle: 'CHAPTERS.04'
+  };
 
-  private relatedInfo: Array<any> = []
-  
+  public relatedInfo: Array<any> = [];
+
   constructor(
     private titleService: Title,
     private meta: Meta,
@@ -39,7 +39,7 @@ export class TrajetoriasAlumniComponent implements OnInit {
 
 
     this.translate.get('CHAPTER_4.8').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 

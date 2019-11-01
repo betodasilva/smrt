@@ -10,7 +10,7 @@ export class TimelineCardComponent implements OnInit {
   @Input() title: string;
   @Input() excerpt: any;
   @Input() icon: string;
-  @Input() last: boolean = false;
+  @Input() last = false;
   constructor() { }
 
   ngOnInit() {

@@ -9,18 +9,18 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MissaoComponent implements OnInit {
 
-  private title: string = '02. Missão, Visão e Crenças - Ismart';
+  private title = '02. Missão, Visão e Crenças - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
-    'imageTablet': 'assets/images/hats/2-missao-visao-crencas-tablet.jpg',
-    'image': 'assets/images/missao-visao-crencas.jpg',
-    'title': 'CHAPTER_2.TITLE',
-    'subtitle': 'CHAPTERS.02'
-  }
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
+    imageTablet: 'assets/images/hats/2-missao-visao-crencas-tablet.jpg',
+    image: 'assets/images/missao-visao-crencas.jpg',
+    title: 'CHAPTER_2.TITLE',
+    subtitle: 'CHAPTERS.02'
+  };
 
-  private relatedInfo: Array<any> = [];
-  
+  public relatedInfo: Array<any> = [];
+
   @ViewChild('share', {static: true, read: ElementRef}) myShare: ElementRef;
   @ViewChild('article', {static: false}) article: ElementRef;
 
@@ -36,7 +36,7 @@ export class MissaoComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '02. Missão, Visão e Crenças - Ismart'});
 
     this.translate.get('CHAPTER_2').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 }

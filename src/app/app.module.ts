@@ -17,7 +17,7 @@ import { TrajetoriasInternacionalComponent } from './pages/04-trajetorias-intern
 import { TrajetoriasEadComponent } from './pages/04-trajetorias-ead/trajetorias-ead.component';
 import { TrajetoriasUniversidadeComponent } from './pages/04-trajetorias-universidade/trajetorias-universidade.component';
 import { TrajetoriasAlumniComponent } from './pages/04-trajetorias-alumni/trajetorias-alumni.component';
-import { TimelineComponent } from "./pages/03-timeline/timeline.component";
+import { TimelineComponent } from './pages/03-timeline/timeline.component';
 import { ParceirosComponent } from './pages/05-parceiros/parceiros.component';
 import { HorizonteComponent } from './pages/06-horizonte/horizonte.component';
 import { ManifestoComponent } from './pages/07-manifesto/manifesto.component';

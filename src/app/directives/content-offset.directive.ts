@@ -4,20 +4,20 @@ import { ContentOffsetService } from '../services/content-offset/content-offset.
 @Directive({
   selector: '[contentOffset]'
 })
-export class ContentOffsetDirective implements OnInit{
+export class ContentOffsetDirective implements OnInit {
 
   constructor(private el: ElementRef, private contentOffset: ContentOffsetService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.applyElOffset();
   }
 
   @HostListener('window:resize')
-  onResize(){
+  onResize() {
     this.applyElOffset();
   }
 
-  applyElOffset(){
+  applyElOffset() {
     const { x } = this.el.nativeElement.getBoundingClientRect();
     this.contentOffset.offsetX = x;
   }

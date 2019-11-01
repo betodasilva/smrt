@@ -9,22 +9,22 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./resultados.component.scss']
 })
 export class ResultadosComponent implements OnInit {
-  
+
   @ViewChild('share', {static: true, read: ElementRef}) shareComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: false}) modal: ModalComponent;
-  
-  private title: string = '08. Resultados - Ismart';
 
-  private chapterHatInfo = {
-    'image': 'assets/images/8-resultados.jpg',
-    'imageMobile': 'assets/images/3-timeline.jpg',
-    'imageTablet': 'assets/images/4-trajetorias.jpg',
-    'title': 'CHAPTER_8.TITLE',
-    'subtitle': 'CHAPTERS.08'
-  }
-  private relatedInfo: Array<any> = [];
-  
+  private title = '08. Resultados - Ismart';
+
+  public chapterHatInfo = {
+    image: 'assets/images/8-resultados.jpg',
+    imageMobile: 'assets/images/3-timeline.jpg',
+    imageTablet: 'assets/images/4-trajetorias.jpg',
+    title: 'CHAPTER_8.TITLE',
+    subtitle: 'CHAPTERS.08'
+  };
+  public relatedInfo: Array<any> = [];
+
   constructor(
     private titleService: Title,
     private meta: Meta,
@@ -37,7 +37,7 @@ export class ResultadosComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '08. Resultados - Ismart'});
 
     this.translate.get('CHAPTER_8').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 

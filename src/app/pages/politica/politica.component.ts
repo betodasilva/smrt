@@ -10,13 +10,14 @@ export class PoliticaComponent implements OnInit {
 
   title = '06. Horizonte - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/6-horizonte-hat.jpg',
-    'imageTablet': 'assets/images/hats/6-horizonte-tablet.jpg',
-    'image': 'assets/images/6-horizonte.jpg',
+  public isFloatContainerFixed = false;
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/6-horizonte-hat.jpg',
+    imageTablet: 'assets/images/hats/6-horizonte-tablet.jpg',
+    image: 'assets/images/6-horizonte.jpg',
     // 'title': 'Capítulo 06',
-    'subtitle': 'Política de Privacidade'
-  }
+    subtitle: 'Política de Privacidade'
+  };
 
   constructor(
     private titleService: Title,

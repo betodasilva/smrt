@@ -8,17 +8,17 @@ export class ProgressBarService {
 
   private _progress: BehaviorSubject<number> = new BehaviorSubject(0);
 
-  public get progress(){
+  public get progress() {
     return this._progress.getValue();
   }
 
-  public set progress(value){
+  public set progress(value) {
     this._progress.next(value);
   }
 
   public progressObs(): Observable<any> {
     return this._progress;
   }
-  
+
   constructor() { }
 }

@@ -8,7 +8,7 @@ import { Component, OnInit, ElementRef, Renderer2, ViewChild } from '@angular/co
 export class SidebarComponent implements OnInit {
   @ViewChild('sidebar', {static: true}) sidebar: ElementRef;
   constructor(
-    private el: ElementRef, 
+    private el: ElementRef,
     private renderer: Renderer2
   ) { }
 

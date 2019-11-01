@@ -11,11 +11,11 @@ export class TestimonialsService {
 
   private _testimonial: BehaviorSubject<any> = new BehaviorSubject({});
 
-  public get current(): Observable<any>{
+  public get current(): Observable<any> {
     return this._testimonial;
   }
 
-  public set current(testimonial){
+  public set current(testimonial) {
     this._testimonial.next(testimonial);
   }
 
@@ -27,8 +27,8 @@ export class TestimonialsService {
     selecao: [
       {
         id: 1,
-        name: "Nádia Ribeiro",
-        excerpt: "Professora de Matemática na Escola Calhim Manuel Abud, na Zona Sul de São Paulo.",
+        name: 'Nádia Ribeiro',
+        excerpt: 'Professora de Matemática na Escola Calhim Manuel Abud, na Zona Sul de São Paulo.',
         testimonial: `Para fazer a indicação sempre
         recorro aos meus pares e respeito
         o ponto de vista dos colegas que
@@ -59,7 +59,7 @@ export class TestimonialsService {
         que o Ismart consegue mostrar a
         esses meninos a dimensão do mundo.
         O que me encanta, e acredito que a
-        qualquer educador, é ver aquele brilho 
+        qualquer educador, é ver aquele brilho
         nos olhos, aquele sorriso discreto que
         parece dizer ‘ahhhh, então é isso!!!’.
         Sempre acreditei na educação como
@@ -68,12 +68,12 @@ export class TestimonialsService {
         fazer com que as pessoas percebam
         que não há futuro, não há mudança
         possível sem educação.`,
-        photo: "assets/images/nadia-ribeiro.jpg"
+        photo: 'assets/images/nadia-ribeiro.jpg'
       },
       {
         id: 2,
-        name: "Jacqueline MacDowell",
-        excerpt: "Professora do Instituto Helena Antipoff, pertence à Secretaria Municipal da Educação do RJ.",
+        name: 'Jacqueline MacDowell',
+        excerpt: 'Professora do Instituto Helena Antipoff, pertence à Secretaria Municipal da Educação do RJ.',
         testimonial: `É muito importante a parceria
         da Secretaria Municipal de Educação
         com o Ismart – que faz toda a
@@ -85,8 +85,8 @@ export class TestimonialsService {
       },
       {
         id: 3,
-        name: "Renato Aguiar",
-        excerpt: "Professor de Matemática da Escola Municipal República do Peru, no Rio de Janeiro",
+        name: 'Renato Aguiar',
+        excerpt: 'Professor de Matemática da Escola Municipal República do Peru, no Rio de Janeiro',
         testimonial: `Em 2014 pude conhecer melhor
         o Ismart, pois a bolsista que foi da
         turma para a qual eu lecionava em 2013
@@ -143,14 +143,14 @@ export class TestimonialsService {
         mais crítico, responsável, organizado,
         solidário, participativo e consciente da
         realidade.`,
-        photo: "assets/images/renato-aguiar.jpg"
+        photo: 'assets/images/renato-aguiar.jpg'
       }
     ],
     parceiros: [
       {
         id: 1,
-        name: "Zélia e Alexandre Frangioni",
-        excerpt: "Parceiros Ismart",
+        name: 'Zélia e Alexandre Frangioni',
+        excerpt: 'Parceiros Ismart',
         testimonial: `Para nós, a Gabrielli (Fonseca)
         tem sido um exemplo de superação,
         não só pelo lado acadêmico, com
@@ -171,28 +171,28 @@ export class TestimonialsService {
       },
       {
         id: 2,
-        name: "Helena Aguiar",
-        excerpt: "Diretora de Planejamento e Integração do Colégio Bandeirantes",
+        name: 'Helena Aguiar',
+        excerpt: 'Diretora de Planejamento e Integração do Colégio Bandeirantes',
         testimonial: `Não é só o
         bolsista do Ismart que
         se beneficia por estar aqui.
         Todo o Colégio ganha
         com a parceria`,
-        photo: "assets/images/helena-aguiar.png"
+        photo: 'assets/images/helena-aguiar.png'
       }
     ],
     contato: [
       {
         id: 1,
-        name: "Isabela Regina J. de Moraes",
-        excerpt: "18 anos, estudante do Colégio Objetivo, em São José dos Campos - SP",
-        testimonial: "Conheci o projeto através de um amigo chamado Vinicius, que estudava na minha escola de origem e em uma das instituições parceiras do Ismart. Foi ele que meu incentivou e ajudou com todas as etapas do processo seletivo.",
-        photo: "assets/images/isabela-moraes.jpg"
+        name: 'Isabela Regina J. de Moraes',
+        excerpt: '18 anos, estudante do Colégio Objetivo, em São José dos Campos - SP',
+        testimonial: 'Conheci o projeto através de um amigo chamado Vinicius, que estudava na minha escola de origem e em uma das instituições parceiras do Ismart. Foi ele que meu incentivou e ajudou com todas as etapas do processo seletivo.',
+        photo: 'assets/images/isabela-moraes.jpg'
       },
       {
         id: 2,
-        name: "Maria Eduarda Machado",
-        excerpt: "Bolsista em Belo Horizonte – MG",
+        name: 'Maria Eduarda Machado',
+        excerpt: 'Bolsista em Belo Horizonte – MG',
         testimonial: `Minha tia viu um anúncio do
         site BHAZ, de Belo Horizonte, a
         respeito de bolsas de estudos no
@@ -211,8 +211,8 @@ export class TestimonialsService {
       },
       {
         id: 3,
-        name: "Leonardo Frazão",
-        excerpt: "Aluno do 3º do Ensino médio no Colégio S. Bento, no Rio de Janeiro – RJ",
+        name: 'Leonardo Frazão',
+        excerpt: 'Aluno do 3º do Ensino médio no Colégio S. Bento, no Rio de Janeiro – RJ',
         testimonial: `Quando eu estava no 6º ano
         do ensino fundamental, professores
         já comentavam a possibilidade de
@@ -229,12 +229,12 @@ export class TestimonialsService {
         ingressar no projeto. Foi assim que
         tive meus primeiros contatos com o
         Ismart.`,
-        photo: "assets/images/leonardo-frazao.jpg"
+        photo: 'assets/images/leonardo-frazao.jpg'
       },
       {
         id: 4,
-        name: "Pedro Henrique C. Navarro",
-        excerpt: "Estudante de Engenharia Química na Universidade de Notre Dame, nos EUA",
+        name: 'Pedro Henrique C. Navarro',
+        excerpt: 'Estudante de Engenharia Química na Universidade de Notre Dame, nos EUA',
         testimonial: `Conheci o Ismart em 2012,
         no 9° ano, durante uma consulta
         médica na minha cidade, Sorocaba
@@ -249,12 +249,12 @@ export class TestimonialsService {
         eu entrasse no processo seletivo,
         pois acreditava que eu tinha o perfil
         do programa`,
-        photo: "assets/images/pedro-navarro.jpg"
+        photo: 'assets/images/pedro-navarro.jpg'
       },
       {
         id: 5,
-        name: "Nádia Ribeiro",
-        excerpt: "Professora de Matemática na Escola Calhim Manuel Abud, na Zona Sul de São Paulo",
+        name: 'Nádia Ribeiro',
+        excerpt: 'Professora de Matemática na Escola Calhim Manuel Abud, na Zona Sul de São Paulo',
         testimonial: `Soube da existência do
         Instituto por um ex-aluno da prefeitura que queria que o inscrevesse
         para o processo seletivo. Meu
@@ -266,7 +266,7 @@ export class TestimonialsService {
         vista ter conectado tantas pessoas
         a ele, pois percebi que quando um
         estudante ingressa no Ismart não é
-        só ele que se liga ao Instituto, mas 
+        só ele que se liga ao Instituto, mas
         toda sua família se compromete.
         Depois que conheci o Ismart, todos
         os anos, logo nos primeiros dias
@@ -283,12 +283,12 @@ export class TestimonialsService {
         bolsista e um pai de bolsista que dão
         depoimentos e reforçam as minhas
         informações`,
-        photo: "assets/images/nadia-ribeiro.jpg"
+        photo: 'assets/images/nadia-ribeiro.jpg'
       },
       {
         id: 6,
-        name: "Renato Aguiar",
-        excerpt: "Professor de Matemática da Escola Municipal República do Peru",
+        name: 'Renato Aguiar',
+        excerpt: 'Professor de Matemática da Escola Municipal República do Peru',
         testimonial: `Comecei a trabalhar na Escola
           Municipal República do Peru, em
           2011. A escola já participava do
@@ -306,14 +306,14 @@ export class TestimonialsService {
           escolas particulares, mas percebi
           que o programa de desenvolvimento
           dos alunos agrega demais na vivência desses alunos`,
-          photo: "assets/images/renato-aguiar.jpg"
+          photo: 'assets/images/renato-aguiar.jpg'
       },
     ],
     horizonte: [
       {
         id: 1,
-        name: "Mariana Rego Monteiro",
-        excerpt: "Diretora-executiva do Ismart",
+        name: 'Mariana Rego Monteiro',
+        excerpt: 'Diretora-executiva do Ismart',
         testimonial: `Nosso objetivo se mantém
         como no início: sonhar grande. Mas é
         preciso ter a certeza de que esse sonho
@@ -323,12 +323,12 @@ export class TestimonialsService {
         desenvolver ainda mais jovens sem
         perder a qualidade do nosso trabalho
         e nosso incríveis resultados`,
-        photo: ""
+        photo: ''
       },
       {
         id: 2,
-        name: "Beatriz Mantelato",
-        excerpt: "Gerente do ensino superior",
+        name: 'Beatriz Mantelato',
+        excerpt: 'Gerente do ensino superior',
         testimonial: `
         Gostaria que os bolsistas graduados ocupassem posições de destaque no Brasil e no mundo em trilhas
         de carreiras como a acadêmica, empreendedorismo, governo e empresas
@@ -344,8 +344,8 @@ export class TestimonialsService {
       },
       {
         id: 3,
-        name: "Lívia Camaz",
-        excerpt: "Coordenadora de projetos Ismart",
+        name: 'Lívia Camaz',
+        excerpt: 'Coordenadora de projetos Ismart',
         testimonial: `Imagino o Ismart alcançando
         cada vez mais alunos, em outros
         estados do Brasil. Podemos enviar
@@ -354,12 +354,12 @@ export class TestimonialsService {
         contribuir com o Brasil. Imagino muitos graduados do Ismart contribuindo
         com o Instituto, mentorando bolsistas
         e sendo apoiadores financeiros.`,
-        photo: ""
+        photo: ''
       },
       {
         id: 4,
-        name: "Ana Paula Camargo",
-        excerpt: "Gerente da Educação Básica",
+        name: 'Ana Paula Camargo',
+        excerpt: 'Gerente da Educação Básica',
         testimonial: `
         Podemos aprimorar todo o
         nosso trabalho de desenvolvimento
@@ -377,8 +377,8 @@ export class TestimonialsService {
       },
       {
         id: 5,
-        name: "Luiza Toledo Guntovitch",
-        excerpt: "Gerente de Gente e Gestão",
+        name: 'Luiza Toledo Guntovitch',
+        excerpt: 'Gerente de Gente e Gestão',
         testimonial: `
         Gostaria que o Ismart continuasse realizando mais sonhos,
         com uma equipe referência em
@@ -396,8 +396,8 @@ export class TestimonialsService {
     pratica: [
       {
         id: 1,
-        name: "Gabrielli Fonseca de Oliveira",
-        excerpt: "18 anos, estudante de Farmácia da Universidade de São Paulo",
+        name: 'Gabrielli Fonseca de Oliveira',
+        excerpt: '18 anos, estudante de Farmácia da Universidade de São Paulo',
         testimonial: `Você enfrentará desafios e terá
         de fazer sacrifícios. Você passará por
         dificuldades e momentos de provação.
@@ -407,12 +407,12 @@ export class TestimonialsService {
         serão abertas. Você amadurecerá
         muito. Para mim, o Ismart representa
         transformação.`,
-        photo: "assets/images/gabrielli-fonseca.jpg"
+        photo: 'assets/images/gabrielli-fonseca.jpg'
       },
       {
         id: 2,
-        name: "Pedro Henrique C. Navarro",
-        excerpt: "Estudante de Engenharia Química na Universidade de Notre Dame, nos Estados Unidos",
+        name: 'Pedro Henrique C. Navarro',
+        excerpt: 'Estudante de Engenharia Química na Universidade de Notre Dame, nos Estados Unidos',
         testimonial: `Inspiração foi a palavra que
         mais permaneceu em minha mente,
         não só durante os primeiros meses
@@ -472,12 +472,12 @@ export class TestimonialsService {
         Ismart e entrando nas melhores
         universidades do Brasil e do
         mundo`,
-        photo: "assets/images/pedro-navarro.jpg"
+        photo: 'assets/images/pedro-navarro.jpg'
       },
       {
         id: 3,
-        name: "Miguel Alves",
-        excerpt: "Estudante de Engenharia de Petróleo na Poli - USP",
+        name: 'Miguel Alves',
+        excerpt: 'Estudante de Engenharia de Petróleo na Poli - USP',
         testimonial: `Entrei no Ismart em 2010,
         no Colégio Objetivo. O baque de
         perceber a diferença de ensino que
@@ -512,7 +512,7 @@ export class TestimonialsService {
         Passei na Poli-USP e trilhei em grupos
         de extensão, iniciação científica,
         centro acadêmico, até me encontrar
-        na Enactus e me desenvolver ainda 
+        na Enactus e me desenvolver ainda
         mais, sempre abraçando o que me
         fazia seguir em frente: ser desafiado
         e superar. E todo esse caminho
@@ -531,17 +531,17 @@ export class TestimonialsService {
       },
       {
         id: 4,
-        name: "Isabela Regina J. de Moraes",
-        excerpt: "17 anos, estudante do Colégio Objetivo, em São José dos Campos – SP",
+        name: 'Isabela Regina J. de Moraes',
+        excerpt: '17 anos, estudante do Colégio Objetivo, em São José dos Campos – SP',
         testimonial: `No meu primeiro ano de Ensino
         médio, por causa de um episódio
         pessoal, acabei contraindo distúrbio
         de ansiedade e foi nesse momento que
         a frase de que nós, ismartanos, somos
-        uma família, se tornou real. Tanto meu analista 
-        (Profissional da área da educação básica que acompanha, 
-        acolhe e integra o bolsista ao ambiente do colégio privado, 
-        orientado-o em toda a transição desde a adaptação ao 
+        uma família, se tornou real. Tanto meu analista
+        (Profissional da área da educação básica que acompanha,
+        acolhe e integra o bolsista ao ambiente do colégio privado,
+        orientado-o em toda a transição desde a adaptação ao
         desenvolvimento interpessoal e processo de orientação profissional.)
         como os amigos que
         fiz durante os dois anos de Instituto
@@ -571,19 +571,19 @@ export class TestimonialsService {
         tarde eu comecei a participar do Uma
         Mão Lava a Outra como professora, e
         foi aí que percebi a minha paixão por
-        educação e comecei a desenvolver a 
+        educação e comecei a desenvolver a
         oratória. Desde então eu participo de
         quase todas as atividades do Instituto
         em conjunto com outras instituições
         e, neste ano, estou fazendo meu
         primeiro projeto social com ajuda, é
         claro, do Ismart.`,
-        photo: "assets/images/isabela-moraes.jpg"
+        photo: 'assets/images/isabela-moraes.jpg'
       },
       {
         id: 5,
-        name: "João Pedro de Oliveira",
-        excerpt: "Graduado Ismart, engenheiro mecânico e trainee no Itaú BBA",
+        name: 'João Pedro de Oliveira',
+        excerpt: 'Graduado Ismart, engenheiro mecânico e trainee no Itaú BBA',
         testimonial: `Eu tinha muita dificuldade
         em me disciplinar e estudar o que
         eu não gostava. Era uma criança
@@ -601,14 +601,14 @@ export class TestimonialsService {
         comportamento era infantil, e fui
         aprendendo a ter autocontrole e tirar
         o melhor de mim.`,
-        photo: "assets/images/joao-pedro-oliveira.jpg"
+        photo: 'assets/images/joao-pedro-oliveira.jpg'
       },
     ],
     suporte: [
       {
         id: 1,
-        name: "Maria Eduarda Machado",
-        excerpt: "Bolsista em Belo Horizonte – MG",
+        name: 'Maria Eduarda Machado',
+        excerpt: 'Bolsista em Belo Horizonte – MG',
         testimonial: `Minha história com o Ismart é
         feliz. Eu amo o Ismart: os funcionários,
         meus colegas e as atividades, como
@@ -639,7 +639,7 @@ export class TestimonialsService {
         falta dos meus pais e do meu irmão,
         o que me chateava. Mas ir para minha
         casa, aturar o ônibus por duas horas
-        e acordar no outro dia às quatro da 
+        e acordar no outro dia às quatro da
         manhã não era fácil. Além disso, a
         adaptação na escola também foi
         difícil, com uma carga horária pesada
@@ -663,33 +663,33 @@ export class TestimonialsService {
         de já ter ideias de faculdades que
         me interessam. Quero ser médica da
         família no SUS.`,
-        photo: "assets/images/maria-eduarda-machado.jpg"
+        photo: 'assets/images/maria-eduarda-machado.jpg'
       },
     ],
     chegando: [
       {
         id: 1,
-        name: "João Pedro de Oliveira",
-        excerpt: "Graduado Ismart, engenheiro mecânico e trainee no Itaú BBA",
+        name: 'João Pedro de Oliveira',
+        excerpt: 'Graduado Ismart, engenheiro mecânico e trainee no Itaú BBA',
         testimonial: `Aproveite ao máximo todas as atividades que ele propõe. Procure
         se envolver com os colegas e os analistas e coordenadores, pois eles vão te
         entender e ajudar nessa nada fácil e super empolgante jornada`,
-        photo: "assets/images/joao-pedro-oliveira.jpg"
+        photo: 'assets/images/joao-pedro-oliveira.jpg'
       },
       {
         id: 2,
-        name: "Gabrielli Fonseca de Oliveira",
-        excerpt: "Universitária Ismart do 1º ano de Farmácia – USP",
+        name: 'Gabrielli Fonseca de Oliveira',
+        excerpt: 'Universitária Ismart do 1º ano de Farmácia – USP',
         testimonial: `Você enfrentará desafios e terá de fazer sacrifícios. Você passará
         por dificuldades e momentos de provação. Mas saiba que tudo isso será
         para o seu crescimento pessoal. Ao fim, tudo valerá a pena, muitas portas
         serão abertas e você amadurecerá muito`,
-        photo: "assets/images/gabrielli-fonseca.jpg"
+        photo: 'assets/images/gabrielli-fonseca.jpg'
       },
       {
         id: 3,
-        name: "Larissa Fabião",
-        excerpt: "Universitária Ismart do curso de Sistema de Informação, na USP",
+        name: 'Larissa Fabião',
+        excerpt: 'Universitária Ismart do curso de Sistema de Informação, na USP',
         testimonial: `Aproveitem ao máximo a oportunidade que estão tendo de ingressar
         nessa comunidade. Participem de todas as atividades possíveis, conversem com o
         máximo de alunos da comunidade, sonhem grande e se dediquem para alcançar os
@@ -697,29 +697,29 @@ export class TestimonialsService {
       },
       {
         id: 4,
-        name: "Maria Eduarda",
-        excerpt: "Bolsista em Belo Horizonte – MG",
+        name: 'Maria Eduarda',
+        excerpt: 'Bolsista em Belo Horizonte – MG',
         testimonial: `Se você gosta de estudar e acredita que a educação pode impulsionar
         sua vida, mas, mesmo assim, não tem os recursos para estudar nas melhores
         escolas do Brasil, com todo o material necessário e infraestrutura, venha
         para o Ismart! Com bolsa numa grande escola, suporte psicológico e outros
         benefícios, a única coisa que o aluno precisa fazer é se esforçar e estudar para
         chegar aonde ele quiser!`,
-        photo: "assets/images/maria-eduarda.jpg"
+        photo: 'assets/images/maria-eduarda.jpg'
       },
       {
         id: 5,
-        name: "Isabela Regina J. de Moraes",
-        excerpt: "Bolsista Ismart em São José dos Campos – SP",
+        name: 'Isabela Regina J. de Moraes',
+        excerpt: 'Bolsista Ismart em São José dos Campos – SP',
         testimonial: `Sonhe! Sonhe o mais alto que quiser; somos capazes e podemos tudo.
         Batalhe por todos os seus objetivos e nunca desista, mesmo que seja difícil.
         Você é forte e só de estar aqui já está lutando!`,
-        photo: "assets/images/isabela-moraes.jpg"
+        photo: 'assets/images/isabela-moraes.jpg'
       },
       {
         id: 6,
-        name: "Pedro Navarro",
-        excerpt: "Universitário Ismart de Engenharia Química na Universidade de Notre Dame, nos EUA",
+        name: 'Pedro Navarro',
+        excerpt: 'Universitário Ismart de Engenharia Química na Universidade de Notre Dame, nos EUA',
         testimonial: `Aproveite cada oportunidade que surgir, não importa o quão louca ou
         impossível de alcançar ela pareça. Faça amizade com o máximo de pessoas
         possíveis e busque inspiração com a história de cada uma. Não desperdice
@@ -732,20 +732,20 @@ export class TestimonialsService {
         tudo que receber, e garantir que suas conquistas sejam a de outros também –
         gratidão é o melhor combustível possível, e dentro do Ismart você se torna uma
         pessoa com poder imenso de transformar a realidade de outros ao seu redor`,
-        photo: "assets/images/pedro-navarro.jpg"
+        photo: 'assets/images/pedro-navarro.jpg'
       },
       {
         id: 7,
-        name: "Leonardo de Castro Coelho",
-        excerpt: "Graduado em Direito pela Universidade Mackenzie",
+        name: 'Leonardo de Castro Coelho',
+        excerpt: 'Graduado em Direito pela Universidade Mackenzie',
         testimonial: `Os momentos difíceis fazem parte do seu crescimento e você não está
         sozinho(a) nessa jornada. O Ismart e sua comunidade estão aqui para apoiálo(a). Você eventualmente irá superar essas etapas com sucesso.`,
-        photo: "assets/images/leonardo-coelho.jpg"
+        photo: 'assets/images/leonardo-coelho.jpg'
       },
       {
         id: 8,
-        name: "Miguel Alves",
-        excerpt: "Universitário Ismart de Engenharia de Petróleo na Poli – USP",
+        name: 'Miguel Alves',
+        excerpt: 'Universitário Ismart de Engenharia de Petróleo na Poli – USP',
         testimonial: `Eu aprendi a sonhar grande dentro do Ismart. Ainda mais importante do
         que isso, eu compreendi que era capaz de alcançar esses sonhos. Por isso, só
         tenho a dizer uma coisa: sonhe muito grande, alcance o infinito nesse sonho, e
@@ -757,30 +757,30 @@ export class TestimonialsService {
     ead: [
       {
         id: 1,
-        name: "Gabrielli Fonseca de Oliveira",
-        excerpt: "Participou do processo seletivo do Ismart em 2013 e iniciou sua trajetória no Ismart participando da primeira turma do programa Ismart Online",
+        name: 'Gabrielli Fonseca de Oliveira',
+        excerpt: 'Participou do processo seletivo do Ismart em 2013 e iniciou sua trajetória no Ismart participando da primeira turma do programa Ismart Online',
         testimonial: `Foi somente com a jornada do Ismart Online que eu expandi minha visão de mundo sobre me relaciono com a sociedade e posso criar minha própria história, independente de padrões socioeconômicos relacionados à conquista de oportunidades`,
-        photo: "assets/images/gabrielli-fonseca.jpg"
+        photo: 'assets/images/gabrielli-fonseca.jpg'
       },
       {
         id: 2,
-        name: "Letícia Nunes de Campos",
-        excerpt: "3º ano Ensino médio - Ismart Online",
+        name: 'Letícia Nunes de Campos',
+        excerpt: '3º ano Ensino médio - Ismart Online',
         testimonial: `Letícia de 2016 não tinha muita perspectiva de vida e com o Ismart Online, eu comecei a entender que eu não precisava me limitar, que eu poderia ir muito mais além e escolher os rumos da minha vida. Já no primeiro ano, eu tive que solucionar um problema presente na sociedade e foi aí que o meu caminho cruzou com o do Lucas Nicascio, na época, universitário Ismart e ele mudou completamente a minha forma de enxergar a vida, além de ajudar a buscar novas oportunidades e avaliar perspectivas de carreiras. E você começa a entender que o Ismart Online não é você e uma plataforma apenas, mas é você e toda uma família que se forma. A gente compartilha, aprende, ri, chora e se ajuda na vida, no Ismart, na escola e em tudo. O Ismart Online ajuda com conteúdos, mas para além disso, ele amplia horizontes. O Ismart é transformação social.`,
-        photo: "assets/images/leticia-nunes.jpg"
+        photo: 'assets/images/leticia-nunes.jpg'
       },
     ],
     universidade: [
       {
         id: 1,
-        name: "Miguel Alves",
-        excerpt: "Universitário Ismart do curso de Engenharia de Petróleo na Poli - USP",
+        name: 'Miguel Alves',
+        excerpt: 'Universitário Ismart do curso de Engenharia de Petróleo na Poli - USP',
         testimonial: `O que mais me marcou no Ismart, sem sombra de dúvida, foi a rede, seja por meio das analistas e gerentes, seja por meio dos bolsistas e agora Alumni. Sinto de fato que tenho uma família. Aqui conheci pessoas incríveis, pelas quais sinto profunda admiração pessoal e profissional, que, são exemplos que quero manter por perto, sempre. Participei em meu primeiro ano do Coaching, que transformou minha carreira no mundo acadêmico. Consegui identificar os possíveis obstáculos e onde gostaria de estar me desafiando.`
       },
       {
         id: 2,
-        name: "Pedro Henrique C. Navarro",
-        excerpt: "Universitário Ismart de Engenharia Química na Universidade de Notre Dame, nos EUA",
+        name: 'Pedro Henrique C. Navarro',
+        excerpt: 'Universitário Ismart de Engenharia Química na Universidade de Notre Dame, nos EUA',
         testimonial: `Quando entrei no Ismart, não sabia exatamente como fazia para ingressar em uma universidade. Tudo que lembrava era das palavras da minha mãe, de que eu tinha que
         entrar em uma federal. Logo nos primeiros dois meses no projeto, recebi o convite para uma palestra sobre a University of Notre Dame com alguns ex-alunos no escritório do Ismart em São Paulo. Fiquei maravilhado ao ver as fotos daquele campus e ouvir as histórias de ex-
         alunos brasileiros e americanos sobre o quão enriquecedora tinham sido suas experiências. No fim da palestra, os alunos compartilharam uma oportunidade de um programa de verão de duas semanas na universidade, o iLED, em que teríamos aulas diárias nos diversos colleges com alunos de outros países. Sempre que deparava com uma oportunidade diferente, minha mãe sempre dizia “por que não?”, e foi o que fiz. Enviei minha application, e alguns meses depois eu estava entrando em um avião pela primeira vez na vida rumo
@@ -789,12 +789,12 @@ export class TestimonialsService {
         processo de application ao longo do Ensino médio e, no 3° ano, tive a chance de participar de outros programas de verão em Stanford e UC Berkeley. Essas oportunidades foram
         fundamentais para que eu realizasse minha application para os EUA
         `,
-        photo: "assets/images/pedro-navarro.jpg"
+        photo: 'assets/images/pedro-navarro.jpg'
       },
       {
         id: 3,
-        name: "Miguel Alves",
-        excerpt: "Universitário Ismart do curso de Engenharia de Petróleo na Poli - USP",
+        name: 'Miguel Alves',
+        excerpt: 'Universitário Ismart do curso de Engenharia de Petróleo na Poli - USP',
         testimonial: `Minha primeira experiência profissional foi o estágio de férias na Odebrecht Oil&Gas, no Rio de Janeiro, em julho de 2017. A experiência de morar em outro estado sozinho foi um pouco assustadora, mas me aproximei da rede do Rio, seja com os universitários, seja com o ensino básico, por meio do Uma Mão Lava a Outra. Foi como ter uma família lá, mesmo que eu tenha acabado de conhecer. A experiência profissional foi desafiadora, era a primeira vez que eu tinha mais do que notas para me avaliar. A todo momento eu era desafiado, em comunicação, aprendendo algo novo, montando planejamento. Trabalhei na área de Inteligência de Mercado da companhia, estudando plataformas de perfuração e produção, campos de produção de petróleo e contextos globais envolvendo a geopolítica
         do petróleo. Pela primeira vez, senti meu curso saindo da teoria – uma experiência super motivadora. Realizei um segundo estágio de férias na mesma empresa, agora na área de
         Controladoria & Finanças, entendo um pouco melhor do fluxo de caixa da produção de petróleo. E, em 2019, iniciei estágio regular na Ambev em Trade Marketing, desenvolvendo e aprendendo mais sobre logística, estratégia de marketing e inteligência de Mercado. Ainda não tenho a certeza dos passos que darei e do caminho a trilhar, mas quero impactar
@@ -802,9 +802,9 @@ export class TestimonialsService {
         `
       },
     ]
-  }
+  };
 
-  public getAll(){
+  public getAll() {
     return this.all;
   }
 
@@ -812,14 +812,14 @@ export class TestimonialsService {
     return this.translate.get( `TESTIMONIALS.${page.toUpperCase()}` );
   }
 
-  public async navigatePrev(page){
+  public async navigatePrev(page) {
     const all = await this.getByPage(page).toPromise();
     const currentIndex = all.findIndex( testimonial => testimonial.id === this._testimonial.getValue().id );
     const testimonial = currentIndex > 0 ? all[ currentIndex - 1 ] : all[ all.length - 1 ];
     this._testimonial.next(testimonial);
   }
 
-  public async navigateNext(page){
+  public async navigateNext(page) {
     const all = await this.getByPage(page).toPromise();
     const currentIndex = all.findIndex( testimonial => testimonial.id === this._testimonial.getValue().id );
     const testimonial = currentIndex + 1 < all.length ? all[ currentIndex + 1 ] : all[0];

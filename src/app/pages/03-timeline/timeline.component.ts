@@ -15,32 +15,31 @@ export class TimelineComponent implements OnInit {
 
   @ViewChildren('cards') cards: QueryList<ElementRef>;
   @ViewChildren('navItems') navItems: QueryList<ElementRef>;
-  
+
   @ViewChild('article', {static: false}) article: ElementRef;
   @ViewChild('nav', {static: false}) nav: ElementRef;
 
   title = '03. Linha do Tempo - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/3-timeline-hat.jpg',
-    'imageTablet': 'assets/images/hats/3-timeline-tablet.jpg',
-    'image': 'assets/images/3-timeline.jpg',
-    'title': 'CHAPTER_3.TITLE',
-    'subtitle': 'CHAPTERS.03'
-  }
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/3-timeline-hat.jpg',
+    imageTablet: 'assets/images/hats/3-timeline-tablet.jpg',
+    image: 'assets/images/3-timeline.jpg',
+    title: 'CHAPTER_3.TITLE',
+    subtitle: 'CHAPTERS.03'
+  };
 
-  private relatedInfo: Array<any> = [];
-  
+  public relatedInfo: Array<any> = [];
+
   constructor(
-    private timeline: TimelineService,
+    public timeline: TimelineService,
     private renderer: Renderer2,
     private titleService: Title,
     private meta: Meta,
-    private scroll: ScrollService,
-    @Inject(WINDOW) private window: Window,
+    public scroll: ScrollService,
+    @Inject(WINDOW) public window: Window,
     private translate: TranslateService
-  ) 
-  { }
+  ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
@@ -48,13 +47,13 @@ export class TimelineComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '03. Linha do Tempo - Ismart'});
 
     this.translate.get('CHAPTER_3').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 
-  onItemNavClick( { target }, navItem ){
+  onItemNavClick( { target }, navItem ) {
     const elToNavigate = this.cards.find( (el: ElementRef) => el.nativeElement.getAttribute('year') === navItem );
-    if ( !elToNavigate ) return;
+    if ( !elToNavigate ) { return; }
 
     const yPosition = ( elToNavigate.nativeElement.getBoundingClientRect().top + this.window.scrollY ) - 64;
     this.window.scrollTo({
@@ -69,8 +68,8 @@ export class TimelineComponent implements OnInit {
   }
 
   animationClass(index, total) {
-    if ( index + 1 === total ) return 'visible fadeIn'
-    
+    if ( index + 1 === total ) { return 'visible fadeIn'; }
+
     return index % 2 === 0 ? 'visible fadeInLeft' : 'visible fadeInRight';
   }
 

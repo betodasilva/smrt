@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef, Inject, } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT } from '@angular/common';
-import { WINDOW } from "../../services/window.service";
+import { WINDOW } from '../../services/window.service';
 import { EmitterService } from 'src/app/services/emitter/emitter.service';
 import { ProgressBarService } from 'src/app/services/progress-bar/progress-bar.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
@@ -19,21 +19,21 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild('header', { static: false }) header: ElementRef;
 
-  private percentage: number = 0;
+  public percentage = 0;
 
-  private headerSrollBefore: number = 0;
-  private headerStyle: { top } = { top: '0px' };
+  private headerSrollBefore = 0;
+  public headerStyle: { top } = { top: '0px' };
 
-  public hasMenuOpened: boolean = false;
-  private hasChaptersOpened: boolean = false;
-  private _availableLanguage: string = '';
+  public hasMenuOpened = false;
+  public hasChaptersOpened = false;
+  public _availableLanguage = '';
 
-  private disableProgressBar: boolean = false;
+  public disableProgressBar = false;
 
-  private get availableLanguage(){
+  public get availableLanguage() {
     return this._availableLanguage;
   }
-  private set availableLanguage(lang){
+  public set availableLanguage(lang) {
     this._availableLanguage = lang;
   }
 
@@ -67,7 +67,7 @@ export class HeaderComponent implements OnInit {
 
   /**
    * Make inactives languages available to choose from
-   * @param { currentLang }:string 
+   * @param { currentLang }:string
    * @param { allLanguages }:string
    * @return { availableLanguages }: string | array
    * */
@@ -78,12 +78,12 @@ export class HeaderComponent implements OnInit {
     return availableLanguage;
   }
 
-  onAvailableLanguageClick(){
+  onAvailableLanguageClick() {
     this.translate.use( this.availableLanguage );
     this.availableLanguage = this.setAvailableLanguage( this.translate.currentLang, this.translate.getLangs() );
   }
-  
-  toggle($event) {
+
+  toggle($event = null) {
     this.hasChaptersOpened = !this.hasChaptersOpened;
   }
 
@@ -97,7 +97,7 @@ export class HeaderComponent implements OnInit {
    * @author https://osvaldas.info/auto-hide-sticky-header
    */
   @HostListener('window:scroll', [])
-  onWindowScroll(){
+  onWindowScroll() {
     const element      = this.header.nativeElement;
     let elHeight       = element.offsetHeight,
         dHeight        = this.document.body.offsetHeight,
@@ -106,22 +106,17 @@ export class HeaderComponent implements OnInit {
         wScrollDiff    = this.headerSrollBefore - wScrollCurrent,
         elTop          = parseInt(this.headerStyle.top) + wScrollDiff;
 
-    if( wScrollCurrent <= 0 ) {
+    if ( wScrollCurrent <= 0 ) {
       this.headerStyle.top = '0px';
       EmitterService.get('headerOpen').emit(false);
-    }
-    else if( wScrollDiff > 0 ) {
+    } else if ( wScrollDiff > 0 ) {
       this.headerStyle.top = ( elTop > 0 ? 0 : elTop ) + 'px';
       EmitterService.get('headerOpen').emit(true);
-    }
-    else if( wScrollDiff < 0 ) // scrolled down
-    {
-        if( wScrollCurrent + wHeight >= dHeight - elHeight )  {
+    } else if ( wScrollDiff < 0 ) {
+        if ( wScrollCurrent + wHeight >= dHeight - elHeight )  {
             this.headerStyle.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
             EmitterService.get('headerOpen').emit(true);
-        }
- 
-        else {
+        } else {
             this.headerStyle.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
             EmitterService.get('headerOpen').emit(false);
         }
@@ -138,11 +133,11 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  listenProgress(){
+  listenProgress() {
     this.progressBar
         .progressObs()
         .subscribe(
           (value) => this.percentage = value
-        )
+        );
   }
 }

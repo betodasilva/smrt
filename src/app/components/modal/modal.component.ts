@@ -16,8 +16,8 @@ export class ModalComponent implements OnInit {
   @Output('onNext') onNext: EventEmitter<any> = new EventEmitter();
   @Output('onPrev') onPrev: EventEmitter<any> = new EventEmitter();
 
-  private modalRef: BsModalRef;
-  private content: {
+  public modalRef: BsModalRef;
+  public content: {
     name,
     excerpt,
     testimonial,
@@ -29,7 +29,7 @@ export class ModalComponent implements OnInit {
   ngOnInit() {
     this.testimonial.subscribe( value => {
       this.content = value;
-    })
+    });
   }
 
   onModalPrevClick() {

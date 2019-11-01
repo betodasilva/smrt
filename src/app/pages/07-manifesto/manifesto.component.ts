@@ -10,22 +10,22 @@ import { TranslateService } from '@ngx-translate/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ManifestoComponent implements OnInit {
-  
+
   @ViewChild('share', {static: true, read: ElementRef}) shareComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: false}) modal: ModalComponent;
 
-  private title: string = '07. Manifesto Ismart - Ismart';
+  private title = '07. Manifesto Ismart - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/7-manifesto-hat.jpg',
-    'imageTablet': 'assets/images/hats/7-manifesto-ismart-tablet.jpg',
-    'image': 'assets/images/7-manifesto.jpg',
-    'title': 'CHAPTER_7.TITLE',
-    'subtitle': 'CHAPTERS.07'
-  }
-  
-  private relatedInfo: Array<any> = [];
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/7-manifesto-hat.jpg',
+    imageTablet: 'assets/images/hats/7-manifesto-ismart-tablet.jpg',
+    image: 'assets/images/7-manifesto.jpg',
+    title: 'CHAPTER_7.TITLE',
+    subtitle: 'CHAPTERS.07'
+  };
+
+  public relatedInfo: Array<any> = [];
 
   constructor(
     private titleService: Title,
@@ -39,7 +39,7 @@ export class ManifestoComponent implements OnInit {
     this.meta.addTag({property: 'og:title', content: '07. Manifesto Ismart - Ismart'});
 
     this.translate.get('CHAPTER_7').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 

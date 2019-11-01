@@ -8,11 +8,11 @@ export class ContentOffsetService {
 
   private _offsetX: BehaviorSubject<number> = new BehaviorSubject(0);
 
-  public get offsetX(){
+  public get offsetX() {
     return this._offsetX.getValue();
   }
 
-  public set offsetX(value){
+  public set offsetX(value) {
     this._offsetX.next(value);
   }
 

@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 interface relatedData {
-  title,
-  subtile,
-  url,
-  image
+  title;
+  subtile;
+  url;
+  image;
 }
 
 @Component({
@@ -14,18 +14,18 @@ interface relatedData {
 })
 export class RelatedComponent implements OnInit {
   @Input('relatedData') relatedData: relatedData;
-  private isLastSlide: boolean = false;
-  private slideConfig = {
-    "slidesToShow": 1,
-    "slidesToScroll": 1,
-    "infinite": false,
-    "arrows": false,
-    "centerMode": false,
+  public isLastSlide = false;
+  public slideConfig = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
+    centerMode: false,
     mobileFirst: true,
     responsive: [
       {
         breakpoint: 768,
-        settings: "unslick"
+        settings: 'unslick'
       }
     ]
   };
@@ -34,11 +34,11 @@ export class RelatedComponent implements OnInit {
   ngOnInit() {
   }
 
-  beforeChange($event){
-    const { 
-      currentSlide, 
-      nextSlide, 
-      slick 
+  beforeChange($event) {
+    const {
+      currentSlide,
+      nextSlide,
+      slick
     } = $event;
     this.isLastSlide = (currentSlide + nextSlide) === slick.slideCount;
   }

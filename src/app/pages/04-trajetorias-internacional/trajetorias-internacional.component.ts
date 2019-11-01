@@ -10,21 +10,21 @@ import { TranslateService } from '@ngx-translate/core';
   encapsulation: ViewEncapsulation.None
 })
 export class TrajetoriasInternacionalComponent implements OnInit {
-  
+
   @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
 
-  private title: string = '04. Trajetórias Ismart: Seleção - Ismart';
+  private title = '04. Trajetórias Ismart: Seleção - Ismart';
 
-  private chapterHatInfo = {
-    'imageMobile': 'assets/images/hats/4-trajetorias-hat.jpg',
-    'imageTablet': 'assets/images/hats/4-trajetorias-tablet.jpg',
-    'image': 'assets/images/4-trajetorias.jpg',
-    'title': 'CHAPTER_4.1.TITLE',
-    'subtitle': 'CHAPTERS.04'
-  }
+  public chapterHatInfo = {
+    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
+    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
+    image: 'assets/images/4-trajetorias.jpg',
+    title: 'CHAPTER_4.1.TITLE',
+    subtitle: 'CHAPTERS.04'
+  };
 
-  private relatedInfo: Array<any> = [];
+  public relatedInfo: Array<any> = [];
 
   constructor(
     private titleService: Title,
@@ -40,7 +40,7 @@ export class TrajetoriasInternacionalComponent implements OnInit {
 
 
     this.translate.get('CHAPTER_4.5').subscribe( (data: any) => {
-      this.relatedInfo = data['RELATED'];
+      this.relatedInfo = data.RELATED;
     });
   }
 
