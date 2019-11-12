@@ -29,7 +29,7 @@ export class ChapterInternComponent implements OnInit {
   };
   public relatedInfo: Array<any> = [];
   // public accordionContent: Array<any> = [];
-  private accordionContent = [
+  public accordionContent = [
     {
       title: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_1.TITLE',
       content: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_1.CONTENT'
