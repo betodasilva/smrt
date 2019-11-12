@@ -27,7 +27,7 @@ export class TestimonialsComponent implements OnInit {
   public slideConfig = {
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: true,
+    infinite: false,
     arrows: true,
     centerMode: false,
     prevArrow: '<button type=\'button\' class=\'btn slick-prev\'><img src=\'assets/images/arrow.svg\'></button>',

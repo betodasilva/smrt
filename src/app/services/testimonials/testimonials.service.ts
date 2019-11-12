@@ -81,8 +81,10 @@ export class TestimonialsService {
         e começa a identificar esses alunos
         a partir do processo seletivo, e
         eles entendem a importância de se
-        desenvolver e crescer`
+        desenvolver e crescer`,
+				"photo": "assets/images/jacqueline-macdowell.jpg"
       },
+
       {
         id: 3,
         name: 'Renato Aguiar',
@@ -207,7 +209,8 @@ export class TestimonialsService {
         estudava num cursinho popular do
         Cefet à tarde. Nesse dia, chegando
         do cursinho, logo que li a matéria
-        me inscrevi para o Ismart`
+        me inscrevi para o Ismart`,
+        photo: 'assets/images/maria-eduarda-machado-souza.jpg'
       },
       {
         id: 3,
@@ -323,7 +326,7 @@ export class TestimonialsService {
         desenvolver ainda mais jovens sem
         perder a qualidade do nosso trabalho
         e nosso incríveis resultados`,
-        photo: ''
+        photo: 'assets/images/mariana-rego-monteiro.jpg'
       },
       {
         id: 2,
@@ -341,6 +344,7 @@ export class TestimonialsService {
         do trabalho para oferecer o melhor
         suporte aos nossos alunos na transição para o mercado de trabalho e
         impulsionarmos a realização dos talentos que fazem parte da nossa rede.`,
+        photo: 'assets/images/beatriz-mantelato.jpg'
       },
       {
         id: 3,
@@ -354,7 +358,7 @@ export class TestimonialsService {
         contribuir com o Brasil. Imagino muitos graduados do Ismart contribuindo
         com o Instituto, mentorando bolsistas
         e sendo apoiadores financeiros.`,
-        photo: ''
+        photo: 'assets/images/livia-camaz.jpg'
       },
       {
         id: 4,
@@ -373,7 +377,8 @@ export class TestimonialsService {
         exigências dos próximos anos. Outro
         ponto é a ampliação da nossa atividade
         para que possamos impactar cada vez
-        mais talentos Brasil afora`
+        mais talentos Brasil afora`,
+        photo: 'assets/images/ana-paula-camargo.jpg'
       },
       {
         id: 5,
@@ -390,7 +395,8 @@ export class TestimonialsService {
         que trabalhem por uma causa com
         que se identifiquem e vejam retorno
         no seu desenvolvimento ao mesmo
-        tempo em que desenvolvem jovens.`
+        tempo em que desenvolvem jovens.`,
+        photo: 'assets/images/luiza-toledo-guntovitch.jpg'
       }
     ],
     pratica: [
@@ -663,7 +669,7 @@ export class TestimonialsService {
         de já ter ideias de faculdades que
         me interessam. Quero ser médica da
         família no SUS.`,
-        photo: 'assets/images/maria-eduarda-machado.jpg'
+        photo: 'assets/images/maria-eduarda-machado-souza.jpg'
       },
     ],
     chegando: [
@@ -693,7 +699,8 @@ export class TestimonialsService {
         testimonial: `Aproveitem ao máximo a oportunidade que estão tendo de ingressar
         nessa comunidade. Participem de todas as atividades possíveis, conversem com o
         máximo de alunos da comunidade, sonhem grande e se dediquem para alcançar os
-        sonhos que vão acabar surgindo a partir dessa nova comunidade`
+        sonhos que vão acabar surgindo a partir dessa nova comunidade`,
+        photo: 'assets/images/larissa-fabiao.jpg'
       },
       {
         id: 4,

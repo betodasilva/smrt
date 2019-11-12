@@ -338,3 +338,10 @@ svg-icon {
 		width: 90px;
 	}
 }
+.no-first-character {
+	&:first-of-type:first-letter {
+		font-size: 18px;
+		color: #012461;
+		line-height: 1.78;
+	}
+}

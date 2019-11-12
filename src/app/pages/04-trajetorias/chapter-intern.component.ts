@@ -28,8 +28,29 @@ export class ChapterInternComponent implements OnInit {
     subtitle: 'CHAPTERS.04'
   };
   public relatedInfo: Array<any> = [];
-  public accordionContent: Array<any> = [];
-
+  // public accordionContent: Array<any> = [];
+  private accordionContent = [
+    {
+      title: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_1.TITLE',
+      content: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_1.CONTENT'
+    },
+    {
+      title: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_2.TITLE',
+      content: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_2.CONTENT'
+    },
+    {
+      title: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_3.TITLE',
+      content: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_3.CONTENT'
+    },
+    {
+      title: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_4.TITLE',
+      content: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_4.CONTENT'
+    },
+    {
+      title: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_5.TITLE',
+      content: 'CHAPTER_4.1.CONTENT.SECTION_7.1.ACCORDION_5.CONTENT'
+    }
+  ];
   constructor(
     private titleService: Title,
     private meta: Meta,
