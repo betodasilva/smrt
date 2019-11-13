@@ -209,7 +209,10 @@
 					"CONTENT": "Projeto criado em 2017 por e para graduados Ismart, com o objetivo de criar uma rede Alumni Ismart engajada e fortalecida por meio de atividades que promovem a troca de experiências, desafios e oportunidades entre a rede. O projeto tem como valores ética, reciprocidade e diversidade."
 				}
 			},
-			"SECTION_8": "<p>“O impacto do Ismart nos últimos 20 anos no Brasil reflete a certeza de que estamos contribuindo para formar cidadãos conscientes e preparados para lidar com os desafios do País. Se refletirmos sobre nossa crença de que os bons exemplos têm efeito multiplicador, que iniciamos em 1999 com apenas seis alunos e que nestes 20 anos tivemos mais de 4.800 alunos impactados pelos projetos que hoje estão pelo Brasil e pelo mundo, conseguimos visualizar o impacto exponencial do Instituto”, ressalta Celina Seara da Costa Pinto, gerente Praça Rio/BH.</p><h3 class=\"chapter-content__title--section\">Envolvimento</h3><p>O trabalho do Ismart se dá com a colaboração de uma rede de parceiros institucionais – apoiadores financeiros, escolas e secretarias de educação – além da equipe interna, para desenvolvimento dos bolsistas e educadores. É essa qualificada rede que permite ao Ismart identificar jovens talentosos de baixa renda ao apoiar a divulgação dos projetos desenvolvidos pelo Instituto. </p><h3 class=\"chapter-content__title--section\">Principais públicos estratégicos</h3><ul class=\"list\"><li>Estudantes talentosos de baixa renda (potencial bolsista)</li><li>Bolsistas Ismart</li><li>Familiares responsáveis pelo bolsista Ismart</li><li>Secretarias de Educação</li><li>Educador da rede pública</li><li>Dirigente de escola particular de excelência</li><li>Apoiadores financeiros</li></ul>"
+			"SECTION_8": "<p>“O impacto do Ismart nos últimos 20 anos no Brasil reflete a certeza de que estamos contribuindo para formar cidadãos conscientes e preparados para lidar com os desafios do País. Se refletirmos sobre nossa crença de que os bons exemplos têm efeito multiplicador, que iniciamos em 1999 com apenas seis alunos e que nestes 20 anos tivemos mais de 4.800 alunos impactados pelos projetos que hoje estão pelo Brasil e pelo mundo, conseguimos visualizar o impacto exponencial do Instituto”, ressalta Celina Seara da Costa Pinto, gerente Praça Rio/BH.</p><h3 class=\"chapter-content__title--section\">Envolvimento</h3><p>O trabalho do Ismart se dá com a colaboração de uma rede de parceiros institucionais – apoiadores financeiros, escolas e secretarias de educação – além da equipe interna, para desenvolvimento dos bolsistas e educadores. É essa qualificada rede que permite ao Ismart identificar jovens talentosos de baixa renda ao apoiar a divulgação dos projetos desenvolvidos pelo Instituto. </p>",
+			"SECTION_9": "<h3 class=\"chapter-content__title--section\">Principais públicos estratégicos</h3><ul class=\"list\"><li>Estudantes talentosos de baixa renda (potencial bolsista)</li><li>Bolsistas Ismart</li><li>Familiares responsáveis pelo bolsista Ismart</li><li>Secretarias de Educação</li><li>Educador da rede pública</li><li>Dirigente de escola particular de excelência</li><li>Apoiadores financeiros</li></ul>",
+			"SUBTITLE_IMG_4": "Alunos do Bolsa Talento",
+			"SUBTITLE_IMG_5": "Alunos do Alicerce"
 		},
 		"RELATED": [
 			{
@@ -748,11 +751,11 @@
 				"photo": "assets/images/jacqueline-macdowell.jpg"
 			},
 			{
-			"id": 3,
-			"name": "Renato Aguiar",
-			"excerpt": "Professor de Matemática da Escola Municipal República do Peru, no Rio de Janeiro",
-			"testimonial": "Em 2014 pude conhecer melhor o Ismart, pois a bolsista que foi da turma para a qual eu lecionava em 2013 passou a visitar a escola e divulgar os projetos. Fiquei muito impressionado com a mudança de postura. Ela era uma aluna muito tímida e já no primeiro ano como bolsista, estava bem mais comunicativa, a ponto de entrar nas turmas e fazer a apresentação das atividades do Ismart. Foi quando deparei com os exemplos de vida dos bolsistas e as oportunidades oferecidas para que desenvolvam o máximo do seu potencial. A estrutura motiva e apoia os alunos, dando acesso a melhores escolas, intercâmbios, apoio psicológico, encontro com profissionais de várias áreas, atividades que os ajudam a chegar bem preparados no mercado de trabalho, como os programas de mentoria, coaching e oficinas que desenvolvem habilidades de comunicação, além dos encontros periódicos com bolsistas e seus familiares. A estrutura acompanha desde o ensino fundamental até à universidade. A ideia de ajudar a encontrar alunos talentosos de baixa renda me motivou cada vez mais, de modo que comecei a participar do encontro de educadores e a sempre atualizar e aperfeiçoar os materiais que uso no preparo dos estudantes, para cada etapa do processo seletivo. Costumo indicar que, além do potencial, busquem melhorar e ampliar os conhecimentos; realizem atividades em grupo interagindo e expondo seus pontos de vista, sem faltar com respeito aos demais colegas, por divergirem de opinião; e contribuam ajudando a escola não só nas atividades solicitadas, mas também sendo solidários e auxiliando os demais alunos com dificuldade em determinados conteúdos. O ingresso em um dos projetos do Ismart proporciona o contato com um universo diferente da realidade do aluno, que o amadurece e impulsiona seu pleno desenvolvimento, modificando o modo de pensar, agir e olhar o mundo ao seu redor, tornando-o um cidadão mais crítico, responsável, organizado, solidário, participativo e consciente da realidade.",
-			"photo": "assets/images/renato-aguiar.jpg"
+				"id": 3,
+				"name": "Renato Aguiar",
+				"excerpt": "Professor de Matemática da Escola Municipal República do Peru, no Rio de Janeiro",
+				"testimonial": "Em 2014 pude conhecer melhor o Ismart, pois a bolsista que foi da turma para a qual eu lecionava em 2013 passou a visitar a escola e divulgar os projetos. Fiquei muito impressionado com a mudança de postura. Ela era uma aluna muito tímida e já no primeiro ano como bolsista, estava bem mais comunicativa, a ponto de entrar nas turmas e fazer a apresentação das atividades do Ismart. Foi quando deparei com os exemplos de vida dos bolsistas e as oportunidades oferecidas para que desenvolvam o máximo do seu potencial. A estrutura motiva e apoia os alunos, dando acesso a melhores escolas, intercâmbios, apoio psicológico, encontro com profissionais de várias áreas, atividades que os ajudam a chegar bem preparados no mercado de trabalho, como os programas de mentoria, coaching e oficinas que desenvolvem habilidades de comunicação, além dos encontros periódicos com bolsistas e seus familiares. A estrutura acompanha desde o ensino fundamental até à universidade. A ideia de ajudar a encontrar alunos talentosos de baixa renda me motivou cada vez mais, de modo que comecei a participar do encontro de educadores e a sempre atualizar e aperfeiçoar os materiais que uso no preparo dos estudantes, para cada etapa do processo seletivo. Costumo indicar que, além do potencial, busquem melhorar e ampliar os conhecimentos; realizem atividades em grupo interagindo e expondo seus pontos de vista, sem faltar com respeito aos demais colegas, por divergirem de opinião; e contribuam ajudando a escola não só nas atividades solicitadas, mas também sendo solidários e auxiliando os demais alunos com dificuldade em determinados conteúdos. O ingresso em um dos projetos do Ismart proporciona o contato com um universo diferente da realidade do aluno, que o amadurece e impulsiona seu pleno desenvolvimento, modificando o modo de pensar, agir e olhar o mundo ao seu redor, tornando-o um cidadão mais crítico, responsável, organizado, solidário, participativo e consciente da realidade.",
+				"photo": "assets/images/renato-aguiar.jpg"
 			}
 		],
 		"PARCEIROS": [
@@ -819,32 +822,36 @@
 				"id": 1,
 				"name": "Mariana Rego Monteiro",
 				"excerpt": "Diretora-executiva do Ismart",
-				"testimonial": "Nosso objetivo se mantém como no início: sonhar grande. Mas é preciso ter a certeza de que esse sonho esteja sempre alinhado aos valores e às diretrizes do Ismart, fazendo o possível para que possamos atrair e desenvolver ainda mais jovens sem perder a qualidade do nosso trabalho e nosso incríveis resultados"
+				"testimonial": "Nosso objetivo se mantém como no início: sonhar grande. Mas é preciso ter a certeza de que esse sonho esteja sempre alinhado aos valores e às diretrizes do Ismart, fazendo o possível para que possamos atrair e desenvolver ainda mais jovens sem perder a qualidade do nosso trabalho e nosso incríveis resultados",
+				"photo": "assets/images/mariana-rego-monteiro.jpg"
 			},
 			{
 				"id": 2,
 				"name": "Beatriz Mantelato",
 				"excerpt": "Gerente do ensino superior",
-				"testimonial": "Gostaria que os bolsistas graduados ocupassem posições de destaque no Brasil e no mundo em trilhas de carreiras como a acadêmica, empreendedorismo, governo e empresas privadas. Que eles sejam os líderes responsáveis por criar soluções e tomar decisões que influenciarão na resolução dos principais problemas da sociedade. No caminho para os próximos anos, seguiremos muito conectados às tendências do futuro do trabalho para oferecer o melhor suporte aos nossos alunos na transição para o mercado de trabalho e impulsionarmos a realização dos talentos que fazem parte da nossa rede."
+				"testimonial": "Gostaria que os bolsistas graduados ocupassem posições de destaque no Brasil e no mundo em trilhas de carreiras como a acadêmica, empreendedorismo, governo e empresas privadas. Que eles sejam os líderes responsáveis por criar soluções e tomar decisões que influenciarão na resolução dos principais problemas da sociedade. No caminho para os próximos anos, seguiremos muito conectados às tendências do futuro do trabalho para oferecer o melhor suporte aos nossos alunos na transição para o mercado de trabalho e impulsionarmos a realização dos talentos que fazem parte da nossa rede.",
+				"photo": "assets/images/beatriz-mantelato.jpg"
 			},
 			{
 				"id": 3,
 				"name": "Lívia Camaz",
 				"excerpt": "Coordenadora de projetos Ismart",
 				"testimonial": "Imagino o Ismart alcançando cada vez mais alunos, em outros estados do Brasil. Podemos enviar cada vez mais alunos para estudarem fora do País e vê-los retornando para contribuir com o Brasil. Imagino muitos graduados do Ismart contribuindo com o Instituto, mentorando bolsistas e sendo apoiadores financeiros.",
-				"photo": ""
+				"photo": "assets/images/livia-camaz.jpg"
 			},
 			{
 				"id": 4,
 				"name": "Ana Paula Camargo",
 				"excerpt": "Gerente da Educação Básica",
-				"testimonial": " Podemos aprimorar todo o nosso trabalho de desenvolvimento – melhoria contínua é um dos nossos mantras. Estamos neste momento trazendo conceitos de literacia digital, ‘coding’, e outras tendências do futuro do mercado para nossos alunos. Assim, garantimos o seu pleno desenvolvimento alinhado às exigências dos próximos anos. Outro ponto é a ampliação da nossa atividade para que possamos impactar cada vez mais talentos Brasil afora"
+				"testimonial": " Podemos aprimorar todo o nosso trabalho de desenvolvimento – melhoria contínua é um dos nossos mantras. Estamos neste momento trazendo conceitos de literacia digital, ‘coding’, e outras tendências do futuro do mercado para nossos alunos. Assim, garantimos o seu pleno desenvolvimento alinhado às exigências dos próximos anos. Outro ponto é a ampliação da nossa atividade para que possamos impactar cada vez mais talentos Brasil afora",
+				"photo": "assets/images/ana-paula-camargo.jpg"
 			},
 			{
 				"id": 5,
 				"name": "Luiza Toledo Guntovitch",
 				"excerpt": "Gerente de Gente e Gestão",
-				"testimonial": " Gostaria que o Ismart continuasse realizando mais sonhos, com uma equipe referência em desenvolvimento de pessoas, com foco no aluno e causando ainda mais impacto positivo por meio do Ismart Online. Em termos de País, queremos deixar profissionais mais completos, que trabalhem por uma causa com que se identifiquem e vejam retorno no seu desenvolvimento ao mesmo tempo em que desenvolvem jovens."
+				"testimonial": " Gostaria que o Ismart continuasse realizando mais sonhos, com uma equipe referência em desenvolvimento de pessoas, com foco no aluno e causando ainda mais impacto positivo por meio do Ismart Online. Em termos de País, queremos deixar profissionais mais completos, que trabalhem por uma causa com que se identifiquem e vejam retorno no seu desenvolvimento ao mesmo tempo em que desenvolvem jovens.",
+				"photo": "assets/images/luiza-toledo-guntovitch.jpg"
 			}
 		],
 		"PRATICA": [
@@ -911,7 +918,8 @@
 				"id": 3,
 				"name": "Larissa Fabião",
 				"excerpt": "Universitária Ismart do curso de Sistema de Informação, na USP",
-				"testimonial": "Aproveitem ao máximo a oportunidade que estão tendo de ingressar nessa comunidade. Participem de todas as atividades possíveis, conversem com o máximo de alunos da comunidade, sonhem grande e se dediquem para alcançar os sonhos que vão acabar surgindo a partir dessa nova comunidade"
+				"testimonial": "Aproveitem ao máximo a oportunidade que estão tendo de ingressar nessa comunidade. Participem de todas as atividades possíveis, conversem com o máximo de alunos da comunidade, sonhem grande e se dediquem para alcançar os sonhos que vão acabar surgindo a partir dessa nova comunidade",
+				"photo": "assets/images/larissa-fabiao.jpg"
 			},
 			{
 				"id": 4,
@@ -931,7 +939,8 @@
 				"id": 6,
 				"name": "Pedro Navarro",
 				"excerpt": "Universitário Ismart de Engenharia Química na Universidade de Notre Dame, nos EUA",
-				"testimonial": "Aproveite cada oportunidade que surgir, não importa o quão louca ou impossível de alcançar ela pareça. Faça amizade com o máximo de pessoas possíveis e busque inspiração com a história de cada uma. Não desperdice nenhum segundo no projeto, procure crescer sempre, pois o tempo passa rápido, e é incrível como o Ismart nos desenvolve em tão pouco tempo. Não tenha medo de falhar algumas vezes ou não conquistar algumas das oportunidades que encontrar pela frente – ter resiliência é importante, e como minha mãe sempre fala, ‘tudo se ajeita’, e de uma forma ou de outra, as melhores oportunidades para você irão aparecer. Procure passar adiante tudo que receber, e garantir que suas conquistas sejam a de outros também – gratidão é o melhor combustível possível, e dentro do Ismart você se torna uma pessoa com poder imenso de transformar a realidade de outros ao seu redor", "photo": "assets/images/pedro-navarro.jpg"
+				"testimonial": "Aproveite cada oportunidade que surgir, não importa o quão louca ou impossível de alcançar ela pareça. Faça amizade com o máximo de pessoas possíveis e busque inspiração com a história de cada uma. Não desperdice nenhum segundo no projeto, procure crescer sempre, pois o tempo passa rápido, e é incrível como o Ismart nos desenvolve em tão pouco tempo. Não tenha medo de falhar algumas vezes ou não conquistar algumas das oportunidades que encontrar pela frente – ter resiliência é importante, e como minha mãe sempre fala, ‘tudo se ajeita’, e de uma forma ou de outra, as melhores oportunidades para você irão aparecer. Procure passar adiante tudo que receber, e garantir que suas conquistas sejam a de outros também – gratidão é o melhor combustível possível, e dentro do Ismart você se torna uma pessoa com poder imenso de transformar a realidade de outros ao seu redor",
+				"photo": "assets/images/pedro-navarro.jpg"
 			},
 			{
 				"id": 7,

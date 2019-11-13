@@ -13,61 +13,90 @@
 		<app-share></app-share>
 	</app-float-container>
 	<div class="container-fluid">
-			<div class="row">
-					<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12" contentOffset>
-							<span class="tag">{{ 'CHAPTERS.04.1' | translate }}</span>
-							<h2 class="chapter-content__title">{{ 'CHAPTER_4.1.CONTENT.TITLE' | translate }}</h2>
-							<h3 class="chapter-content__subtitle">{{ 'CHAPTER_4.1.CONTENT.SUBTITLE' | translate }}</h3>
-							<p>{{ 'CHAPTER_4.1.CONTENT.SECTION_1' | translate }}</p>
-					</div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12" contentOffset>
+				<span class="tag">{{ 'CHAPTERS.04.1' | translate }}</span>
+				<h2 class="chapter-content__title">{{ 'CHAPTER_4.1.CONTENT.TITLE' | translate }}</h2>
+				<h3 class="chapter-content__subtitle">{{ 'CHAPTER_4.1.CONTENT.SUBTITLE' | translate }}</h3>
+				<p>{{ 'CHAPTER_4.1.CONTENT.SECTION_1' | translate }}</p>
 			</div>
-			<div class="row">
-					<figure class="chapter-content__img mb-5">
-							<div class="img__container">
-									<img src="assets/images/joao-pedro-de-oliveira-graduado-ismart_2.jpg" alt="">
-							</div>
-							<div class="blockquote__container container">
-									<blockquote class="blockquote__image blockquote__quote">{{ 'CHAPTER_4.1.CONTENT.SECTION_2.QUOTE' | translate }}
-									<cite>{{ 'CHAPTER_4.1.CONTENT.SECTION_2.CITE' | translate }}</cite>
-									</blockquote>
-							</div>
-							<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
-									<figcaption><img src="assets/images/camera.svg">{{ 'CHAPTER_4.1.CONTENT.SECTION_2.PHOTO_DESCRIPTION' | translate }}</figcaption>
-							</div>
-					</figure>
+		</div>
+		<div class="row">
+			<figure class="chapter-content__img mb-5">
+				<div class="img__container">
+					<img src="assets/images/joao-pedro-de-oliveira-graduado-ismart_2.jpg" alt="">
+				</div>
+				<div class="blockquote__container container">
+					<blockquote class="blockquote__image blockquote__quote">{{ 'CHAPTER_4.1.CONTENT.SECTION_2.QUOTE' | translate }}
+					<cite>{{ 'CHAPTER_4.1.CONTENT.SECTION_2.CITE' | translate }}</cite>
+					</blockquote>
+				</div>
+				<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+					<figcaption><img src="assets/images/camera.svg">{{ 'CHAPTER_4.1.CONTENT.SECTION_2.PHOTO_DESCRIPTION' | translate }}</figcaption>
+				</div>
+			</figure>
+		</div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12" [innerHTML]="'CHAPTER_4.1.CONTENT.SECTION_3' | translate">
 			</div>
-			<div class="row">
-					<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12" [innerHTML]="'CHAPTER_4.1.CONTENT.SECTION_3' | translate">
-					</div>
-			</div>
-			<div class="row">
-					<figure class="chapter-content__img mb-5">
-							<div class="img__container">
-									<img src="assets/images/alunos-ismart-do-ensino-medio.jpg" alt="">  
-							</div>
-							<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
-									<figcaption><img src="assets/images/camera.svg" alt=""> {{ 'CHAPTER_4.1.CONTENT.SECTION_4' | translate }}</figcaption>
-							</div>
-					</figure>
-			</div>
-			<div class="row">
-					<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
-						<span [innerHTML]="'CHAPTER_4.1.CONTENT.SECTION_5' | translate"></span>
+		</div>
+		<div class="row">
+			<figure class="chapter-content__img mb-5">
+				<div class="img__container">
+					<img src="assets/images/alunos-ismart-do-ensino-medio.jpg" alt="">  
+				</div>
+				<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+					<figcaption><img src="assets/images/camera.svg" alt=""> {{ 'CHAPTER_4.1.CONTENT.SECTION_4' | translate }}</figcaption>
+				</div>
+			</figure>
+		</div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+				<span [innerHTML]="'CHAPTER_4.1.CONTENT.SECTION_5' | translate"></span>
 
-							<figure class="chapter-content__img">
-									<div class="img__container">
-											<img src="assets/images/joao-pedro-de-oliveira-graduado-ismart_3.jpg" alt="">
-									</div>
-									<figcaption><img src="assets/images/camera.svg" alt="">  {{ 'CHAPTER_4.1.CONTENT.SECTION_6' | translate }}</figcaption>
-							</figure>
+				<figure class="chapter-content__img">
+						<div class="img__container">
+								<img src="assets/images/joao-pedro-de-oliveira-graduado-ismart_3.jpg" alt="">
+						</div>
+						<figcaption><img src="assets/images/camera.svg" alt="">  {{ 'CHAPTER_4.1.CONTENT.SECTION_6' | translate }}</figcaption>
+				</figure>
 
-							<h3 class="chapter-content__title--section">{{ 'CHAPTER_4.1.CONTENT.SECTION_7' | translate }}</h3>
-							<!-- Accordion -->
-							<app-accordion [accordiondata]="accordionContent"></app-accordion>
-
-							<span [innerHTML]="'CHAPTER_4.1.CONTENT.SECTION_8' | translate"></span>
-					</div>  
-			</div>
+				<h3 class="chapter-content__title--section">{{ 'CHAPTER_4.1.CONTENT.SECTION_7' | translate }}</h3>
+				<!-- Accordion -->
+				<app-accordion [accordiondata]="accordionContent"></app-accordion>
+			</div>  
+		</div>
+		<div class="row">
+			<figure class="chapter-content__img mb-5">
+				<div class="img__container">
+					<img src="assets/images/alunos-do-bolsa-talento.jpg" alt="">  
+				</div>
+				<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+					<figcaption><img src="assets/images/camera.svg" alt=""> {{ 'CHAPTER_4.1.CONTENT.SUBTITLE_IMG_4' | translate }}</figcaption>
+				</div>
+			</figure>
+		</div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+				<span [innerHTML]="'CHAPTER_4.1.CONTENT.SECTION_8' | translate"></span>
+			</div>  
+		</div>
+		<div class="row">
+			<figure class="chapter-content__img">
+				<div class="img__container">
+					<img src="assets/images/alunos-do-alicerce.jpg" alt="">  
+				</div>
+				<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+					<figcaption><img src="assets/images/camera.svg" alt=""> {{ 'CHAPTER_4.1.CONTENT.SUBTITLE_IMG_5' | translate }}</figcaption>
+				</div>
+			</figure>
+		</div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
+				<span [innerHTML]="'CHAPTER_4.1.CONTENT.SECTION_9' | translate"></span>
+			</div>  
+		</div>
+		
 	</div>
 </article>
 <app-testimonials
