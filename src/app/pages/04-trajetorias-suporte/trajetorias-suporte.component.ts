@@ -22,7 +22,7 @@ export class TrajetoriasSuporteComponent implements OnInit {
   public chapterHatInfo = {
     imageMobile: 'assets/images/04-trajetoria-smart-suporte-mobile.jpg',
     imageTablet: 'assets/images/04-trajetoria-smart-suporte-mobile.jpg',
-    image: 'assets/images/04-trajetoria-smart-suporte -desktop.jpg',
+    image: 'assets/images/04-trajetoria-smart-suporte-desktop.jpg',
     title: 'CHAPTER_4.1.TITLE',
     subtitle: 'CHAPTERS.04'
   };
