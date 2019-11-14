@@ -20,9 +20,9 @@ export class TrajetoriasSuporteComponent implements OnInit {
   private title = '04. Trajetórias Ismart: Seleção - Ismart';
 
   public chapterHatInfo = {
-    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
-    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
-    image: 'assets/images/4-trajetorias.jpg',
+    imageMobile: 'assets/images/04-trajetoria-smart-suporte-mobile.jpg',
+    imageTablet: 'assets/images/04-trajetoria-smart-suporte-mobile.jpg',
+    image: 'assets/images/04-trajetoria-smart-suporte -desktop.jpg',
     title: 'CHAPTER_4.1.TITLE',
     subtitle: 'CHAPTERS.04'
   };
@@ -38,7 +38,7 @@ export class TrajetoriasSuporteComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
+    this.meta.addTag({property: 'og:image', content: 'assets/images/04-trajetoria-smart-suporte-mobile.jpg' } );
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Suporte - Ismart'});
 
     this.translate.get('CHAPTER_4.4').subscribe( (data: any) => {

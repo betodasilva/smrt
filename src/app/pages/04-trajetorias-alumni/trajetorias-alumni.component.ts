@@ -16,9 +16,9 @@ export class TrajetoriasAlumniComponent implements OnInit {
   private title = '04. Trajetórias Ismart: Alumni - Ismart';
 
   public chapterHatInfo = {
-    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
-    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
-    image: 'assets/images/4-trajetorias.jpg',
+    imageMobile: 'assets/images/04-trajetoria-smart-alumni-mobile.jpg',
+    imageTablet: 'assets/images/04-trajetoria-smart-alumni-mobile.jpg',
+    image: 'assets/images/04-trajetoria-smart-alumni-desktop.jpg',
     title: 'CHAPTER_4.1.TITLE',
     subtitle: 'CHAPTERS.04'
   };
@@ -34,7 +34,7 @@ export class TrajetoriasAlumniComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
+    this.meta.addTag({property: 'og:image', content: 'assets/images/04-trajetoria-smart-alumni-mobile.jpg' } );
     this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Alumni - Ismart'});
 
 
