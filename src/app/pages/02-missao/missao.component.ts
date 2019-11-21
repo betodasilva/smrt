@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MissaoComponent implements OnInit {
 
-  private title = '02. Missão, Visão e Crenças - Ismart';
+  private title = 'Missão, Visão e Crenças > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
     imageMobile: 'assets/images/hats/2-missao-visao-crencas-hat.jpg',
@@ -33,7 +33,9 @@ export class MissaoComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/2-missao-visao-crencas-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '02. Missão, Visão e Crenças - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Missão, Visão e Crenças > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Concretizar o pleno potencial de jovens talentos de baixa renda até à universidade, através de programas calcados na valorização da excelência.'});
 
     this.translate.get('CHAPTER_2').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

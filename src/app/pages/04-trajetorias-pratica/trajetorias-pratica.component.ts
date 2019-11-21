@@ -16,10 +16,10 @@ export class TrajetoriasPraticaComponent implements OnInit {
   @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
 
-  private title = '04. Trajetórias Ismart: Prática - Ismart';
+  private title = 'Trajetórias Ismart: Prática > Ismart - RA 2018-2019';
   public chapterHatInfo = {
     imageMobile: 'assets/images/04-trajetoria-smart-pratica-mobile.jpg',
-    imageTablet: 'assets/images/04-trajetoria-smart-pratica-mobile.jpg',
+    imageTablet: 'assets/images/hats/4-trajetoria-pratica-tablet.jpg',
     image: 'assets/images/04-trajetoria-smart-pratica-desktop.jpg',
     title: 'CHAPTER_4.1.TITLE',
     subtitle: 'CHAPTERS.04'
@@ -37,7 +37,9 @@ export class TrajetoriasPraticaComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/04-trajetoria-smart-pratica-mobile.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Prática - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Trajetórias Ismart: Prática > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Mais do que uma bolsa de estudos, o Ismart trabalha para mudar a visão de mundo dos bolsistas e torná-los protagonista da própria história'});
 
     this.translate.get('CHAPTER_4.3').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

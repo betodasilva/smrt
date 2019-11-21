@@ -18,7 +18,7 @@ export class ChapterInternComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: true}) modal: ModalComponent;
 
-  private title = '04. Trajetórias Ismart: Contato - Ismart';
+  private title = 'Trajetórias Ismart: Contato > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
     imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
@@ -61,7 +61,9 @@ export class ChapterInternComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Contato - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Trajetórias Ismart: Contato > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'O impacto das bolsas de estudo do Ismart reflete a certeza de formar cidadãos conscientes e preparados para lidar com os desafios do País.'});
 
     this.translate.get('CHAPTER_4.1').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

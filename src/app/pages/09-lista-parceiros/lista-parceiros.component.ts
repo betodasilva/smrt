@@ -14,7 +14,7 @@ export class ListaParceirosComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: false}) modal: ModalComponent;
 
-  private title = '09. Lista de parceiros - Ismart';
+  private title = 'Lista de parceiros > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
     imageMobile: 'assets/images/hats/9-lista-de-parceiros-hat.jpg',
@@ -36,7 +36,10 @@ export class ListaParceirosComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/9-lista-de-parceiros-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '09. Lista de parceiros - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Lista de parceiros > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Para abraçar e transformar cada um desses alunos através da educação, o Instituto conta com parcerias fundamentais no curso dessa jornada.'});
+
 
     this.translate.get('CHAPTER_9').subscribe( (data: any) => {
       this.accordionContent = data.LIST;

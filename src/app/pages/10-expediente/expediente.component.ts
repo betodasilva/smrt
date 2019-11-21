@@ -14,7 +14,7 @@ export class ExpedienteComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: false}) modal: ModalComponent;
 
-  private title = '10. Expediente - Ismart';
+  private title = 'Expediente > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
     imageMobile: 'assets/images/hats/10-expediente-hat.jpg',
@@ -36,7 +36,9 @@ export class ExpedienteComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/10-expediente-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '10. Expediente - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Expediente > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Um trabalho que envolve a dedicação de toda a equipe Ismart e várias outras pessoas que acreditam no caminho da educação.'});
 
     this.translate.get('CHAPTER_10').subscribe( (data: any) => {
       this.accordionContent = data.LIST;

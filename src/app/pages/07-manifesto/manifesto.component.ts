@@ -15,12 +15,12 @@ export class ManifestoComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: false}) modal: ModalComponent;
 
-  private title = '07. Manifesto Ismart - Ismart';
+  private title = 'Manifesto Ismart > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
-    imageMobile: 'assets/images/hats/7-manifesto-hat.jpg',
-    imageTablet: 'assets/images/hats/7-manifesto-ismart-tablet.jpg',
-    image: 'assets/images/7-manifesto.jpg',
+    imageMobile: 'assets/images/hats/7-manifesto-ismart-mobile.png',
+    imageTablet: 'assets/images/hats/7-manifesto-tablet.jpg',
+    image: 'assets/images/hats/7-manifesto-ismart-desktop.jpg',
     title: 'CHAPTER_7.TITLE',
     subtitle: 'CHAPTERS.07'
   };
@@ -36,7 +36,9 @@ export class ManifestoComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/7-manifesto-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '07. Manifesto Ismart - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Manifesto Ismart > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Acreditamos no talento do jovem brasileiro e no poder transformador da educação e trabalhamos por um futuro melhor para eles e para o Brasil.'});
 
     this.translate.get('CHAPTER_7').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

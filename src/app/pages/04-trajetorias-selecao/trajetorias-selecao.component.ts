@@ -12,15 +12,15 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class TrajetoriasSelecaoComponent implements OnInit {
 
-  private title = '04. Trajetórias Ismart: Seleção - Ismart';
+  private title = 'Trajetórias Ismart: Seleção > Ismart - RA 2018-2019';
   @ViewChild('sidebar', {static: true, read: ElementRef}) sidebarComponent: ElementRef;
   @ViewChild('testimonial', {static: true, read: ElementRef}) testimonialComponent: ElementRef;
   @ViewChild('article', {static: true}) article: ElementRef;
 
   public chapterHatInfo = {
-    imageMobile: 'assets/images/04-trajetoria-smart-selecao-mobile.jpg',
-    imageTablet: 'assets/images/04-trajetoria-smart-selecao-mobile.jpg',
-    image: 'assets/images/04-trajetoria-smart-selecao-desktop.jpg',
+    imageMobile: 'assets/images/hats/4-trajetoria-selecao-mobile.jpg',
+    imageTablet: 'assets/images/hats/4-trajetoria-selecao-tablet.jpg',
+    image: 'assets/images/hats/4-trajetoria-selecao-desktop.jpg',
     title: 'CHAPTER_4.1.TITLE',
     subtitle: 'CHAPTERS.04'
   };
@@ -40,7 +40,9 @@ export class TrajetoriasSelecaoComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/04-trajetoria-smart-selecao-mobile.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Seleção - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Trajetórias Ismart: Seleção > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'O processo seletivo é a oportunidade que alunos de baixa renda com altas habilidades têm para se desenvolverem e conquistarem destaque.'});
 
     this.translate.get('CHAPTER_4.2').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

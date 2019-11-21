@@ -16,7 +16,7 @@ export class HorizonteComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: false}) modal: ModalComponent;
 
-  private title = '06. Horizonte - Ismart';
+  private title = 'Horizonte > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
     imageMobile: 'assets/images/hats/6-horizonte-hat.jpg',
@@ -41,7 +41,9 @@ export class HorizonteComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/6-horizonte-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '06. Horizonte - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Horizonte > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Uma vez no Ismart, a intenção é ajudar os alunos a nunca duvidarem do seu potencial e a se apropriarem da sua história com protagonismo, resiliência e perseverança.'});
 
     this.translate.get('CHAPTER_6').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

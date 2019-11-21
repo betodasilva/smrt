@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ChapterInternSimpleComponentm implements OnInit {
 
-  title = '01. Mensagem do Conselho - Ismart';
+  title = 'Mensagem do Conselho > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
     imageMobile: 'assets/images/hats/1-mensagem-do-conselho-hat.jpg',
@@ -30,7 +30,9 @@ export class ChapterInternSimpleComponentm implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/1-mensagem-do-conselho-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '01. Mensagem do Conselho - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Mensagem do Conselho > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Sonhar grande e transformar esse sonho em realidade são os caminhos para o sucesso e para fazer a diferença na sociedade.'});
 
     this.translate.get('CHAPTER_1').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;
