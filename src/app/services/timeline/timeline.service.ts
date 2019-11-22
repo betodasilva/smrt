@@ -56,7 +56,7 @@ export class TimelineService {
     },
     {
       title: '2013',
-      excerpt: '<p>Início do Summer Program, programa de intercâmbio. Com apoio da associação de ex-alunos brasileiros, bolsistas do Ismart passaram a temporada de verão na Universidade de Notre Dame, em Indiana, Estados Unidos.</p><p>O processo de seleção de bolsistas do Ismart começa a considerar também algumas habilidades socioemocionais para selecionar seus candidatos.</p>',
+      excerpt: '<p>Início do Summer Program. Com apoio da associação de ex-alunos brasileiros, bolsistas do Ismart passaram a temporada de verão na Universidade de Notre Dame, em Indiana, Estados Unidos.</p><p>O processo de seleção de bolsistas do Ismart começa a considerar também algumas habilidades socioemocionais para selecionar seus candidatos.</p>',
       icon: 'assets/images/nav.svg'
     },
     {
