@@ -59,7 +59,7 @@ import { AnimateOnScrollDirective } from './directives/animate-on-scroll.directi
 import { ScrollService } from './services/scroll/scroll.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/');
 }
 
 @NgModule({
