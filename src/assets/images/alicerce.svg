@@ -1,39 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="597" height="142" viewBox="0 0 597 142">
-    <g fill="none" fill-rule="evenodd">
-        <path stroke="#D9D9D9" stroke-width="1.404" d="M173.123 28.678h423.854M173.123 140.583h423.854M173.123 112.607h423.854M173.123 84.63h423.854M173.123 56.654h423.854M173.123.702h423.854"/>
-        <path fill="#00BDF2" d="M0 141.283h173.123V0H0z"/>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="16" font-weight="bold" letter-spacing="1">
-            <tspan x="40.572" y="79">ALICERCE</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14">
-            <tspan x="185" y="17">São Paulo</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold">
-            <tspan x="569.76" y="17">61</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14">
-            <tspan x="185" y="46">São José dos Campos</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold">
-            <tspan x="569.76" y="46">51</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14">
-            <tspan x="185" y="75">Rio de Janeiro</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold">
-            <tspan x="569.76" y="75">53</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Regular, Lato" font-size="14">
-            <tspan x="185" y="104">Belo Horizonte</tspan>
-        </text>
-        <text fill="#012461" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold">
-            <tspan x="569.76" y="104">20</tspan>
-        </text>
-        <text fill="#00BDF2" font-family="Lato-Bold, Lato" font-size="16.848" font-weight="bold" letter-spacing="-.657">
-            <tspan x="185" y="136">T</tspan> <tspan x="194.047" y="136" letter-spacing="-.649">O</tspan> <tspan x="206.599" y="136" letter-spacing="-1.238">T</tspan> <tspan x="214.282" y="136">AL ALICE</tspan> <tspan x="284.041" y="136" letter-spacing="-.388">R</tspan> <tspan x="294.318" y="136">CE</tspan>
-        </text>
-        <text fill="#00BDF2" font-family="Lato-Bold, Lato" font-size="16" font-weight="bold">
-            <tspan x="558.16" y="135">185</tspan>
-        </text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="690px" height="164px" viewBox="0 0 690 164" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>alicerce</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Tabelas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="alicerce">
+            <path d="M200.092105,33.1455474 L689.973105,33.1455474" id="Stroke-1" stroke="#D9D9D9" stroke-width="1.404"></path>
+            <path d="M200.092105,162.482472 L689.973105,162.482472" id="Stroke-4" stroke="#D9D9D9" stroke-width="1.404"></path>
+            <path d="M200.092105,130.148282 L689.973105,130.148282" id="Stroke-10" stroke="#D9D9D9" stroke-width="1.404"></path>
+            <path d="M200.092105,97.814091 L689.973105,97.814091" id="Stroke-13" stroke="#D9D9D9" stroke-width="1.404"></path>
+            <path d="M200.092105,65.4799004 L689.973105,65.4799004" id="Stroke-18" stroke="#D9D9D9" stroke-width="1.404"></path>
+            <path d="M200.092105,0.811356786 L689.973105,0.811356786" id="Stroke-21" stroke="#D9D9D9" stroke-width="1.404"></path>
+            <polygon id="Fill-37" fill="#00BDF2" points="0 163.292044 200.091943 163.292044 200.091943 0 0 0"></polygon>
+            <text font-family="Montserrat-Bold, Montserrat" font-size="17" font-weight="bold" line-spacing="24" letter-spacing="1.0625" fill="#FFFFFF">
+                <tspan x="51.1763744" y="90.839196">ALICERCE</tspan>
+            </text>
+            <text id="São-Paulo" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" line-spacing="24" fill="#012461">
+                <tspan x="213.819095" y="20.0251256">São Paulo</tspan>
+            </text>
+            <text id="61" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" line-spacing="24" fill="#012461">
+                <tspan x="661.046432" y="19.0251256">61</tspan>
+            </text>
+            <text id="São-José-dos-Campos" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" line-spacing="24" fill="#012461">
+                <tspan x="213.819095" y="53.5427136">São José dos Campos</tspan>
+            </text>
+            <text id="51" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" line-spacing="24" fill="#012461">
+                <tspan x="661.046432" y="52.5427136">51</tspan>
+            </text>
+            <text id="Rio-de-Janeiro" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" line-spacing="24" fill="#012461">
+                <tspan x="213.819095" y="87.0603015">Rio de Janeiro</tspan>
+            </text>
+            <text id="53" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" line-spacing="24" fill="#012461">
+                <tspan x="661.046432" y="86.0603015">53</tspan>
+            </text>
+            <text id="Belo-Horizonte" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" line-spacing="24" fill="#012461">
+                <tspan x="213.819095" y="120.577889">Belo Horizonte</tspan>
+            </text>
+            <text id="20" font-family="Lato-Bold, Lato" font-size="14" font-weight="bold" line-spacing="24" fill="#012461">
+                <tspan x="661.046432" y="119.577889">20</tspan>
+            </text>
+            <text id="TOTAL-ALICERCE" font-family="Lato-Bold, Lato" font-size="16.8480001" font-weight="bold" letter-spacing="-0.657071998" fill="#00BDF2">
+                <tspan x="213.819095" y="152.095477">T</tspan>
+                <tspan x="222.866472" y="152.095477" letter-spacing="-0.648648002">O</tspan>
+                <tspan x="235.418232" y="152.095477" letter-spacing="-1.23832803">T</tspan>
+                <tspan x="243.10092" y="152.095477">AL ALICE</tspan>
+                <tspan x="312.860064" y="152.095477" letter-spacing="-0.387504009">R</tspan>
+                <tspan x="323.137344" y="152.095477">CE</tspan>
+            </text>
+            <text id="185" font-family="Lato-Bold, Lato" font-size="16" font-weight="bold" line-spacing="24" fill="#00BDF2">
+                <tspan x="649.446432" y="151.095477">185</tspan>
+            </text>
+        </g>
     </g>
 </svg>

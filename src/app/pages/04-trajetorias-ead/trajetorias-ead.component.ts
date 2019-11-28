@@ -17,12 +17,12 @@ export class TrajetoriasEadComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: true}) modal: ModalComponent;
 
-  private title = '04. Trajetórias Ismart: Prática - Ismart';
+  private title = 'Trajetórias Ismart: EaD > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
-    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
-    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
-    image: 'assets/images/4-trajetorias.jpg',
+    imageMobile: 'assets/images/04-trajetoria-smart-ead-mobile.jpg',
+    imageTablet: 'assets/images/hats/4-trajetoria-ead-tablet.jpg',
+    image: 'assets/images/04-trajetoria-smart-ead-desktop.jpg',
     title: 'CHAPTER_4.1.TITLE',
     subtitle: 'CHAPTERS.04'
   };
@@ -38,9 +38,10 @@ export class TrajetoriasEadComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Prática - Ismart'});
-
+    this.meta.addTag({property: 'og:image', content: 'assets/images/04-trajetoria-smart-ead-mobile.jpg' } );
+    this.meta.addTag({property: 'og:title', content: 'Trajetórias Ismart: EaD > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'O Instituto aposta na tecnologia, via EaD, como uma maneira de ampliar as oportunidades para mais jovens talentos de baixa renda.'});
 
     this.translate.get('CHAPTER_4.6').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

@@ -19,7 +19,7 @@ export class TimelineComponent implements OnInit {
   @ViewChild('article', {static: false}) article: ElementRef;
   @ViewChild('nav', {static: false}) nav: ElementRef;
 
-  title = '03. Linha do Tempo - Ismart';
+  title = 'Linha do tempo > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
     imageMobile: 'assets/images/hats/3-timeline-hat.jpg',
@@ -44,7 +44,9 @@ export class TimelineComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.meta.addTag({property: 'og:image', content: 'assets/images/hats/3-timeline-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '03. Linha do Tempo - Ismart'});
+    this.meta.addTag({property: 'og:title', content: 'Linha do tempo > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Do ensino fundamental, passando pelo ensino médio e universidade transformamos vidas através da educação há mais de 20 anos.'});
 
     this.translate.get('CHAPTER_3').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;

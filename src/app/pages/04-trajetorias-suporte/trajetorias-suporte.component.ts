@@ -17,12 +17,12 @@ export class TrajetoriasSuporteComponent implements OnInit {
   @ViewChild('article', {static: true}) article: ElementRef;
   @ViewChild('modal', {static: true}) modal: ModalComponent;
 
-  private title = '04. Trajetórias Ismart: Seleção - Ismart';
+  private title = 'Trajetórias Ismart: Suporte > Ismart - RA 2018-2019';
 
   public chapterHatInfo = {
-    imageMobile: 'assets/images/hats/4-trajetorias-hat.jpg',
-    imageTablet: 'assets/images/hats/4-trajetorias-tablet.jpg',
-    image: 'assets/images/4-trajetorias.jpg',
+    imageMobile: 'assets/images/04-trajetoria-smart-suporte-mobile.jpg',
+    imageTablet: 'assets/images/hats/4-trajetoria-suporte-tablet.jpg',
+    image: 'assets/images/04-trajetoria-smart-suporte-desktop.jpg',
     title: 'CHAPTER_4.1.TITLE',
     subtitle: 'CHAPTERS.04'
   };
@@ -38,8 +38,10 @@ export class TrajetoriasSuporteComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.meta.addTag({property: 'og:image', content: 'assets/images/hats/4-trajetorias-hat.jpg' } );
-    this.meta.addTag({property: 'og:title', content: '04. Trajetórias Ismart: Suporte - Ismart'});
+    this.meta.addTag({property: 'og:image', content: 'assets/images/04-trajetoria-smart-suporte-mobile.jpg' } );
+    this.meta.addTag({property: 'og:title', content: 'Trajetórias Ismart: Suporte > Ismart - RA 2018-2019'});
+    this.meta.addTag({property: 'og:keywords', content: 'ismart20anos, ead, ensino médio, ensino fundamental, faculdade, bolsa de estudos, alumni, protagonista, processo seletivo, educação'});
+    this.meta.addTag({property: 'og:description', content: 'Nosso objetivo é preparar o aluno para que tenha um ótimo desempenho ao longo do ensino médio e possa ser aprovado em universidades de referência.'});
 
     this.translate.get('CHAPTER_4.4').subscribe( (data: any) => {
       this.relatedInfo = data.RELATED;
